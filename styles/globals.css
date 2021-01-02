@@ -14,3 +14,50 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h2 {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+}
+
+.dSpan {
+  padding: 0.5em;
+  background: #E7EAEE;
+  border-radius: 0.5em;
+  color: #39435B;
+  margin: 1em;
+  opacity: 1;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+button {
+  padding: 0.5em;
+  color: #B8D4FF;
+  background: #204EF0;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  animation-name: appear;
+  animation-duration: 2s;
+  font-weight: 600;
+  margin-left: 1em;
+}
+
+.questionHold {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.questionhold>* {
+  margin-left: 1em;
+}
