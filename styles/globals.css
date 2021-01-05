@@ -23,6 +23,9 @@ h2 {
 @keyframes appear {
   0% {
     opacity: 0;
+    display: none;
+    height: 0px;
+    margin: 0;
   }
 }
 
@@ -39,18 +42,8 @@ h2 {
   animation-fill-mode: backwards;
 }
 
-button {
-  padding: 0.5em;
-  color: #B8D4FF;
-  background: #204EF0;
-  border-radius: 0.5em;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  animation-name: appear;
-  animation-duration: 2s;
-  font-weight: 600;
-  margin-left: 1em;
+.dhold {
+  width: 100%;
 }
 
 .questionHold {

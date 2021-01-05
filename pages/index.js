@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+import { css, cx } from '@emotion/css'
 
 
 export default function Home() {
@@ -35,9 +36,9 @@ export default function Home() {
       start: {
         dialogue:
           [ 
-            {d: "Hello."},
-            {d: "My name's Calvin"},
-            {d: 'Welcome to my website. This my space to showcase my work'},
+            {d: "Hello. 🌱"},
+            {d: "My name's Calvin."},
+            {d: 'Welcome to my website. This my space to showcase my work.'},
             {d: 'Please, look around. And feel free to ask me a question.'},
           ],
         questions: 
@@ -87,22 +88,37 @@ export default function Home() {
   
 
   //setTimeout(() => setconcat(), 130);
+
+  const startTree = { dia:
+  [ 
+    {d: "Hello. 🐌"},
+    {d: "My name's Calvin."},
+    {d: 'Welcome to my website. This my space to showcase my work.'},
+    {d: 'Please, look around. And feel free to ask me a question.'},
+  ]
+}
   
   
   const current_step = dialogue[line].dialogue;
   const current_question = dialogue[line].questions;
 
-  const [tree, setTree] = useState(dialogue[line].dialogue);
+  const [trees, setTrees] = useState([startTree]);
 
   // the plan is to render from the concattonated array of the 
 
-  //concatonates a 
+  
+
+  //concatonates a a
   const setconcat = (va, q) => {
     const temp = dialogue[va].dialogue
     const tempq = current_question[q]
-    setTree(tree => tree.concat(tempq))
-    setTree(tree => tree.concat(temp))
-    console.log(tree)
+    const a = { dia:
+                  temp,
+                  qu:
+                  tempq
+    }
+    setTrees(trees => trees.concat(a))
+    console.log(trees)
   }
 
 
@@ -113,7 +129,23 @@ export default function Home() {
           setLine(next);
           setRealq(q);
           setconcat(next, index);
-        }} key={index}>
+        }} key={index}
+        className={css`
+          padding: 0.5em;
+          color: #B8D4FF;
+          background: #204EF0;
+          border-radius: 0.5em;
+          border: none;
+          outline: none;
+          font-size: 1em;
+          animation-delay: ${((current_step.length*1.5) + 2) + 's'};
+          animation-name: appear;
+          animation-duration: 0.5s;
+          animation-fill-mode: backwards;
+          font-weight: 600;
+          margin-left: 1em;
+        `}
+        >
         {q}
       </button>
     ));
@@ -121,38 +153,57 @@ export default function Home() {
 
   useEffect(() => {
     window.addEventListener('load', () => {
-      console.log(tree);
+      console.log(trees);
     });
   });
 
   const renderTree = () => {
-    return tree.map(({ d, q }, index) => (
-    <div key={index}>
-      { q ? ( 
-        <div style={testStyle}>
-        <h2>
-          <span style={qSpan}>
-            {q}
-          </span>
-        </h2>
-      </div>
-      ) : ( 
-        null
-      )}
-      { d ? (
-        <div className="dhold">
+    return trees.map(({dia, qu}, index) => (
+      <div key={index}>
+        { qu ? ( 
+          <div style={testStyle}>
           <h2>
-            <span className="dSpan">
-            {d}
+            <span style={qSpan}>
+              {qu.q}
             </span>
           </h2>
         </div>
-      ) : (
-        null
-      )}
-    </div>
+        ) : ( 
+          null
+        )}
+        { dia ? (
+          dia.map(({ d }, index) => (
+          <div className="dhold" key={index}>
+            <h2 className={css`
+                opacity: 1;
+                display: box;
+                height: 0px;
+                margin: 3em;
+                animation-name: appear;
+                animation-duration: 3s;
+                animation-delay: ${1.5*index + 's'};
+                animation-fill-mode: backwards;
+              `}>
+              <span className={css`
+              padding: 0.5em;
+              background: #E7EAEE;
+              border-radius: 0.5em;
+              color: #39435B;
+              `}
+              >
+                {d}
+              </span>
+            </h2>
+          </div>
+          ))
+        ) : (
+          null
+        )}
+      </div>
+     
     ));
   }
+
 
 
   /*
@@ -185,7 +236,7 @@ export default function Home() {
         <div className="chatHold">
           <div className="chat">
             <div>
-              {renderTree()}
+            {renderTree()}
             </div>
           </div>
         </div>
@@ -255,11 +306,16 @@ export default function Home() {
           text-align: right;
           background: red;
         }
+
+        .dhold {
+          width: 100%;
+        }
         
         .chatHold {
           height: 300px;
           display: flex;
           flex-flow: column;
+          width: 100%;
         }
 
         .chat {
@@ -268,6 +324,7 @@ export default function Home() {
           flex-direction: column-reverse;
           background: white;
           overflow-y: scroll; /* or overflow-y: auto */
+          width: 100%;
         }
 
         @media (max-width: 600px) {
