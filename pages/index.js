@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { css, cx } from '@emotion/css'
+import Meta from '../components/Meta'
 
 
 export default function Home() {
@@ -12,23 +13,12 @@ export default function Home() {
 
   const qSpan = {
     padding: '0.5em',
-    background: '#B8D4FF',
     borderRadius: '0.5em',
     color: '#204EF0',
     margin: '1em',
     animationName: 'appear',
-    animationDuration: '0.5s'
-  }
-
-  const dSpan ={
-    padding: '0.5em',
-    background: '#E7EAEE',
-    borderRadius: '0.5em',
-    color: '#39435B',
-    margin: '1em',
-    animationName: 'appear',
-    animationDuration: '4s',
-    animationDelay: '2s'
+    animationDuration: '0.5s',
+    fontWeight: '400'
   }
 
   const dialogue = 
@@ -91,9 +81,9 @@ export default function Home() {
 
   const startTree = { dia:
   [ 
-    {d: "Hello. 🐌"},
+    {d: "Hello."},
     {d: "My name's Calvin."},
-    {d: 'Welcome to my website. This my space to showcase my work.'},
+    {d: 'I design products that fit the complexity of peoples’ lives.'},
     {d: 'Please, look around. And feel free to ask me a question.'},
   ]
 }
@@ -132,7 +122,7 @@ export default function Home() {
         }} key={index}
         className={css`
           padding: 0.5em;
-          color: #B8D4FF;
+          color: #fff;
           background: #204EF0;
           border-radius: 0.5em;
           border: none;
@@ -142,8 +132,8 @@ export default function Home() {
           animation-name: appear;
           animation-duration: 0.5s;
           animation-fill-mode: backwards;
-          font-weight: 600;
-          margin-left: 1em;
+          font-weight: 400;
+          margin-left: 0.5em;
         `}
         >
         {q}
@@ -178,7 +168,7 @@ export default function Home() {
                 opacity: 1;
                 display: box;
                 height: 0px;
-                margin: 3em;
+                margin: 2em;
                 animation-name: appear;
                 animation-duration: 3s;
                 animation-delay: ${1.5*index + 's'};
@@ -186,9 +176,9 @@ export default function Home() {
               `}>
               <span className={css`
               padding: 0.5em;
-              background: #E7EAEE;
               border-radius: 0.5em;
               color: #39435B;
+              font-weight: 400;
               `}
               >
                 {d}
@@ -231,7 +221,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Meta />
       <main>
         <div className="chatHold">
           <div className="chat">
@@ -247,16 +237,12 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          width: 100vw;
         }
 
         main {
-          padding: 5rem 0;
+          padding: 0;
+          max-width: 900px;
         }
 
         h1 {
@@ -292,13 +278,7 @@ export default function Home() {
         }
 
         .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
           max-width: 800px;
-          margin-top: 3rem;
         }
 
         .qhold {
@@ -307,9 +287,6 @@ export default function Home() {
           background: red;
         }
 
-        .dhold {
-          width: 100%;
-        }
         
         .chatHold {
           height: 300px;
