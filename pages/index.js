@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { css, cx } from '@emotion/css'
+import { css } from '@emotion/css'
 import Meta from '../components/Meta'
+import Project from '../components/Project'
 
 
 export default function Home() {
@@ -234,98 +235,65 @@ export default function Home() {
           {renderQuestions()}
         </div>
       </main>
-
-      <style jsx>{`
-        .container {
-          width: 100vw;
-        }
-
-        main {
-          padding: 0;
-          max-width: 900px;
-        }
-
-        h1 {
-          text-align: right;
-        }
-
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        .grid {
-          max-width: 800px;
-        }
-
-        .qhold {
-          width: 80%;
-          text-align: right;
-          background: red;
-        }
-
-        
-        .chatHold {
-          height: 300px;
-          display: flex;
-          flex-flow: column;
-          width: 100%;
-        }
-
-        .chat {
-          flex: 1 1 auto;
-          display: flex;
-          flex-direction: column-reverse;
-          background: white;
-          overflow-y: scroll; /* or overflow-y: auto */
-          width: 100%;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+      <div className="workHold">
+        <div>
+          <div className="sectionTitle">
+            Projects
+          </div>
+          <Project 
+            image="botshot.gif"
+            date="2020" 
+            name="Epiphyte" 
+            description="test"  
+            options={[
+                { value: 'test ', label: 'Read the casestudy' },
+                { value: 'test', label: 'See the code' }
+            ]} 
+          />
+          <Project 
+            image="newdim_botnet_00.jpg"
+            date="2020" 
+            name="Botnet" 
+            description="test"  
+            options={[
+                { value: 'test ', label: 'Read the casestudy' },
+                { value: 'test', label: 'See the code' }
+            ]} 
+          />
+          <Project 
+            image="newdim_abacus_00.jpg"
+            date="2020" 
+            name="Botnet" 
+            description="test"  
+            options={[
+                { value: 'test ', label: 'Read the casestudy' },
+                { value: 'test', label: 'See the code' }
+            ]} 
+          />
+          <Project 
+            image="newdim_bitclaims_04.gif"
+            date="2020" 
+            name="Botnet" 
+            description="test"  
+            options={[
+                { value: 'test ', label: 'Read the casestudy' },
+                { value: 'test', label: 'See the code' }
+            ]} 
+          />
+        </div>
+        <div>
+          <div className="sectionTitle">
+            Writing
+            </div>
+            <a>test</a>
+        </div>
+        <div>
+          <div className="sectionTitle">
+            Other
+          </div>
+          <a>test</a>
+        </div>
+      </div>
     </div>
   )
 }

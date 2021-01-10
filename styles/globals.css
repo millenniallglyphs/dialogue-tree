@@ -29,8 +29,52 @@ h2 {
   }
 }
 
+main {
+  padding: 0;
+  max-width: 61%;
+}
+
+.workHold {
+  display: grid;
+  grid-template-columns: 62.66% 16.66% 16.66%;
+  gap: 2%;
+  margin-top: 4em;
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.sectionTitle {
+  border-bottom: 1px solid #D0D0D0;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.qhold {
+  width: 80%;
+  text-align: right;
+  background: red;
+}
+
+
+.chatHold {
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+.chat {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  background: white;
+  overflow-y: scroll; /* or overflow-y: auto */
+  width: 100%;
+}
+
 .dSpan {
   padding: 0.5em;
+  background: #E7EAEE;
   border-radius: 0.5em;
   color: #39435B;
   margin: 1em;

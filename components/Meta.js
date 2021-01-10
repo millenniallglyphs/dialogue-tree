@@ -8,7 +8,8 @@ export default function Meta() {
         fontSize: '0.8em',
         marginRight: '2em',
         marginTop: '0',
-        marginBottom: '0'
+        marginBottom: '0',
+        color: '#909090'
     }
 
     const label = {
@@ -35,7 +36,9 @@ export default function Meta() {
         justifyContent: 'space-between',
         padding: '1em',
         width: '100%',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        paddingLeft: '4em',
+        paddingRight: '4em'
     }
 
     const btn = {
@@ -57,7 +60,7 @@ export default function Meta() {
                 <p style={small}>Complexity</p>
                 <p style={small}>Systems</p>
             </div>
-            <button style={btn}>Send me a message</button>
+            <div />
         </div>
     )
 }
