@@ -1,7 +1,12 @@
+import Hold from './Hold'
+
 export default function Meta() {
     const flex = {
         display: 'flex',
-        alignItems: 'flex-end'
+        alignItems: 'flex-end',
+        justifyContent: 'space-between',
+        marginTop: '1em',
+        marginBottom: '1em'
     }
 
     const small = {
@@ -49,18 +54,28 @@ export default function Meta() {
         background: 'white'
     }
 
+    const home = {
+        display: 'flex'
+    }
+
+    const target = {
+        display: 'flex',
+        justifyContent: 'flex-end'
+    }
+
     return (
-        <div style={metahold}>
+        <Hold>
             <div style={flex}>
-                <p style={label}>The Meta</p>
-                <div style={favicon}></div>
-                <p style={small}>www.calvin.ooo</p>
-                <p style={small}>Calvin Hutcheon</p>
-                <p style={small}>Product</p>
-                <p style={small}>Complexity</p>
-                <p style={small}>Systems</p>
+                <div style={home}>
+                    <div style={favicon}></div>
+                    <p style={small}>www.calvin.ooo</p>
+                </div>
+                <div style={target}>
+                    <p style={small}>Projects</p>
+                    <p style={small}>Writing</p>
+                </div>
             </div>
             <div />
-        </div>
+        </Hold>
     )
 }

@@ -11,19 +11,18 @@ export default function Project({ image, date, name, description, options=[] }) 
     return(
         <div
             className={css`
-                display: flex;
-                align-items: center;
-                margin-bottom: 1em;
+                margin-top: 2em;
             `}
         >
             <div className={css`
-                width: 50%;
-                height: 300px;
+                width: 100%;
+                height: 500px;
                 background: red;
                 background-image: url(${image});
                 background-position: center;
                 background-size: cover;
                 margin-right: 1em;
+                border-radius: 8px;
               `}/>
             <div>
                 <p

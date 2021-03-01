@@ -26,12 +26,15 @@ h2 {
     display: none;
     height: 0px;
     margin: 0;
+    margin-left: -1em;
   }
 }
 
 main {
-  padding: 0;
-  max-width: 61%;
+  padding-top: 0;
+  padding-bottom: 2em;
+  width: 100%;
+  background: #F4F4F4;
 }
 
 .workHold {
@@ -57,17 +60,17 @@ main {
 
 
 .chatHold {
-  height: 300px;
+  height: 500px;
   display: flex;
   flex-flow: column;
-  width: 100%;
+  max-width: 800px;
 }
 
 .chat {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column-reverse;
-  background: white;
+  background: #F4F4F4;
   overflow-y: scroll; /* or overflow-y: auto */
   width: 100%;
 }
@@ -92,6 +95,8 @@ main {
 .questionHold {
   display: flex;
   justify-content: flex-end;
+  max-width: 900px;
+  height: 35px;
 }
 
 .questionhold>* {

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { css } from '@emotion/css'
 import Meta from '../components/Meta'
 import Project from '../components/Project'
+import Hold from '../components/Hold'
 
 
 export default function Home() {
@@ -169,14 +170,16 @@ export default function Home() {
                 opacity: 1;
                 display: box;
                 height: 0px;
-                margin: 2em;
+                margin-top: 2em;
+                margin-bottom: 2em;
                 animation-name: appear;
                 animation-duration: 3s;
                 animation-delay: ${1.5*index + 's'};
                 animation-fill-mode: backwards;
               `}>
               <span className={css`
-              padding: 0.5em;
+              padding-top: 0.5em;
+              padding-bottom: 0.5em;
               border-radius: 0.5em;
               color: #39435B;
               font-weight: 400;
@@ -224,76 +227,34 @@ export default function Home() {
       </Head>
       <Meta />
       <main>
-        <div className="chatHold">
-          <div className="chat">
-            <div>
-            {renderTree()}
+        <Hold>
+          <div className="chatHold">
+            <div className="chat">
+              <div>
+              {renderTree()}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="questionHold">
-          {renderQuestions()}
-        </div>
+          <div className="questionHold">
+            {renderQuestions()}
+          </div>
+        </Hold>
       </main>
-      <div className="workHold">
-        <div>
-          <div className="sectionTitle">
-            Projects
-          </div>
-          <Project 
-            image="botshot.gif"
-            date="2020" 
-            name="Epiphyte" 
-            description="test"  
-            options={[
-                { value: 'test ', label: 'Read the casestudy' },
-                { value: 'test', label: 'See the code' }
-            ]} 
-          />
-          <Project 
-            image="newdim_botnet_00.jpg"
-            date="2020" 
-            name="Botnet" 
-            description="test"  
-            options={[
-                { value: 'test ', label: 'Read the casestudy' },
-                { value: 'test', label: 'See the code' }
-            ]} 
-          />
-          <Project 
-            image="newdim_abacus_00.jpg"
-            date="2020" 
-            name="Botnet" 
-            description="test"  
-            options={[
-                { value: 'test ', label: 'Read the casestudy' },
-                { value: 'test', label: 'See the code' }
-            ]} 
-          />
-          <Project 
-            image="newdim_bitclaims_04.gif"
-            date="2020" 
-            name="Botnet" 
-            description="test"  
-            options={[
-                { value: 'test ', label: 'Read the casestudy' },
-                { value: 'test', label: 'See the code' }
-            ]} 
-          />
-        </div>
-        <div>
-          <div className="sectionTitle">
-            Writing
-            </div>
-            <a>test</a>
-        </div>
-        <div>
-          <div className="sectionTitle">
-            Other
-          </div>
-          <a>test</a>
-        </div>
-      </div>
+      <Hold>
+        <Project 
+          image="botshot.gif"
+          date="2020" 
+          name="Epiphyte" 
+          description="test"  
+          options={[
+              { value: 'test ', label: 'Read the casestudy' },
+              { value: 'test', label: 'See the code' }
+          ]} 
+        />
+      </Hold>
+      <Hold>
+      </Hold>
+      
     </div>
   )
 }
