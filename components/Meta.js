@@ -1,6 +1,7 @@
 import Hold from './Hold'
+import { css } from '@emotion/css';
 
-export default function Meta() {
+export default function Meta({kind, passStyle}) {
     const flex = {
         display: 'flex',
         alignItems: 'flex-end',
@@ -11,7 +12,6 @@ export default function Meta() {
 
     const small = {
         fontSize: '0.8em',
-        marginRight: '2em',
         marginTop: '0',
         marginBottom: '0',
         color: '#909090'
@@ -63,19 +63,34 @@ export default function Meta() {
         justifyContent: 'flex-end'
     }
 
+    const toggleStyling = () => {
+        return (
+            <button
+                onClick={passStyle}
+            >
+                <p style={small}>{ kind==="light" ? ( "☽" ) : ("☼")}</p>
+            </button>
+        )
+    }
+
     return (
-        <Hold>
-            <div style={flex}>
-                <div style={home}>
-                    <div style={favicon}></div>
-                    <p style={small}>www.calvin.ooo</p>
+        <div className={css`
+            position: fixed;
+            background: ${ kind==='light' ? ('#F4F4F4') : ('#222222') };
+            width: 100%;
+        `}>
+            <Hold>
+                <div style={flex}>
+                    <div style={home}>
+                        <div style={favicon}></div>
+                        <p style={small}>www.calvin.ooo</p>
+                    </div>
+                    <div style={target}>
+                        {toggleStyling()}
+                    </div>
                 </div>
-                <div style={target}>
-                    <p style={small}>Projects</p>
-                    <p style={small}>Writing</p>
-                </div>
-            </div>
-            <div />
-        </Hold>
+                <div />
+            </Hold>
+        </div>
     )
 }

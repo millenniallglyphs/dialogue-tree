@@ -16,7 +16,7 @@ export default function Project({ image, date, name, description, options=[] }) 
         >
             <div className={css`
                 width: 100%;
-                height: 500px;
+                height: 380px;
                 background: red;
                 background-image: url(${image});
                 background-position: center;
