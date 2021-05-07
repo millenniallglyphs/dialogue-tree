@@ -1,17 +1,30 @@
 import { css } from '@emotion/css'
+import StyleSelect from '../lib/StyleSelect';
+import { useContext } from 'react';
 
 export default function Project({ image, date, name, description, options=[] }) {
+    const color = useContext(StyleSelect)
     const renderOptions = () => {
         return options.map(({ target, label, }, index) => (
           <a href={target} key={index}>
-            {label}
+            <div className={css`
+                padding: 0.5em;
+                border-radius: 8px;
+                background: ${ color.styled==="light" ? ('#fff') : ('#282B33')};
+                margin-right: 0.5em;
+                color: ${ color.styled==="light" ? ('#909090') : ('#909090')};
+                font-size: 0.8em;
+            `}>
+                {label}
+            </div>
           </a>
         ));
       };
     return(
         <div
             className={css`
-                margin-top: 2em;
+                background: ${ color.styled==="light" ? ('#F4F4F4') : ('#222222')};
+                border-radius: 8px;
             `}
         >
             <div className={css`
@@ -24,7 +37,18 @@ export default function Project({ image, date, name, description, options=[] }) 
                 margin-right: 1em;
                 border-radius: 8px;
               `}/>
-            <div>
+            <div className={css`
+                padding: 1em;
+            `}>
+                <div className={css`
+                    display: flex;
+                    justify-content: space-between;
+                `}>
+                <div className={css`
+                display: flex
+                `}>
+                    {renderOptions()}
+                </div>
                 <p
                     className={css`
                         color: #909090;
@@ -33,13 +57,22 @@ export default function Project({ image, date, name, description, options=[] }) 
                 >
                     {date}
                 </p>
-                <h3>
+                </div>
+                <h3 className={css`
+                    font-weight: 400;
+                    font-size: 1.8em;
+                    line-height: 1em;
+                    margin: 0;
+                    color: ${ color.styled==="light" ? ('#39435B') : ('#fff')}
+                `}>
                     {name}
                 </h3>
-                <p>
+                <p className={css`
+                    color: ${ color.styled==="light" ? ('#909090') : ('#909090')}
+                `}>
                     {description}
                 </p>
-                {renderOptions()}
+                
             </div>
         </div>
     )

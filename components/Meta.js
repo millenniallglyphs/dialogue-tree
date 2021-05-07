@@ -67,6 +67,13 @@ export default function Meta({kind, passStyle}) {
         return (
             <button
                 onClick={passStyle}
+                className={css`
+                    width: 20.5px;
+                    background: ${ kind==="light" ? ('#F4F4F4') : ('#222222')};
+                    border-radius: 4px;
+                    border: 0px solid #909090;
+                    cursor: pointer;
+                `}
             >
                 <p style={small}>{ kind==="light" ? ( "☽" ) : ("☼")}</p>
             </button>
@@ -76,7 +83,7 @@ export default function Meta({kind, passStyle}) {
     return (
         <div className={css`
             position: fixed;
-            background: ${ kind==='light' ? ('#F4F4F4') : ('#222222') };
+            background: ${ kind==='light' ? ('#fff') : ('#000') };
             width: 100%;
         `}>
             <Hold>

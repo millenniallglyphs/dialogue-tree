@@ -115,7 +115,7 @@ export default function DialogueTree() {
             padding-top: 0;
             padding-bottom: 2em;
             width: 100%;
-            background: ${ color.styled==="light" ? ('#F4F4F4') : ('#222222')};
+            background: ${ color.styled==="light" ? ('#F4F4F4') : ('#161616')};
         `}
         >
         <div style={noMarg}>
@@ -124,7 +124,7 @@ export default function DialogueTree() {
                 flex: 1 1 auto;
                 display: flex;
                 flex-direction: column-reverse;
-                background: ${ color.styled==="light" ? ('#F4F4F4') : ('#222222')};
+                background: none;
                 overflow-y: scroll; /* or overflow-y: auto */
                 width: 100%;
             `}>

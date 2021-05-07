@@ -12,6 +12,11 @@ export default function Home() {
 
   const color = useContext(StyleSelect)
 
+  const beep = [
+    {label:"Brand", target:"test"},
+    {label:"Development", target:"test"}
+  ]
+
   const testStyle = {
     width: '100%',
     textAlign: 'right',
@@ -103,10 +108,16 @@ export default function Home() {
       </div>
       <Hold>
       { proj ? (
-        <>
-          <Project image="brand-process-hero.jpg" name="Brand"/>
-          <Project image="newdim_abacus_00.jpg" name="Brand"/>
-        </>
+        <div className={css`
+          display: grid;
+          grid-template-columns: 50% auto;
+          grid-gap: 1em;
+        `}>
+          <Project image="brand-process-hero.jpg" name="Xalgorithms Brand" date="Jun 12" description="lorem Ipsum" options={beep} />
+          <Project image="rm-panel.png" name="A Modular Assembly Pannel" date="Jun 12" description="lorem Ipsum" options={beep}/>
+          <Project image="newdim_abacus_00.jpg" name="Brand" date="Jun 12" description="lorem Ipsum" options={beep}/>
+          <Project image="components.png" name="Simple React Components" date="Jun 12" description="lorem Ipsum" options={beep}/>
+        </div>
       ) : (
         <p>writing</p>
       )

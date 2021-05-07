@@ -8,7 +8,6 @@ const Dialogue = {
           {d: 'Please, ask me a question.'},
         ],
       questions: 
-      //need to update the structure to handle the questions so that they can be passed to the concat function
         [
           {q: "What is design for the animate?", next: "animate"},
           {q: "Where do you live?", next: "live"}
