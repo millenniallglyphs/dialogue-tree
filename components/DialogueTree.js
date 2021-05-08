@@ -62,6 +62,7 @@ export default function DialogueTree() {
 
   const renderQuestions = () => {
     return current_question.map(({ q, next }, index) => (
+      q ? (
       <Button
       check={() => {
         setLine(next);
@@ -73,6 +74,9 @@ export default function DialogueTree() {
       >
           {q}
         </Button>
+      ) : (
+        null
+      )
     ));
   };
 

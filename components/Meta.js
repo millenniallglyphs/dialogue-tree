@@ -90,7 +90,7 @@ export default function Meta({kind, passStyle}) {
                 <div style={flex}>
                     <div style={home}>
                         <div style={favicon}></div>
-                        <p style={small}>www.calvin.ooo</p>
+                        <p style={small}>Calvin</p>
                     </div>
                     <div style={target}>
                         {toggleStyling()}

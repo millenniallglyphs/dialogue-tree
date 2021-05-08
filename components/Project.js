@@ -10,7 +10,7 @@ export default function Project({ image, date, name, description, options=[] }) 
             <div className={css`
                 padding: 0.5em;
                 border-radius: 8px;
-                background: ${ color.styled==="light" ? ('#fff') : ('#282B33')};
+                background: ${ color.styled==="light" ? ('#fff') : ('#000')};
                 margin-right: 0.5em;
                 color: ${ color.styled==="light" ? ('#909090') : ('#909090')};
                 font-size: 0.8em;
@@ -30,7 +30,7 @@ export default function Project({ image, date, name, description, options=[] }) 
             <div className={css`
                 width: 100%;
                 height: 380px;
-                background: red;
+                background: #F4F4F4;
                 background-image: url(${image});
                 background-position: center;
                 background-size: cover;

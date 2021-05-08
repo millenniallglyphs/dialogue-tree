@@ -113,10 +113,12 @@ export default function Home() {
           grid-template-columns: 50% auto;
           grid-gap: 1em;
         `}>
-          <Project image="brand-process-hero.jpg" name="Xalgorithms Brand" date="Jun 12" description="lorem Ipsum" options={beep} />
+          <Project image="brand-process-hero.jpg" name="A Community Driven Brand" date="Jun 12" description="lorem Ipsum" options={beep} />
+          <Project image="moss.png" name="An Ecological Tradebot" date="Jun 12" description="lorem Ipsum" options={beep}/>
           <Project image="rm-panel.png" name="A Modular Assembly Pannel" date="Jun 12" description="lorem Ipsum" options={beep}/>
-          <Project image="newdim_abacus_00.jpg" name="Brand" date="Jun 12" description="lorem Ipsum" options={beep}/>
+          <Project image="newdim_abacus_00.jpg" name="Responding to Climate" date="Jun 12" description="lorem Ipsum" options={beep}/>
           <Project image="components.png" name="Simple React Components" date="Jun 12" description="lorem Ipsum" options={beep}/>
+          <Project image="mock.png" name="An app!" date="Jun 12" description="lorem Ipsum" options={beep}/>
         </div>
       ) : (
         <p>writing</p>
