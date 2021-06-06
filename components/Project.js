@@ -28,6 +28,7 @@ export default function Project({ image, date, name, description, id, options=[]
                 border-radius: 8px;
             `}
         >
+            { image ? (
             <div className={css`
                 width: 100%;
                 height: 380px;
@@ -38,6 +39,9 @@ export default function Project({ image, date, name, description, id, options=[]
                 margin-right: 1em;
                 border-radius: 8px;
               `}/>
+              ) : (
+                  null
+              )}
             <div className={css`
                 padding: 1em;
             `}>
@@ -59,7 +63,7 @@ export default function Project({ image, date, name, description, id, options=[]
                     {date}
                 </p>
                 </div>
-                <Link href={'/projects/'+id}>
+                <Link href={id}>
                     <a>
                     <h3 className={css`
                         font-weight: 400;

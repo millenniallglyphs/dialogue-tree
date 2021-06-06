@@ -7,26 +7,36 @@ import DialogueTree from '../components/DialogueTree'
 import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
 import { getSortedPostsData } from '../lib/projects'
+import { getSortedWritingData } from '../lib/writing'
 
 export async function getStaticProps() {
 
   
-
+  const allWritingData = getSortedWritingData()
   const allPostsData = getSortedPostsData()
     return {
       props: {
-        allPostsData
+        allPostsData,
+        allWritingData
       }
     }
   }
 
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, allWritingData }) {
 
   const renderProject = () => {
     return(
       allPostsData.map(({id, title, image, date, description, tags}) => (
-        <Project image={image} name={title} date={date} description={description} options={tags} id={id} key={id}/>
+        <Project image={image} name={title} date={date} description={description} options={tags} id={'/projects/'+id} key={id}/>
+      ))
+    )
+  }
+
+  const renderWriting = () => {
+    return(
+      allWritingData.map(({title, id, date, description, tags}) => (
+        <Project name={title} date={date} description={description} options={tags} id={'/writing/'+id} key={id}/>
       ))
     )
   }
@@ -137,7 +147,10 @@ export default function Home({ allPostsData }) {
           {renderProject()}
         </div>
       ) : (
-        <p>writing</p>
+        <>
+          <p>writing</p>
+          {renderWriting()}
+        </>
       )
 
       }
