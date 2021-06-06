@@ -55,7 +55,6 @@ export default function DialogueTree() {
                   tempq
     }
     setTrees(trees => trees.concat(a))
-    console.log(trees)
   }
 
 
@@ -119,7 +118,7 @@ export default function DialogueTree() {
             padding-top: 0;
             padding-bottom: 2em;
             width: 100%;
-            background: ${ color.styled==="light" ? ('#F4F4F4') : ('#161616')};
+            background: ${ color.styled==="light" ? ('#FFF') : ('#161616')};
         `}
         >
         <div style={noMarg}>

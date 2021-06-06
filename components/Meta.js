@@ -1,5 +1,6 @@
 import Hold from './Hold'
 import { css } from '@emotion/css';
+import Link from 'next/link';
 
 export default function Meta({kind, passStyle}) {
     const flex = {
@@ -83,14 +84,18 @@ export default function Meta({kind, passStyle}) {
     return (
         <div className={css`
             position: fixed;
-            background: ${ kind==='light' ? ('#fff') : ('#000') };
+            background: ${ kind==='light' ? ('#fff') : ('#161616') };
             width: 100%;
         `}>
             <Hold>
                 <div style={flex}>
                     <div style={home}>
                         <div style={favicon}></div>
-                        <p style={small}>Calvin</p>
+                        <Link href="/">
+                            <a>
+                                <p style={small}>Calvin</p>
+                            </a>
+                        </Link>
                     </div>
                     <div style={target}>
                         {toggleStyling()}

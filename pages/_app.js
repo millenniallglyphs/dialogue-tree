@@ -23,7 +23,7 @@ function handleStyleChange(){
     <StyleSelect.Provider value={{styled, setStyled}}>
       <div className={css`
         min-height: 100vh;
-        background-color: ${styled==="light" ? ('#fff') : ('#000')};
+        background-color: ${styled==="light" ? ('#F4F4F4') : ('#000')};
       `}>
         <Meta passStyle={handleStyleChange} kind={styled}/>
         <Component {...pageProps} />

@@ -6,9 +6,30 @@ import Hold from '../components/Hold'
 import DialogueTree from '../components/DialogueTree'
 import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
+import { getSortedPostsData } from '../lib/projects'
+
+export async function getStaticProps() {
+
+  
+
+  const allPostsData = getSortedPostsData()
+    return {
+      props: {
+        allPostsData
+      }
+    }
+  }
 
 
-export default function Home() {
+export default function Home({ allPostsData }) {
+
+  const renderProject = () => {
+    return(
+      allPostsData.map(({id, title, image, date, description, tags}) => (
+        <Project image={image} name={title} date={date} description={description} options={tags} id={id} key={id}/>
+      ))
+    )
+  }
 
   const color = useContext(StyleSelect)
 
@@ -98,7 +119,7 @@ export default function Home() {
       position: -webkit-sticky;
       position: sticky;
       top: 78px;
-      background: ${ color.styled==="light" ? ('#fff') : ('#000')};
+      background: ${ color.styled==="light" ? ('#fff') : ('#161616')};
       width: 100%;
       z-index: 5;
       padding-top: 1em;
@@ -109,16 +130,11 @@ export default function Home() {
       <Hold>
       { proj ? (
         <div className={css`
-          display: grid;
-          grid-template-columns: 50% auto;
-          grid-gap: 1em;
-        `}>
-          <Project image="brand-process-hero.jpg" name="A Community Driven Brand" date="Jun 12" description="lorem Ipsum" options={beep} />
-          <Project image="moss.png" name="An Ecological Tradebot" date="Jun 12" description="lorem Ipsum" options={beep}/>
-          <Project image="rm-panel.png" name="A Modular Assembly Pannel" date="Jun 12" description="lorem Ipsum" options={beep}/>
-          <Project image="newdim_abacus_00.jpg" name="Responding to Climate" date="Jun 12" description="lorem Ipsum" options={beep}/>
-          <Project image="components.png" name="Simple React Components" date="Jun 12" description="lorem Ipsum" options={beep}/>
-          <Project image="mock.png" name="An app!" date="Jun 12" description="lorem Ipsum" options={beep}/>
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-gap: 1em;
+      `}>
+          {renderProject()}
         </div>
       ) : (
         <p>writing</p>
