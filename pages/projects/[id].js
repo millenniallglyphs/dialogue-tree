@@ -1,13 +1,17 @@
 import { getAllPostIds, getPostData } from '../../lib/projects'
 import { useEffect, useState, useContext } from 'react'
-import renderToString from 'next-mdx-remote/render-to-string';
-import hydrate from 'next-mdx-remote/hydrate';
 import Hold from '../../components/Hold'
 import { css } from '@emotion/css'
 import StyleSelect from '../../lib/StyleSelect';
 import ContentLeft from '../../components/contentLeft'
+import BlockContent from '../../components/BlockContent';
 
-const components = { ContentLeft }
+import { MDXProvider } from '@mdx-js/react'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
+
+
+const components = { ContentLeft, BlockContent }
 
 export async function getStaticPaths() {
 
@@ -19,11 +23,11 @@ export async function getStaticPaths() {
   }
 
   export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id) 
-    const mdxSource = await renderToString(postData.mdxPath, {components})
+    const source = await getPostData(params.id) 
+    const mdxSource = await serialize(source.mdxPath)
+    console.log(source)
     return {
       props: {
-        postData,
         source: mdxSource,
       }
     }
@@ -31,9 +35,9 @@ export async function getStaticPaths() {
 
 
 
-export default function Post({ postData, source }) {
+export default function Post({ source }) {
 
-const content = hydrate(source, { components });
+
 
 const color = useContext(StyleSelect)
 
@@ -48,7 +52,7 @@ const color = useContext(StyleSelect)
                 grid-gap: 1em;
             `}>
                 <div className={css`
-                    background-image: url(${'/' + postData.image});
+                    background-image: url(${'/' + source.image});
                     background-position: center;
                     background-size: cover;
                     height: 400px;
@@ -59,18 +63,22 @@ const color = useContext(StyleSelect)
                 <div className={css`
                     grid-area: 2 / 1 / 3 / 3;
                 `}>
-                    <h1>{postData.title}</h1>
+                    <h1>{source.title}</h1>
                 </div>
                 <div className={css`
                     grid-area: 2 / 4 / 3 / 5;
                 `}>
-                    <p>{postData.description}</p>
+                    <p>{source.description}</p>
                 </div>
             </div> 
             <div className={css`
                 margin-top: 78px;
             `}>
-                {content}
+                <MDXProvider components={components}>
+                    <div className="wrapper">
+                        <MDXRemote {...source} />
+                    </div>
+                </MDXProvider>
             </div>  
         </Hold>   
     )
