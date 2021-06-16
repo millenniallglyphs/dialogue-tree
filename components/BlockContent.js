@@ -1,4 +1,4 @@
-import Button from './Button'
+import FileBlock from './FileBlock';
 import { css } from '@emotion/css'
 import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
@@ -10,15 +10,26 @@ export default function blockContent({title, img, paragraph, right, cta, label, 
         <div className={css`
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap: 1em;
+            grid-gap: 4em;
         `}>
             <div className={css`
                 align-self: center;
             `}>
-                <h3>{title}</h3>
-                <p>{paragraph}</p>
+                <h3 className={css`
+                    font-weight: 400;
+                    font-size: 1.8em;
+                    line-height: 1em;
+                    color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
+                `}>
+                    {title}
+                </h3>
+                <p className={css`
+                    color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
+                `}>
+                    {paragraph}
+                </p>
                 { label ? (
-                    <Button step="0">{label}</Button>
+                    <FileBlock type="test" label={label} target={target} content="Epiphyte is a tradebot that uses lichen and moss as computational black boxes."/>
                  ) : (
                     null
                 )}
