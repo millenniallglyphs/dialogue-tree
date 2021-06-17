@@ -23,11 +23,10 @@ export async function getStaticPaths() {
   }
 
   export async function getStaticProps({ params }) {
-    const source = await getPostData(params.id) 
-    const mdxSource = await serialize(source.mdxPath)
-    console.log(source)
+    const postData = await getPostData(params.id) 
+    const mdxSource = await serialize(postData.mdxPath)
     return {
-      props: {
+      props: {postData,
         source: mdxSource,
       }
     }
@@ -35,9 +34,9 @@ export async function getStaticPaths() {
 
 
 
-export default function Post({ source }) {
+export default function Post({ source, postData }) {
 
-
+console.log(postData)
 
 const color = useContext(StyleSelect)
 
@@ -48,27 +47,28 @@ const color = useContext(StyleSelect)
             <div className={css`
                 margin-top: 78px;
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-gap: 1em;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 4em;
             `}>
                 <div className={css`
-                    background-image: url(${'/' + source.image});
+                    background-image: url(${'/' + postData.image});
                     background-position: center;
                     background-size: cover;
                     height: 400px;
-                    grid-area: 1 / 1 / 2 / 4;
+                    grid-area: 1 / 2 / 2 / 3;
                 `}
                 />
                 <div />
                 <div className={css`
-                    grid-area: 2 / 1 / 3 / 3;
+                    grid-area: 1 / 1 / 2 / 2;
                 `}>
-                    <h1>{source.title}</h1>
-                </div>
-                <div className={css`
-                    grid-area: 2 / 4 / 3 / 5;
-                `}>
-                    <p>{source.description}</p>
+                    <h1 className={css`
+                    font-weight: 400;
+                    font-size: 2.4em;
+                    line-height: 1em;
+                    color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
+                `}>{postData.title}</h1>
+                <p>{postData.description}</p>
                 </div>
             </div> 
             <div className={css`
