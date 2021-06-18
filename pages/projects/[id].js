@@ -5,6 +5,7 @@ import { css } from '@emotion/css'
 import StyleSelect from '../../lib/StyleSelect';
 import ContentLeft from '../../components/contentLeft'
 import BlockContent from '../../components/BlockContent';
+import FileBlock from '../../components/FileBlock';
 
 import { MDXProvider } from '@mdx-js/react'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -40,35 +41,58 @@ console.log(postData)
 
 const color = useContext(StyleSelect)
 
+const renderOptions = () => {
+    return postData.tags.map(({ target, label, }, index) => (
+      <a href={target} key={index}>
+        <div className={css`
+            padding: 0.5em;
+            border-radius: 8px;
+            background: ${ color.styled==="light" ? ('#FFF') : ('#000')};
+            margin-right: 0.5em;
+            color: ${ color.styled==="light" ? ('#909090') : ('#909090')};
+            font-size: 0.8em;
+        `}>
+            {label}
+        </div>
+      </a>
+    ));
+  };
+
     
 
     return (
         <Hold>
             <div className={css`
                 margin-top: 78px;
+            `}>
+                
+            <h1 className={css`
+                font-weight: 400;
+                font-size: 3.4em;
+                line-height: 1em;
+                color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
+            `}>{postData.title}</h1>
+            <h3 className={css`
+                font-weight: 400;
+                font-size: 1.8em;
+                line-height: 1em;
+                color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
+            `}>{postData.description}</h3>
+            <div className={css`
+                display: flex
+                `}>
+                {renderOptions()}
+            </div>
+            <p>
+                Testing testing testing lorem ipsum
+            </p>
+            <div className={css`
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-gap: 4em;
-            `}>
-                <div className={css`
-                    background-image: url(${'/' + postData.image});
-                    background-position: center;
-                    background-size: cover;
-                    height: 400px;
-                    grid-area: 1 / 2 / 2 / 3;
-                `}
-                />
-                <div />
-                <div className={css`
-                    grid-area: 1 / 1 / 2 / 2;
+                grid-gap: 1em;
                 `}>
-                    <h1 className={css`
-                    font-weight: 400;
-                    font-size: 2.4em;
-                    line-height: 1em;
-                    color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
-                `}>{postData.title}</h1>
-                <p>{postData.description}</p>
+                    <FileBlock type="test" label='blah' target='blah' content="Epiphyte is a tradebot that uses lichen and moss as computational black boxes."/>
+                    <FileBlock type="test" label='foo' target='bar' content="Epiphyte is a tradebot that uses lichen and moss as computational black boxes."/>
                 </div>
             </div> 
             <div className={css`

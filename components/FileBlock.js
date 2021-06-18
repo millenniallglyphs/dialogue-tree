@@ -10,6 +10,9 @@ export default function FileBlock({type, content, label, target}) {
             display: flex;
             color: #909090;
             align-items: center;
+            background: #fff;
+            border-radius: 8px;
+            padding: 0 1em 1em 1em;
         `}>
             
                 { type ? (
