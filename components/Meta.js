@@ -86,6 +86,7 @@ export default function Meta({kind, passStyle}) {
             position: fixed;
             background: ${ kind==='light' ? ('#fff') : ('#161616') };
             width: 100%;
+            top: 0;
         `}>
             <Hold>
                 <div style={flex}>

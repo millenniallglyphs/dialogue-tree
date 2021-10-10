@@ -139,11 +139,7 @@ export default function Home({ allPostsData, allWritingData }) {
       </div>
       <Hold>
       { proj ? (
-        <div className={css`
-        display: grid;
-        grid-template-columns: 50% auto;
-        grid-gap: 1em;
-      `}>
+        <div className="projgrid">
           {renderProject()}
         </div>
       ) : (

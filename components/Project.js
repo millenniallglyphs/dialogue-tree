@@ -50,7 +50,8 @@ export default function Project({ image, date, name, description, id, options=[]
                     justify-content: space-between;
                 `}>
                 <div className={css`
-                display: flex
+                display: flex;
+                flex-wrap: wrap;
                 `}>
                     {renderOptions()}
                 </div>

@@ -4,9 +4,58 @@ date: '2021-06-04'
 description: 'Lorem Ipsum'
 image: 'components.png'
 tags: [
-    {label: 'Brand', target: 'test'},
-    {label: 'Development', target: 'test'}
+    {label: 'Usability Testing', target: 'test'},
+    {label: 'Technical Writing', target: 'test'},
+    {label: 'Visual Design', target: 'test'},
+    {label: 'Development', target: 'test'},
+    {label: 'Interaction Design', target: 'test'}
 ]
 ---
 
-Hello World
+### business problem trying to solve
+
+As the foundation moves forward, there is a need to have a cohesive brand identity.
+
+With a host working groups and reference implementations it is becoming a challenge to maintain a cohesive brand identity across multiple applications and websites. Particularly as the organization scales, being able for developers to autonomously deploy brand conformant web content is needed.
+
+To make it as easy as possible for developers to build within the xalogithms foundation visual identity, I decided to build a react component library. There ere a number of advantages to this choice. Now out of the box components can be used in next js and pure react apps. The fonts and color libraries are included with easy to use css variable.
+
+More over deploying components as an npm package makes it easier to manage brand updates across an array of deployments.
+
+Finally, to make the components maximally useful, even beyond react applications, I included a base css file that can be used to style the basic components (buttons h titles, text styling) in applications, regardless of framework. 
+
+### approach
+
+I reviewed the existing work to derive a library of essential components. 
+
+Working with ryan, the primary dev on rule maker, we collaborated to ensure that the components could successfully pass the data required. 
+
+We had to determine fidelity, what level of specificity was required, to ensure that the atomic components and only necessary compound components were included
+
+the other challenging element was including an icon library. These icons are stored as svg and take fill and size arguments.
+
+With brand specific icons, including these was a critical element.
+
+Finally, accessibility testing was required to ensure that contrast, and legibility were appropriate across components. This was accomplished contrast testing applications.
+
+It was also underscored in the docs that accessibility considerations, such image alts were required arguments. 
+
+make explicit my role:
+
+I did all the design work, technical writing, and the majority of the dev work. Ryan contributed feedback and advice, but he was largely occupied with work on the backend and we only intersected when he was making use of the component library in his application.
+
+would like to get contributions for more collaborators. That's a goal going into the future. 
+
+### results
+
+you can install using the following command 
+
+`yarn add xf-material-components`
+
+These are deployed across 3 websites and 1 application .
+
+### impact of the work
+
+Successfully deployed. However, there is not as much use of the react components. It is mostly the style sheet that is contributing—espcially as I move onto the next step of developing a hugo template so that documentation, etc can be deployed with even greater ease.
+
+Impact is somewhat difficult to measure, since the organization is still in its  nascent stages. with more contribution, and more dev hours across the org, it will be easier to assess the impact.

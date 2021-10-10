@@ -22,14 +22,14 @@ export default function DialogueTree() {
         padding: '0.5em',
         borderRadius: '0.5em',
         color: '#204EF0',
-        margin: '1em',
         animationName: 'appear',
         animationDuration: '0.5s',
-        fontWeight: '400'
+        animationFillMode: 'backwards',
+        fontWeight: '400',
       }
     
       const noMarg = {
-        width: '900px',
+        maxWidth: '900px',
         padding: '0px',
         margin: 'auto'
       }
@@ -69,7 +69,7 @@ export default function DialogueTree() {
         setconcat(next, index);
       }} 
       key={index}
-        step={current_step}
+      step={current_step}
       >
           {q}
         </Button>

@@ -9,13 +9,10 @@ export default function DialogueText({children, index}) {
         <div className="dhold">
             <h2 className={css`
                 opacity: 1;
-                display: box;
-                height: 0.5em;
-                margin-top: 2em;
-                margin-bottom: 2em;
-                padding-left: 1em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
                 animation-name: appear;
-                animation-duration: 3s;
+                animation-duration: 2s;
                 animation-delay: ${1.5*index + 's'};
                 animation-fill-mode: backwards;
               `}>
@@ -25,6 +22,7 @@ export default function DialogueText({children, index}) {
               border-radius: 0.5em;
               color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
               font-weight: 400;
+              line-height: 1.8em;
               `}
               >
                 {children}
