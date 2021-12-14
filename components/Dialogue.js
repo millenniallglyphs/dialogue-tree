@@ -9,8 +9,8 @@ const Dialogue = {
         ],
       questions: 
         [
-          {q: "What experience do you have?", next: "experience"},
-          {q: "What makes you passionate?", next: "passion"},
+          {q: "Your experience?", next: "experience"},
+          {q: "What makes you different?", next: "passion"},
         ]
     },
     experience: {

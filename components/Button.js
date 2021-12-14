@@ -20,14 +20,12 @@ export default function Button({children, step, check}) {
             border: none;
             outline: none;
             font-size: 1em;
-            animation-delay: ${((beep*1.5) + 1) + 's'};
+            animation-delay: ${(beep + 0.5) + 's'};
             animation-name: buttonappear;
             animation-duration: 0.5s;
             animation-fill-mode: backwards;
             font-weight: 400;
-            margin-left: 0.5em;
             cursor: pointer;
-            margin-bottom: 1em;
           `}
           onClick={check}
           >

@@ -6,6 +6,7 @@ import StyleSelect from '../../lib/StyleSelect';
 import ContentLeft from '../../components/contentLeft'
 import BlockContent from '../../components/BlockContent';
 import FileBlock from '../../components/FileBlock';
+import GridComp from '../../components/GridComp';
 
 import { MDXProvider } from '@mdx-js/react'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -48,7 +49,6 @@ const renderOptions = () => {
             padding: 0.5em;
             border-radius: 8px;
             background: ${ color.styled==="light" ? ('#FFF') : ('#000')};
-            margin-right: 0.5em;
             color: ${ color.styled==="light" ? ('#909090') : ('#909090')};
             font-size: 0.8em;
         `}>
@@ -58,10 +58,69 @@ const renderOptions = () => {
     ));
   };
 
+const renderFeatures = () => {
+  return postData.features.map(({title, label, target, type}, index) => (
+    <FileBlock type="test" label={label} target={target} title={title} type={type}/>
+  ));
+}  
+
+const renderTeam = () => {
+  return postData.team.map(({name, target}, index) => (
+    <a href={target}>{name}</a>
+  ));
+}
+
     
 
     return (
-        <Hold>
+      <GridComp>
+        <div className={css`
+                margin-top: 78px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1em;
+                padding-left: 1em;
+                padding-top: 1em;
+                align-content: start;    
+            `}>
+              <p>My Roles</p>
+          <div className={css`
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5em;
+                `}>
+                  { postData.tags ? (
+                    renderOptions()
+                  ) : (
+                    null
+                  )
+                  }
+            </div>
+            <p>Team</p>
+            { postData.team ? (
+            renderTeam()
+            ) : (
+              null
+            )}
+            <p>Deliverables</p>
+            <div className={css`
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1em;
+                `}>
+                  { postData.features ? (
+                    renderFeatures()
+                  ) : (
+                    null
+                  )
+                  }
+              </div>
+        </div>
+        
+          <div className={css`
+           max-width: 750px;
+           padding: 1em;
+          `}>
             <div className={css`
                 margin-top: 78px;
             `}>
@@ -78,22 +137,11 @@ const renderOptions = () => {
                 line-height: 1em;
                 color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
             `}>{postData.description}</h3>
-            <div className={css`
-                display: flex
-                `}>
-                {renderOptions()}
-            </div>
+            
             <p>
                 Testing testing testing lorem ipsum
             </p>
-            <div className={css`
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 1em;
-                `}>
-                    <FileBlock type="test" label='blah' target='blah' content="Epiphyte is a tradebot that uses lichen and moss as computational black boxes."/>
-                    <FileBlock type="test" label='foo' target='bar' content="Epiphyte is a tradebot that uses lichen and moss as computational black boxes."/>
-                </div>
+           
             </div> 
             <div className={css`
                 margin-top: 78px;
@@ -104,6 +152,7 @@ const renderOptions = () => {
                     </div>
                 </MDXProvider>
             </div>  
-        </Hold>   
+            </div>
+      </GridComp> 
     )
   }

@@ -87,14 +87,33 @@ export default function DialogueTree() {
 
   const renderTree = () => {
     return trees.map(({dia, qu}, index) => (
-      <div key={index}>
+      <div key={index}
+        className={css`
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5em;
+        `}
+      >
         { qu ? ( 
           <div style={testStyle}>
-          <h2>
-            <span style={qSpan}>
+          <div className={css`
+          display: inline-block;
+          padding: 0.5em 1em 0.5em 1em;
+          border-radius: 0.75em 0.75em 0.12em 0.75em;
+          color: ${ color.styled==="light" ? ('#fff') : ('#39435B')};
+          font-weight: 400;
+          background: #000;
+          animation-name: appear;
+          animation-duration: 0.5s;
+          animation-fill-mode: backwards;
+          `}>
+            <p className={css`
+              margin: 0;
+            `}>
               {qu.q}
-            </span>
-          </h2>
+            </p>
+          </div>
         </div>
         ) : ( 
           null
@@ -118,7 +137,7 @@ export default function DialogueTree() {
             padding-top: 0;
             padding-bottom: 2em;
             width: 100%;
-            background: ${ color.styled==="light" ? ('#FFF') : ('#161616')};
+            background: ${ color.styled==="light" ? ('#F4F4F4') : ('#161616')};
         `}
         >
         <div style={noMarg}>

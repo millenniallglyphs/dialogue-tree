@@ -3,34 +3,32 @@ import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
 import Icon from './Icon';
 
-export default function FileBlock({type, content, label, target}) {
+export default function FileBlock({type, title, label, target}) {
     const color = useContext(StyleSelect)
     return(
         <div className={css`
-            display: flex;
             color: #909090;
-            align-items: center;
             background: #fff;
             border-radius: 8px;
-            padding: 0 1em 1em 1em;
+            padding: 1em;
         `}>
             
-                { type ? (
-                    <div className={css`
-                        margin-right: 1em;
-                    `}>
-                        <Icon type="paper"/>
-                    </div>
-
-                    ) : (
-                        null
-                    )
-                }
             
             <div>
+            <h3 className={css`
+                        font-weight: 400;
+                        font-size: 1.2em;
+                        line-height: 1em;
+                        margin: 0;
+                        color: ${ color.styled==="light" ? ('#39435B') : ('#fff')}
+                    `}>
+                    {title}
+                </h3>
+                {/*
                 <p>
                     {content}
                 </p>
+                */}
                 <a href={target} className={css`
                     color: ${ color.styled==="light" ? ('#204EF0') : ('#2C67FF')};
                 `}>

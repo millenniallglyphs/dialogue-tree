@@ -98,8 +98,34 @@ export default function Meta({kind, passStyle}) {
                             </a>
                         </Link>
                     </div>
+                    <div>
+                    <div
+                    className={css`
+                        display: flex;
+                    `}
+                    >
+                        <div style={target}>
+                        <div className={css`
+                        padding-bottom: 1em;
+                        border-bottom: 1px solid #909090;
+                        margin-right: 2em;
+                        cursor: pointer;
+                        `}>
+                            <p style={small}>Projects</p>
+                        </div>
+                        <div className={css`
+                        padding-bottom: 1em;
+                        border-bottom: 1px solid #909090;
+                        margin-right: 2em;
+                        cursor: pointer;
+                        `}>
+                            <p style={small}>Writing</p>
+                        </div>
+                        </div>
+                    </div>
                     <div style={target}>
                         {toggleStyling()}
+                    </div>
                     </div>
                 </div>
                 <div />

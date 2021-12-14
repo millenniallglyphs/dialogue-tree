@@ -12,7 +12,6 @@ export default function Project({ image, date, name, description, id, options=[]
                 padding: 0.5em;
                 border-radius: 8px;
                 background: ${ color.styled==="light" ? ('#F4F4F4') : ('#000')};
-                margin-right: 0.5em;
                 color: ${ color.styled==="light" ? ('#909090') : ('#909090')};
                 font-size: 0.8em;
             `}>
@@ -48,10 +47,12 @@ export default function Project({ image, date, name, description, id, options=[]
                 <div className={css`
                     display: flex;
                     justify-content: space-between;
+                    margin-bottom: 1em;
                 `}>
                 <div className={css`
                 display: flex;
                 flex-wrap: wrap;
+                gap: 0.5em;
                 `}>
                     {renderOptions()}
                 </div>
@@ -59,6 +60,8 @@ export default function Project({ image, date, name, description, id, options=[]
                     className={css`
                         color: #909090;
                         font-size: 0.8em;
+                        margin: 0;
+                        margin-top: 0.5em;
                     `}
                 >
                     {date}

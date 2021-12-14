@@ -8,6 +8,7 @@ import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
 import { getSortedPostsData } from '../lib/projects'
 import { getSortedWritingData } from '../lib/writing'
+import GridComp from '../components/GridComp'
 
 export async function getStaticProps() {
 
@@ -64,7 +65,7 @@ export default function Home({ allPostsData, allWritingData }) {
   }
 
   const noMarg = {
-    width: '900px',
+    width: '100%',
     padding: '0px',
     margin: 'auto'
   }
@@ -84,38 +85,6 @@ export default function Home({ allPostsData, allWritingData }) {
   const [proj, setProj] = useState(true)
 
 
-  
-  const renderProjToggle = () => {
-    return(
-      <Hold>
-        <div style={target}>
-          <div className={css`
-          padding-bottom: 1em;
-          border-bottom: ${ proj===true ? ('1px solid #909090') : ('none')};
-          margin-right: 2em;
-          cursor: pointer;
-          `}>
-            <p onClick={() => {
-              setProj(true);
-            }}
-            style={small}>Projects</p>
-          </div>
-          <div className={css`
-          padding-bottom: 1em;
-          border-bottom: ${ proj===false ? ('1px solid #909090') : ('none')};
-          margin-right: 2em;
-          cursor: pointer;
-          `}>
-            <p onClick={() => {
-              setProj(false);
-            }}
-            style={small}>Writing</p>
-          </div>
-        </div>
-      </Hold>
-    )
-  }
-
 
 
   return (
@@ -124,7 +93,7 @@ export default function Home({ allPostsData, allWritingData }) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <DialogueTree/>
+    
       <div className={css`
       position: -webkit-sticky;
       position: sticky;
@@ -135,22 +104,24 @@ export default function Home({ allPostsData, allWritingData }) {
       padding-top: 1em;
       padding-bottom: 1em;
       `}>
-        {renderProjToggle()}
       </div>
-      <Hold>
-      { proj ? (
-        <div className="projgrid">
-          {renderProject()}
-        </div>
-      ) : (
-        <>
-          <p>writing</p>
-          {renderWriting()}
-        </>
-      )
+      <GridComp>
+        <DialogueTree/>
+        <Hold>
+        { proj ? (
+          <div className="projgrid">
+            {renderProject()}
+          </div>
+        ) : (
+          <>
+            <p>writing</p>
+            {renderWriting()}
+          </>
+        )
 
-      }
-      </Hold>
+        }
+        </Hold>
+      </GridComp>
       
     </div>
   )
