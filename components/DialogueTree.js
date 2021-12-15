@@ -135,7 +135,7 @@ export default function DialogueTree() {
     return (
         <div className={css`
             padding-top: 0;
-            padding-bottom: 2em;
+            padding-bottom: 1em;
             width: 100%;
             background: ${ color.styled==="light" ? ('#F4F4F4') : ('#161616')};
         `}

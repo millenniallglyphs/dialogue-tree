@@ -5,10 +5,8 @@ import Link from 'next/link';
 export default function Meta({kind, passStyle}) {
     const flex = {
         display: 'flex',
-        alignItems: 'flex-end',
+        alignItems: 'center',
         justifyContent: 'space-between',
-        marginTop: '1em',
-        marginBottom: '1em'
     }
 
     const small = {
@@ -98,35 +96,37 @@ export default function Meta({kind, passStyle}) {
                             </a>
                         </Link>
                     </div>
-                    <div>
-                    <div
-                    className={css`
+                    <div className={css`
                         display: flex;
-                    `}
-                    >
-                        <div style={target}>
-                        <div className={css`
-                        padding-bottom: 1em;
-                        border-bottom: 1px solid #909090;
-                        margin-right: 2em;
-                        cursor: pointer;
-                        `}>
-                            <p style={small}>Projects</p>
+                    `}>
+                            <div
+                            className={css`
+                                display: flex;
+                            `}
+                            >
+                            
+                                <div className={css`
+                                padding-bottom: 0.5em;
+                                border-bottom: 1px solid #909090;
+                                margin-right: 2em;
+                                cursor: pointer;
+                                `}>
+                                    <p style={small}>Projects</p>
+                                </div>
+                                <div className={css`
+                                padding-bottom: 0.5em;
+                                border-bottom: 1px solid #909090;
+                                margin-right: 2em;
+                                cursor: pointer;
+                                `}>
+                                    <p style={small}>Writing</p>
+                                </div>
+                                
+                            </div>
+                            <div style={target}>
+                                {toggleStyling()}
+                            </div>
                         </div>
-                        <div className={css`
-                        padding-bottom: 1em;
-                        border-bottom: 1px solid #909090;
-                        margin-right: 2em;
-                        cursor: pointer;
-                        `}>
-                            <p style={small}>Writing</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div style={target}>
-                        {toggleStyling()}
-                    </div>
-                    </div>
                 </div>
                 <div />
             </Hold>

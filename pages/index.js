@@ -94,19 +94,20 @@ export default function Home({ allPostsData, allWritingData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     
-      <div className={css`
-      position: -webkit-sticky;
-      position: sticky;
-      top: 78px;
-      background: ${ color.styled==="light" ? ('#fff') : ('#161616')};
-      width: 100%;
-      z-index: 5;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      `}>
-      </div>
       <GridComp>
-        <DialogueTree/>
+        <div className={css`
+          height: 100vh;
+          position: -webkit-sticky;
+          position: sticky;
+          top: 0px;
+          padding-top: 56.5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-end;
+        `}>
+          <DialogueTree/>
+        </div>
         <Hold>
         { proj ? (
           <div className="projgrid">

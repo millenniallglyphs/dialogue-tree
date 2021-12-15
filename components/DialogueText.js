@@ -9,7 +9,6 @@ export default function DialogueText({children, index}) {
         
           <div className={css`
               display: inline-block;
-              padding: 0.5em 1em 0.5em 1em;
               border-radius: 0.75em 0.75em 0.75em 0.12em;
               color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
               font-weight: 400;
@@ -19,11 +18,11 @@ export default function DialogueText({children, index}) {
               animation-name: appear;
               animation-duration: 0.75s;
               animation-delay: ${index + 's'};
-              animation-fill-mode: backwards;
+              animation-fill-mode: both;
               `}>
-                <p className='animationInternal'>
+                <div className='animationInternal'>
                 {children}
-                </p>
+                </div>
             </div>
     )
 }

@@ -25,6 +25,7 @@ export default function Project({ image, date, name, description, id, options=[]
             className={css`
                 background: ${ color.styled==="light" ? ('#FFF') : ('#222222')};
                 border-radius: 8px;
+                width: 100%;
             `}
         >
             { image ? (
@@ -44,29 +45,7 @@ export default function Project({ image, date, name, description, id, options=[]
             <div className={css`
                 padding: 1em;
             `}>
-                <div className={css`
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 1em;
-                `}>
-                <div className={css`
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5em;
-                `}>
-                    {renderOptions()}
-                </div>
-                <p
-                    className={css`
-                        color: #909090;
-                        font-size: 0.8em;
-                        margin: 0;
-                        margin-top: 0.5em;
-                    `}
-                >
-                    {date}
-                </p>
-                </div>
+            
                 <Link href={id}>
                     <a>
                     <h3 className={css`
