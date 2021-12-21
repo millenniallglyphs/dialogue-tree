@@ -85,6 +85,7 @@ export default function Meta({kind, passStyle}) {
             background: ${ kind==='light' ? ('#fff') : ('#161616') };
             width: 100%;
             top: 0;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         `}>
             <Hold>
                 <div style={flex}>

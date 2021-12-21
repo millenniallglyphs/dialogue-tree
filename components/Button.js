@@ -26,6 +26,9 @@ export default function Button({children, step, check}) {
             animation-fill-mode: backwards;
             font-weight: 400;
             cursor: pointer;
+            &:hover  {
+              background: #000;
+            }
           `}
           onClick={check}
           >

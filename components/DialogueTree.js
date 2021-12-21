@@ -16,6 +16,7 @@ export default function DialogueTree() {
     const testStyle = {
         width: '100%',
         textAlign: 'right',
+        marginTop: '0.5em'
       }
     
       const qSpan = {
@@ -106,7 +107,7 @@ export default function DialogueTree() {
           background: #000;
           animation-name: appear;
           animation-duration: 0.5s;
-          animation-fill-mode: backwards;
+          animation-fill-mode: both;
           `}>
             <p className={css`
               margin: 0;
@@ -122,7 +123,7 @@ export default function DialogueTree() {
           dia.map(({ d }, index) => (
           <DialogueText key={index} index={index}>
                 {d}
-            </DialogueText>  
+          </DialogueText>  
           ))
         ) : (
           null

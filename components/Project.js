@@ -21,27 +21,21 @@ export default function Project({ image, date, name, description, id, options=[]
         ));
       };
     return(
-        <div
-            className={css`
-                background: ${ color.styled==="light" ? ('#FFF') : ('#222222')};
+        <>
+        { image ? (
+        <div className={css`
                 border-radius: 8px;
                 width: 100%;
-            `}
-        >
-            { image ? (
-            <div className={css`
                 width: 100%;
                 height: 380px;
-                background: #F4F4F4;
-                background-image: url(${image});
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.64) 20.96%, rgba(0, 0, 0, 0) 42.12%), linear-gradient(180deg, rgba(0, 0, 0, 0.64) 24.03%, rgba(0, 0, 0, 0) 48.29%), url(${image});
                 background-position: center;
                 background-size: cover;
-                margin-right: 1em;
-                border-radius: 8px;
-              `}/>
-              ) : (
-                  null
-              )}
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            `}
+        >
             <div className={css`
                 padding: 1em;
             `}>
@@ -53,7 +47,7 @@ export default function Project({ image, date, name, description, id, options=[]
                         font-size: 1.8em;
                         line-height: 1em;
                         margin: 0;
-                        color: ${ color.styled==="light" ? ('#39435B') : ('#fff')}
+                        color: ${ color.styled==="light" ? ('#fff') : ('#39435B')}
                     `}>
                         {name}
                     </h3>
@@ -66,6 +60,13 @@ export default function Project({ image, date, name, description, id, options=[]
                 </p>
                 
             </div>
+            <div>
+                <p> Read the case study</p>
+            </div>
         </div>
+        ) : (
+            null
+        )}
+        </>
     )
 }

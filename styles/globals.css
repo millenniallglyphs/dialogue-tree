@@ -80,7 +80,6 @@ h4 {
     margin-bottom: 0em;
     line-height: 0em;
     font-size: 0em;
-    border-radius: 0.75em 0.75em 0.75em 0.12em;
   }
   25% {
     font-size: 2rem;
@@ -95,7 +94,6 @@ h4 {
     margin-bottom: 0em;
     line-height: 2.5rem;
     font-size: 2rem;
-    border-radius: 0.75em 0.75em 0.75em 0.12em;
   }
 }
 
