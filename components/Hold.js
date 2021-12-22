@@ -1,6 +1,6 @@
 export default function Hold({children}) {
     const holdStyle = {
-        maxWidth: '100%',
+        width: '100%',
         padding: '1em',
         margin: 'auto'
     }
