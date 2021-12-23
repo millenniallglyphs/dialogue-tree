@@ -32,7 +32,10 @@ export default function DialogueTree() {
       const noMarg = {
         maxWidth: '900px',
         padding: '0px',
-        margin: 'auto'
+        margin: 'auto',
+        display: 'grid',
+        height: '100vh',
+        gridTemplateRows: '1fr 65px'
       }
     
     
@@ -136,7 +139,6 @@ export default function DialogueTree() {
     return (
         <div className={css`
             padding-top: 0;
-            padding-bottom: 1em;
             width: 100%;
             background: ${ color.styled==="light" ? ('#F4F4F4') : ('#161616')};
         `}

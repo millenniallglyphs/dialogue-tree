@@ -149,12 +149,11 @@ h4 {
 
 
 .chatHold {
-  height: 600px;
   display: flex;
   flex-flow: column;
   max-width: 850px;
   padding: 1em;
-  margin-top: 83px;
+  overflow-y: scroll; /* or overflow-y: auto */
 }
 
 .chat {
@@ -192,9 +191,8 @@ h4 {
   max-width: 900px;
   min-height: 35px;
   gap: 0.5em;
-  border-top: 1px solid #909090;
-  padding-top: 1em;
-  margin-left: 1em;
+  padding: 1em;
+  background: #ECECEC;
 }
 
 
@@ -207,12 +205,12 @@ h4 {
 }
 
 .projgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
-  padding-top: 56.5px;
   width: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
+
 
 @media screen and (max-width: 700px)  {
   .projgrid {

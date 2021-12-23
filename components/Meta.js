@@ -86,6 +86,7 @@ export default function Meta({kind, passStyle}) {
             width: 100%;
             top: 0;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            z-index: 5;
         `}>
             <Hold>
                 <div style={flex}>

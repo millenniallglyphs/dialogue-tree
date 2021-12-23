@@ -108,7 +108,12 @@ export default function Home({ allPostsData, allWritingData }) {
         `}>
           <DialogueTree/>
         </div>
-        <Hold>
+        <div>
+          <ul className={css`
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          `}>
         { proj ? (
           <div className="projgrid">
             {renderProject()}
@@ -121,7 +126,8 @@ export default function Home({ allPostsData, allWritingData }) {
         )
 
         }
-        </Hold>
+        </ul>
+        </div>
       </GridComp>
       
     </div>

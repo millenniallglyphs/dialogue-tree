@@ -14,6 +14,8 @@ export default function Project({ image, date, name, description, id, options=[]
                 color: ${ color.styled==="light" ? ('#fff') : ('#909090')};
                 font-size: 0.8em;
                 border: 1px solid #fff;
+                background: rgba(0, 0, 0, 0.37);
+                backdrop-filter: blur(8px);
             `}>
                 {label}
             </div>
@@ -21,22 +23,24 @@ export default function Project({ image, date, name, description, id, options=[]
         ));
       };
     return(
-        <>
+        <li>
         { image ? (
         <div className={css`
-                border-radius: 8px;
                 width: 100%;
-                width: 100%;
-                height: 380px;
-                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.64) 24.03%, rgba(0, 0, 0, 0) 48.29%), url(${image});
+                height: 100vh;
+                scroll-snap-align: start;
+                background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 59.19%), linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 48.29%), url(${image});
                 background-position: center;
-                background-size: cover;
+                background-size: 120%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                padding: 1em;
+                padding: 56px 1em 1em 1em;
+                transition: background-size 3s;
+                background-repeat: no-repeat;
                 &:hover {
                     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    background-size: 130%;
                 }
             `}
         >
@@ -52,6 +56,7 @@ export default function Project({ image, date, name, description, id, options=[]
                         font-size: 1.8em;
                         line-height: 1em;
                         margin: 0;
+                        padding-top: 1em;
                         color: ${ color.styled==="light" ? ('#fff') : ('#39435B')}
                     `}>
                         {name}
@@ -69,6 +74,7 @@ export default function Project({ image, date, name, description, id, options=[]
                 display: flex;
                 justify-content: space-between;
                 color: #fff;
+                align-items: center;
             `}>
                 <div className={css`
                     display: flex;
@@ -77,14 +83,20 @@ export default function Project({ image, date, name, description, id, options=[]
                 `}>
                     {renderOptions()}
                 </div>
-                <div>
-                    <p> Read the case study</p>
+                <div className={css`
+                    margin: 0;
+                    padding: 0;
+                `}>
+                    <p className={css`
+                        margin: 0;
+                        padding: 0;
+                    `}> Read the case study</p>
                 </div>
             </div>
         </div>
         ) : (
             null
         )}
-        </>
+        </li>
     )
 }
