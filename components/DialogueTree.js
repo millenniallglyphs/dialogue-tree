@@ -143,15 +143,26 @@ export default function DialogueTree() {
             background: ${ color.styled==="light" ? ('#F4F4F4') : ('#161616')};
         `}
         >
-        <div style={noMarg}>
+        <div className={css`
+          maxWidth: 900px;
+          padding: 0px;
+          margin: auto;
+          display: grid;
+          height: 100vh;
+          grid-template-rows: 1fr 65px;
+          @media (max-width: 1000px) {
+            height: 40vh;
+            grid-template-rows: 1fr 45px;
+          }
+        `}>
           <div className="chatHold">
             <div className={css`
                 flex: 1 1 auto;
                 display: flex;
                 flex-direction: column-reverse;
                 background: none;
-                overflow-y: scroll; /* or overflow-y: auto */
-                width: 100%;
+                height: 100%;
+                overflow-y: scroll;
             `}>
               <div>
               {renderTree()}

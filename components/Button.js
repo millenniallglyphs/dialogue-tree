@@ -15,7 +15,7 @@ export default function Button({children, step, check}) {
             padding-left: 1em;
             padding-right: 1em;
             color: #fff;
-            background: ${ color.styled==="light" ? ('#204EF0') : ('#2C67FF')};
+            background: ${ color.styled==="light" ? ('#000') : ('FFF')};
             border-radius: 0.5em;
             border: none;
             outline: none;

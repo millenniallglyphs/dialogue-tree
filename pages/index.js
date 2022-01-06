@@ -105,6 +105,13 @@ export default function Home({ allPostsData, allWritingData }) {
           flex-direction: column;
           justify-content: flex-end;
           align-items: flex-end;
+          grid-area: 1 / 1 / 2 /2;
+          z-index: 1;
+          @media (max-width: 1000px) {
+            height: 40vh;
+            grid-area: 2 / 1 / 3 /2;
+            padding-top: 0px;
+          }
         `}>
           <DialogueTree/>
         </div>

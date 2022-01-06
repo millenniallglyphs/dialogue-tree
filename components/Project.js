@@ -29,24 +29,37 @@ export default function Project({ image, date, name, description, id, options=[]
                 width: 100%;
                 height: 100vh;
                 scroll-snap-align: start;
-                background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 59.19%), linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 48.29%), url(${image});
-                background-position: center;
-                background-size: 120%;
-                display: flex;
-                flex-direction: column;
+                padding: 74px 1em 1em 1em;
+                border-radius: 8px;
                 justify-content: space-between;
-                padding: 56px 1em 1em 1em;
-                transition: background-size 3s;
-                background-repeat: no-repeat;
-                &:hover {
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    background-size: 130%;
-                }
+                @media (max-width: 1000px) {
+                    height: 60vh;
+                    width: 91vw;
+                    padding: 74px 0em 1em 1em;
+                  }
             `}
-        >
+        > 
+        <div className={css`
+            background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 59.19%), linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 48.29%), url(${image});
+            background-position: center;
+            background-size: 120%;
+            transition: background-size 3s, box-shadow 1s;
+            background-repeat: no-repeat;
+            &:hover {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                background-size: 130%;
+            }
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1em;
+        `}>
             <div className={css`
                 display: flex;
                 justify-content: space-between;
+                
             `}>
                 <div>
                 <Link href={id}>
@@ -92,6 +105,7 @@ export default function Project({ image, date, name, description, id, options=[]
                         padding: 0;
                     `}> Read the case study</p>
                 </div>
+            </div>
             </div>
         </div>
         ) : (
