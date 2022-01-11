@@ -105,12 +105,17 @@ export default function DialogueTree() {
           display: inline-block;
           padding: 0.5em 1em 0.5em 1em;
           border-radius: 0.75em 0.75em 0.12em 0.75em;
-          color: ${ color.styled==="light" ? ('#fff') : ('#39435B')};
           font-weight: 400;
           background: #000;
           animation-name: appear;
           animation-duration: 0.5s;
           animation-fill-mode: both;
+          @media (max-width: 1000px) {
+            animation-name: appearb;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            font-size: 1.2em;
+          }
           `}>
             <p className={css`
               margin: 0;
@@ -169,7 +174,24 @@ export default function DialogueTree() {
               </div>
             </div>
           </div>
-          <div className="questionHold">
+          <div className={css`
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            max-width: 900px;
+            min-height: 35px;
+            gap: 0.5em;
+            padding: 1em;
+            background: ${ color.styled==="light" ? ('#ECECEC') : ('#282828')};
+            margin-left: 1em;
+            margin-right: 1em;
+            border-radius: 8px 8px 0px 0px;
+            @media (max-width: 1000px) {
+              margin-left: 0em;
+              margin-right: 0em;
+              border-radius: 0em;
+            }
+          `}>
             {renderQuestions()}
           </div>
         </div>

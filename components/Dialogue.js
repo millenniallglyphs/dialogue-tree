@@ -2,9 +2,9 @@ const Dialogue = {
     start: {
       dialogue:
         [ 
-          {d: "Hi. 🐌"},
-          {d: "My name's Calvin."},
-          {d: 'I design digital products for the complexity of real life.'},
+          {d: "Hi.  🌱"},
+          {d: "My Name's Calvin."},
+          {d: "I design products that bring people value in a complex and changing world."},
           {d: 'What can I tell you about my practice?'},
         ],
       questions: 

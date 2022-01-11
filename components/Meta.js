@@ -54,7 +54,8 @@ export default function Meta({kind, passStyle}) {
     }
 
     const home = {
-        display: 'flex'
+        display: 'flex',
+        alignItems: 'center',
     }
 
     const target = {
@@ -68,7 +69,7 @@ export default function Meta({kind, passStyle}) {
                 onClick={passStyle}
                 className={css`
                     width: 20.5px;
-                    background: ${ kind==="light" ? ('#F4F4F4') : ('#222222')};
+                    background: ${ kind==="light" ? ('#222222') : ('#F4F4F4')};
                     border-radius: 4px;
                     border: 0px solid #909090;
                     cursor: pointer;
@@ -82,19 +83,26 @@ export default function Meta({kind, passStyle}) {
     return (
         <div className={css`
             position: fixed;
-            background: ${ kind==='light' ? ('#fff') : ('#161616') };
+            background: ${ kind==='light' ? ('#161616') : ('#fff') };
             width: 100%;
             top: 0;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             z-index: 5;
         `}>
             <Hold>
                 <div style={flex}>
                     <div style={home}>
-                        <div style={favicon}></div>
+                        <div className={css`
+                            height: 3em;
+                            width: 3em;
+                            background-image: url('headshot.png');
+                            background-size: cover;
+                            background-position: center;
+                            border-radius: 2em;
+                            margin-right: 1em;
+                        `}></div>
                         <Link href="/">
                             <a>
-                                <p style={small}>Calvin</p>
+                                <p style={small}>Calvin Designs Products for Life</p>
                             </a>
                         </Link>
                     </div>
@@ -108,16 +116,12 @@ export default function Meta({kind, passStyle}) {
                             >
                             
                                 <div className={css`
-                                padding-bottom: 0.5em;
-                                border-bottom: 1px solid #909090;
                                 margin-right: 2em;
                                 cursor: pointer;
                                 `}>
                                     <p style={small}>Projects</p>
                                 </div>
                                 <div className={css`
-                                padding-bottom: 0.5em;
-                                border-bottom: 1px solid #909090;
                                 margin-right: 2em;
                                 cursor: pointer;
                                 `}>

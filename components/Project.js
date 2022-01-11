@@ -29,7 +29,7 @@ export default function Project({ image, date, name, description, id, options=[]
                 width: 100%;
                 height: 100vh;
                 scroll-snap-align: start;
-                padding: 74px 1em 1em 1em;
+                padding: 94px 1em 1em 0em;
                 border-radius: 8px;
                 justify-content: space-between;
                 @media (max-width: 1000px) {
@@ -65,20 +65,21 @@ export default function Project({ image, date, name, description, id, options=[]
                 <Link href={id}>
                     <a>
                     <h3 className={css`
-                        font-weight: 400;
-                        font-size: 1.8em;
+                        font-weight: 800;
+                        font-size: 6em;
                         line-height: 1em;
                         margin: 0;
-                        padding-top: 1em;
-                        color: ${ color.styled==="light" ? ('#fff') : ('#39435B')}
+                        color: #fff;
                     `}>
                         {name}
                     </h3>
                     </a>
                 </Link>
                 </div>
-                <div>
-                    <p>Date</p>
+                <div className={css`
+                color: #fff;
+                `}>
+                    <p>{date}</p>
                 </div>
                 
                 
@@ -103,7 +104,7 @@ export default function Project({ image, date, name, description, id, options=[]
                     <p className={css`
                         margin: 0;
                         padding: 0;
-                    `}> Read the case study</p>
+                    `}> Read More →</p>
                 </div>
             </div>
             </div>

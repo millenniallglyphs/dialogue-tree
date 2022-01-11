@@ -96,9 +96,12 @@ const renderTeam = () => {
                   )
                   }
             </div>
-            <p>Team</p>
+            
             { postData.team ? (
-            renderTeam()
+              <>
+              <p>Team</p>
+              {renderTeam()}
+            </>
             ) : (
               null
             )}
@@ -126,8 +129,8 @@ const renderTeam = () => {
             `}>
                 
             <h1 className={css`
-                font-weight: 400;
-                font-size: 3.4em;
+                font-weight: 800;
+                font-size: 4em;
                 line-height: 1em;
                 color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
             `}>{postData.title}</h1>
@@ -137,10 +140,6 @@ const renderTeam = () => {
                 line-height: 1em;
                 color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
             `}>{postData.description}</h3>
-            
-            <p>
-                Testing testing testing lorem ipsum
-            </p>
            
             </div> 
             <div className={css`

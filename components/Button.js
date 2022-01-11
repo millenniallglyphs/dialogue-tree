@@ -5,7 +5,6 @@ import { useContext } from 'react';
 export default function Button({children, step, check}) {
 
     const color = useContext(StyleSelect)
-    console.log(step.length)
     const beep = step.length
 
     return (
@@ -14,8 +13,8 @@ export default function Button({children, step, check}) {
             padding: 0.5em;
             padding-left: 1em;
             padding-right: 1em;
-            color: #fff;
-            background: ${ color.styled==="light" ? ('#000') : ('FFF')};
+            color: ${ color.styled==="light" ? ('#fff') : ('#000')};
+            background: ${ color.styled==="light" ? ('#000') : ('#FFF')};
             border-radius: 0.5em;
             border: none;
             outline: none;

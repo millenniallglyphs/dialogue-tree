@@ -10,17 +10,21 @@ export default function DialogueText({children, index}) {
           <div className={css`
               display: inline-block;
               border-radius: 0.75em 0.75em 0.75em 0.12em;
-              color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
               font-weight: 400;
-              background: #fff;
+              background-color: ${ color.styled==="light" ? ('#fff') : ('#000')};
               opacity: 1;
               margin-top: 0em;
               animation-name: appear;
               animation-duration: 0.75s;
               animation-delay: ${index + 's'};
               animation-fill-mode: both;
+              @media (max-width: 1000px) {
+                animation-name: appearb;
+              }
               `}>
-                <div className='animationInternal'>
+                <div className={css`
+                     color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
+                `}>
                 {children}
                 </div>
             </div>
