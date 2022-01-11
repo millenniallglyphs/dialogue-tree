@@ -129,6 +129,18 @@ h4 {
   }
 }
 
+@keyframes select {
+  0% {
+    margin-left: -1em;
+  }
+  50% {
+    margin-left: 1em;
+  }
+  100% {
+    margin-left: -1em;
+  }
+}
+
 .animationInternal {
   padding: 0em;
   margin: 0em;

@@ -104,6 +104,7 @@ export default function Project({ image, date, name, description, id, options=[]
                     <p className={css`
                         margin: 0;
                         padding: 0;
+                        font-weight: 700;
                     `}> Read More →</p>
                 </div>
             </div>

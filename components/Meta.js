@@ -102,7 +102,7 @@ export default function Meta({kind, passStyle}) {
                         `}></div>
                         <Link href="/">
                             <a>
-                                <p style={small}>Calvin Designs Products for Life</p>
+                                <p style={small}>Calvin Designs Products</p>
                             </a>
                         </Link>
                     </div>
