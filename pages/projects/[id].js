@@ -75,13 +75,17 @@ const renderTeam = () => {
     return (
       <GridComp>
         <div className={css`
-                margin-top: 78px;
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-gap: 1em;
                 padding-left: 1em;
                 padding-top: 1em;
-                align-content: start;    
+                align-content: start;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0px;
+                padding-top: 86.5px;
+                height: 100vh;
             `}>
               <p>My Roles</p>
           <div className={css`
@@ -132,21 +136,18 @@ const renderTeam = () => {
                 font-weight: 800;
                 font-size: 4em;
                 line-height: 1em;
-                color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
+                color: ${ color.styled==="light" ? ('#000') : ('#fff')};
             `}>{postData.title}</h1>
-            <h3 className={css`
-                font-weight: 400;
-                font-size: 1.8em;
-                line-height: 1em;
-                color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
-            `}>{postData.description}</h3>
+        
            
             </div> 
             <div className={css`
-                margin-top: 78px;
+                margin-top: 0px;
             `}>
                 <MDXProvider components={components}>
-                    <div className="wrapper">
+                    <div className="wrapper" className={css`
+                     color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
+                    `}>
                         <MDXRemote {...source} />
                     </div>
                 </MDXProvider>

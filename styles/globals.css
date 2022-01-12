@@ -226,6 +226,7 @@ h4 {
 
 .wrapper {
   width: 100%;
+  color: red;
 }
 
 .wrapper>*>img {

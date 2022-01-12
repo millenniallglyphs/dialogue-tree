@@ -55,6 +55,12 @@ export default function Project({ image, date, name, description, id, options=[]
             flex-direction: column;
             justify-content: space-between;
             padding: 1em;
+            @media (max-width: 1000px) {
+                background-size: cover;
+                &:hover {
+                    background-size: cover;
+                }
+            }
         `}>
             <div className={css`
                 display: flex;
@@ -70,6 +76,12 @@ export default function Project({ image, date, name, description, id, options=[]
                         line-height: 1em;
                         margin: 0;
                         color: #fff;
+                        @media (max-width: 1000px) {
+                            font-size: 4em;
+                        }
+                        @media (max-width: 600px) {
+                            font-size: 2em;
+                        }
                     `}>
                         {name}
                     </h3>
