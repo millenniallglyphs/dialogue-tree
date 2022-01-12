@@ -85,7 +85,7 @@ export default function DialogueTree() {
 
   useEffect(() => {
     window.addEventListener('load', () => {
-      console.log(trees);
+      
     });
   });
 
@@ -106,10 +106,11 @@ export default function DialogueTree() {
           padding: 0.5em 1em 0.5em 1em;
           border-radius: 0.75em 0.75em 0.12em 0.75em;
           font-weight: 400;
-          background: #000;
+          background: ${ color.styled==="light" ? ('#000') : ('#fff')};
           animation-name: appear;
           animation-duration: 0.5s;
           animation-fill-mode: both;
+          color: ${ color.styled==="light" ? ('#fff') : ('#39435B')};
           @media (max-width: 1000px) {
             animation-name: appearb;
             animation-duration: 0.5s;

@@ -38,8 +38,6 @@ export async function getStaticPaths() {
 
 export default function Post({ source, postData }) {
 
-console.log(postData)
-
 const color = useContext(StyleSelect)
 
 const renderOptions = () => {
@@ -60,13 +58,13 @@ const renderOptions = () => {
 
 const renderFeatures = () => {
   return postData.features.map(({title, label, target, type}, index) => (
-    <FileBlock type="test" label={label} target={target} title={title} type={type}/>
+    <FileBlock type="test" label={label} target={target} title={title} type={type} key={index}/>
   ));
 }  
 
 const renderTeam = () => {
   return postData.team.map(({name, target}, index) => (
-    <a href={target}>{name}</a>
+    <a href={target} key={index}>{name}</a>
   ));
 }
 

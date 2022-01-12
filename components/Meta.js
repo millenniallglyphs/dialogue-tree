@@ -94,7 +94,7 @@ export default function Meta({kind, passStyle}) {
                         <div className={css`
                             height: 3em;
                             width: 3em;
-                            background-image: url('headshot.png');
+                            background-image: url('/headshot.png');
                             background-size: cover;
                             background-position: center;
                             border-radius: 2em;
@@ -102,7 +102,7 @@ export default function Meta({kind, passStyle}) {
                         `}></div>
                         <Link href="/">
                             <a>
-                                <p style={small}>Calvin Designs Products</p>
+                                <p style={small}>Calvin Hutcheon</p>
                             </a>
                         </Link>
                     </div>
@@ -119,7 +119,7 @@ export default function Meta({kind, passStyle}) {
                                 margin-right: 2em;
                                 cursor: pointer;
                                 `}>
-                                    <p style={small}>Projects</p>
+                                    <p style={small}>Work</p>
                                 </div>
                                 <div className={css`
                                 margin-right: 2em;

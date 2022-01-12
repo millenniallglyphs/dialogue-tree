@@ -22,6 +22,9 @@ export default function Project({ image, date, name, description, id, options=[]
           </a>
         ));
       };
+    const grada = `linear-gradient(360deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 59.19%), linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 48.29%), url(${image})`
+
+    const gradb = `linear-gradient(360deg, rgba(300, 300, 300, 0.64) 0%, rgba(300, 300, 300, 0) 59.19%), linear-gradient(180deg, rgba(300, 300, 300, 0.64) 0%, rgba(300, 300, 300, 0) 48.29%), url(${image})`
     return(
         <li>
         { image ? (
@@ -40,7 +43,7 @@ export default function Project({ image, date, name, description, id, options=[]
             `}
         > 
         <div className={css`
-            background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 59.19%), linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 48.29%), url(${image});
+            background-image: ${ color.styled==="light" ? grada : gradb};
             background-position: center;
             background-size: 120%;
             transition: background-size 3s, box-shadow 1s;
@@ -75,7 +78,7 @@ export default function Project({ image, date, name, description, id, options=[]
                         font-size: 6em;
                         line-height: 1em;
                         margin: 0;
-                        color: #fff;
+                        color: ${ color.styled==="light" ? ('#fff') : ('#000')};
                         @media (max-width: 1000px) {
                             font-size: 4em;
                         }
@@ -89,7 +92,7 @@ export default function Project({ image, date, name, description, id, options=[]
                 </Link>
                 </div>
                 <div className={css`
-                color: #fff;
+                color: ${ color.styled==="light" ? ('#fff') : ('#000')};
                 `}>
                     <p>{date}</p>
                 </div>
@@ -99,7 +102,7 @@ export default function Project({ image, date, name, description, id, options=[]
             <div className={css`
                 display: flex;
                 justify-content: space-between;
-                color: #fff;
+                color: ${ color.styled==="light" ? ('#fff') : ('#000')};
                 align-items: center;
             `}>
                 <div className={css`
