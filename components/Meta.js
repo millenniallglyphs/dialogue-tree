@@ -125,13 +125,17 @@ export default function Meta({kind, passStyle}) {
                                 margin-right: 2em;
                                 cursor: pointer;
                                 `}>
-                                    <p style={small}>Writing</p>
+                                    <Link href="/writing">
+                                        <p style={small}>Writing</p>
+                                    </Link>
                                 </div>
                                 
                             </div>
+                            {/*
                             <div style={target}>
                                 {toggleStyling()}
                             </div>
+                            */}
                         </div>
                 </div>
                 <div />

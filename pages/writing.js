@@ -27,7 +27,11 @@ export default function Writing({ allPostsData, allWritingData }){
     const renderWriting = () => {
         return(
           allWritingData.map(({title, id, date, description, tags}) => (
+            <div>
+                <h1>{title}</h1>
+                <a>Read More</a>
             <Project name={title} date={date} description={description} options={tags} id={'/writing/'+id} key={id}/>
+            </div>
           ))
         )
       }
@@ -36,10 +40,12 @@ export default function Writing({ allPostsData, allWritingData }){
             <div>
                 
             </div>
-        <ul>
+            <div>
+              <ul>
 
-        {renderWriting()}
-        </ul>
+              {renderWriting()}
+              </ul>
+          </div>
         </GridComp>
     )
 }

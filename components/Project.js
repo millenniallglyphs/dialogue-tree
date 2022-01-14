@@ -93,8 +93,11 @@ export default function Project({ image, date, name, description, id, options=[]
                 </div>
                 <div className={css`
                 color: ${ color.styled==="light" ? ('#fff') : ('#000')};
+                width: 60px;
                 `}>
+                    {/*
                     <p>{date}</p>
+                    */}
                 </div>
                 
                 
@@ -103,7 +106,7 @@ export default function Project({ image, date, name, description, id, options=[]
                 display: flex;
                 justify-content: space-between;
                 color: ${ color.styled==="light" ? ('#fff') : ('#000')};
-                align-items: center;
+                align-items: flex-end;
             `}>
                 <div className={css`
                     display: flex;
@@ -120,6 +123,7 @@ export default function Project({ image, date, name, description, id, options=[]
                         margin: 0;
                         padding: 0;
                         font-weight: 700;
+                        width: 80px;
                     `}> Read More →</p>
                 </div>
             </div>
