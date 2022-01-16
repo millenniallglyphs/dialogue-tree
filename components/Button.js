@@ -26,7 +26,7 @@ export default function Button({children, step, check}) {
             font-weight: 400;
             cursor: pointer;
             &:hover  {
-              background: #000;
+              background: #39435B
             }
           `}
           onClick={check}
