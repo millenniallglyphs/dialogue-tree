@@ -2,7 +2,7 @@ import Hold from './Hold'
 import { css } from '@emotion/css';
 import Link from 'next/link';
 
-export default function Meta({kind, passStyle}) {
+export default function Meta() {
     const flex = {
         display: 'flex',
         alignItems: 'center',
@@ -62,7 +62,7 @@ export default function Meta({kind, passStyle}) {
         display: 'flex',
         justifyContent: 'flex-end'
     }
-
+/*
     const toggleStyling = () => {
         return (
             <button
@@ -79,11 +79,12 @@ export default function Meta({kind, passStyle}) {
             </button>
         )
     }
+    */
 
     return (
         <div className={css`
             position: fixed;
-            background: ${ kind==='light' ? ('#161616') : ('#fff') };
+            background: #161616;
             width: 100%;
             top: 0;
             z-index: 5;
@@ -100,7 +101,7 @@ export default function Meta({kind, passStyle}) {
                             border-radius: 2em;
                             margin-right: 1em;
                         `}></div>
-                        <Link href="/">
+                        <Link href="/work">
                             <a>
                                 <p style={small}>Calvin Hutcheon</p>
                             </a>
@@ -119,7 +120,9 @@ export default function Meta({kind, passStyle}) {
                                 margin-right: 2em;
                                 cursor: pointer;
                                 `}>
-                                    <p style={small}>Work</p>
+                                    <Link href="/work">
+                                        <p style={small}>Work</p>
+                                    </Link>
                                 </div>
                                 <div className={css`
                                 margin-right: 2em;

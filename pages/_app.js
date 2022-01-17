@@ -10,6 +10,8 @@ function MyApp({ Component, pageProps }) {
 
 const [styled, setStyled] = useState("light");
 
+const getLayout = Component.getLayout || ((page) => page)
+
 function handleStyleChange(){
   if ( styled === "light" ) {
     setStyled("dark");
@@ -18,17 +20,11 @@ function handleStyleChange(){
   }
 };
 
-  return (
+  return getLayout(
     <>
-    <StyleSelect.Provider value={{styled, setStyled}}>
-      <div className={css`
-        min-height: 100vh;
-        background-color: ${styled==="light" ? ('#F4F4F4') : ('#161616')};
-      `}>
-        <Meta passStyle={handleStyleChange} kind={styled}/>
-        <Component {...pageProps} />
-      </div>
-    </StyleSelect.Provider>
+      <StyleSelect.Provider value={{styled, setStyled}}>
+          <Component {...pageProps} />
+      </StyleSelect.Provider>
     </>
   )
 }

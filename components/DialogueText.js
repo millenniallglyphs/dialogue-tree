@@ -11,7 +11,7 @@ export default function DialogueText({children, index}) {
               display: inline-block;
               border-radius: 0.75em 0.75em 0.75em 0.12em;
               font-weight: 400;
-              background-color: ${ color.styled==="light" ? ('#fff') : ('#000')};
+              background-color: #fff;
               opacity: 1;
               margin-top: 0em;
               animation-name: appear;
@@ -23,7 +23,7 @@ export default function DialogueText({children, index}) {
               }
               `}>
                 <div className={css`
-                     color: ${ color.styled==="light" ? ('#39435B') : ('#fff')};
+                     color: #39435B;
                 `}>
                 {children}
                 </div>

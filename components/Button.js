@@ -13,8 +13,8 @@ export default function Button({children, step, check}) {
             padding: 0.5em;
             padding-left: 1em;
             padding-right: 1em;
-            color: ${ color.styled==="light" ? ('#fff') : ('#000')};
-            background: ${ color.styled==="light" ? ('#000') : ('#FFF')};
+            color: #fff;
+            background: #000;
             border-radius: 0.5em;
             border: none;
             outline: none;

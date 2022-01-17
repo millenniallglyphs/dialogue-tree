@@ -106,11 +106,11 @@ export default function DialogueTree() {
           padding: 0.5em 1em 0.5em 1em;
           border-radius: 0.75em 0.75em 0.12em 0.75em;
           font-weight: 400;
-          background: ${ color.styled==="light" ? ('#000') : ('#fff')};
+          background: #000;
           animation-name: appear;
           animation-duration: 0.5s;
           animation-fill-mode: both;
-          color: ${ color.styled==="light" ? ('#fff') : ('#39435B')};
+          color: #fff;
           @media (max-width: 1000px) {
             animation-name: appearb;
             animation-duration: 0.5s;
@@ -146,7 +146,7 @@ export default function DialogueTree() {
         <div className={css`
             padding-top: 0;
             width: 100%;
-            background: ${ color.styled==="light" ? ('#F4F4F4') : ('#161616')};
+            background: #F4F4F4;
         `}
         >
         <div className={css`
@@ -183,7 +183,7 @@ export default function DialogueTree() {
             min-height: 35px;
             gap: 0.5em;
             padding: 1em;
-            background: ${ color.styled==="light" ? ('#ECECEC') : ('#282828')};
+            background: #ECECEC;
             margin-left: 1em;
             margin-right: 1em;
             border-radius: 8px 8px 0px 0px;
