@@ -1,5 +1,4 @@
 import { getAllPostIds, getPostData } from '../../lib/projects'
-import { css } from '@emotion/css'
 import ContentLeft from '../../components/contentLeft'
 import BlockContent from '../../components/BlockContent';
 import SEO from '../../components/Seo';
@@ -35,9 +34,7 @@ export default function Post({ source, postData }) {
       <SEO title={postData.title} img={postData.image} description={postData.description}/>
       <PostLayout title={postData.title} image={postData.image} date={postData.date} team={postData.team} features={postData.features} tags={postData.tags}>
           <MDXProvider components={components}>
-              <div className="wrapper" className={css`
-                color: #39435B;
-              `}>
+              <div className="wrapper">
                   <MDXRemote {...source} />
               </div>
           </MDXProvider>

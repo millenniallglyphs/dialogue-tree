@@ -4,6 +4,7 @@ import { getSortedWritingData } from '../lib/writing'
 import ListLayout from '../components/ListLayout'
 import BasicLayout from '../components/BasicLayout'
 import { css } from '@emotion/css';
+import SEO from '../components/Seo'
 
 export async function getStaticProps() {
 
@@ -21,36 +22,54 @@ export async function getStaticProps() {
 export default function Writing({ allPostsData, allWritingData }){
     const renderWriting = () => {
         return(
-          allWritingData.map(({title, id, date, description, tags}) => (
-            <div className={css`
-              border: 1px solid #000;
+          allWritingData.map(({title, id, date, description, tags}, index) => (
+            <li key={index}>
+            <div  className={css`
               padding: 1em;
               border-radius: 8px;
               margin-bottom: 1em;
+              background: #fff;
+              margin-right: 1em;
+              width: 100%;
+                height: auto;
+                scroll-snap-align: start;
+              @media (max-width: 1000px) {
+                height: 60vh;
+                width: 91vw;
+                padding: 74px 0em 1em 1em;
+              }
             `}>
                 <h1 className={css`
                   font-weight: 700;
                   margin: 0;
                 `}>{title}</h1>
                 <a>Read More</a>
-            <Project name={title} date={date} description={description} options={tags} id={'/writing/'+id} key={id}/>
             </div>
+            </li>
           ))
         )
       }
     return(
       <>
+      <SEO title="Product Design for a Complex World" description="Calvin Hutcheon is a product designer dedicated to delivering value to users by championing resilience, tolerance, and capacity for complexity." img="meta.png"/>
+
       <div className={css`
         margin-top: 96px;
+        @media (max-width: 1000px) {
+          margin-top: 60px;
+        }
+
       `}>
-       </div>
       <ul className={css`
-      list-style-type: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
       `}>
         <div className="projgrid">
           {renderWriting()}
         </div>
       </ul>
+      </div>
       </>
     )
 }

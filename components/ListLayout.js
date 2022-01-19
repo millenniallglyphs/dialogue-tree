@@ -26,17 +26,6 @@ export default function ListLayout({children}) {
           <DialogueTree/>
         </div>
         <div>
-            {/*
-          <ul className={css`
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-          `}>
-          <div className="projgrid">
-            {renderProject()}
-          </div>
-        </ul>
-            */}
             {children}
         </div>
       </GridComp>

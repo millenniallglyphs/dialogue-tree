@@ -117,7 +117,7 @@ export default function Meta() {
                             >
                             
                                 <div className={css`
-                                margin-right: 2em;
+                                margin-right: 1em;
                                 cursor: pointer;
                                 `}>
                                     <Link href="/work">
@@ -125,7 +125,6 @@ export default function Meta() {
                                     </Link>
                                 </div>
                                 <div className={css`
-                                margin-right: 2em;
                                 cursor: pointer;
                                 `}>
                                     <Link href="/writing">

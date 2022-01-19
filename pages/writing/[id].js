@@ -36,9 +36,7 @@ export default function Writing({ writingData, source }) {
       <SEO title={writingData.title} img={writingData.image} description={writingData.description}/>
           <PostLayout title={writingData.title} img={writingData.image} date={writingData.date} team={writingData.team} features={writingData.features} tags={writingData.tags}>
                 <MDXProvider components={components}>
-                    <div className="wrapper" className={css`
-                     color: #39435B;
-                    `}>
+                    <div className="wrapper">
                         <MDXRemote {...source} />
                     </div>
                 </MDXProvider>
