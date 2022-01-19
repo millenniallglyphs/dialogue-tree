@@ -123,7 +123,10 @@ export default function Project({ image, date, name, description, id, options=[]
                         margin: 0;
                         padding: 0;
                         font-weight: 700;
-                        width: 80px;
+                        width: 120px;
+                        @media (max-width: 600px) {
+                            width: 80px;
+                        }
                     `}> Read More →</p>
                 </div>
             </div>

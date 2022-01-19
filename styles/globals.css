@@ -226,7 +226,6 @@ h4 {
 
 .wrapper {
   width: 100%;
-  color: red;
 }
 
 .wrapper>*>img {
@@ -240,6 +239,43 @@ h4 {
   scroll-snap-type: y mandatory;
 }
 
+.none {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.hidden {
+  height: 0px;
+  position: absolute; 
+  visibility: hidden;
+  transition: height 0.5s;
+}
+
+.nothidden {
+  margin-top: 4em;
+  transition: height 1s, visibility 0.5s;
+  display: block;
+  visibility: visible;
+  animation: ddown 2s;
+  max-width: 600px;
+}
+
+@keyframes ddown {
+  0% {
+    opacity: 0;
+  }
+}
+
+.svghold {
+  transition: transform 0.5s;
+  }
+  
+  .svgrotate {
+      transform: rotate(0.5turn);
+      transition: transform 0.5s;
+  }
 
 @media screen and (max-width: 1000px)  {
   .projgrid {

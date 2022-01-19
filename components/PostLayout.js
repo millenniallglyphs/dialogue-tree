@@ -1,10 +1,11 @@
 import { css } from '@emotion/css'
-
-import Button from './Button';
 import FileBlock from './FileBlock';
+import React from 'react';
 
 
 export default function PostLayout({tags, features, team, title, date, image, children}) {
+
+  const [isOpen, setIsOpen] = React.useState(false);
 
     const renderOptions = () => {
         return tags.map(({ target, label, }, index) => (
@@ -32,6 +33,52 @@ export default function PostLayout({tags, features, team, title, date, image, ch
       return team.map(({name, target}, index) => (
         <a href={target} key={index}>{name}</a>
       ));
+    }
+
+    const renderAll = () => {
+      return(
+        <div>
+          <p className={css`
+                  margin-top: 0em;
+                `}><b>My Roles</b></p>
+                  <div className={css`
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5em;
+                        color: #fff;
+                        justify-content: flex-end;
+                        `}>
+                          { tags ? (
+                            renderOptions()
+                          ) : (
+                            null
+                          )
+                          }
+                    </div>
+        { team ? (
+                <>
+                <p>Team</p>
+                {renderTeam()}
+              </>
+         ) : (
+                null
+          )}
+              <p><b>Deliverables</b></p>
+              <div className={css`
+                  display: grid;
+                  grid-template-columns: 1fr;
+                  grid-gap: 1em;
+                  justify-content: flex-end;
+                  `}>
+                    { features ? (
+                      renderFeatures()
+                    ) : (
+                      null
+                    )
+                    }
+                </div>
+          </div>
+      )
     }
 
     return(
@@ -100,7 +147,7 @@ export default function PostLayout({tags, features, team, title, date, image, ch
                   position: sticky;
                   top: 0px;
                   padding-top: 86.5px;
-                  height: 100vh;
+                  height: 400px;
                   text-align: right;
                   align-content: space-between;
                   @media (max-width: 1000px) {
@@ -109,65 +156,47 @@ export default function PostLayout({tags, features, team, title, date, image, ch
                   }
               `}>
                 <div className={css`
+                display: none;
+                @media (max-width: 1000px) {
+                  display: block;
+                }
+                `}>
+                <div>
+                { !isOpen ? (  
+                        <button onClick={() => setIsOpen(true)} className="none">
+                            <div className="svghold">
+                            <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.3 0.392276C14.0476 0.141416 13.7062 0.000610352 13.3504 0.000610352C12.9946 0.000610352 12.6532 0.141416 12.4008 0.392276L7.56551 5.16026L2.79752 0.392276C2.54516 0.141416 2.20379 0.000610352 1.84796 0.000610352C1.49214 0.000610352 1.15076 0.141416 0.898407 0.392276C0.772166 0.517486 0.671965 0.666454 0.603585 0.830585C0.535205 0.994716 0.5 1.17076 0.5 1.34857C0.5 1.52637 0.535205 1.70242 0.603585 1.86655C0.671965 2.03068 0.772166 2.17965 0.898407 2.30486L6.60922 8.01567C6.73443 8.14191 6.88339 8.24211 7.04753 8.31049C7.21166 8.37887 7.3877 8.41408 7.56551 8.41408C7.74331 8.41408 7.91936 8.37887 8.08349 8.31049C8.24762 8.24211 8.39659 8.14191 8.5218 8.01567L14.3 2.30486C14.4262 2.17965 14.5264 2.03068 14.5948 1.86655C14.6632 1.70242 14.6984 1.52637 14.6984 1.34857C14.6984 1.17076 14.6632 0.994716 14.5948 0.830585C14.5264 0.666454 14.4262 0.517486 14.3 0.392276Z" fill="#464E63"/>
+</svg>
+                            </div>
+                        </button>
+                    ) : ( 
+                        <button onClick={() => setIsOpen(false)} className="none">
+                            <div className="svgrotate">
+                            <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.3 0.392276C14.0476 0.141416 13.7062 0.000610352 13.3504 0.000610352C12.9946 0.000610352 12.6532 0.141416 12.4008 0.392276L7.56551 5.16026L2.79752 0.392276C2.54516 0.141416 2.20379 0.000610352 1.84796 0.000610352C1.49214 0.000610352 1.15076 0.141416 0.898407 0.392276C0.772166 0.517486 0.671965 0.666454 0.603585 0.830585C0.535205 0.994716 0.5 1.17076 0.5 1.34857C0.5 1.52637 0.535205 1.70242 0.603585 1.86655C0.671965 2.03068 0.772166 2.17965 0.898407 2.30486L6.60922 8.01567C6.73443 8.14191 6.88339 8.24211 7.04753 8.31049C7.21166 8.37887 7.3877 8.41408 7.56551 8.41408C7.74331 8.41408 7.91936 8.37887 8.08349 8.31049C8.24762 8.24211 8.39659 8.14191 8.5218 8.01567L14.3 2.30486C14.4262 2.17965 14.5264 2.03068 14.5948 1.86655C14.6632 1.70242 14.6984 1.52637 14.6984 1.34857C14.6984 1.17076 14.6632 0.994716 14.5948 0.830585C14.5264 0.666454 14.4262 0.517486 14.3 0.392276Z" fill="#464E63"/>
+</svg>
+                            </div>
+                        </button>
+                    )}
+                  </div> 
+
+                  <div className={ !isOpen ? ("hidden") : ("nothidden")}>
+                  {renderAll()}
+                  </div>
+                  </div>
+                <div className={css`
                   border-right: 1px solid #39435B;
                   padding-right: 1em;
-                  margin-top: 1em;
+                  display: block;
+                  margin-top: 1em; @media (max-width: 1000px) {
+                    display: none;
+                  }
                 `}>
-                <p className={css`
-                  margin-top: 0em;
-                `}><b>My Roles</b></p>
-                  <div className={css`
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 0.5em;
-                        color: #fff;
-                        justify-content: flex-end;
-                        `}>
-                          { tags ? (
-                            renderOptions()
-                          ) : (
-                            null
-                          )
-                          }
-                    </div>
+                
               
-              { team ? (
-                <>
-                <p>Team</p>
-                {renderTeam()}
-              </>
-              ) : (
-                null
-              )}
-              <p><b>Deliverables</b></p>
-              <div className={css`
-                  display: grid;
-                  grid-template-columns: 1fr;
-                  grid-gap: 1em;
-                  justify-content: flex-end;
-                  `}>
-                    { features ? (
-                      renderFeatures()
-                    ) : (
-                      null
-                    )
-                    }
-                </div>
-              </div>
-              <div>
-                <div className={css`
-                border-right: 1px solid #39435B;
-                padding-right: 1em;
-                margin-bottom: 1em;
-                `}>
-                  <p><b>Share</b></p>
-                  <div>
-                <Button step='0' >Copy URL</Button>
-                </div>
-                <div>
-                <Button step='0' >Download </Button>
-                </div>
-                </div>
+              {renderAll()}
+            
               </div>
           </div>
           
@@ -181,30 +210,7 @@ export default function PostLayout({tags, features, team, title, date, image, ch
                  {children}
               </div>  
               </div>
-              <div className={css`
-                  display: grid;
-                  grid-template-columns: 1fr;
-                  grid-gap: 1em;
-                  padding-left: 1em;
-                  padding-top: 1em;
-                  align-content: start;
-                  position: -webkit-sticky;
-                  position: sticky;
-                  top: 0px;
-                  padding-top: 86.5px;
-                  height: 100vh;
-                  @media (max-width: 1000px) {
-                    height: auto;
-                    padding-top: 65.5px;
-                  }
-              `}>
-                <div>
-                <Button step='0' >Copy URL</Button>
-                </div>
-                <div>
-                <Button step='0' >Download </Button>
-                </div>
-              </div>
+            
         </div>
         </>  
     )

@@ -1,4 +1,5 @@
 import Meta from "./Meta"
+import Footer from "./Footer"
 import { css } from '@emotion/css'
 
 export default function BasicLayout({children}) {
@@ -11,6 +12,7 @@ export default function BasicLayout({children}) {
             `}>
                 {children}
             </div>
+            <Footer />
         </>
     )
 }
