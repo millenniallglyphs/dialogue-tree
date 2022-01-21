@@ -29,7 +29,7 @@ h2 {
 }
 
 h1 {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 3.4em;
   line-height: 1em;
 }
@@ -268,23 +268,26 @@ pre {
 
 .hidden {
   height: 0px;
-  position: absolute; 
-  visibility: hidden;
-  transition: height 0.5s;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s, height 2s;
 }
 
 .nothidden {
-  margin-top: 1em;
-  transition: height 1s, visibility 0.5s;
-  display: block;
-  visibility: visible;
-  animation: ddown 2s;
-  max-width: 100%;
+  opacity: 1;
+  margin-top: 0;
+  height: auto;
+  transition: opacity 1s, height 1s;
 }
 
 @keyframes ddown {
   0% {
     opacity: 0;
+    margin-top: -100vh;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
   }
 }
 

@@ -1,5 +1,6 @@
 import { css } from '@emotion/css'
 import FileBlock from './FileBlock';
+import Footer from './footer';
 import React from 'react';
 
 
@@ -106,7 +107,7 @@ export default function PostLayout({tags, features, team, title, date, image, ch
                   height: 400px;
                   display: flex;
                   flex-direction: column;
-              justify-content: space-between;
+                justify-content: space-between;
                   @media (max-width: 1000px) {
                     margin-top: 0px;
                     max-width: 100%;
@@ -153,9 +154,10 @@ export default function PostLayout({tags, features, team, title, date, image, ch
                   text-align: right;
                   align-content: space-between;
                   width: 100%;
-                  margin-top: -43px;
-                  
+                  margin-top: 0px;
+                  top: 86px;
                   @media (max-width: 1000px) {
+                    margin-top: -43px;
                     height: auto;
                     top: 60px;
                     padding-top: 0em;
@@ -217,7 +219,6 @@ export default function PostLayout({tags, features, team, title, date, image, ch
                   </div>
                 </div>
                 <div className={css`
-                  border-right: 1px solid #39435B;
                   padding-right: 1em;
                   display: block;
                   margin-top: 1em; @media (max-width: 1000px) {
@@ -225,7 +226,6 @@ export default function PostLayout({tags, features, team, title, date, image, ch
                   }
                 `}>
                 
-              
               {renderAll()}
             
               </div>
@@ -246,6 +246,7 @@ export default function PostLayout({tags, features, team, title, date, image, ch
               </div>
             
         </div>
+        <Footer></Footer>
         </>  
     )
 }

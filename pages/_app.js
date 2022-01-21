@@ -22,9 +22,9 @@ function handleStyleChange(){
 
   return getLayout(
     <>
-      <StyleSelect.Provider value={{styled, setStyled}}>
-          <Component {...pageProps} />
-      </StyleSelect.Provider>
+    <StyleSelect.Provider value={{styled, setStyled}}>
+        <Component {...pageProps} />
+    </StyleSelect.Provider>
     </>
   )
 }

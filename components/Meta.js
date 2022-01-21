@@ -1,8 +1,12 @@
 import Hold from './Hold'
 import { css } from '@emotion/css';
 import Link from 'next/link';
+import React from 'react';
 
 export default function Meta() {
+
+    const [isOpen, setIsOpen] = React.useState(false);
+
     const flex = {
         display: 'flex',
         alignItems: 'center',
@@ -16,42 +20,6 @@ export default function Meta() {
         color: '#909090'
     }
 
-    const label = {
-        fontSize: '0.8em',
-        marginRight: '2em',
-        color: '#909090',
-        marginTop: '0',
-        marginBottom: '0'
-    }
-    const favicon = {
-        height: '12px',
-        width: '12px',
-        background: '#0500FF',
-        marginRight: '2em'
-    }
-
-    const metapic = {
-        width: '60px',
-        marginRight: '2em'
-    }
-
-    const metahold = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        padding: '1em',
-        width: '100%',
-        boxSizing: 'border-box',
-        paddingLeft: '4em',
-        paddingRight: '4em'
-    }
-
-    const btn = {
-        border: '1px solid #000',
-        padding: '0.5em',
-        borderRadius: '2px',
-        fontSize: '0.8em',
-        background: 'white'
-    }
 
     const home = {
         display: 'flex',
@@ -62,26 +30,9 @@ export default function Meta() {
         display: 'flex',
         justifyContent: 'flex-end'
     }
-/*
-    const toggleStyling = () => {
-        return (
-            <button
-                onClick={passStyle}
-                className={css`
-                    width: 20.5px;
-                    background: ${ kind==="light" ? ('#222222') : ('#F4F4F4')};
-                    border-radius: 4px;
-                    border: 0px solid #909090;
-                    cursor: pointer;
-                `}
-            >
-                <p style={small}>{ kind==="light" ? ( "☽" ) : ("☼")}</p>
-            </button>
-        )
-    }
-    */
 
     return (
+        <>
         <div className={css`
             position: fixed;
             background: #161616;
@@ -113,11 +64,18 @@ export default function Meta() {
                             <div
                             className={css`
                                 display: flex;
+                                align-items: center;
+                                gap: 1em;
                             `}
                             >
-                            
                                 <div className={css`
-                                margin-right: 1em;
+                            display: flex;
+                            gap: 1em;
+                                @media (max-width: 600px) {
+                                    display: none;
+                                }
+                            `}>>
+                                <div className={css`
                                 cursor: pointer;
                                 `}>
                                     <Link href="/work">
@@ -131,17 +89,117 @@ export default function Meta() {
                                         <p style={small}>Writing</p>
                                     </Link>
                                 </div>
+                                </div>
+                                <a href="mailto:hello@calvin.ooo">
+                                <div className={css`
+                                padding: 0.5em;
+                                padding-left: 1em;
+                                padding-right: 1em;
+                                color: #000;
+                                background: #fff;
+                                border-radius: 0.5em;
+                                border: none;
+                                outline: none;
+                                font-size: 0.8em;
+                                font-weight: 400;
+                                cursor: pointer;
+                                &:hover  {
+                                    background: #f4f4f4;
+                                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                }
+                                &:active  {
+                                    background: #f4f4f4;
+                                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                }
+                            `}>
+                                Get In Touch
+                            </div>
+                            </a>
+                            <div className={css`
+                            display: none;
+                                @media (max-width: 600px) {
+                                    display: block
+                                }
+                            `}>
+                                { !isOpen ? (
+                                <button onClick={() => setIsOpen(true)} className="none">
+                                    <svg width="30" height="14" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1.41016H29" stroke="white"/>
+                                        <path d="M1 9.41016H29" stroke="white" strokeLinecap="round"/>
+                                        <path d="M1 17.4102H29" stroke="white"/>
+                                    </svg>
+                                </button>
+                                ) : (
+                                    <button onClick={() => setIsOpen(false)} className="none">
+                                        <svg width="30" height="14" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L29.0018 17.0001" stroke="white"/>
+                                        <path d="M1 17L29.0018 0.999869" stroke="white" strokeLinecap="round"/>
+                                        </svg>
+                                    </button>
+                                )}
                                 
+                            </div>
                             </div>
                             {/*
                             <div style={target}>
                                 {toggleStyling()}
                             </div>
                             */}
+                            
                         </div>
                 </div>
                 <div />
             </Hold>
         </div>
+        <div className={css`
+            position: fixed;
+            top: 60px;
+            left: 0px;
+            z-index: 6;
+        `}>
+            
+            <div className={ !isOpen ? ("hidden") : ("nothidden")}>
+                
+                <div className={css`
+                    width: 100vw; 
+                    height: 100vh;
+                    background: #161616;
+                    padding: 1em;
+                    z-index: 5;
+                    position: relative;
+                    color: #fff;
+                    text-align: right;
+                    font-weight: 700;
+                `}>
+                    <div>
+                    <Link href="/work">
+                        <button onClick={() => setIsOpen(false)} className="none">
+                        <h1 className={css`
+                                color: #fff;
+                                padding: 0;
+                                margin: 0;
+                            `}>
+                            Work
+                        </h1>
+                        </button>
+                    </Link>
+                    </div>
+                    <div>
+                        <Link href="/writing">
+                            <button onClick={() => setIsOpen(false)} className='none'>
+                            <h1 className={css`
+                                color: #fff;
+                                padding: 0;
+                            `}>
+                                Writing
+                            </h1>
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+            
+            </div>    
+        </div>
+    </>
     )
 }

@@ -42,12 +42,14 @@ export default function Project({ image, date, name, description, id, options=[]
                   }
             `}
         > 
+        <Link href={id}>
         <div className={css`
             background-image: ${ color.styled==="light" ? grada : gradb};
             background-position: center;
             background-size: 120%;
             transition: background-size 3s, box-shadow 1s;
             background-repeat: no-repeat;
+            cursor: pointer;
             &:hover {
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 background-size: 130%;
@@ -71,8 +73,6 @@ export default function Project({ image, date, name, description, id, options=[]
                 
             `}>
                 <div>
-                <Link href={id}>
-                    <a>
                     <h3 className={css`
                         font-weight: 800;
                         font-size: 6em;
@@ -88,8 +88,7 @@ export default function Project({ image, date, name, description, id, options=[]
                     `}>
                         {name}
                     </h3>
-                    </a>
-                </Link>
+                    
                 </div>
                 <div className={css`
                 color: ${ color.styled==="light" ? ('#fff') : ('#000')};
@@ -122,7 +121,7 @@ export default function Project({ image, date, name, description, id, options=[]
                     <p className={css`
                         margin: 0;
                         padding: 0;
-                        font-weight: 700;
+                        font-weight: 400;
                         width: 120px;
                         @media (max-width: 600px) {
                             width: 80px;
@@ -131,6 +130,7 @@ export default function Project({ image, date, name, description, id, options=[]
                 </div>
             </div>
             </div>
+            </Link>
         </div>
         ) : (
             null
