@@ -14,7 +14,7 @@ export default function Button({children, step, check}) {
             padding-left: 1em;
             padding-right: 1em;
             color: #fff;
-            background: #000;
+            background: #04082B;
             border-radius: 0.5em;
             border: none;
             outline: none;

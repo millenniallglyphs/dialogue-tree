@@ -45,8 +45,8 @@ export default function Work({ allPostsData }) {
 
   const renderProject = () => {
     return(
-      allPostsData.map(({id, title, image, date, description, tags}) => (
-        <Project image={image} name={title} date={date} description={description} options={tags} target={'/projects/'+id} key={id} id={id}/>
+      allPostsData.map(({id, title, image, date, description, tags, color}) => (
+        <Project image={image} name={title} date={date} description={description} options={tags} target={'/projects/'+id} key={id} id={id} bgcolor={color}/>
       ))
     )
   }

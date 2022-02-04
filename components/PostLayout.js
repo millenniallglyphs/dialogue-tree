@@ -4,7 +4,7 @@ import Footer from './footer';
 import React from 'react';
 
 
-export default function PostLayout({tags, features, team, title, date, image, children}) {
+export default function PostLayout({tags, features, team, title, date, image, bgcolor, children}) {
 
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -88,9 +88,7 @@ export default function PostLayout({tags, features, team, title, date, image, ch
            display: grid;
            grid-template-columns: 475px 1fr;
            margin-top: 78px;
-                  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 59.19%), linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 48.29%), url(${image});
-                  background-size: cover;
-                  background-position: center;
+          background: ${bgcolor};
           z-index: 4;
           position: relative;
           @media (max-width: 1000px) {
@@ -105,6 +103,35 @@ export default function PostLayout({tags, features, team, title, date, image, ch
                   padding: 1em;
                   max-width: 750px;
                   height: 400px;
+                  background-image: url(${image});
+                  background-size: cover;
+                  background-position: center;
+                  @media (max-width: 1000px) {
+                    margin-top: 0px;
+                    max-width: 100%;
+                  }
+  
+              `}>
+                
+          
+             
+              </div> 
+  
+          </div>
+          <div className={css`
+           display: grid;
+           grid-template-columns: 475px 1fr;
+          @media (max-width: 1000px) {
+              grid-template-columns: 1fr;
+              grid-template-rows: auto 1fr;
+              margin-top: 60px;
+            }
+          `}>
+            <div />
+            <div className={css`
+                  
+                  padding: 1em;
+                  max-width: 750px;
                   display: flex;
                   flex-direction: column;
                 justify-content: space-between;
@@ -114,17 +141,13 @@ export default function PostLayout({tags, features, team, title, date, image, ch
                   }
   
               `}>
-                <div>
-                  <p className={css`
-                    color: #fff;
-                  `}>{date}</p>
-                </div>
+                
               <div>
                 <h1 className={css`
                     font-weight: 800;
                     font-size: 4em;
                     line-height: 1em;
-                    color: #fff;
+                    color: #04082B;
                 `}>{title}</h1>
               </div>
           

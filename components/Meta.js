@@ -14,10 +14,10 @@ export default function Meta() {
     }
 
     const small = {
-        fontSize: '0.8em',
+        fontSize: '1em',
         marginTop: '0',
         marginBottom: '0',
-        color: '#909090'
+        color: '#fff'
     }
 
 
@@ -35,7 +35,7 @@ export default function Meta() {
         <>
         <div className={css`
             position: fixed;
-            background: #161616;
+            background: #04082B;
             width: 100%;
             top: 0;
             z-index: 5;
@@ -100,7 +100,7 @@ export default function Meta() {
                                 border-radius: 0.5em;
                                 border: none;
                                 outline: none;
-                                font-size: 0.8em;
+                                font-size: 1em;
                                 font-weight: 400;
                                 cursor: pointer;
                                 &:hover  {

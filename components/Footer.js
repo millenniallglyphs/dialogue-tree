@@ -9,7 +9,7 @@ export default function Footer() {
             justify-content: space-between;
             align-items: center;
             padding: 1em;
-            background: #161616;
+            background: #04082B;
             color: #909090;
             font-size: 0.8em;
         `}>

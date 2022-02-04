@@ -146,7 +146,6 @@ export default function DialogueTree() {
         <div className={css`
             padding-top: 0;
             width: 100%;
-            background: #F4F4F4;
         `}
         >
         <div className={css`
@@ -155,6 +154,7 @@ export default function DialogueTree() {
           margin: auto;
           display: grid;
           height: 100vh;
+          padding-bottom: 1em;
           grid-template-rows: 1fr 65px;
           @media (max-width: 1000px) {
             height: 40vh;
@@ -187,7 +187,7 @@ export default function DialogueTree() {
             background: #F4F4F4;
             margin-left: 1em;
             margin-right: 1em;
-            border-radius: 8px 8px 0px 0px;
+            border-radius: 8px;
             box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.14);
             @media (max-width: 1000px) {
               margin-left: 0em;

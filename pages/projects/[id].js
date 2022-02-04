@@ -32,7 +32,7 @@ export default function Post({ source, postData }) {
   return (
     <>
       <SEO title={postData.title} img={postData.image} description={postData.description}/>
-      <PostLayout title={postData.title} image={postData.image} date={postData.date} team={postData.team} features={postData.features} tags={postData.tags}>
+      <PostLayout title={postData.title} image={postData.image} date={postData.date} team={postData.team} features={postData.features} tags={postData.tags} bgcolor={postData.color}>
           <MDXProvider components={components}>
               <div className="wrapper">
                   <MDXRemote {...source} />

@@ -3,7 +3,7 @@ import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
 import Link from 'next/link';
 
-export default function Project({ image, date, name, description, id, target, options=[] }) {
+export default function Project({ image, date, name, description, id, bgcolor, target, options=[] }) {
     const color = useContext(StyleSelect)
     const renderOptions = () => {
         return options.map(({ target, label, }, index) => (
@@ -11,20 +11,17 @@ export default function Project({ image, date, name, description, id, target, op
             <div className={css`
                 padding: 0.5em;
                 border-radius: 8px;
-                color: ${ color.styled==="light" ? ('#fff') : ('#909090')};
+                color: #04082B;
                 font-size: 0.8em;
-                border: 1px solid #fff;
-                background: rgba(0, 0, 0, 0.37);
-                backdrop-filter: blur(8px);
+                border: 1px solid #04082B;
+
             `}>
                 {label}
             </div>
           </a>
         ));
       };
-    const grada = `linear-gradient(360deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 59.19%), linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 48.29%), url(${image})`
-
-    const gradb = `linear-gradient(360deg, rgba(300, 300, 300, 0.64) 0%, rgba(300, 300, 300, 0) 59.19%), linear-gradient(180deg, rgba(300, 300, 300, 0.64) 0%, rgba(300, 300, 300, 0) 48.29%), url(${image})`
+    
     return(
         <li id={id}>
         { image ? (
@@ -44,21 +41,11 @@ export default function Project({ image, date, name, description, id, target, op
         > 
         <Link href={target}>
         <div className={css`
-            background-image: ${ color.styled==="light" ? grada : gradb};
-            background-position: center;
-            background-size: 120%;
-            transition: background-size 3s, box-shadow 1s;
-            background-repeat: no-repeat;
-            cursor: pointer;
-            &:hover {
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                background-size: 130%;
-            }
+            background: ${bgcolor};
             height: 100%;
             border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
             padding: 1em;
             @media (max-width: 1000px) {
                 background-size: cover;
@@ -78,7 +65,7 @@ export default function Project({ image, date, name, description, id, target, op
                         font-size: 6em;
                         line-height: 1em;
                         margin: 0;
-                        color: ${ color.styled==="light" ? ('#fff') : ('#000')};
+                        color: #04082B;
                         @media (max-width: 1000px) {
                             font-size: 4em;
                         }
@@ -102,7 +89,21 @@ export default function Project({ image, date, name, description, id, target, op
                 
             </div>
             <div className={css`
+                background-color: #BFCDFD;
+                background-image: url(${image});
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                transition: background-size 3s, box-shadow 1s;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                
+            `}>
+
+            </div>
+            <div className={css`
                 display: flex;
+                padding-top: 1em;
                 justify-content: space-between;
                 color: ${ color.styled==="light" ? ('#fff') : ('#000')};
                 align-items: flex-end;
@@ -123,6 +124,7 @@ export default function Project({ image, date, name, description, id, target, op
                         padding: 0;
                         font-weight: 400;
                         width: 120px;
+                        color: #04082B;
                         @media (max-width: 600px) {
                             width: 80px;
                         }
