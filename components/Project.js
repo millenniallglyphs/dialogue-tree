@@ -3,7 +3,7 @@ import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
 import Link from 'next/link';
 
-export default function Project({ image, date, name, description, id, options=[] }) {
+export default function Project({ image, date, name, description, id, target, options=[] }) {
     const color = useContext(StyleSelect)
     const renderOptions = () => {
         return options.map(({ target, label, }, index) => (
@@ -26,13 +26,13 @@ export default function Project({ image, date, name, description, id, options=[]
 
     const gradb = `linear-gradient(360deg, rgba(300, 300, 300, 0.64) 0%, rgba(300, 300, 300, 0) 59.19%), linear-gradient(180deg, rgba(300, 300, 300, 0.64) 0%, rgba(300, 300, 300, 0) 48.29%), url(${image})`
     return(
-        <li>
+        <li id={id}>
         { image ? (
         <div className={css`
                 width: 100%;
                 height: 100vh;
                 scroll-snap-align: start;
-                padding: 94px 1em 1em 0em;
+                padding: 94px 5.4em 1em 0em;
                 border-radius: 8px;
                 justify-content: space-between;
                 @media (max-width: 1000px) {
@@ -42,7 +42,7 @@ export default function Project({ image, date, name, description, id, options=[]
                   }
             `}
         > 
-        <Link href={id}>
+        <Link href={target}>
         <div className={css`
             background-image: ${ color.styled==="light" ? grada : gradb};
             background-position: center;

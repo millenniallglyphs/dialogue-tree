@@ -2,10 +2,10 @@ const Dialogue = {
     start: {
       dialogue:
         [ 
-          {d: "Hi.  🌱"},
+          {d: "Hi. 🕯"},
           {d: "My Name's Calvin."},
-          {d: "I design products that deliver value to people in a complex and changing world."},
-          {d: 'What can I tell you about my practice?'},
+          {d: "I help teams illuminate the challenging questions needed for products to deliver value in an evolving present. "},
+          {d: 'Scroll through my work or try asking a question.'},
         ],
       questions: 
         [
