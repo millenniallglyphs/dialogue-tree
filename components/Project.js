@@ -13,6 +13,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                 border-radius: 8px;
                 color: #04082B;
                 font-size: 0.8em;
+                background: #fff;
                 border: 1px solid #04082B;
 
             `}>
@@ -46,6 +47,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
             border-radius: 8px;
             display: grid;
             grid-template-rows: auto 1fr auto;
+            gap: 1em;
             padding: 1em;
             @media (max-width: 1000px) {
                 background-size: cover;
@@ -122,7 +124,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                     <p className={css`
                         margin: 0;
                         padding: 0;
-                        font-weight: 400;
+                        font-weight: 800;
                         width: 120px;
                         color: #04082B;
                         @media (max-width: 600px) {
