@@ -10,9 +10,13 @@ export default function FileBlock({type, title, label, target}) {
         display: flex;
         gap: 0.5em;
         justify-content: flex-end;
+        @media (max-width: 1000px) {
+            justify-content: flex-start;
+          }
        `}>
                 <a href={target} className={css`
                     color: ${ color.styled==="light" ? ('#39435B') : ('#2C67FF')};
+                    font-weight: 800;
                 `}>
                      {title}
                 </a>

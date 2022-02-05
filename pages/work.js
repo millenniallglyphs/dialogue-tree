@@ -56,12 +56,16 @@ export default function Work({ allPostsData }) {
       <>
       <div className={css`
           position: fixed;
+          display: block;
           top: 100px;
           right: 1em;
           z-index: 6;
           display: flex;
           flex-direction: column;
           gap: 1em;
+          @media (max-width: 1000px) {
+            display: none;
+          }
         `}>
           <button onClick={() => scrollUp()} className={css`
             background: #ffffff;

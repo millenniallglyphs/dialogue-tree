@@ -159,6 +159,7 @@ export default function DialogueTree() {
           @media (max-width: 1000px) {
             height: 40vh;
             grid-template-rows: 1fr 45px;
+            padding-bottom: 0em;
           }
         `}>
           <div className="chatHold">

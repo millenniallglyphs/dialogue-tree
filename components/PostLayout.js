@@ -17,6 +17,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 color: #39435B;
                 font-size: 0.8em;
                 border: 1px solid #39435B;
+                background: #fff;
             `}>
                 {label}
             </div>
@@ -41,13 +42,16 @@ export default function PostLayout({tags, features, team, title, date, image, bg
         <div>
           <p className={css`
                   margin-top: 0em;
-                `}><b>My Roles</b></p>
+                `}>My Roles</p>
                   <div className={css`
                         display: flex;
                         flex-wrap: wrap;
                         gap: 0.5em;
                         color: #fff;
                         justify-content: flex-end;
+                        @media (max-width: 1000px) {
+                          justify-content: flex-start;
+                        }
                         `}>
                           { tags ? (
                             renderOptions()
@@ -64,12 +68,15 @@ export default function PostLayout({tags, features, team, title, date, image, bg
          ) : (
                 null
           )}
-              <p><b>Deliverables</b></p>
+              <p>Deliverables</p>
               <div className={css`
                   display: grid;
                   grid-template-columns: 1fr;
                   grid-gap: 1em;
-                  justify-content: flex-end;
+                  justify-content: end;
+                  @media (max-width: 1000px) {
+                    justify-content: start;
+                  }
                   `}>
                     { features ? (
                       renderFeatures()
@@ -102,13 +109,15 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   
                   padding: 1em;
                   max-width: 750px;
-                  height: 400px;
+                  height: 300px;
                   background-image: url(${image});
-                  background-size: cover;
+                  background-size: contain;
+                  background-repeat: no-repeat;
                   background-position: center;
                   @media (max-width: 1000px) {
                     margin-top: 0px;
                     max-width: 100%;
+                    height: 30vh;
                   }
   
               `}>
@@ -118,13 +127,14 @@ export default function PostLayout({tags, features, team, title, date, image, bg
               </div> 
   
           </div>
+          
           <div className={css`
            display: grid;
            grid-template-columns: 475px 1fr;
+           background-color: ${bgcolor}; 
           @media (max-width: 1000px) {
               grid-template-columns: 1fr;
               grid-template-rows: auto 1fr;
-              margin-top: 60px;
             }
           `}>
             <div />
@@ -134,7 +144,9 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   max-width: 750px;
                   display: flex;
                   flex-direction: column;
-                justify-content: space-between;
+                  justify-content: space-between;
+                  z-index: 3;
+                  background: ${bgcolor};
                   @media (max-width: 1000px) {
                     margin-top: 0px;
                     max-width: 100%;
@@ -148,6 +160,10 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                     font-size: 4em;
                     line-height: 1em;
                     color: #04082B;
+                    margin: 0;
+                    @media (max-width: 1000px) {
+                      margin: 0;
+                    }
                 `}>{title}</h1>
               </div>
           
@@ -155,6 +171,38 @@ export default function PostLayout({tags, features, team, title, date, image, bg
               </div> 
   
           </div>
+          <div className={css`
+                  padding: 1em;
+                  position: -webkit-sticky;
+                  position: sticky;
+                  top: 0px;
+                  height: auto;
+                  width: 100%;
+                  margin-top: -52px;
+                  height: auto;
+                  top: 80px;
+                  background: ${bgcolor};
+                  display: block;
+                  border-bottom: 1px solid #39435B;
+                  @media (max-width: 1000px) {
+                    display: none;
+                  }
+              `}>
+                <div className={css`
+                  display: grid;
+                  grid-template-columns: 475px 1fr;`}>
+                    <div>
+
+                    </div>
+                    <div>
+                    <p className={css`
+                      margin: 0;
+                      font-weight: 800;
+                    `}>{title}</p>
+                    </div>
+                 
+                 </div>
+              </div>
         <div className={css`
            display: grid;
            grid-template-columns: 475px auto 1fr;
@@ -178,22 +226,22 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   align-content: space-between;
                   width: 100%;
                   margin-top: 0px;
-                  top: 86px;
+                  top: 118px;
                   @media (max-width: 1000px) {
                     margin-top: -43px;
                     height: auto;
                     top: 60px;
                     padding-top: 0em;
-                    padding-left: 1em;
-                    padding-right: 1em;
+                    padding-left: 0em;
+                    padding-right: 0em;
+                    text-align: left;
                   }
               `}>
                 <div className={css`
                 
                 display: none;
-                background-color: #F4F4F4; 
-                padding-top: 1em;
-                padding-bottom: 1em;
+                background-color: ${bgcolor}; 
+                padding: 1em;
                 border-bottom: 1px solid #39435B;
                 z-index: 1;
                 @media (max-width: 1000px) {
@@ -203,24 +251,16 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   <div className={css`
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    gap: 1em;
                   `}>
-                  <div>
-                    <p className={css`
-                      color: #39435B;
-                      padding: 0;
-                      margin: 0;
-                    `}>
-                      {title}
-                    </p>
-                  </div>
+                  
                   <div>
                   <div>
                 { !isOpen ? (  
                         <button onClick={() => setIsOpen(true)} className="none">
                             <div className="svghold">
                             <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M14.3 0.392276C14.0476 0.141416 13.7062 0.000610352 13.3504 0.000610352C12.9946 0.000610352 12.6532 0.141416 12.4008 0.392276L7.56551 5.16026L2.79752 0.392276C2.54516 0.141416 2.20379 0.000610352 1.84796 0.000610352C1.49214 0.000610352 1.15076 0.141416 0.898407 0.392276C0.772166 0.517486 0.671965 0.666454 0.603585 0.830585C0.535205 0.994716 0.5 1.17076 0.5 1.34857C0.5 1.52637 0.535205 1.70242 0.603585 1.86655C0.671965 2.03068 0.772166 2.17965 0.898407 2.30486L6.60922 8.01567C6.73443 8.14191 6.88339 8.24211 7.04753 8.31049C7.21166 8.37887 7.3877 8.41408 7.56551 8.41408C7.74331 8.41408 7.91936 8.37887 8.08349 8.31049C8.24762 8.24211 8.39659 8.14191 8.5218 8.01567L14.3 2.30486C14.4262 2.17965 14.5264 2.03068 14.5948 1.86655C14.6632 1.70242 14.6984 1.52637 14.6984 1.34857C14.6984 1.17076 14.6632 0.994716 14.5948 0.830585C14.5264 0.666454 14.4262 0.517486 14.3 0.392276Z" fill="#39435B"/>
+<path d="M14.3 0.392276C14.0476 0.141416 13.7062 0.000610352 13.3504 0.000610352C12.9946 0.000610352 12.6532 0.141416 12.4008 0.392276L7.56551 5.16026L2.79752 0.392276C2.54516 0.141416 2.20379 0.000610352 1.84796 0.000610352C1.49214 0.000610352 1.15076 0.141416 0.898407 0.392276C0.772166 0.517486 0.671965 0.666454 0.603585 0.830585C0.535205 0.994716 0.5 1.17076 0.5 1.34857C0.5 1.52637 0.535205 1.70242 0.603585 1.86655C0.671965 2.03068 0.772166 2.17965 0.898407 2.30486L6.60922 8.01567C6.73443 8.14191 6.88339 8.24211 7.04753 8.31049C7.21166 8.37887 7.3877 8.41408 7.56551 8.41408C7.74331 8.41408 7.91936 8.37887 8.08349 8.31049C8.24762 8.24211 8.39659 8.14191 8.5218 8.01567L14.3 2.30486C14.4262 2.17965 14.5264 2.03068 14.5948 1.86655C14.6632 1.70242 14.6984 1.52637 14.6984 1.34857C14.6984 1.17076 14.6632 0.994716 14.5948 0.830585C14.5264 0.666454 14.4262 0.517486 14.3 0.392276Z" fill="#04082B"/>
 </svg>
                             </div>
                         </button>
@@ -228,13 +268,23 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                         <button onClick={() => setIsOpen(false)} className="none">
                             <div className="svgrotate">
                             <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M14.3 0.392276C14.0476 0.141416 13.7062 0.000610352 13.3504 0.000610352C12.9946 0.000610352 12.6532 0.141416 12.4008 0.392276L7.56551 5.16026L2.79752 0.392276C2.54516 0.141416 2.20379 0.000610352 1.84796 0.000610352C1.49214 0.000610352 1.15076 0.141416 0.898407 0.392276C0.772166 0.517486 0.671965 0.666454 0.603585 0.830585C0.535205 0.994716 0.5 1.17076 0.5 1.34857C0.5 1.52637 0.535205 1.70242 0.603585 1.86655C0.671965 2.03068 0.772166 2.17965 0.898407 2.30486L6.60922 8.01567C6.73443 8.14191 6.88339 8.24211 7.04753 8.31049C7.21166 8.37887 7.3877 8.41408 7.56551 8.41408C7.74331 8.41408 7.91936 8.37887 8.08349 8.31049C8.24762 8.24211 8.39659 8.14191 8.5218 8.01567L14.3 2.30486C14.4262 2.17965 14.5264 2.03068 14.5948 1.86655C14.6632 1.70242 14.6984 1.52637 14.6984 1.34857C14.6984 1.17076 14.6632 0.994716 14.5948 0.830585C14.5264 0.666454 14.4262 0.517486 14.3 0.392276Z" fill="#39435B"/>
+<path d="M14.3 0.392276C14.0476 0.141416 13.7062 0.000610352 13.3504 0.000610352C12.9946 0.000610352 12.6532 0.141416 12.4008 0.392276L7.56551 5.16026L2.79752 0.392276C2.54516 0.141416 2.20379 0.000610352 1.84796 0.000610352C1.49214 0.000610352 1.15076 0.141416 0.898407 0.392276C0.772166 0.517486 0.671965 0.666454 0.603585 0.830585C0.535205 0.994716 0.5 1.17076 0.5 1.34857C0.5 1.52637 0.535205 1.70242 0.603585 1.86655C0.671965 2.03068 0.772166 2.17965 0.898407 2.30486L6.60922 8.01567C6.73443 8.14191 6.88339 8.24211 7.04753 8.31049C7.21166 8.37887 7.3877 8.41408 7.56551 8.41408C7.74331 8.41408 7.91936 8.37887 8.08349 8.31049C8.24762 8.24211 8.39659 8.14191 8.5218 8.01567L14.3 2.30486C14.4262 2.17965 14.5264 2.03068 14.5948 1.86655C14.6632 1.70242 14.6984 1.52637 14.6984 1.34857C14.6984 1.17076 14.6632 0.994716 14.5948 0.830585C14.5264 0.666454 14.4262 0.517486 14.3 0.392276Z" fill="#04082B"/>
 </svg>
                             </div>
                         </button>
                     )}
                     </div>
                     </div>
+                    <div>
+                    <p className={css`
+                      color: #04082B;
+                      padding: 0;
+                      margin: 0;
+                      font-weight: 800;
+                    `}>
+                      {title}
+                    </p>
+                  </div>
                   </div> 
 
                   <div className={ !isOpen ? ("hidden") : ("nothidden")}>

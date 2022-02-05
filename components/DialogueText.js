@@ -14,6 +14,7 @@ export default function DialogueText({children, index}) {
               background-color: #fff;
               opacity: 1;
               margin-top: 0em;
+              border: 1px solid #04082B;
               box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
               animation-name: appear;
               animation-duration: 0.75s;

@@ -95,7 +95,7 @@ export default function Meta() {
                                 padding: 0.5em;
                                 padding-left: 1em;
                                 padding-right: 1em;
-                                color: #000;
+                                color: #04082B;
                                 background: #fff;
                                 border-radius: 0.5em;
                                 border: none;
@@ -123,7 +123,7 @@ export default function Meta() {
                             `}>
                                 { !isOpen ? (
                                 <button onClick={() => setIsOpen(true)} className="none">
-                                    <svg width="30" height="14" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="24" height="14" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 1.41016H29" stroke="white"/>
                                         <path d="M1 9.41016H29" stroke="white" strokeLinecap="round"/>
                                         <path d="M1 17.4102H29" stroke="white"/>
@@ -131,7 +131,7 @@ export default function Meta() {
                                 </button>
                                 ) : (
                                     <button onClick={() => setIsOpen(false)} className="none">
-                                        <svg width="30" height="14" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="24" height="14" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 1L29.0018 17.0001" stroke="white"/>
                                         <path d="M1 17L29.0018 0.999869" stroke="white" strokeLinecap="round"/>
                                         </svg>
@@ -163,7 +163,7 @@ export default function Meta() {
                 <div className={css`
                     width: 100vw; 
                     height: 100vh;
-                    background: #161616;
+                    background: #04082B;
                     padding: 1em;
                     z-index: 5;
                     position: relative;
