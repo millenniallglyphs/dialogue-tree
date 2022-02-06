@@ -63,10 +63,9 @@ border-radius: 8px;
             }
         `}>
             <div className={css`
-                background-color: #BFCDFD;
                 background-image: url(${image});
                 background-position: center;
-                background-size: cover;
+                background-size: contain;
                 width: 100%;
                 transition: background-size 3s, box-shadow 1s;
                 background-repeat: no-repeat;

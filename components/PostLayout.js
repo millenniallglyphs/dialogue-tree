@@ -178,7 +178,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   top: 0px;
                   height: auto;
                   width: 100%;
-                  margin-top: -51px;
+                  margin-top: -50px;
                   height: auto;
                   top: 80px;
                   background: ${ kind === "work" ? (bgcolor) : ("#fff")};
