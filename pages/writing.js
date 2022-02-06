@@ -1,6 +1,6 @@
 import Project from '../components/Project'
 import { getSortedPostsData } from '../lib/projects'
-import { getSortedWritingData } from '../lib/writing'
+
 import ListLayout from '../components/ListLayout'
 import BasicLayout from '../components/BasicLayout'
 import { css } from '@emotion/css';
@@ -9,20 +9,22 @@ import SEO from '../components/Seo'
 export async function getStaticProps() {
 
   
-  const allWritingData = getSortedWritingData()
+
   const allPostsData = getSortedPostsData()
     return {
       props: {
         allPostsData,
-        allWritingData
+
       }
     }
   }
 
-export default function Writing({ allPostsData, allWritingData }){
+export default function Writing({ allPostsData }){
+
+
     const renderWriting = () => {
         return(
-          allWritingData.map(({title, id, date, description, tags}, index) => (
+          allPostsData.map(({title, id, date, description, tags}, index) => (
             <li key={index}>
             <div  className={css`
               padding: 1em;
@@ -66,7 +68,7 @@ export default function Writing({ allPostsData, allWritingData }){
         padding: 0;
       `}>
         <div className="projgrid">
-          {renderWriting()}
+          { /*renderWriting()*/}
         </div>
       </ul>
       </div>

@@ -46,9 +46,15 @@ export default function Project({ image, date, name, description, id, bgcolor, t
             height: 100%;
             border-radius: 8px;
             display: grid;
-            grid-template-rows: auto 1fr auto;
+            grid-template-rows: 1fr auto auto;
             gap: 1em;
             padding: 1em;
+            border: 1px solid ${bgcolor};
+            &:hover {
+                border: 1px solid #04082B;
+                box-shadow: 0px 0px 12px 4px rgba(9, 9, 9, 0.28);
+border-radius: 8px;
+            }
             @media (max-width: 1000px) {
                 background-size: cover;
                 &:hover {
@@ -56,6 +62,20 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                 }
             }
         `}>
+            <div className={css`
+                background-color: #BFCDFD;
+                background-image: url(${image});
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                transition: background-size 3s, box-shadow 1s;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                
+            `}>
+
+            </div>
+
             <div className={css`
                 display: flex;
                 justify-content: space-between;
@@ -90,19 +110,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                 
                 
             </div>
-            <div className={css`
-                background-color: #BFCDFD;
-                background-image: url(${image});
-                background-position: center;
-                background-size: cover;
-                width: 100%;
-                transition: background-size 3s, box-shadow 1s;
-                background-repeat: no-repeat;
-                cursor: pointer;
-                
-            `}>
-
-            </div>
+            
             <div className={css`
                 display: flex;
                 padding-top: 1em;
