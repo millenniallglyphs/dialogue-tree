@@ -1,6 +1,6 @@
 import { css } from '@emotion/css'
 import Project from '../components/Project'
-import Writing from '../components/writing'
+import Writing from '../components/Writing'
 import { getSortedPostsData } from '../lib/projects'
 import SEO from '../components/Seo'
 import ListLayout from '../components/ListLayout'

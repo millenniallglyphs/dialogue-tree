@@ -1,6 +1,6 @@
 import { css } from '@emotion/css'
 import FileBlock from './FileBlock';
-import Footer from './footer';
+import Footer from './Footer';
 import React from 'react';
 
 
