@@ -14,7 +14,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
             <div className={css`
                 padding: 0.5em;
                 border-radius: 8px;
-                color: #39435B;
+                color: #04082B;
                 font-size: 0.8em;
                 border: 1px solid #39435B;
                 background: #fff;
@@ -178,7 +178,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   top: 0px;
                   height: auto;
                   width: 100%;
-                  margin-top: -52px;
+                  margin-top: -51px;
                   height: auto;
                   top: 80px;
                   background: ${bgcolor};

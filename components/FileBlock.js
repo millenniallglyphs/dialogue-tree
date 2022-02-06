@@ -15,7 +15,7 @@ export default function FileBlock({type, title, label, target}) {
           }
        `}>
                 <a href={target} className={css`
-                    color: ${ color.styled==="light" ? ('#39435B') : ('#2C67FF')};
+                    color: #04082B;
                     font-weight: 800;
                 `}>
                      {title}
