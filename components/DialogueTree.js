@@ -13,6 +13,12 @@ export default function DialogueTree() {
 
     const color = useContext(StyleSelect)
 
+
+    const scrollDown = () => {
+      const e = document.getElementById("reverseflow");
+      e.scrollTo(0, 0);
+    }
+
     const testStyle = {
         width: '100%',
         textAlign: 'right',
@@ -71,6 +77,7 @@ export default function DialogueTree() {
         setLine(next);
         setRealq(q);
         setconcat(next, index);
+        scrollDown();
       }} 
       key={index}
       step={current_step}
@@ -171,8 +178,8 @@ export default function DialogueTree() {
                 height: 100%;
                 overflow-y: scroll;
                 padding: 1em;
-            `}>
-              <div>
+            `} id="reverseflow">
+              <div >
               {renderTree()}
               </div>
             </div>

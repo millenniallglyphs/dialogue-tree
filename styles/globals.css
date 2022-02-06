@@ -411,7 +411,7 @@ pre {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     display: flex;
-    z-index: 6;
+    z-index: 8;
   }
 
   .sideQuote {

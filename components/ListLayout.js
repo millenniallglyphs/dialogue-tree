@@ -25,7 +25,10 @@ export default function ListLayout({children}) {
         `}>
           <DialogueTree/>
         </div>
-        <div>
+        <div className={css`
+         z-index: 2;
+          box-shadow: 0px 0px 8px 8px #F4F4F4;
+        `}>
             {children}
         </div>
       </GridComp>
