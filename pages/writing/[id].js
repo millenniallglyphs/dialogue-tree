@@ -34,7 +34,7 @@ export default function Writing({ writingData, source }) {
     return (
       <>
       <SEO title={writingData.title} img={writingData.image} description={writingData.description}/>
-          <PostLayout title={writingData.title} img={writingData.image} date={writingData.date} team={writingData.team} features={writingData.features} tags={writingData.tags}>
+          <PostLayout title={writingData.title} img={writingData.image} date={writingData.date} team={writingData.team} features={writingData.features} tags={writingData.tags} kind={writingData.kind}>
                 <MDXProvider components={components}>
                     <div className="wrapper">
                         <MDXRemote {...source} />

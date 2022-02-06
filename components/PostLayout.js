@@ -4,7 +4,7 @@ import Footer from './Footer';
 import React from 'react';
 
 
-export default function PostLayout({tags, features, team, title, date, image, bgcolor, children}) {
+export default function PostLayout({tags, features, team, title, date, image, bgcolor, children, kind}) {
 
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -95,7 +95,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
            display: grid;
            grid-template-columns: 475px 1fr;
            margin-top: 78px;
-          background: ${bgcolor};
+          background: ${ kind === "work" ? (bgcolor) : ("#fff")};
           z-index: 4;
           position: relative;
           @media (max-width: 1000px) {
@@ -131,7 +131,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
           <div className={css`
            display: grid;
            grid-template-columns: 475px 1fr;
-           background-color: ${bgcolor}; 
+           background-color: ${ kind === "work" ? (bgcolor) : ("#fff")}; 
           @media (max-width: 1000px) {
               grid-template-columns: 1fr;
               grid-template-rows: auto 1fr;
@@ -146,7 +146,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   flex-direction: column;
                   justify-content: space-between;
                   z-index: 3;
-                  background: ${bgcolor};
+                  background: ${ kind === "work" ? (bgcolor) : ("#fff")};
                   @media (max-width: 1000px) {
                     margin-top: 0px;
                     max-width: 100%;
@@ -181,7 +181,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   margin-top: -51px;
                   height: auto;
                   top: 80px;
-                  background: ${bgcolor};
+                  background: ${ kind === "work" ? (bgcolor) : ("#fff")};
                   display: block;
                   border-bottom: 1px solid #39435B;
                   @media (max-width: 1000px) {
@@ -240,7 +240,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 <div className={css`
                 
                 display: none;
-                background-color: ${bgcolor}; 
+                background-color: ${ kind === "work" ? (bgcolor) : ("#fff")}; 
                 padding: 1em;
                 border-bottom: 1px solid #39435B;
                 z-index: 1;

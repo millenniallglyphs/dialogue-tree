@@ -55,7 +55,7 @@ h4 {
 pre {
   overflow-y: scroll;
   width: 100%;
-  background: #161616;
+  background: #04082B;
   padding: 1em;
   border-radius: 8px;
   color: #fff;
@@ -237,11 +237,70 @@ pre {
 .wrapper {
   width: 100%;
   color: #39435B;
+  counter-reset: sidequote;
+}
+
+.sideQuote {
+  color: var(--primary);
+  float: right;
+  clear: right;
+  margin-right: -310px;
+  font-size: 0.8em;
+  padding: 0.2em;
+  line-height: 1.5em;
+  width: 280px;
+  font-style: normal;
+}
+
+.underQuote {
+  color: var(--primary);
+  float: right;
+  clear: right;
+  margin-right: -310px;
+  font-size: 0.8em;
+  padding: 0.2em;
+  line-height: 1.5em;
+  width: 280px;
+  font-style: normal;
+}
+
+.sideQuote::before{
+  content: counter(sidequote) ".\A";
+  white-space: pre;
+  font-size: 2em;
+  padding-bottom: 1em;
+  font-weight: 800;
+}
+
+.underQuote::before{
+  content: counter(sidequote) ".\A";
+  white-space: pre;
+  font-size: 2em;
+  padding-bottom: 1em;
+  font-weight: 800;
+}
+
+.quoteNum::after {
+  counter-increment: sidequote;
+  content: " " counter(sidequote);
+  color: var(--primary);
+  vertical-align: super;
+  font-size: 0.7em;
+  cursor: pointer;
 }
 
 .wrapper>*>a {
   color:  #04082B;
   text-decoration: underline;
+}
+
+.wrapper>blockquote {
+  font-style: italic;
+  border-left: 1px solid #39435B;
+  padding-left: 1em;
+  margin-left: 1em;
+  margin-right: 2em;
+  width: 100%;
 }
 
 .wrapper>*>code {
@@ -353,6 +412,30 @@ pre {
     scroll-snap-type: x mandatory;
     display: flex;
     z-index: 6;
+  }
+
+  .sideQuote {
+    display: none;
+  }
+
+  .underQuote {
+    color: var(--primary);
+    float: left;
+    clear: both;
+    margin-right: 0px;
+    font-size: 0.8em;
+    font-family: "publicSans", sans-serif;
+    padding: 0.2em;
+    line-height: 1.5em;
+    width: 100%;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+  }
+
+  .underQuote::before{
+    content: counter(sidequote) ". ";
+    font-size: 1em;
   }
 
 }

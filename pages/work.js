@@ -48,12 +48,12 @@ export default function Work({ allPostsData }) {
 
   const renderProject = () => {
     return(
-      allPostsData.map(({id, title, image, date, description, tags, color, kind, writingid}, index) => (
+      allPostsData.map(({id, title, image, date, description, tags, color, kind, writingid, summary}, index) => (
         <div key={index}>
         { kind === "work" ? (
           <Project image={image} name={title} date={date} description={description} options={tags} target={'/projects/'+id} key={id} id={id} bgcolor={color}/>
         ) : (
-          <Writing name={title} target={'/writing/'+writingid} id={writingid}/>
+          <Writing name={title} target={'/writing/'+writingid} id={writingid} summary={summary}/>
         )}
         
         </div>

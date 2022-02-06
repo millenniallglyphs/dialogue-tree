@@ -1,7 +1,7 @@
 import { css } from '@emotion/css'
 import Link from 'next/link';
 
-export default function Writing({name, id, target}) {
+export default function Writing({name, id, target, summary}) {
     return(
     <li id={id}>
         <div className={css`
@@ -53,8 +53,14 @@ export default function Writing({name, id, target}) {
                     </h3>
                     
                 </div>
-                <div>
-
+                <div className={css`
+                    max-width: 750px;
+                `}>
+                    <p className={css`
+                        font-size: 2rem;
+                        line-height: 2.5rem;
+                        margin: 0;
+                    `}>{summary}</p>
                 </div>
                 <div>
                 <p className={css`
