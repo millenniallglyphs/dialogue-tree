@@ -6,9 +6,8 @@ export default function Writing({name, id, target, summary}) {
     <li id={id}>
         <div className={css`
                 width: 100%;
-                height: 100vh;
+                height: 500px;
                 scroll-snap-align: start;
-                padding: 94px 5.4em 1em 0em;
                 border-radius: 8px;
                 justify-content: space-between;
                 @media (max-width: 1000px) {
@@ -24,21 +23,33 @@ export default function Writing({name, id, target, summary}) {
                     height: 100%;
                     border-radius: 8px;
                     display: grid;
-                    grid-template-rows: auto 1fr auto;
+                    grid-template-rows: auto auto 1fr auto;
                     gap: 1em;
                     padding: 1em;
+                    cursor: pointer;
                     border: 1px solid #04082B;
+                    &:hover {
+                        box-shadow: 0px 0px 12px 4px rgba(9, 9, 9, 0.28);
+                        border-radius: 8px;
+                    }
                     @media (max-width: 1000px) {
                         background-size: cover;
-                        &:hover {
-                            background-size: cover;
-                        }
                     }
                 `}>
                 <div>
+                    <p className={css`
+                        margin: 0;
+                        text-transform: uppercase;
+                        font-size: 0.8em;
+                        font-weight: 800;
+                    `}>
+                        Writing
+                    </p>
+                </div>
+                <div>
                     <h3 className={css`
                         font-weight: 800;
-                        font-size: 6em;
+                        font-size: 4em;
                         line-height: 1em;
                         margin: 0;
                         color: #04082B;
@@ -57,9 +68,13 @@ export default function Writing({name, id, target, summary}) {
                     max-width: 750px;
                 `}>
                     <p className={css`
-                        font-size: 2rem;
-                        line-height: 2.5rem;
+                        font-size: 1.4em;
+                        line-height: 2rem;
                         margin: 0;
+                        @media (max-width: 600px) {
+                            font-size: 1.4em;
+                            line-height: 2rem;
+                        }
                     `}>{summary}</p>
                 </div>
                 <div>

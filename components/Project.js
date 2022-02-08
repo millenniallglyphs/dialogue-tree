@@ -28,9 +28,8 @@ export default function Project({ image, date, name, description, id, bgcolor, t
         { image ? (
         <div className={css`
                 width: 100%;
-                height: 100vh;
+                height: 500px;
                 scroll-snap-align: start;
-                padding: 94px 5.4em 1em 0em;
                 border-radius: 8px;
                 justify-content: space-between;
                 @media (max-width: 1000px) {
@@ -46,12 +45,12 @@ export default function Project({ image, date, name, description, id, bgcolor, t
             height: 100%;
             border-radius: 8px;
             display: grid;
-            grid-template-rows: 1fr auto auto;
+            grid-template-rows: auto 1fr auto auto;
             gap: 1em;
             padding: 1em;
+            cursor: pointer;
             border: 1px solid ${bgcolor};
             &:hover {
-                border: 1px solid #04082B;
                 box-shadow: 0px 0px 12px 4px rgba(9, 9, 9, 0.28);
 border-radius: 8px;
             }
@@ -62,6 +61,16 @@ border-radius: 8px;
                 }
             }
         `}>
+            <div>
+                <p className={css`
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-size: 0.8em;
+                    font-weight: 800;
+                `}>
+                    Case Study
+                </p>
+            </div>
             <div className={css`
                 background-image: url(${image});
                 background-position: center;
@@ -83,7 +92,7 @@ border-radius: 8px;
                 <div>
                     <h3 className={css`
                         font-weight: 800;
-                        font-size: 6em;
+                        font-size: 4em;
                         line-height: 1em;
                         margin: 0;
                         color: #04082B;

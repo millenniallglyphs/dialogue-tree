@@ -177,7 +177,10 @@ export default function DialogueTree() {
                 background: none;
                 height: 100%;
                 overflow-y: scroll;
-                padding: 1em;
+                padding: 1em 0em 1em 1em;
+                @media (max-width: 1000px) {
+                  padding: 1em;
+                }
             `} id="reverseflow">
               <div >
               {renderTree()}
@@ -194,7 +197,7 @@ export default function DialogueTree() {
             padding: 1em;
             background: #F4F4F4;
             margin-left: 1em;
-            margin-right: 1em;
+            margin-right: 0em;
             border-radius: 8px;
             box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.14);
             @media (max-width: 1000px) {

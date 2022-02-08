@@ -26,8 +26,13 @@ export default function ListLayout({children}) {
           <DialogueTree/>
         </div>
         <div className={css`
-         z-index: 2;
+         z-index: 0;
+         box-shadow: none;
+         @media (max-width: 1000px) {
+          z-index: 2;
           box-shadow: 0px 0px 8px 8px #F4F4F4;
+         }
+          
         `}>
             {children}
         </div>

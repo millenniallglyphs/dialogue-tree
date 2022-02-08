@@ -74,21 +74,8 @@ export default function Meta() {
                                 @media (max-width: 600px) {
                                     display: none;
                                 }
-                            `}>>
-                                <div className={css`
-                                cursor: pointer;
-                                `}>
-                                    <Link href="/work">
-                                        <p style={small}>Work</p>
-                                    </Link>
-                                </div>
-                                <div className={css`
-                                cursor: pointer;
-                                `}>
-                                    <Link href="/writing">
-                                        <p style={small}>Writing</p>
-                                    </Link>
-                                </div>
+                            `}>
+                                
                                 </div>
                                 <a href="mailto:hello@calvin.ooo">
                                 <div className={css`

@@ -60,8 +60,28 @@ This insight helped to create two poles of focus for the project, ensuring that 
 
 One key insight from this exploration was the idea of the [rule template](https://communications.xalgorithms.org/rule-maker/rule-templates/).  A successful general purpose technology is one that is not only flexible, but is also easily modified to fit specific use-cases. A template allows developers to dynamically generate specific Rule Maker interfaces by allowing the fields of application to be defined by a `template.json` document.
 
+```
+// pencil-manufacturing-template.json
+	
+"item.classification": {
+    "label": "UNSPSC Code",
+    "description": "Choose the product involved in this rule",
+    "type": "array",
+    "options": [
+        {"label": "Pencil or pen grips", "value": "44121707"}, 
+        {"label": "Colored pencils", "value": "44121707"}, 
+        {"label": "Wooden pencils", "value": "44121706"}, 
+        {"label": "Mechanical pencils", "value": "44121705"}
+    ]
+}
+```
+
 Significant effort was placed on understanding the needs of rule authors. This work produced insights across the authorship timeline. To start with, effort is required to become fluent in this novel method of expressing rules. 
-[overcoming the skill gap](https://communications.xalgorithms.org/rule-maker/on-boarding/) became a key area of consideration. Similarly, [assembly ](https://communications.xalgorithms.org/rule-maker/table-editor-ui/) and [testing](https://communications.xalgorithms.org/rule-maker/rule-testing/) also became sites of study. Interestingly, elements of the interface as granular as the iconography required deep investigation. The [logic state icons](https://communications.xalgorithms.org/rule-maker/logic-icons/) involved significant redesign based on user testing.
+[overcoming the skill gap](https://communications.xalgorithms.org/rule-maker/on-boarding/) became a key area of consideration. Similarly, [assembly ](https://communications.xalgorithms.org/rule-maker/table-editor-ui/) and [testing](https://communications.xalgorithms.org/rule-maker/rule-testing/) also became sites of study. Interestingly, elements of the interface as granular as the iconography required deep investigation. 
+
+The [logic state icons](https://communications.xalgorithms.org/rule-maker/logic-icons/) involved significant redesign based on user testing.
+
+<iframe border: border="1px solid rgba(0, 0, 0, 0.1)" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIBwP60W5HyMid6apwO7ANC%2FTable-Editor%3Fnode-id%3D5%253A3181" allowFullScreen></iframe>
 
 However, it was also important to recognize the limitation of the application. Authoring a rule is a process that requires a deep interrogation of a source text and reflection on meaning, intention, and outcome. Only some actions involved in this process are supported in application: much happening in the mind of the author. While these mental actions may be complimented by the application, charting this distinction  helped focus the design process, ensuring support of application functionality. 
 
