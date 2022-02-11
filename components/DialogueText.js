@@ -15,7 +15,7 @@ export default function DialogueText({children, index}) {
               opacity: 1;
               margin-top: 0em;
               border: 1px solid #04082B;
-              box-shadow: 0px 0px 12px 4px #F4F4F4;
+              box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
               animation-name: appear;
               animation-duration: 0.75s;
               animation-delay: ${index + 's'};
@@ -25,7 +25,7 @@ export default function DialogueText({children, index}) {
               }
               `}>
                 <div className={css`
-                     color: #39435B;
+                     color: #04082B;
                 `}>
                 {children}
                 </div>

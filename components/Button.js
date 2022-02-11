@@ -18,12 +18,14 @@ export default function Button({children, step, check}) {
             border-radius: 0.5em;
             border: none;
             outline: none;
-            font-size: 1em;
+            font-size: 16px;
             animation-delay: ${(beep + 0.5) + 's'};
             animation-name: buttonappear;
             animation-duration: 0.5s;
             animation-fill-mode: backwards;
-            font-weight: 400;
+            font-weight: 600;
+            transition: box-shadow 1s;
+            box-shadow: none;
             cursor: pointer;
             &:hover  {
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

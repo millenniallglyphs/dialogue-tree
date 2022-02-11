@@ -113,7 +113,7 @@ export default function DialogueTree() {
           padding: 0.5em 1em 0.5em 1em;
           border-radius: 0.75em 0.75em 0.12em 0.75em;
           font-weight: 400;
-          background: #000;
+          background: #04082B;
           animation-name: appear;
           animation-duration: 0.5s;
           animation-fill-mode: both;

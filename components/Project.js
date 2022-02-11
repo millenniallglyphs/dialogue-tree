@@ -49,10 +49,16 @@ export default function Project({ image, date, name, description, id, bgcolor, t
             gap: 1em;
             padding: 1em;
             cursor: pointer;
+            transition: box-shadow 1s;
+            box-shadow: none;
             border: 1px solid ${bgcolor};
             &:hover {
                 box-shadow: 0px 0px 12px 4px rgba(9, 9, 9, 0.28);
 border-radius: 8px;
+            }
+            &:hover #activate {
+                margin-left: 1em;
+                transition: margin-left 1s;
             }
             @media (max-width: 1000px) {
                 background-size: cover;
@@ -136,17 +142,25 @@ border-radius: 8px;
                 <div className={css`
                     margin: 0;
                     padding: 0;
+                    display: flex;
+                    width: 120px;
+                    font-weight: 800;
+                        
+                        color: #04082B;
+                    @media (max-width: 600px) {
+                        width: 80px;
+                    }
                 `}>
                     <p className={css`
                         margin: 0;
                         padding: 0;
-                        font-weight: 800;
-                        width: 120px;
-                        color: #04082B;
-                        @media (max-width: 600px) {
-                            width: 80px;
-                        }
-                    `}> Read More →</p>
+                        
+                        
+                    `}> Read More</p>
+                    <p id="activate" className={css`
+                        margin: 0;
+                        padding: 0;
+                    `}>→</p>
                 </div>
             </div>
             </div>

@@ -17,7 +17,8 @@ export default function Meta() {
         fontSize: '1em',
         marginTop: '0',
         marginBottom: '0',
-        color: '#fff'
+        color: '#fff',
+        fontWeight: 600,
     }
 
 
@@ -88,7 +89,9 @@ export default function Meta() {
                                 border: none;
                                 outline: none;
                                 font-size: 1em;
-                                font-weight: 400;
+                                font-weight: 600;
+                                transition: box-shadow 1s, background 1s;
+                                box-shadow: none;
                                 cursor: pointer;
                                 &:hover  {
                                     background: #f4f4f4;
