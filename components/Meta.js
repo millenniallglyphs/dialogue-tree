@@ -105,6 +105,7 @@ export default function Meta() {
                                 Get In Touch
                             </div>
                             </a>
+                            {/*}
                             <div className={css`
                             display: none;
                                 @media (max-width: 600px) {
@@ -129,6 +130,7 @@ export default function Meta() {
                                 )}
                                 
                             </div>
+                            */}
                             </div>
                             {/*
                             <div style={target}>

@@ -102,6 +102,9 @@ border-radius: 8px;
                         line-height: 1em;
                         margin: 0;
                         color: #04082B;
+                        @media (max-width: 1800px) {
+                            font-size: 3vw;
+                        }
                         @media (max-width: 1000px) {
                             font-size: 4em;
                         }
@@ -148,7 +151,7 @@ border-radius: 8px;
                         
                         color: #04082B;
                     @media (max-width: 600px) {
-                        width: 80px;
+                        width: 90px;
                     }
                 `}>
                     <p className={css`

@@ -18,7 +18,7 @@ export default function Button({children, step, check}) {
             border-radius: 0.5em;
             border: none;
             outline: none;
-            font-size: 16px;
+            font-size: 1em;
             animation-delay: ${(beep + 0.5) + 's'};
             animation-name: buttonappear;
             animation-duration: 0.5s;

@@ -59,6 +59,9 @@ export default function Writing({name, id, target, summary}) {
                         line-height: 1em;
                         margin: 0;
                         color: #04082B;
+                        @media (max-width: 1800px) {
+                            font-size: 3vw;
+                        }
                         @media (max-width: 1000px) {
                             font-size: 4em;
                         }
@@ -77,6 +80,7 @@ export default function Writing({name, id, target, summary}) {
                         font-size: 1.4em;
                         line-height: 2rem;
                         margin: 0;
+                        overflow-y: hidden;
                         @media (max-width: 600px) {
                             font-size: 1.4em;
                             line-height: 2rem;
@@ -92,7 +96,7 @@ export default function Writing({name, id, target, summary}) {
                         
                         color: #04082B;
                     @media (max-width: 600px) {
-                        width: 80px;
+                        width: 120px;
                     }
                 `}>
                     <p className={css`

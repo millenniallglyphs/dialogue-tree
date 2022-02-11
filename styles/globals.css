@@ -16,7 +16,7 @@ a {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
   html,
   body {
     font-size: 12px;
@@ -342,6 +342,14 @@ pre {
   padding-bottom: 1em;
 }
 
+@media screen and (max-width: 1400px) {
+  .projgrid {
+   
+    grid-template-columns: 1fr;
+    
+  }
+}
+
 .none {
   border: none;
   background: none;
@@ -425,6 +433,7 @@ pre {
     display: flex;
     z-index: 8;
     gap: 0em;
+    padding: 0;
   }
 
   .sideQuote {
