@@ -94,7 +94,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
         <div className={css`
            display: grid;
            grid-template-columns: 475px 1fr;
-           margin-top: 78px;
+           margin-top: 0px;
           background: ${ kind === "work" ? (bgcolor) : ("#fff")};
           z-index: 4;
           position: relative;
@@ -179,11 +179,10 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   height: auto;
                   width: 100%;
                   margin-top: -50px;
-                  height: auto;
-                  top: 80px;
+                  height: 80px;
+                  top: 0px;
                   background: ${ kind === "work" ? (bgcolor) : ("#fff")};
                   display: block;
-                  border-bottom: 1px solid #39435B;
                   @media (max-width: 1000px) {
                     display: none;
                   }
@@ -226,7 +225,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   align-content: space-between;
                   width: 100%;
                   margin-top: 0px;
-                  top: 118px;
+                  top: 80px;
                   @media (max-width: 1000px) {
                     margin-top: -43px;
                     height: auto;
@@ -315,11 +314,12 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   padding: 1em;
               `}>
                  {children}
+                 <Footer></Footer>
               </div>  
               </div>
             
         </div>
-        <Footer></Footer>
+       
         </>  
     )
 }

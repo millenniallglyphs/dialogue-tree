@@ -6,7 +6,7 @@ export default function Writing({name, id, target, summary}) {
     <li id={id}>
         <div className={css`
                 width: 100%;
-                height: 500px;
+                height: 100vh;
                 scroll-snap-align: start;
                 border-radius: 8px;
                 justify-content: space-between;
@@ -21,19 +21,13 @@ export default function Writing({name, id, target, summary}) {
                 <div className={css`
                     background: #fff;
                     height: 100%;
-                    border-radius: 8px;
                     display: grid;
                     grid-template-rows: auto auto 1fr auto;
                     gap: 1em;
-                    padding: 1em;
+                    padding: 2em;
                     cursor: pointer;
                     transition: box-shadow 1s;
                     box-shadow: none;
-                    border: 1px solid #04082B;
-                    &:hover {
-                        box-shadow: 0px 0px 12px 4px rgba(9, 9, 9, 0.28);
-                        border-radius: 8px;
-                    }
                     &:hover #activate {
                         margin-left: 1em;
                         transition: margin-left 1s;
@@ -55,13 +49,10 @@ export default function Writing({name, id, target, summary}) {
                 <div>
                     <h3 className={css`
                         font-weight: 800;
-                        font-size: 4em;
+                        font-size: 8vw;
                         line-height: 1em;
                         margin: 0;
                         color: #04082B;
-                        @media (max-width: 1800px) {
-                            font-size: 3vw;
-                        }
                         @media (max-width: 1000px) {
                             font-size: 4em;
                         }

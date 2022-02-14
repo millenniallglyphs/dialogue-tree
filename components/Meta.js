@@ -17,7 +17,7 @@ export default function Meta() {
         fontSize: '1em',
         marginTop: '0',
         marginBottom: '0',
-        color: '#fff',
+        color: '#04082B',
         fontWeight: 600,
     }
 
@@ -36,7 +36,6 @@ export default function Meta() {
         <>
         <div className={css`
             position: fixed;
-            background: #04082B;
             width: 100%;
             top: 0;
             z-index: 5;
@@ -93,6 +92,7 @@ export default function Meta() {
                                 transition: box-shadow 1s, background 1s;
                                 box-shadow: none;
                                 cursor: pointer;
+                                box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.14);
                                 &:hover  {
                                     background: #f4f4f4;
                                     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);

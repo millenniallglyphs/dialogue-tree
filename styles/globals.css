@@ -347,14 +347,15 @@ li::marker{
   width: 100%;
   max-height: 100vh;
   overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1em;
   width: 100%;
-  padding-top: 94px;
-  padding-right: 1em;
+  padding-top: 0px;
   padding-left: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 0em;
+  margin: 0;
 }
 
 @media screen and (max-width: 1400px) {
