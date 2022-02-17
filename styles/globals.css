@@ -12,6 +12,8 @@ a {
   text-decoration: none;
 }
 
+
+
 * {
   box-sizing: border-box;
 }
@@ -306,7 +308,16 @@ li::marker{
 
 .wrapper>*>a {
   color:  #04082B;
-  text-decoration: underline;
+  border-bottom: 1px solid #04082B;
+  transition: border-bottom 1s;
+}
+
+.wrapper>*>a:hover {
+  border-bottom: 2px solid #04082B;
+}
+
+.wrapper>*>a::after{
+  content: " ↗";
 }
 
 .wrapper>blockquote {
@@ -350,7 +361,6 @@ li::marker{
   scroll-snap-type: y mandatory;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1em;
   width: 100%;
   padding-top: 0px;
   padding-left: 1em;

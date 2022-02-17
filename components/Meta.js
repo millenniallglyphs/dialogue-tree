@@ -46,7 +46,7 @@ export default function Meta() {
                         <div className={css`
                             height: 3em;
                             width: 3em;
-                            background-image: url('/headshot.png');
+                            background-image: url('/headshot.jpg');
                             background-size: cover;
                             background-position: center;
                             border-radius: 2em;

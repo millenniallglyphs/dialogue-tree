@@ -9,7 +9,7 @@ export default function DialogueText({children, index}) {
         
           <div className={css`
               display: inline-block;
-              border-radius: 0.75em 0.75em 0.75em 0.12em;
+              border-radius: 0.12em 0.75em 0.75em 0.75em;
               font-weight: 400;
               background-color: #fff;
               opacity: 1;
@@ -26,7 +26,30 @@ export default function DialogueText({children, index}) {
                 <div className={css`
                      color: #04082B;
                 `}>
-                {children}
+                  { children === "Selman" ? ( 
+                    <a href="https://selmandesign.com" target="_blank" className={css`
+                      border-bottom: 2px solid #04082B;
+                      &::after {
+                        content: "↗"
+                      }
+                    `}>
+                      {children}
+                    </a>
+                  ) : children === "XXIX" ? ( 
+                    <a href="https://studioxxix.com" target="_blank" className={css`
+                      border-bottom: 2px solid #04082B;
+                      &::after {
+                        content: "↗"
+                      }
+                    `}>
+                      {children}
+                    </a>
+                  ) : (
+                    <>
+                    {children}
+                    </>
+                  )}
+               
                 </div>
             </div>
     )

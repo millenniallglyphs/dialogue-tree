@@ -4,28 +4,29 @@ const Dialogue = {
         [ 
           {d: "Hello."},
           {d: "My Name's Calvin."},
-          {d: "I help teams ask questions, craft stories, and design products that deliver value. "},
-          {d: 'Try asking a question.'},
+          {d: "I help teams discover emergent possibility, act with empathy, and deliver products that people want to use."},
+          {d: 'Choose a question to learn more.'},
         ],
       questions: 
         [
-          {q: "Your experience?", next: "experience"},
-          {q: "What makes you different?", next: "passion"},
+          {q: "What's your experience?", next: "experience"},
+          {q: "What's your skill set?", next: "ability"},
         ]
     },
     experience: {
       dialogue:
         [ 
-          {d: "From freelance,"},
-          {d: "to start ups,"},
-          {d: "to an Open Source tech org,"},
-          {d: "I've worked in many different environments."},
-          {d: "I've held titles ranging from product designer "},
-          {d: "to creative technologist."}
+          {d: "I've held roles ranging from:"},
+          {d: "1. Creative Technologist"},
+          {d: "2. Product Designer"},
+          {d: "I've freelanced with an open-source tech org, start-ups, and design studios, including."},
+          {d: "Selman"},
+          {d: "XXIX"},
         ],
       questions: 
         [
-          {q: "How do you tackle a design challenge?", next: "challenge"},
+          {q: "What's your skill set?", next: "ability"},
+          {q: "What's your process?", next: "challenge"},
         ]
     },
     challenge: {
@@ -47,11 +48,13 @@ const Dialogue = {
     ability: {
       dialogue:
       [
-        {d: "I'm a full stack designer."},
-        {d: "I can think through UX problems"},
-        {d: "I can develop UI solution"},
-        {d: "I can construct pixel perfect prototypes"},
-        {d: "And I can build production ready React components."}
+        {d: "I work across the product skill tree, taking on roles that include:"},
+        {d: "1. Facilitation"},
+        {d: "2. User Research"},
+        {d: "3. UX Design"},
+        {d: "4. UI Design"},
+        {d: "5. Prototyping"},
+        {d: "6. Dev Handoff"}
       ],
       questions:
       [

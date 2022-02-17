@@ -1,15 +1,16 @@
 ---
-title: 'Authoring Rules for Any Purpose, in Any Language'
-date: '2021-06-04'
+title: 'DWDS: What Devs Want to Implement'
+date: '2022-02-14'
 description: 'Lorem Ipsum'
-image: '/rule.png'
+image: '/on-ramp.png'
 color: '#E7BF34'
 kind: 'work'
 tags: [
-    {label: 'Research', target: 'test'},
+    {label: 'Facilitation', target: 'test'},
+    {label: 'User Research', target: 'test'},
     {label: 'UX', target: 'test'},
     {label: 'UI', target: 'test'},
-    {label: 'User Testing', target: 'test'}
+    {label: 'Prototyping', target: 'test'}
 ]
 features : [
     {title: 'Documentation', target: 'https://millenniallglyphs.github.io/neighborhood-scale-software-patterns/'},
@@ -26,9 +27,9 @@ Developers across industries have a need for a distributed, general-purpose meth
 
 The Xalgorithms Foundation has created the Data With Direction Specification (DWDS) providing a general purpose free/libre/open design solution. With nearly a decade spent developing the system design, entering the implementation phase of the project marks a major milestone. With this comes an opportunity to asses priorities and orient the implementation in a strategic manner. 
 
-### Mission Critical Design
+### Identifying Implementation
 
-![animated preview of application](/window.gif)
+![preview of application](/rm-panel.png)
 
 DWDS is a decentralized network of nodes. A node consists of three applications:
 
@@ -38,27 +39,17 @@ DWDS is a decentralized network of nodes. A node consists of three applications:
 
 I was tasked with designing the Rule Maker application. This is a critical element of the overall success of the project. One of the key points of distinction, and one of the core value propositions of the specification is the tabular authorship method that enables any user, no matter the level of technical ability, to write rules that can be utilized across digital networks. 
 
-### Defining Users to Define Interface
-
 The method of authorship is the most striking characteristic of the Rule Maker application. However, given Rule Maker's status as one of three applications comprising a node, it was clear that before work could begin on the design of the interface it was important to understand how and why all three applications would be implemented across use-cases. 
 
-To explore this questions, I developed distinct narratives and mapped the implementation process and interplay between the three applications that comprise a node.
+To explore this questions, I developed distinct narratives and mapped the implementation process and interplay between the three applications that comprise a node. Below is an Example of one journey.
 
 
-<iframe width='100%' height='450' border="1px solid #04082B" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FwecDOah0hvb4G1rtreJifa%2FDWDS-in-Use%3Fnode-id%3D0%253A1" allowFullScreen></iframe>
+<iframe sborder="1px solid rgba(0, 0, 0, 0.1)" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FoTwlE1f3K8Dt9JCfQs0CIM%2FImplementation-Journey%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 
 
 The common thread across all stories was the developer. The developer had to play a central role in integrating DWDS with other pieces of software to meet their goals. It became clear that the innovative features of Rule Maker would not benefit any rule authors if the application was not designed with developer implication as a primary concern. To help orient the design and development process two personas were created as touch stones. 
 
-
-<iframe width='100%' height='450' border="1px solid #04082B" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFyJu1ghz8Den96mr5W6Bfv%2FPersona%3Fnode-id%3D0%253A1" allowFullScreen></iframe>
-
-
-This insight helped to create two poles of focus for the project, ensuring that both the developer implementing Rule Maker, and the author writing rules were considered. With this framework in mind it was possible to being charting what developer accommodations were needed. The following graphics maps out the relationship between between developer actions and core actions.
-
-<iframe width='100%' height='450' border="1px solid #04082B" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fr2fxTOD3VGA94AHlBUZTKz%2FDWDS-Rule-Maker-Action-Map-v0.1.0%3Fnode-id%3D0%253A1" allowFullScreen></iframe>
-
-One key insight from this exploration was the idea of the [rule template](https://communications.xalgorithms.org/rule-maker/rule-templates/).  A successful general purpose technology is one that is not only flexible, but is also easily modified to fit specific use-cases. A template allows developers to dynamically generate specific Rule Maker interfaces by allowing the fields of application to be defined by a `template.json` document.
+This insight helped to create two poles of focus for the project, ensuring that both the developer implementing Rule Maker, and the author writing rules were considered. One key insight from this was the idea of the [rule template](https://communications.xalgorithms.org/rule-maker/rule-templates/).  A successful general purpose technology is one that is not only flexible, but is also easily modified to fit specific use-cases. A template allows developers to dynamically generate specific Rule Maker interfaces by allowing the fields of application to be defined by a `template.json` document.
 
 ```
 // pencil-manufacturing-template.json
@@ -76,32 +67,19 @@ One key insight from this exploration was the idea of the [rule template](https:
 }
 ```
 
-Significant effort was placed on understanding the needs of rule authors. This work produced insights across the authorship timeline. To start with, effort is required to become fluent in this novel method of expressing rules. 
-[overcoming the skill gap](https://communications.xalgorithms.org/rule-maker/on-boarding/) became a key area of consideration. Similarly, [assembly ](https://communications.xalgorithms.org/rule-maker/table-editor-ui/) and [testing](https://communications.xalgorithms.org/rule-maker/rule-testing/) also became sites of study. Interestingly, elements of the interface as granular as the iconography required deep investigation. 
 
-The [logic state icons](https://communications.xalgorithms.org/rule-maker/logic-icons/) involved significant redesign based on user testing.
+ With this feature in mind it was possible to being charting what developer accommodations were needed. The following graphics maps out the relationship between between developer actions and core actions.
 
-<iframe border: border="1px solid rgba(0, 0, 0, 0.1)" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIBwP60W5HyMid6apwO7ANC%2FTable-Editor%3Fnode-id%3D5%253A3181" allowFullScreen></iframe>
+<iframe width='100%' height='450' border="1px solid #04082B" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fr2fxTOD3VGA94AHlBUZTKz%2FDWDS-Rule-Maker-Action-Map-v0.1.0%3Fnode-id%3D0%253A1" allowFullScreen></iframe>
 
-However, it was also important to recognize the limitation of the application. Authoring a rule is a process that requires a deep interrogation of a source text and reflection on meaning, intention, and outcome. Only some actions involved in this process are supported in application: much happening in the mind of the author. While these mental actions may be complimented by the application, charting this distinction  helped focus the design process, ensuring support of application functionality. 
-
-<iframe width='100%' height='450' border="1px solid #04082B" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXz37GPQS5Zw5CRf1ljobHM%2FRM-Activity-Map%3Fnode-id%3D0%253A1" allowFullScreen></iframe>
 
 ### Meeting Needs of Developers and Rule Authors
 
-Considering the needs of two distinct groups, developers and authors, shaped the design of the Rule Maker application by mandating:
+Considering the needs of developers and rule authors, shaped the design of the Rule Maker application by mandating:
 
 1. A simple modular interface
 2. Support for developer implementation
 
-![preview of application](/rm-panel.png)
-
-The result is a focused application designed to easily be adapted to specific use-cases. This application is defined by the insights discovered throughout the design process, and is assembled using a simple [modular component library](https://communications.xalgorithms.org/components/) I created for the Xalgorithms Foundation. You can explore the clickable prototype of Rule Maker Below. You can also download the prototype application here.
+The result is a focused application designed to easily be adapted to specific use-cases.  You can explore the clickable prototype of Rule Maker Below. You can also download the prototype application here.
 
 <iframe width='100%' height='450' border="1px solid #04082B" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FIBwP60W5HyMid6apwO7ANC%2FTable-Editor%3Fpage-id%3D189%253A10559%26node-id%3D207%253A18340%26viewport%3D323%252C48%252C0.05%26scaling%3Dscale-down%26starting-point-node-id%3D207%253A18340" allowFullScreen></iframe>
-
-### Falling Action
-
-The design process played a significant role across the project. Not only did the process inform the creation of the user interface, many of the insights surfaced helped to generate alignment and directionaliy across the team.
-
-There is research and dev work remaining.... some kind of conclusion. 

@@ -9,14 +9,19 @@ export default function FileBlock({type, title, label, target}) {
        <div className={css`
         display: flex;
         gap: 0.5em;
+        padding-bottom: 0.5em;
         justify-content: flex-end;
+        border-bottom: 1px solid #F4F4F4;
         @media (max-width: 1000px) {
             justify-content: flex-start;
+          }
+          &:hover {
+              border-bottom: 1px solid #04082B;
           }
        `}>
                 <a href={target} className={css`
                     color: #04082B;
-                    font-weight: 800;
+                    font-weight: 400;
                 `}>
                      {title}
                 </a>

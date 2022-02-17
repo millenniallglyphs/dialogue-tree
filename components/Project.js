@@ -41,16 +41,17 @@ export default function Project({ image, date, name, description, id, bgcolor, t
         > 
         <Link href={target}>
         <div className={css`
-            background: ${bgcolor};
+            background: #04082B;
             height: 100%;
             display: grid;
-            grid-template-rows: auto auto 1fr auto;
+            grid-template-rows: auto auto 1fr;
             gap: 1em;
             padding: 2em;
+            padding-bottom: 0em;
             cursor: pointer;
             transition: box-shadow 1s;
             box-shadow: none;
-            border: 1px solid ${bgcolor};
+            border: 1px solid #04082B;
             &:hover #activate {
                 margin-left: 1em;
                 transition: margin-left 1s;
@@ -68,6 +69,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                     text-transform: uppercase;
                     font-size: 0.8em;
                     font-weight: 800;
+                    color: #fff;
                 `}>
                     Case Study
                 </p>
@@ -85,7 +87,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                         font-size: 8vw;
                         line-height: 1em;
                         margin: 0;
-                        color: #04082B;
+                        color: #fff;
                         
                         @media (max-width: 1000px) {
                             font-size: 4em;
@@ -111,23 +113,24 @@ export default function Project({ image, date, name, description, id, bgcolor, t
             </div>
             <div className={css`
                 background-image: url(${image});
-                background-position: center;
+                background-position: bottom;
                 background-size: contain;
                 width: 100%;
                 transition: background-size 3s, box-shadow 1s;
                 background-repeat: no-repeat;
                 cursor: pointer;
+                align-items: flex-end;
+                display: flex;
                 
             `}>
-
-            </div>
-            
-            <div className={css`
+                <div className={css`
                 display: flex;
+                width: 100%;
                 padding-top: 1em;
                 justify-content: space-between;
                 color: ${ color.styled==="light" ? ('#fff') : ('#000')};
                 align-items: flex-end;
+                padding-bottom: 2em;
             `}>
                 <div className={css`
                     display: flex;
@@ -143,7 +146,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                     width: 120px;
                     font-weight: 800;
                         
-                        color: #04082B;
+                        color: #fff;
                     @media (max-width: 600px) {
                         width: 90px;
                     }
@@ -160,6 +163,10 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                     `}>→</p>
                 </div>
             </div>
+
+            </div>
+            
+            
             </div>
             </Link>
         </div>

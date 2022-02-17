@@ -177,7 +177,7 @@ export default function DialogueTree() {
                 background: none;
                 height: 100%;
                 overflow-y: scroll;
-                padding: 1em 0em 1em 1em;
+                padding: 1em;
                 @media (max-width: 1000px) {
                   padding: 1em;
                 }

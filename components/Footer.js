@@ -17,6 +17,8 @@ export default function Footer() {
                     font-size: 1em;
                     font-weight: 600;
                 `}>
+                    🕯
+                    <br />
                     Designed and Built by me
                 </p>
             </div>

@@ -10,24 +10,34 @@ export default function PostLayout({tags, features, team, title, date, image, bg
 
     const renderOptions = () => {
         return tags.map(({ target, label, }, index) => (
-          <a href={target} key={index}>
             <div className={css`
                 padding: 0.5em;
                 border-radius: 8px;
                 color: #04082B;
-                font-size: 0.8em;
-                border: 1px solid #39435B;
                 background: #fff;
+                box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.14);
             `}>
                 {label}
             </div>
-          </a>
         ));
       };
     
     const renderFeatures = () => {
-      return features.map(({title, label, target, type}, index) => (
-        <FileBlock type="test" label={label} target={target} title={title} type={type} key={index}/>
+      return features.map(({title, target}, index) => (
+        <div>
+        <a href={target} key={index} target="_blank" className={css`
+        color:  #04082B;
+        border-bottom: 0px solid #04082B;
+        transition: border-bottom 1s;
+        font-weight: 400;
+        &:hover {
+          border-bottom: 2px solid #04082B;
+        }
+        &::after {
+          content: " ↗";
+        }
+        `}>{title}</a>
+        </div>
       ));
     }  
     
@@ -42,13 +52,15 @@ export default function PostLayout({tags, features, team, title, date, image, bg
         <div>
           <p className={css`
                   margin-top: 0em;
+                  font-size: 0.8em;
+                  font-weight: 800;
+                  text-transform: uppercase;
                 `}>My Roles</p>
                   <div className={css`
                         display: flex;
                         flex-wrap: wrap;
                         gap: 0.5em;
                         color: #fff;
-                        justify-content: flex-end;
                         @media (max-width: 1000px) {
                           justify-content: flex-start;
                         }
@@ -68,7 +80,11 @@ export default function PostLayout({tags, features, team, title, date, image, bg
          ) : (
                 null
           )}
-              <p>Deliverables</p>
+              <p className={css`
+                font-size: 0.8em;
+                font-weight: 800;
+                text-transform: uppercase;
+              `}>Deliverables</p>
               <div className={css`
                   display: grid;
                   grid-template-columns: 1fr;
@@ -130,6 +146,8 @@ export default function PostLayout({tags, features, team, title, date, image, bg
           
           <div className={css`
            display: grid;
+           z-index: 4;
+           position: relative;
            grid-template-columns: 475px 1fr;
            background-color: ${ kind === "work" ? (bgcolor) : ("#fff")}; 
           @media (max-width: 1000px) {
@@ -181,8 +199,10 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   margin-top: -50px;
                   height: 80px;
                   top: 0px;
-                  background: ${ kind === "work" ? (bgcolor) : ("#fff")};
-                  display: block;
+                  z-index: 1;
+                  background: ${ kind === "work" ? ("#F4F4F4") : ("#fff")};
+                  display: flex;
+                  align-items: center;
                   @media (max-width: 1000px) {
                     display: none;
                   }
@@ -197,6 +217,8 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                     <p className={css`
                       margin: 0;
                       font-weight: 800;
+                      font-size: 0.8em;
+                      text-transform: uppercase;
                     `}>{title}</p>
                     </div>
                  
@@ -221,7 +243,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   position: sticky;
                   top: 0px;
                   height: 400px;
-                  text-align: right;
+                  text-align: left;
                   align-content: space-between;
                   width: 100%;
                   margin-top: 0px;
