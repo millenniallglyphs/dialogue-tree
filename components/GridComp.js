@@ -7,7 +7,7 @@ export default function GridComp({children}){
          grid-template-columns: 475px 1fr;
          @media (max-width: 1000px) {
             grid-template-columns: 1fr;
-            grid-template-rows: 60vh 40vh;
+            grid-template-rows: 55vh 45vh;
           }
         `}>
             {children}

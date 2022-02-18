@@ -18,7 +18,7 @@ export default function ListLayout({children}) {
           grid-area: 1 / 1 / 2 /2;
           z-index: 1;
           @media (max-width: 1000px) {
-            height: 40vh;
+            height: 45vh;
             grid-area: 2 / 1 / 3 /2;
             padding-top: 0px;
           }

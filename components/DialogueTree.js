@@ -164,7 +164,7 @@ export default function DialogueTree() {
           padding-bottom: 1em;
           grid-template-rows: 1fr 65px;
           @media (max-width: 1000px) {
-            height: 40vh;
+            height: 45vh;
             grid-template-rows: 1fr 45px;
             padding-bottom: 0em;
           }

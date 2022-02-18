@@ -11,9 +11,9 @@ export default function Writing({name, id, target, summary}) {
                 border-radius: 8px;
                 justify-content: space-between;
                 @media (max-width: 1000px) {
-                    height: 60vh;
-                    width: 91vw;
-                    padding: 74px 0em 1em 1em;
+                    height: 55vh;
+                    width: 100vw;
+                    padding: 0em;
                   }
             `}
         > 
@@ -31,9 +31,11 @@ export default function Writing({name, id, target, summary}) {
                     &:hover #activate {
                         margin-left: 1em;
                         transition: margin-left 1s;
+                        
                     }
                     @media (max-width: 1000px) {
                         background-size: cover;
+                        padding: 64px 1em 1em 1em;
                     }
                 `}>
                 <div>

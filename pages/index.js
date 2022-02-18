@@ -52,8 +52,10 @@ export async function getStaticProps() {
           <div key={index}>
           { kind === "work" ? (
             <Project image={image} name={title} date={date} description={description} options={tags} target={'/projects/'+id} key={id} id={id} bgcolor={color}/>
-          ) : (
+          ) : kind === "writing" ? (
             <Writing name={title} target={'/writing/'+writingid} id={writingid} summary={summary}/>
+          ) : (
+            null
           )}
           
           </div>
@@ -73,6 +75,10 @@ export async function getStaticProps() {
           justify-content: space-between;
           flex-direction: column;
           padding-right: 1em;
+          display: block;
+          @media (max-width: 1000px) {
+            display: none;
+          }
         `}>
           <div/>
           <div className={css`

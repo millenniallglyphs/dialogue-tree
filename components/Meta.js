@@ -17,8 +17,9 @@ export default function Meta() {
         fontSize: '1em',
         marginTop: '0',
         marginBottom: '0',
-        color: '#04082B',
+        color: '#fff',
         fontWeight: 600,
+        mixBlendMode: 'difference',
     }
 
 
@@ -39,6 +40,7 @@ export default function Meta() {
             width: 100%;
             top: 0;
             z-index: 5;
+            rgba(255, 255, 255, 0)
         `}>
             <Hold>
                 <div style={flex}>
@@ -46,17 +48,20 @@ export default function Meta() {
                         <div className={css`
                             height: 3em;
                             width: 3em;
-                            background-image: url('/headshot.jpg');
+                            background-image: url('/headshot2.jpg');
                             background-size: cover;
                             background-position: center;
                             border-radius: 2em;
                             margin-right: 1em;
+                            isolation: isolate;
                         `}></div>
-                        <Link href="/work">
+                        <div>
+                        <Link href="/">
                             <a>
                                 <p style={small}>Calvin Hutcheon</p>
                             </a>
                         </Link>
+                        </div>
                     </div>
                     <div className={css`
                         display: flex;

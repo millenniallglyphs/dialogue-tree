@@ -9,7 +9,7 @@ export default function DialogueText({children, index}) {
         
           <div className={css`
               display: inline-block;
-              border-radius: 0.12em 0.75em 0.75em 0.75em;
+              border-radius:  0.75em 0.75em 0.75em 0.12em;
               font-weight: 400;
               background-color: #fff;
               opacity: 1;
