@@ -111,7 +111,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
            display: grid;
            grid-template-columns: 475px 1fr;
            margin-top: 0px;
-          background: ${ kind === "work" ? (bgcolor) : ("#fff")};
+          background: ${ kind === "work" ? (" #04082B") : ("#fff")};
           z-index: 4;
           position: relative;
           @media (max-width: 1000px) {
@@ -149,7 +149,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
            z-index: 4;
            position: relative;
            grid-template-columns: 475px 1fr;
-           background-color: ${ kind === "work" ? (bgcolor) : ("#fff")}; 
+           background-color: ${ kind === "work" ? ( "#04082B") : ("#fff")}; 
           @media (max-width: 1000px) {
               grid-template-columns: 1fr;
               grid-template-rows: auto 1fr;
@@ -164,7 +164,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   flex-direction: column;
                   justify-content: space-between;
                   z-index: 3;
-                  background: ${ kind === "work" ? (bgcolor) : ("#fff")};
+                  background: ${ kind === "work" ? ( "#04082B") : ("#fff")};
                   @media (max-width: 1000px) {
                     margin-top: 0px;
                     max-width: 100%;

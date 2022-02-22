@@ -75,7 +75,6 @@ export async function getStaticProps() {
           justify-content: space-between;
           flex-direction: column;
           padding-right: 1em;
-          display: block;
           @media (max-width: 1000px) {
             display: none;
           }
