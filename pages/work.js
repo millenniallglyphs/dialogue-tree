@@ -53,8 +53,14 @@ export default function Work({allPostsData}){
             <div className="projgrid" id="scroll-element">
               
               {renderProject()}
-              <Footer />
-         
+              <div className={css`
+                display: block;
+                @media (max-width: 1000px) {
+                  display: none;
+                }
+              `}>
+                <Footer />
+              </div>
             </div>
          
           </ul>

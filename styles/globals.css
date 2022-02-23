@@ -387,18 +387,18 @@ li::marker{
 }
 
 .hidden {
-  height: 0px;
   opacity: 0;
+  height: 0px;
   pointer-events: none;
-  transition: opacity 0.5s, height 2s;
+  margin-top: 0;
+  transition: opacity 0.5s;
 }
 
 .nothidden {
   opacity: 1;
   margin-top: 0;
-  padding-top: 1em;
   height: auto;
-  transition: opacity 1s, height 1s;
+  transition: opacity 1s;
 }
 
 #activate {

@@ -163,12 +163,13 @@ export default function Meta({kind}) {
                             <div className={css`
                             display: none;
                                 @media (max-width: 600px) {
-                                    display: block
+                                    display: block;
+                                    padding-top: 4px;
                                 }
                             `}>
                                 { !isOpen ? (
                                 <button onClick={() => setIsOpen(true)} className="none">
-                                    <svg width="24" height="14" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="24" height="15" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 1.41016H29" stroke="#04082B"/>
                                         <path d="M1 9.41016H29" stroke="#04082B" strokeLinecap="round"/>
                                         <path d="M1 17.4102H29" stroke="#04082B"/>
@@ -209,11 +210,11 @@ export default function Meta({kind}) {
                 <div className={css`
                     width: 100vw; 
                     height: 100vh;
-                    background: #04082B;
+                    background-color: rgba(255, 255, 255, 0.7);
                     padding: 1em;
                     z-index: 5;
                     position: relative;
-                    color: #fff;
+                    color: #04082B;
                     text-align: right;
                     font-weight: 700;
                 `}>
@@ -221,9 +222,10 @@ export default function Meta({kind}) {
                     <Link href="/work">
                         <button onClick={() => setIsOpen(false)} className="none">
                         <h1 className={css`
-                                color: #fff;
+                                color: #04082B;
                                 padding: 0;
                                 margin: 0;
+                                font-size: 5em;
                             `}>
                             Work
                         </h1>
@@ -234,10 +236,12 @@ export default function Meta({kind}) {
                         <Link href="/writing">
                             <button onClick={() => setIsOpen(false)} className='none'>
                             <h1 className={css`
-                                color: #fff;
+                                color: #04082B;
                                 padding: 0;
+                                margin: 0;
+                                font-size: 5em;
                             `}>
-                                Writing
+                               Writing
                             </h1>
                             </button>
                         </Link>
