@@ -5,33 +5,47 @@ export default function SEO ({img, title, description, tags=[]}) {
     
     const [tagstring, SetTagstring] = useState("")
 
-    {/*default tags are declared here*/}
+    /*default tags are declared here*/
 
     const tagsList = [
         {tag: "Calvin"},
         {tag: "Hutcheon"},
         {tag: "Calvin Hutcheon"},
         {tag: "Product Design"},
-        {tag: "UX"},
-        {tag: "UI"},
-        {tag: "User Interface"},
-        {tag: "User Experience"},
-        {tag: "HCI"},
-        {tag: "Human Computer Interaction"},
         {tag: "Design"},
         {tag: "Product"},
+        {tag: "UX"},
+        {tag: "User Experience"},
+        {tag: "UI"},
+        {tag: "User Interface"},
+        {tag: "Prototype"},
+        {tag: "Prototyping"},
+        {tag: "Facilitate"},
+        {tag: "Facilitation"},
+        {tag: "User Research"},
+        {tag: "User"},
+        {tag: "Research"},
+        {tag: "User Testing"},
+        {tag: "Dev Handoff"},
+        {tag: "Dev"},
+        {tag: "Developer"},
+        {tag: "Front End"},
+        {tag: "FE"},
+        {tag: "Communication"},
+        {tag: "Analysis"},
+        {tag: "Leadership"},
+        {tag: "collaboration"},
+        {tag: "HCI"},
+        {tag: "Human Computer Interaction"},
+        {tag: "Creative Technologist"},
+        {tag: "Technologist"},
         {tag: "Open Source"},
         {tag: "Free Software"},
         {tag: "Appropriate Technology"},
         {tag: "Interface"},
-        {tag: "Neighborhood"},
-        {tag: "Neighborhood Scale Design"},
         {tag: "Complexity"},
         {tag: "Climate"},
         {tag: "Value"},
-        {tag: "User"},
-        {tag: "User Research"},
-        {tag: "Research"},
         {tag: "Resilience"},
         {tag: "Resilient"},
         {tag: "Web3"},
@@ -40,10 +54,13 @@ export default function SEO ({img, title, description, tags=[]}) {
         {tag: "Application"},
     ]
 
-    {/*checks to see if custom tags are passed by a blog post, if not, will concatenate with the const tagList*/}
+    /*checks to see if custom tags are passed by a blog post. if present, will concatenate tagList*/
     
     const renderTags = () => {
         tags[0] ? (
+        tagsList.map(({tag}) => {
+            SetTagstring(tagstring => tagstring.concat(tag + ", "))
+        }) &&
         tags.map(({tag}) => {
             SetTagstring(tagstring => tagstring.concat(tag + ", "))
         }) 

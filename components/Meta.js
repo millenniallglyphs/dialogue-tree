@@ -3,7 +3,7 @@ import { css } from '@emotion/css';
 import Link from 'next/link';
 import React from 'react';
 
-export default function Meta() {
+export default function Meta({kind}) {
 
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -17,7 +17,7 @@ export default function Meta() {
         fontSize: '1em',
         marginTop: '0',
         marginBottom: '0',
-        color: '#fff',
+        color: '#04082B',
         fontWeight: 600,
         mixBlendMode: 'difference',
     }
@@ -41,14 +41,21 @@ export default function Meta() {
             top: 0;
             z-index: 5;
             rgba(255, 255, 255, 0)
+            mixBlendMode: 'difference',
         `}>
             <Hold>
-                <div style={flex}>
+                <div className={css`
+                    display: grid;
+                    grid-template-columns: 475px 1fr;
+                    @media (max-width: 1000px) {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                `}>
                     <div style={home}>
                         <div className={css`
                             height: 3em;
                             width: 3em;
-                            background-image: url('/headshot2.jpg');
+                            background-image: url('/headshot.jpg');
                             background-size: cover;
                             background-position: center;
                             border-radius: 2em;
@@ -58,30 +65,72 @@ export default function Meta() {
                         <div>
                         <Link href="/">
                             <a>
-                                <p style={small}>Calvin Hutcheon</p>
+                                <p className={css`
+                                    font-size: 1em;
+                                    margin-top: 0;
+                                    margin-bottom: 0;
+                                    color: #04082B;
+                                    font-weight: 600;
+                                `}>Calvin Hutcheon</p>
                             </a>
                         </Link>
                         </div>
                     </div>
                     <div className={css`
                         display: flex;
+                        
                     `}>
                             <div
                             className={css`
                                 display: flex;
                                 align-items: center;
                                 gap: 1em;
+                                justify-content: space-between;
+                                width: 100%;
+                                @media (max-width: 1000px) {
+                                    justify-content: flex-end;
+                                }
                             `}
                             >
                                 <div className={css`
-                            display: flex;
-                            gap: 1em;
+                                display: flex;
+                                align-items: center;
+                                padding-left: 2em;
+                                gap: 1em;
                                 @media (max-width: 600px) {
                                     display: none;
                                 }
                             `}>
+                                <Link href="/work">
+                                    <a className={css`
+                                        font-size: 0.8em;
+                                        font-weight: 600;
+                                        text-transform: uppercase;
+                                        color:  #04082B;
+                                        opacity: ${ kind === "light" ? ("1") : ("0.5")};
+                                        transition: opacity 1s;
+                                        &:hover {
+                                            opacity: 1;
+                                            transition: opacity 1s;
+                                        }
+                                    `}>work</a>
+                                </Link>
+                                <Link href="/writing">
+                                <a className={css`
+                                        font-size: 0.8em;
+                                        font-weight: 600;
+                                        text-transform: uppercase;
+                                        color:  #04082B;
+                                        opacity: ${ kind === "light" ? ("0.5") : ("1")};
+                                        transition: opacity 1s;
+                                        &:hover {
+                                            opacity: 1;
+                                            transition: opacity 1s;
+                                        }
+                                    `}>writing</a>
+                                </Link>
                                 
-                                </div>
+                            </div>
                                 <a href="mailto:hello@calvin.ooo">
                                 <div className={css`
                                 padding: 0.5em;
@@ -110,7 +159,7 @@ export default function Meta() {
                                 Get In Touch
                             </div>
                             </a>
-                            {/*}
+                            
                             <div className={css`
                             display: none;
                                 @media (max-width: 600px) {
@@ -120,22 +169,22 @@ export default function Meta() {
                                 { !isOpen ? (
                                 <button onClick={() => setIsOpen(true)} className="none">
                                     <svg width="24" height="14" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1.41016H29" stroke="white"/>
-                                        <path d="M1 9.41016H29" stroke="white" strokeLinecap="round"/>
-                                        <path d="M1 17.4102H29" stroke="white"/>
+                                        <path d="M1 1.41016H29" stroke="#04082B"/>
+                                        <path d="M1 9.41016H29" stroke="#04082B" strokeLinecap="round"/>
+                                        <path d="M1 17.4102H29" stroke="#04082B"/>
                                     </svg>
                                 </button>
                                 ) : (
                                     <button onClick={() => setIsOpen(false)} className="none">
                                         <svg width="24" height="14" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L29.0018 17.0001" stroke="white"/>
-                                        <path d="M1 17L29.0018 0.999869" stroke="white" strokeLinecap="round"/>
+                                        <path d="M1 1L29.0018 17.0001" stroke="#04082B"/>
+                                        <path d="M1 17L29.0018 0.999869" stroke="#04082B" strokeLinecap="round"/>
                                         </svg>
                                     </button>
                                 )}
                                 
                             </div>
-                            */}
+                            
                             </div>
                             {/*
                             <div style={target}>

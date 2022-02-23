@@ -1,7 +1,7 @@
 import { css } from '@emotion/css'
 import Link from 'next/link';
 
-export default function Writing({name, id, target, summary}) {
+export default function WritingPrev({name, id, target, summary}) {
     return(
     <li id={id}>
         <div className={css`
@@ -44,6 +44,7 @@ export default function Writing({name, id, target, summary}) {
                         text-transform: uppercase;
                         font-size: 0.8em;
                         font-weight: 800;
+                        color: #fff;
                     `}>
                         Writing
                     </p>

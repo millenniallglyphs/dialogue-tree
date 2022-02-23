@@ -1,10 +1,10 @@
 import Meta from "./Meta"
 import { css } from '@emotion/css'
 
-export default function BasicLayout({children}) {
+export default function BasicLayout({kind, children}) {
     return(
         <>
-            <Meta kind="light"/>
+            <Meta kind={kind}/>
             <div className={css`
                 min-height: 100vh;
                 background-color: #F4F4F4;

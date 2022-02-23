@@ -46,7 +46,7 @@ export default function Post({ source, postData }) {
 
 Post.getLayout = function getLayout(page) {
   return (
-    <BasicLayout>
+    <BasicLayout kind="light">
       {page}
     </BasicLayout>
   )

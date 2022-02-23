@@ -40,7 +40,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
         > 
         <Link href={target}>
         <div className={css`
-            background: #04082B;
+            background: #fff;
             height: 100%;
             display: grid;
             grid-template-rows: auto auto 1fr;
@@ -57,7 +57,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                 background-size: cover;
                 padding: 0em;
                 gap: 0.5em;
-                padding-top: 54px;
+                padding-top: 34px;
                 &:hover {
                     background-size: cover;
                 }
@@ -100,7 +100,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                         font-size: 8vw;
                         line-height: 1em;
                         margin: 0;
-                        color: #fff;
+                        color: #04082B;
                         
                         @media (max-width: 1000px) {
                             font-size: 4em;
@@ -147,6 +147,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                 color: ${ color.styled==="light" ? ('#fff') : ('#000')};
                 align-items: flex-end;
                 padding: 2em;
+               
                 @media (max-width: 1000px) {
                    padding: 1em;
                 }
@@ -154,7 +155,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                 <div className={css`
                     display: flex;
                     gap: 0.5em;
-                    flex-wrap: wrap;
+                    flex-wrap: wrap-reverse;
                 `}>
                     {renderOptions()}
                 </div>

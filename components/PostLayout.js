@@ -15,6 +15,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 border-radius: 8px;
                 color: #04082B;
                 background: #fff;
+                font-size: 0.8em;
                 box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.14);
             `}>
                 {label}
@@ -55,6 +56,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   font-size: 0.8em;
                   font-weight: 800;
                   text-transform: uppercase;
+                  padding-bottom: 1em;
                 `}>My Roles</p>
                   <div className={css`
                         display: flex;
@@ -84,6 +86,8 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 font-size: 0.8em;
                 font-weight: 800;
                 text-transform: uppercase;
+                padding-top: 1em;
+                padding-bottom: 1em;
               `}>Deliverables</p>
               <div className={css`
                   display: grid;
@@ -107,64 +111,45 @@ export default function PostLayout({tags, features, team, title, date, image, bg
 
     return(
         <>
-        <div className={css`
-           display: grid;
-           grid-template-columns: 475px 1fr;
-           margin-top: 0px;
-          background: ${ kind === "work" ? (" #04082B") : ("#fff")};
-          z-index: 4;
-          position: relative;
-          @media (max-width: 1000px) {
-              grid-template-columns: 1fr;
-              grid-template-rows: auto 1fr;
-              margin-top: 60px;
-            }
-          `}>
-            <div />
-            <div className={css`
-                  
-                  padding: 1em;
-                  max-width: 750px;
-                  height: 300px;
-                  background-image: url(${image});
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                  @media (max-width: 1000px) {
-                    margin-top: 0px;
-                    max-width: 100%;
-                    height: 30vh;
-                  }
-  
-              `}>
-                
-          
-             
-              </div> 
-  
-          </div>
+      
           
           <div className={css`
            display: grid;
            z-index: 4;
+           background-image:  url(${image});
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            
            position: relative;
            grid-template-columns: 475px 1fr;
-           background-color: ${ kind === "work" ? ( "#04082B") : ("#fff")}; 
+           width: 100%;
+           height: 500px;
+           &:after {
+            position: absolute;
+            content: " ";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+           }
           @media (max-width: 1000px) {
               grid-template-columns: 1fr;
               grid-template-rows: auto 1fr;
+              height: 400px;
             }
           `}>
             <div />
             <div className={css`
                   
                   padding: 1em;
+                  padding-top: 84px;
                   max-width: 750px;
                   display: flex;
                   flex-direction: column;
                   justify-content: space-between;
                   z-index: 3;
-                  background: ${ kind === "work" ? ( "#04082B") : ("#fff")};
                   @media (max-width: 1000px) {
                     margin-top: 0px;
                     max-width: 100%;
@@ -179,8 +164,10 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                     line-height: 1em;
                     color: #04082B;
                     margin: 0;
+                    padding-left: 2rem;
                     @media (max-width: 1000px) {
                       margin: 0;
+                      padding-left: 0em;
                     }
                 `}>{title}</h1>
               </div>
@@ -190,17 +177,13 @@ export default function PostLayout({tags, features, team, title, date, image, bg
   
           </div>
           <div className={css`
-                  padding: 1em;
                   position: -webkit-sticky;
                   position: sticky;
                   top: 0px;
                   height: auto;
                   width: 100%;
-                  margin-top: -50px;
-                  height: 80px;
+                  margin-top: -100px;
                   top: 0px;
-                  z-index: 1;
-                  background: ${ kind === "work" ? ("#F4F4F4") : ("#fff")};
                   display: flex;
                   align-items: center;
                   @media (max-width: 1000px) {
@@ -209,11 +192,20 @@ export default function PostLayout({tags, features, team, title, date, image, bg
               `}>
                 <div className={css`
                   display: grid;
-                  grid-template-columns: 475px 1fr;`}>
+                  grid-template-columns: 475px 1fr;
+                  width: 100%;
+                  `}>
                     <div>
 
                     </div>
-                    <div>
+                    <div className={css`
+                      padding-top: 72px;
+                      padding-left: 3em;
+                      padding-bottom: 2em;
+                      background: #F4F4F4;
+                      z-index: 1;
+                      width: 100%;
+                    `}>
                     <p className={css`
                       margin: 0;
                       font-weight: 800;
@@ -246,13 +238,14 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   text-align: left;
                   align-content: space-between;
                   width: 100%;
+                  background-color: #F4F4F4; 
                   margin-top: 0px;
-                  top: 80px;
+                  top: 50px;
                   @media (max-width: 1000px) {
-                    margin-top: -43px;
+                    margin-top: -100px;
                     height: auto;
-                    top: 60px;
-                    padding-top: 0em;
+                    top: 0px;
+                    padding-top: 48px;
                     padding-left: 0em;
                     padding-right: 0em;
                     text-align: left;
@@ -261,9 +254,8 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 <div className={css`
                 
                 display: none;
-                background-color: ${ kind === "work" ? (bgcolor) : ("#fff")}; 
+                background-color: #F4F4F4; 
                 padding: 1em;
-                border-bottom: 1px solid #39435B;
                 z-index: 1;
                 @media (max-width: 1000px) {
                   display: block;
@@ -334,6 +326,10 @@ export default function PostLayout({tags, features, team, title, date, image, bg
               <div className={css`
                   margin-top: 0px;
                   padding: 1em;
+                  padding-left: 3em;
+                  @media (max-width: 1000px) {
+                    padding-left: 1em;
+                  }
               `}>
                  {children}
                  <Footer></Footer>
