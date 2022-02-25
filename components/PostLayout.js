@@ -111,33 +111,16 @@ export default function PostLayout({tags, features, team, title, date, image, bg
 
     return(
         <>
-      
-          
-          <div className={css`
+        <div className={css`
            display: grid;
            z-index: 4;
-           background-image:  url(${image});
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top;
-            
+           background: #fff;
            position: relative;
            grid-template-columns: 475px 1fr;
            width: 100%;
-           height: 500px;
-           &:after {
-            position: absolute;
-            content: " ";
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.7);
-           }
           @media (max-width: 1000px) {
               grid-template-columns: 1fr;
               grid-template-rows: auto 1fr;
-              height: 400px;
             }
           `}>
             <div />
@@ -174,6 +157,30 @@ export default function PostLayout({tags, features, team, title, date, image, bg
           
              
               </div> 
+  
+          </div>
+      
+          
+          <div className={css`
+           display: grid;
+           z-index: 4;
+           background-image:  url(${image});
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            position: relative;
+            background-color: #fff;
+           width: 100%;
+           height: 500px;
+          
+          @media (max-width: 1000px) {
+              grid-template-columns: 1fr;
+              grid-template-rows: auto 1fr;
+              height: 400px;
+            }
+          `}>
+            
+          
   
           </div>
           <div className={css`

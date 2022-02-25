@@ -40,8 +40,12 @@ export default function Meta({kind}) {
             width: 100%;
             top: 0;
             z-index: 5;
-            rgba(255, 255, 255, 0)
-            mixBlendMode: 'difference',
+            rgba(255, 255, 255, 0);
+            background: ${ isOpen === !"true" ? (
+                "rgba(255, 255, 255, 0)"
+            ) : (
+                "rgba(255, 255, 255, 0.7)"
+            )};
         `}>
             <Hold>
                 <div className={css`
