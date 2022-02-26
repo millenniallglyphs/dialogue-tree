@@ -4,7 +4,7 @@ const Dialogue = {
         [ 
           {d: "Hello."},
           {d: "My Name's Calvin."},
-          {d: "I help teams discover emergent possibility, act with empathy, and deliver products that people want to use."},
+          {d: "I help teams to discover emergent possibility, build beyond the model, and deliver enchanting products."},
           {d: 'Choose a question to learn more.'},
         ],
       questions: 
@@ -26,7 +26,6 @@ const Dialogue = {
       questions: 
         [
           {q: "What's your skill set?", next: "ability"},
-          {q: "What's your process?", next: "challenge"},
         ]
     },
     challenge: {
@@ -58,7 +57,7 @@ const Dialogue = {
       ],
       questions:
       [
-        {q: "What ideas make you excited?", next: "excited"},
+        {q: "How can we get in touch?", next: "end"},
       ]
     },
     excited: {
@@ -97,10 +96,11 @@ const Dialogue = {
     },
     end: {
       dialogue: [
-        {d: "If you want to talk,"},
-        {d: "if you're interested in collaborating, "},
-        {d: "or, if you want to share a project you're excited about"},
-        {d: "please, email me at hello@calvin.ooo"},
+        {d: "Do you have more questions?"},
+        {d: "Are you interested in collaborating?"},
+        {d: "Want to hire me?"},
+        {d: "Please, shoot me an email:"},
+        {d: "hello@calvin.ooo"}
       ],
       questions: [
         

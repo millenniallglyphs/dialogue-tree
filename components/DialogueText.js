@@ -44,6 +44,15 @@ export default function DialogueText({children, index}) {
                     `}>
                       {children}
                     </a>
+                  ) : children === "hello@calvin.ooo" ? (
+                    <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
+                    border-bottom: 2px solid #04082B;
+                    &::after {
+                      content: "↗"
+                    }
+                  `}>
+                    {children}
+                  </a>
                   ) : (
                     <>
                     {children}
