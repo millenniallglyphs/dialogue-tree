@@ -97,11 +97,12 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                 <div>
                     <h3 className={css`
                         font-weight: 800;
-                        font-size: 8vw;
+                        font-size: 7.6vw;
                         line-height: 1em;
-                        margin: 0;
+                        margin-left: 0;
+                        padding: 0;
+                        max-width: 100%;
                         color: #04082B;
-                        
                         @media (max-width: 1000px) {
                             font-size: 4em;
                         }
@@ -161,12 +162,14 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                 </div>
                 <div className={css`
                     margin: 0;
-                    padding: 0;
+                    padding: 0.2em;
                     display: flex;
                     min-width: 100px;
                     font-weight: 600;
-                    color: #f3f9ff;
-                    mix-blend-mode: exclusion;
+                    color: #04082B;
+                    background: rgba(250, 250, 250, 0.8 );
+                    border-radius: 8px;
+                    box-shadow: 0px 0px 40px 50px rgba(250, 250, 250, 0.8);
                     @media (max-width: 600px) {
                         width: 70px;
                     }
@@ -174,7 +177,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                     <p className={css`
                         margin: 0;
                         padding: 0;
-                        
+                        color: #04082B
                         
                     `}> Read More</p>
                     <p id="activate" className={css`

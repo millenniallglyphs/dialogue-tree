@@ -47,6 +47,7 @@ h3 {
   font-weight: 800;
   font-size: 1.8em;
   line-height: 1em;
+  margin-left: 0em;
 }
 
 h4 {
@@ -59,7 +60,7 @@ pre {
   overflow-y: scroll;
   width: 100%;
   background: #04082B;
-  padding: 1em;
+  padding: 1em 2rem 1em 2rem;
   border-radius: 8px;
   color: #fff;
   font-size: 0.8em;
@@ -78,6 +79,11 @@ ul>* {
 
 li::marker{
   padding-right: 1em;
+}
+
+caption {
+  width: 750px;
+  font-size: 0.8em;
 }
 
 
@@ -307,11 +313,36 @@ li::marker{
   cursor: pointer;
 }
 
+.wrapper {
+  max-width: 880px;
+  font-size: 1.4em;
+  line-height: 1.8em; 
+}
+
+.wrapper > img {
+  width: 100%;
+}
+
+.wrapper>*:not(img):not(iframe):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre):not(div) {
+  max-width: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.wrapper>iframe {
+  width: 100%;
+  height: 70vh;
+}
+
+
 .wrapper>*>a {
   color:  #04082B;
   border-bottom: 1px solid #04082B;
   transition: border-bottom 1s;
 }
+
+
+
 
 .wrapper>*>a:hover {
   border-bottom: 2px solid #04082B;
@@ -328,22 +359,41 @@ li::marker{
   margin-left: 1em;
   margin-right: 2em;
   width: 100%;
+  max-width: 750px;
 }
 
 .wrapper>*>code {
   font-size: 0.8em;
   background: #04082B;
   color: #fff;
-  padding: 0.2em 1em 0.2em 1em;
+  padding: 0.2em 2em 0.2em 2em;
   border-radius: 4px;
+  max-width: 750px;
+}
+
+
+.wrapper>p:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  line-height: 1.8em; 
+}
+
+.wrapper>p>.highlight {
+ background: rgb(200, 200, 255);
 }
 
 .wrapper>h1,h2,h3,h4,h5,h6 {
   color: #04082B;
   margin: 0;
+  max-width: 750px;
+  padding-left: 2rem;
+  line-height: 1.2em;
 }
 
-.wrapper>*>img {
+.wrapper>div {
+  width: 100%;
+}
+
+
+.wrapper>p>img {
   width: 100%;
 }
 
@@ -351,9 +401,8 @@ li::marker{
   width: 100%;
 }
 
-.wrapper>* {
-  line-height: 1.8em;
-}
+
+
 
 .projgrid {
   width: 100%;

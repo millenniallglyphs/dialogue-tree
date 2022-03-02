@@ -60,6 +60,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 `}>My Roles</p>
                   <div className={css`
                         display: flex;
+                        justify-content: flex-end;
                         flex-wrap: wrap;
                         gap: 0.5em;
                         color: #fff;
@@ -112,12 +113,14 @@ export default function PostLayout({tags, features, team, title, date, image, bg
     return(
         <>
         <div className={css`
-           display: grid;
            z-index: 4;
-           background: #fff;
+           background: #F4F4F4;
            position: relative;
-           grid-template-columns: 475px 1fr;
+           display: grid;
+            grid-template-columns: 475px 1fr;
            width: 100%;
+           padding-left: 1em;
+           padding-right: 1em;
           @media (max-width: 1000px) {
               grid-template-columns: 1fr;
               grid-template-rows: auto 1fr;
@@ -126,8 +129,10 @@ export default function PostLayout({tags, features, team, title, date, image, bg
             <div />
             <div className={css`
                   
-                  padding: 1em;
+                  padding-bottom: 1em;
+                  padding-left: 2em;
                   padding-top: 84px;
+
                   max-width: 750px;
                   display: flex;
                   flex-direction: column;
@@ -143,8 +148,9 @@ export default function PostLayout({tags, features, team, title, date, image, bg
               <div>
                 <h1 className={css`
                     font-weight: 800;
-                    font-size: 4em;
+                    font-size: 3.2em;
                     line-height: 1em;
+                    padding-left: 0rem !important; 
                     color: #04082B;
                     margin: 0;
                     padding-left: 2rem;
@@ -160,7 +166,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
   
           </div>
       
-          
+          {/*
           <div className={css`
            display: grid;
            z-index: 4;
@@ -179,10 +185,12 @@ export default function PostLayout({tags, features, team, title, date, image, bg
               height: 400px;
             }
           `}>
+          
             
           
   
           </div>
+          */}
           <div className={css`
                   position: -webkit-sticky;
                   position: sticky;
@@ -206,7 +214,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
 
                     </div>
                     <div className={css`
-                      padding-top: 72px;
+                      padding-top: 2em;
                       padding-left: 3em;
                       padding-bottom: 2em;
                       background: #F4F4F4;
@@ -242,12 +250,12 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   position: sticky;
                   top: 0px;
                   height: 400px;
-                  text-align: left;
+                  text-align: right;
                   align-content: space-between;
                   width: 100%;
                   background-color: #F4F4F4; 
                   margin-top: 0px;
-                  top: 50px;
+                  top: 0px;
                   @media (max-width: 1000px) {
                     margin-top: -100px;
                     height: auto;
@@ -325,7 +333,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
           </div>
           
             <div className={css`
-             max-width: 750px;
+             max-width: 100%;
              @media (max-width: 1000px) {
                max-width: 100%;
              }
@@ -333,7 +341,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
               <div className={css`
                   margin-top: 0px;
                   padding: 1em;
-                  padding-left: 3em;
+                  padding-left: 1em;
                   @media (max-width: 1000px) {
                     padding-left: 1em;
                   }

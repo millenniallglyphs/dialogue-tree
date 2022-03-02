@@ -19,7 +19,7 @@ export default function Footer() {
                 `}>
                     🕯
                     <br />
-                    Designed and Built by me
+                    Designed and Built by Calvin
                 </p>
             </div>
             <div className={css`

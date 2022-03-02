@@ -36,7 +36,7 @@ export default function Meta({kind}) {
     return (
         <>
         <div className={css`
-            position: fixed;
+            position: absolute;
             width: 100%;
             top: 0;
             z-index: 5;

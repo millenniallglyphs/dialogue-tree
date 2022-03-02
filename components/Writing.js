@@ -56,6 +56,8 @@ export default function WritingPrev({name, id, target, summary}) {
                         line-height: 1em;
                         margin: 0;
                         color: #04082B;
+                        max-width: 100%;
+                        padding-left: 0rem !important; 
                         @media (max-width: 1000px) {
                             font-size: 4em;
                         }
