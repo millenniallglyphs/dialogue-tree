@@ -6,11 +6,12 @@ import PostLayout from '../../components/PostLayout';
 import SideQuote from '../../components/SideQuote';
 import BasicLayout from '../../components/BasicLayout';
 import RandomLogo from '../../components/RandomLogo';
+import Preview from '../../components/Preview';
 import { MDXProvider } from '@mdx-js/react'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 
-const components = { ContentLeft, BlockContent, SideQuote, RandomLogo }
+const components = { ContentLeft, BlockContent, SideQuote, RandomLogo, Preview }
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
