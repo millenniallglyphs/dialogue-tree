@@ -6,12 +6,14 @@ image: '/brand-community.jpg'
 color: '#C0D5E8'
 kind: 'work'
 tags: [
-    {label: 'Strategy', target: 'test'},
-    {label: 'Technical Writing', target: 'test'}
+    {label: 'Facilitation', target: 'test'},
+    {label: 'UX', target: 'test'},
+    {label: 'UI', target: 'test'}
 ]
 features : [
-    {title: 'Documentation', target: 'https://millenniallglyphs.github.io/neighborhood-scale-software-patterns/'},
-    {title: 'Process Document', target: 'https://millenniallglyphs.github.io/neighborhood-scale-software-patterns/'},
+    {title: 'Logomark', target: 'https://communications.xalgorithms.org/brand/'},
+    {title: 'Design System (NPM)', target:"https://communications.xalgorithms.org/components/"},
+    {title: 'Design System (Figma)', target:"test"}
 ]
 ---
 
@@ -25,13 +27,13 @@ To define a brand for the Xalgorithms Foundation, it is crucial to understand th
 
 > Brand is one of the strongest assets for decentralized protocols. A headless brand strategy is an ecosystemic affair and entails the mobilization of a decentralized set of actors. At its core, it revolves around giving agency to different stakeholders in a way that lets them coordinate more effectively and feel connected to the brand.
 
-Understood as a constellation of assets which generate orientation at key points in the collaborative journey,  the brand situates contributors within a common context of the organization's intended impact, and emergent outcomes. This is a characteristic of communications across channels. Given the open-source nature of the organization, the collaborative journey spans a person's first encounters on social media, all the way through to engaging with activities within the project management structure.  ^5f6ec4
+Understood as a constellation of assets which generate orientation at key points in the collaborative journey,  the brand situates contributors within a common context of the organization's intended impact, and emergent outcomes. This is a characteristic of communications across channels. Given the open-source nature of the organization, the collaborative journey spans a person's first encounters on social media, all the way through to engaging with activities within the project management structure.
 
 <img src="/Org-Structure.png" alt="org communication and management channels"/>
 
 <caption>Communication and Management Channels</caption>
 
-In this context, the organizations identity is contingent upon the action of the contributors. It is not a set of guidelines imposed from the top down. Rather it is a set of building blocks that people use to organically define the culture of the organization. Operationalizing the brand requires engaging with the sociological reality of the identity—and this calls for defining collateral that is tolerant, expressive, and simple enough to enable use by contributors in ways that supports their emergent goals. 
+In this context, the organization's identity is contingent upon the action of the contributors. It is not a set of guidelines imposed from the top down. Rather it is a set of building blocks that people use to organically define the culture of the organization. Operationalizing the brand requires engaging with the sociological reality of the identity—and this calls for defining collateral that is tolerant, expressive, and simple enough to enable use by contributors in ways that supports their emergent goals. 
 
 **Logo Mark**
 
@@ -45,9 +47,7 @@ The logo mark was defined through an iterative process. The mark references the 
 
 <caption>The Lichen interface was one of the primary pieces of inspiration</caption>
 
-To be effective, the logo mark must be operationalized. This means considering not just what the formal definition of the mark, but optimizing for use by contributors. This was accomplished in the following ways:
-
-1. Creating a mark that was tolerant enough that it could be recreated, modified, and expressed in a variety of mediums. The idea was that a formal lockup was not needed. Rather a simply geometry was defined that could be reproduced in a variety of contexts.
+In order for the logo to be effective, it was important to consider both the formal qualities and the ease of use. Creating a mark that was tolerant enough that it could be recreated, modified, and expressed in a variety of mediums. The idea was that a formal lockup was not needed. Rather a simply geometry was defined that could be reproduced in a variety of contexts.
 
 ```jsx 
 // a constellation among the stars
@@ -60,19 +60,19 @@ To be effective, the logo mark must be operationalized. This means considering n
 
 <img src="/logo-sketch.jpg" alt="hand sketch"/>
 
-2. [Assets](https://communications.xalgorithms.org/brand/) are included in the design system npm packages, making them easy for developers to access and utilize within applications. More on this in the following section. 
+Finally, [Assets](https://communications.xalgorithms.org/brand/) are included within the design system npm packages, making them easy for developers to access and utilize within applications.
 
 **Design System**
 
 <img src="/components-material.png" alt="preview of design system" />
 
-There are multiple outputs that guide the Xalgorithms Foundation. Three of these core outputs are applications. Additionally, websites are needed for the communication purposes of working groups. In order to establish a cohesive identity across these multiple channels, it was clear a design system was needed to consolidate the components that comprise the applications and websites. You can see [full documentation here](https://communications.xalgorithms.org/components/). 
+There are multiple outputs that that fall within the scope of Xalgorithms Foundation. Three of these core outputs are applications. Additionally, websites are needed for the communication purposes of working groups. In order to establish a cohesive identity across these multiple applications, it was clear a design system was needed to consolidate the components and ensure consistency. [Full documentation here](https://communications.xalgorithms.org/components/). 
 
 ```cl
 $ yarn add xf-material-components
 ```
 
-```jsx 
+```jsx
 // App.js
 
 import Logo from 'xf-material-components'
@@ -86,19 +86,19 @@ function App() {
 }
 ```
 
-Read the Case Study for a full explanation of this. 
+Read the Case Study below to learn more about this process. 
 
 <Preview />
 
-The result is a simple react component library that can be swiftly included in an application. This react library also corresponds to a component library built in Figma, streamlining the design process. You can see the design system at work in the rule maker interface, and the Xalgorithms Foundation website. 
+The result is a simple, modular react component library that can be swiftly integrated into an application. This react library also corresponds to a component library built in Figma, streamlining the design process.
 
 <img src="/library.png" alt="figma library preview" />
 
 **Voice**
 
-Many of the most important points on the contribution journey are defined by the language used, rather than by visual elements. Thoughtful, in-depth writing is central to communicating, and engaging with the contributor community on the complex topics in-play.
+Many of the most important points on the contribution journey are defined by the language, rather than visual elements. Thoughtful, in-depth writing is central to communicating, and engaging with the contributor community.
 
-Given that the identity is grounded in the ecosystem of contributors, a traditional guide to voice does not make sense. Rather, an alternative strategy was taken, using the diversity of contributors as an advantages. This strategy seeks to highlight the contributions and writing of contributors across the organization, forming a mosaic of communication, rather than a monolithic voice. 
+Given that the identity is grounded in the ecosystem of contributors, a traditional guide to voice does not make sense. Rather, an alternative strategy is taken, making the diversity of voices and perspective involved an asset. This strategy seeks to highlight the contributions and writing of contributors across the organization, forming a mosaic of thought, rather than a monolithic voice. 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Will, an undergraduate at <a href="https://twitter.com/NorthwesternU?ref_src=twsrc%5Etfw">@NorthwesternU</a>, is working with <a href="https://twitter.com/Xalgorithms?ref_src=twsrc%5Etfw">@Xalgorithms</a> and Northwestern&#39;s CCL to use an <a href="https://twitter.com/hashtag/economic?src=hash&amp;ref_src=twsrc%5Etfw">#economic</a> <a href="https://twitter.com/hashtag/framework?src=hash&amp;ref_src=twsrc%5Etfw">#framework</a> - <a href="https://twitter.com/hashtag/EarthReserveAssurance?src=hash&amp;ref_src=twsrc%5Etfw">#EarthReserveAssurance</a> (<a href="https://twitter.com/hashtag/ERA?src=hash&amp;ref_src=twsrc%5Etfw">#ERA</a>) - that aligns both economic and <a href="https://twitter.com/hashtag/environmental?src=hash&amp;ref_src=twsrc%5Etfw">#environmental</a> incentives!<a href="https://twitter.com/hashtag/agentbasedmodelling?src=hash&amp;ref_src=twsrc%5Etfw">#agentbasedmodelling</a> <a href="https://twitter.com/hashtag/ABM?src=hash&amp;ref_src=twsrc%5Etfw">#ABM</a><a href="https://t.co/XoZK2LtwYG">https://t.co/XoZK2LtwYG</a> <a href="https://t.co/w7QgfBOmak">pic.twitter.com/w7QgfBOmak</a></p>&mdash; Xalgorithms (@Xalgorithms) <a href="https://twitter.com/Xalgorithms/status/1490686598069035010?ref_src=twsrc%5Etfw">February 7, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -106,8 +106,4 @@ This was operationalized by [Craig Atkinson](beep), who created an effective [so
 
 **Next Steps**
 
-This work is ongoing. Further efforts are needed to support community development. These primarily involve examining key points along the contribution journey and improving the experience where most effective.
-
-Possible ideas for upcoming improvements include the creation of custom emojis for chat that correspond to the core outputs. These can be used to help sort contributors into areas of interest. 
-
-Another possible improvement is the creation of an organization wide glossary. Many words have specific meanings that impact communication. Having a single point to explore this information would help enable clarity in discussion. 
+This work is ongoing. Further efforts are needed to support community development. These primarily involve improving interactions at key points along the contribution journey.
