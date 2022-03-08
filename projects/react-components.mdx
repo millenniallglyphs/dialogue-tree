@@ -1,5 +1,5 @@
 ---
-title: 'Simple Modular Components'
+title: 'Improving User Expereince, Design Processes, and Development with a Component Library'
 date: '2021-01-04'
 description: 'Lorem Ipsum'
 image: '/yarn.png'
@@ -18,52 +18,42 @@ features : [
 ]
 ---
 
-### business problem trying to solve
+To achieve the emergent outcomes that define the Xalgorithms Foundation core working groups, key outputs are defined. Three of these outputs are applications. Additionally, websites are needed for the communication purposes of working groups. In order to establish a cohesive identity across these multiple channels, it was clear a design system was needed to consolidate the components that form the UI of applications and websites. 
 
-As the foundation moves forward, there is a need to have a cohesive brand identity.
+image of the connection between the three applications
 
-With a host working groups and reference implementations it is becoming a challenge to maintain a cohesive brand identity across multiple applications and websites. Particularly as the organization scales, being able for developers to autonomously deploy brand conformant web content is needed.
+Creating a design system was intended to ensure best user experience across applications and websites, streamline the design process, and facilitates front end development tasks. Meeting the needs of users, designers and developers was crucial to the success of this project. Thus forming the constraints etc.... 
 
-To make it as easy as possible for developers to build within the xalogithms foundation visual identity, I decided to build a react component library. There ere a number of advantages to this choice. Now out of the box components can be used in next js and pure react apps. The fonts and color libraries are included with easy to use css variable.
+**Ensuring Best User Experience**
 
-More over deploying components as an npm package makes it easier to manage brand updates across an array of deployments.
+To ensure the best user experience across applications it was important to consider issues of accessibility, multi-lingual functionality, and brand conformance. This draws directly from the intended impact:
 
-Finally, to make the components maximally useful, even beyond react applications, I included a base css file that can be used to style the basic components (buttons h titles, text styling) in applications, regardless of framework. 
+> Increased capacity to draft, publish, access, audit, and operationalize normative rules by people (and machines) 
 
-### approach
+From this its clear that not only must the interfaces make rules accessible to non-technical people, it is also critical that rules are accessible to people regardless of ability, or language preference. This influenced  a number of key decisions.
 
-![preview of library of components](/components.png)
+image of fira showcase
 
-I reviewed the existing work to derive a library of essential components. 
+All components in the library use Fira Sans (and Fira Code). Fira has high legibility, and has gone significant user testing by the Mozilla foundation to ensure readability on screens. Importantly, Fira is an open source project with an active group of contributors maintaining glyphs across alphabets. This means that Fira has exceptional multi-lingual support, that includes Latin, Hebrew, Arabic, Cyrillic, Devanagari and more. 
 
-Working with ryan, the primary dev on rule maker, we collaborated to ensure that the components could successfully pass the data required. 
+<img src="/color.png" alt="color makeup" />
 
-We had to determine fidelity, what level of specificity was required, to ensure that the atomic components and only necessary compound components were included
+When making color choices, it was important to ensure that color could be used to direct user actions, support the brand identity, while at the same time supporting users regardless of vision status. This meant considering issues of contrast and conducting usability testing across the color library. Accessibility testing was accomplished using xyz application.
 
-the other challenging element was including an icon library. These icons are stored as svg and take fill and size arguments.
+accessibility image
 
-With brand specific icons, including these was a critical element.
+Finally making the best possible user experience required devs to implement elements components in certain ways. This required emphasis in documentation to ensure all image elements have alt captions etc. 
 
-Finally, accessibility testing was required to ensure that contrast, and legibility were appropriate across components. This was accomplished contrast testing applications.
+**Streamlining Design Process**
 
-It was also underscored in the docs that accessibility considerations, such image alts were required arguments. 
+Creating a dedicated design system streamlines the design process. In Figma projects it is a simple process to import the library to begin building a high fidelity flow once the wire-frame stage is completed. This ensure consistency when collaborating with other designers. Also, given the fact that this is an open source porject. This ensure easy on-boarding for designers that contribute to the project. 
 
-make explicit my role:
+<img src="/library.png" alt="figma library preview" />
 
-I did all the design work, technical writing, and the majority of the dev work. Ryan contributed feedback and advice, but he was largely occupied with work on the backend and we only intersected when he was making use of the component library in his application.
+**Facilitating Dev Work**
 
-would like to get contributions for more collaborators. That's a goal going into the future. 
+The final goal was to facilitate development, streamline prototyping, and create a shared sense of dev objective through a cohesive brand framework. Since the Xalgorithms Foundation website and the Rule Maker prototype are built in react, the natural choice was to create a react component library. I built a minimal component library containing all the atomic components of the design system. This is deployed as an NPM package for ease of deployment. 
 
-### results
+However, it was important to maximize flexibility. To help ensure effective design even with developers not working in a react framework, I but together a bassic css file containing color, font, etc to provide a starting point. 
 
-you can install using the following command 
-
-`yarn add xf-material-components`
-
-These are deployed across 3 websites and 1 application .
-
-### impact of the work
-
-Successfully deployed. However, there is not as much use of the react components. It is mostly the style sheet that is contributing—espcially as I move onto the next step of developing a hugo template so that documentation, etc can be deployed with even greater ease.
-
-Impact is somewhat difficult to measure, since the organization is still in its  nascent stages. with more contribution, and more dev hours across the org, it will be easier to assess the impact.
+Similarly, I built a simple hugo template to facilitate documentation. This is also how I documented all of the elements of the design system. See more here. 

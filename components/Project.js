@@ -97,7 +97,7 @@ export default function Project({ image, date, name, description, id, bgcolor, t
                 <div>
                     <h3 className={css`
                         font-weight: 800;
-                        font-size: 7.6vw;
+                        font-size: 4.5vw;
                         line-height: 1em;
                         margin-left: 0;
                         padding: 0;

@@ -1,5 +1,5 @@
 ---
-title: 'DWDS: What Devs Want to Implement'
+title: 'Designing an Application That People Want to Use and Devs Want to Deploy'
 date: '2022-02-14'
 description: 'Lorem Ipsum'
 image: '/mocalt4.jpg'
@@ -19,19 +19,9 @@ features : [
 ]
 ---
 
-### A Challenge Across Industries
+Developers across industries have a need for a distributed, general-purpose method that enables any person to author, publish, discover, fetch, scrutinize, prioritize and optionally automate rules on digital networks at scale and with speed.  The Xalgorithms Foundation has created the Data With Direction Specification (DWDS) providing a general purpose free/libre/open design solution. With nearly a decade spent developing the system design, entering the implementation phase of the project marks a major milestone. With this comes an opportunity to asses priorities and orient the implementation in a strategic manner. 
 
-Developers across industries have a need for a distributed, general-purpose method that enables any person to author, publish, discover, fetch, scrutinize, prioritize and optionally automate rules on digital networks at scale and with speed.
-
-### A Turning Point
-
-The Xalgorithms Foundation has created the Data With Direction Specification (DWDS) providing a general purpose free/libre/open design solution. With nearly a decade spent developing the system design, entering the implementation phase of the project marks a major milestone. With this comes an opportunity to asses priorities and orient the implementation in a strategic manner. 
-
-### Identifying Implementation
-
-<br />
-<img src="/rm-panel.png" alt="preview of application" />
-
+Image of three nodes
 
 DWDS is a decentralized network of nodes. A node consists of three applications:
 
@@ -41,47 +31,41 @@ DWDS is a decentralized network of nodes. A node consists of three applications:
 
 I was tasked with designing the Rule Maker application. This is a critical element of the overall success of the project. One of the key points of distinction, and one of the core value propositions of the specification is the tabular authorship method that enables any user, no matter the level of technical ability, to write rules that can be utilized across digital networks. 
 
-The method of authorship is the most striking characteristic of the Rule Maker application. However, given Rule Maker's status as one of three applications comprising a node, it was clear that before work could begin on the design of the interface it was important to understand how and why all three applications would be implemented across use-cases. 
+<img src="/diagram-01.png" alt="rule expression example" />
 
-To explore this questions, I developed distinct narratives and mapped the implementation process and interplay between the three applications that comprise a node. Below is an Example of one journey.
+The method of authorship is the most striking characteristic of the Rule Maker application. However, given Rule Maker's status as one of three applications comprising a node, it was clear that before work could begin on the design of the interface it was important to understand how and why all three applications would be implemented across use-cases. To explore this questions, I developed distinct narratives and mapped the implementation process and interplay between the three applications that comprise a node.
 
+<img src="/JOURNEY.png" alt="mock of interface" />
 
-<iframe sborder="1px solid rgba(0, 0, 0, 0.1)" width="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FoTwlE1f3K8Dt9JCfQs0CIM%2FImplementation-Journey%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+The common thread across all stories was the developer. The developer had to play a central role in integrating DWDS with other pieces of software to meet their goals. It became clear that the innovative features of Rule Maker would not benefit any rule authors if the application was not designed with developer implication as a primary concern. To help orient the design and development process two personas were created as touch stones. 
 
+<img src="/Persona.png" alt="persona image" />
 
-The common thread across all stories was the developer. The developer had to play a central role in integrating DWDS with other pieces of software to meet their goals. <span className="highlight">It became clear that the innovative features of Rule Maker would not benefit any rule authors if the application was not designed with developer implication as a primary concern.</span> To help orient the design and development process two personas were created as touch stones. 
+This insight helped to create two poles of focus for the project, ensuring that both the developer implementing Rule Maker, and the author writing rules were considered. With this framework in mind it was possible to being charting what developer accommodations were needed. The following graphics maps out the relationship between between developer actions and core actions.
 
-This insight helped to create two poles of focus for the project, ensuring that both the developer implementing Rule Maker, and the author writing rules were considered. One key insight from this was the idea of the [rule template](https://communications.xalgorithms.org/rule-maker/rule-templates/).  A successful general purpose technology is one that is not only flexible, but is also easily modified to fit specific use-cases. A template allows developers to dynamically generate specific Rule Maker interfaces by allowing the fields of application to be defined by a `template.json` document.
+<iframe border= "1px solid rgba(0, 0, 0, 0.1)" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fr2fxTOD3VGA94AHlBUZTKz%2FDWDS-Rule-Maker-Action-Map-v0.1.0%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 
-```
-// pencil-manufacturing-template.json
-	
+The key insight from this exploration was the idea of the [rule template](https://communications.xalgorithms.org/rule-maker/rule-templates/).  A successful general purpose technology is one that is not only flexible, but is also easily modified to fit specific use-cases. A template allows developers to dynamically generate specific Rule Maker interfaces by allowing the fields of application to be defined by a `template.json` document.
+
+```jsx
 "item.classification": {
-    "label": "UNSPSC Code",
-    "description": "Choose the product involved in this rule",
+    "label": "Procduct Code",
+    "description": "Choose what kind of product this rule is about.",
     "type": "array",
     "options": [
-        {"label": "Pencil or pen grips", "value": "44121707"}, 
-        {"label": "Colored pencils", "value": "44121707"}, 
-        {"label": "Wooden pencils", "value": "44121706"}, 
-        {"label": "Mechanical pencils", "value": "44121705"}
+        {"label": "Pencil or Pen Grips", "unspsc-code": "44121707"}, 
+        {"label": "Colored Pencils", "unspsc-code": "44121707"}, 
+        {"label": "Wooden Pencils", "unspsc-code": "44121706"}, 
+        {"label": "Mechanical Pencils", "unspsc-code": "44121705"}
     ]
 }
 ```
-
-
- With this feature in mind it was possible to being charting what developer accommodations were needed. The following graphics maps out the relationship between between developer actions and core actions.
-
-<iframe width='100%' height='450' border="1px solid #04082B" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fr2fxTOD3VGA94AHlBUZTKz%2FDWDS-Rule-Maker-Action-Map-v0.1.0%3Fnode-id%3D0%253A1" allowFullScreen></iframe>
-
-
-### Meeting Needs of Developers and Rule Authors
 
 Considering the needs of developers and rule authors, shaped the design of the Rule Maker application by mandating:
 
 1. A simple modular interface
 2. Support for developer implementation
 
-The result is a focused application designed to easily be adapted to specific use-cases.  You can explore the clickable prototype of Rule Maker Below. You can also download the prototype application here.
+The result is a focused application designed to easily be adapted to specific use-cases. 
 
-<iframe width='100%' height='450' border="1px solid #04082B" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FIBwP60W5HyMid6apwO7ANC%2FTable-Editor%3Fpage-id%3D189%253A10559%26node-id%3D207%253A18340%26viewport%3D323%252C48%252C0.05%26scaling%3Dscale-down%26starting-point-node-id%3D207%253A18340" allowFullScreen></iframe>
+<img src="/mocalt4.jpg" alt="mock of interface" />
