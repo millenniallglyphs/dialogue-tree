@@ -32,17 +32,17 @@ To ensure the best user experience across applications it was important to consi
 
 From this its clear that not only must the interfaces make rules accessible to non-technical people, it is also critical that rules are accessible to people regardless of ability, or language preference. This influenced  a number of key decisions.
 
-image of fira showcase
+<img src="/font.png" alt="fira in use" />
 
 All components in the library use Fira Sans (and Fira Code). Fira has high legibility, and has gone significant user testing by the Mozilla foundation to ensure readability on screens. Importantly, Fira is an open source project with an active group of contributors maintaining glyphs across alphabets. This means that Fira has exceptional multi-lingual support, that includes Latin, Hebrew, Arabic, Cyrillic, Devanagari and more. 
 
 <img src="/color.png" alt="color makeup" />
 
-When making color choices, it was important to ensure that color could be used to direct user actions, support the brand identity, while at the same time supporting users regardless of vision status. This meant considering issues of contrast and conducting usability testing across the color library. Accessibility testing was accomplished using xyz application.
+When making color choices, it was important to ensure that color could be used to direct user actions, support the brand identity, while at the same time supporting users regardless of vision status. This meant considering issues of contrast and conducting usability testing across the color library.
 
-accessibility image
+<img src="/components-material.png" alt="preview of design system" />
 
-Finally making the best possible user experience required devs to implement elements components in certain ways. This required emphasis in documentation to ensure all image elements have alt captions etc. 
+Finally making the best possible user experience requires correct dev implementation. For this reason, special attention to  documentation was required to ensure compliance with accessibility standards, such as including image alts. 
 
 **Streamlining Design Process**
 
@@ -54,6 +54,51 @@ Creating a dedicated design system streamlines the design process. In Figma proj
 
 The final goal was to facilitate development, streamline prototyping, and create a shared sense of dev objective through a cohesive brand framework. Since the Xalgorithms Foundation website and the Rule Maker prototype are built in react, the natural choice was to create a react component library. I built a minimal component library containing all the atomic components of the design system. This is deployed as an NPM package for ease of deployment. 
 
+```cl
+$ yarn add xf-material-components
+```
+
+```jsx
+// App.js
+
+    import Logo from 'xf-material-components'
+
+    function App() {
+        return (
+            <div className="App">
+                <Logo />
+            </div>
+        );
+    }
+```
+
 However, it was important to maximize flexibility. To help ensure effective design even with developers not working in a react framework, I but together a bassic css file containing color, font, etc to provide a starting point. 
 
-Similarly, I built a simple hugo template to facilitate documentation. This is also how I documented all of the elements of the design system. See more here. 
+```html
+// index.html
+    <head>
+        <link rel="stylesheet"
+          type="css"
+          href="xf-material-components/config/rootStyle.css">
+    </head>
+```
+
+Similarly, I built a simple hugo template to facilitate documentation. This is also how I documented all of the elements of the design system. Test out the theme by starting a new [Hugo](https://github.com/gohugoio/hugo) project.
+
+```cl
+$ hugo new site quickstart
+```
+
+Next, add the template as a submodule.
+
+```cl
+$ cd quickstart
+    $ git init
+    $ git submodule add https://gitlab.com/seeddisburser/xf-material-theme.git
+```
+
+Include the theme in the config.
+
+```cl
+$ echo 'theme = "xf-material-theme"' >> config.toml
+```
