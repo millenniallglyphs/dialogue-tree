@@ -1,4 +1,3 @@
-
 import { css } from '@emotion/css'
 import WritingPrev from '../components/Writing'
 import Footer from '../components/Footer'
@@ -24,9 +23,13 @@ export default function Writing({ allWritingData }){
 
   const renderWriting = () => {
     return(
-      allWritingData.map(({id, title,  summary}, index) => (
+      allWritingData.map(({id, title,  summary, kind}, index) => (
+        <div key={index}>
+        {  kind === "writing" ? (
           <WritingPrev name={title} target={'/writing/'+id} id={id} summary={summary} key={index}/>
-
+        ): ( null)
+        }
+        </div>
       ))
     )
   }

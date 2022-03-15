@@ -1,5 +1,5 @@
 ---
-title: 'Improving User Expereince, Design Processes, and Development with a Component Library'
+title: 'How I Improved User Experience, Design Process, and Ease of Development with a Component Library'
 date: '2021-01-04'
 description: 'Lorem Ipsum'
 image: '/yarn.png'
@@ -18,41 +18,42 @@ features : [
 ]
 ---
 
-To achieve the emergent outcomes that define the Xalgorithms Foundation core working groups, key outputs are defined. Three of these outputs are applications. Additionally, websites are needed for the communication purposes of working groups. In order to establish a cohesive identity across these multiple channels, it was clear a design system was needed to consolidate the components that form the UI of applications and websites. 
+Three of the core Xalgorithms Foundation outputs are applications. While the applications are the core focus, there are also websites needed for working groups. In order to establish a cohesive identity across multiple applications, I decided a design system was needed to consolidate the components and ensure consistency.
 
 image of the connection between the three applications
 
-Creating a design system was intended to ensure best user experience across applications and websites, streamline the design process, and facilitates front end development tasks. Meeting the needs of users, designers and developers was crucial to the success of this project. Thus forming the constraints etc.... 
+I created a design system intended to ensure best user experience across applications and websites, streamline the design process, and facilitates front end development tasks. I viewed meeting the needs of users, designers and developers as crucial to the success of this project. 
 
 **Ensuring Best User Experience**
 
-To ensure the best user experience across applications it was important to consider issues of accessibility, multi-lingual functionality, and brand conformance. This draws directly from the intended impact:
+To ensure the best user experience across applications I considered issues of accessibility, multi-lingual functionality, and brand conformance. This draws directly from the intended impact:
 
 > Increased capacity to draft, publish, access, audit, and operationalize normative rules by people (and machines) 
 
-From this its clear that not only must the interfaces make rules accessible to non-technical people, it is also critical that rules are accessible to people regardless of ability, or language preference. This influenced  a number of key decisions.
+From the impact statement its clear that not only must the interfaces make rules accessible to non-technical people, it is also critical that rules are accessible to people regardless of ability, or language preference. This influenced my decisions, particularly those regarding type choice.
 
 <img src="/font.png" alt="fira in use" />
 
-All components in the library use Fira Sans (and Fira Code). Fira has high legibility, and has gone significant user testing by the Mozilla foundation to ensure readability on screens. Importantly, Fira is an open source project with an active group of contributors maintaining glyphs across alphabets. This means that Fira has exceptional multi-lingual support, that includes Latin, Hebrew, Arabic, Cyrillic, Devanagari and more. 
+I selected Fira Sans (and Fira Code) for use in the component library. Fira has high legibility, and has undergone significant user testing by the Mozilla Foundation to ensure readability on screens. Importantly, Fira is an open source project with an active group of contributors maintaining glyphs across alphabets. This means that Fira has exceptional multi-lingual support, that includes Latin, Hebrew, Arabic, Cyrillic, Devanagari and more. 
 
 <img src="/color.png" alt="color makeup" />
 
-When making color choices, it was important to ensure that color could be used to direct user actions, support the brand identity, while at the same time supporting users regardless of vision status. This meant considering issues of contrast and conducting usability testing across the color library.
+When making color choices, I selected colors to direct user actions, support the brand identity, while at the same time supporting users regardless of vision status. This meant considering issues of contrast and conducting usability testing across the color library. Accessibility testing was accomplished using xyz application.
 
 <img src="/components-material.png" alt="preview of design system" />
 
-Finally making the best possible user experience requires correct dev implementation. For this reason, special attention to  documentation was required to ensure compliance with accessibility standards, such as including image alts. 
+Finally making the best possible user experience requires correct dev implementation. For this reason, I paid special attention to  documentation to ensure compliance with accessibility standards, such as including image alts.
 
 **Streamlining Design Process**
 
-Creating a dedicated design system streamlines the design process. In Figma projects it is a simple process to import the library to begin building a high fidelity flow once the wire-frame stage is completed. This ensure consistency when collaborating with other designers. Also, given the fact that this is an open source porject. This ensure easy on-boarding for designers that contribute to the project. 
+Creating a dedicated design system streamlines the design process. In Figma projects it is a simple process to import the library to begin building a high fidelity flow once the wire-frame stage is completed. This ensure consistency when collaborating with other designers. Also, given the fact that this is an open source project,  easy designer on-boarding is a natural way to bolster collaboration.
 
 <img src="/library.png" alt="figma library preview" />
 
 **Facilitating Dev Work**
 
-The final goal was to facilitate development, streamline prototyping, and create a shared sense of dev objective through a cohesive brand framework. Since the Xalgorithms Foundation website and the Rule Maker prototype are built in react, the natural choice was to create a react component library. I built a minimal component library containing all the atomic components of the design system. This is deployed as an NPM package for ease of deployment. 
+My final goal was to facilitate development, streamline prototyping, and create a shared sense of dev objective through a cohesive brand framework. Since the Xalgorithms Foundation website and the Rule Maker prototype are built in react, the natural choice was to create a react component library. I built a minimal component library containing all the atomic components of the design system. I deployed this as an NPM package for ease of implementation. 
+
 
 ```cl
 $ yarn add xf-material-components
@@ -72,7 +73,7 @@ $ yarn add xf-material-components
     }
 ```
 
-However, it was important to maximize flexibility. To help ensure effective design even with developers not working in a react framework, I but together a bassic css file containing color, font, etc to provide a starting point. 
+I decided it was also important to maximize flexibility by not assuming use of react. To help ensure effective design across frameworks, I but together a basic css file containing the atomic design elements. 
 
 ```html
 // index.html
@@ -83,7 +84,7 @@ However, it was important to maximize flexibility. To help ensure effective desi
     </head>
 ```
 
-Similarly, I built a simple hugo template to facilitate documentation. This is also how I documented all of the elements of the design system. Test out the theme by starting a new [Hugo](https://github.com/gohugoio/hugo) project.
+Similarly, I built a simple hugo template to facilitate documentation. This is also how I documented all of the elements of the design system. You can try out the theme by starting a new [Hugo](https://github.com/gohugoio/hugo) project.
 
 ```cl
 $ hugo new site quickstart
@@ -102,3 +103,4 @@ Include the theme in the config.
 ```cl
 $ echo 'theme = "xf-material-theme"' >> config.toml
 ```
+
