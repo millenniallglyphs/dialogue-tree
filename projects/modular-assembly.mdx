@@ -19,29 +19,33 @@ features : [
 ]
 ---
 
-Developers across industries have a need for a distributed, general-purpose method that enables any person to author, publish, discover, fetch, scrutinize, prioritize and optionally automate rules on digital networks at scale and with speed.  The Xalgorithms Foundation has created the Data With Direction Specification (DWDS) providing a general purpose free/libre/open design solution. With nearly a decade spent developing the system design, entering the implementation phase of the project marks a major milestone. With this comes an opportunity to asses priorities and orient the implementation in a strategic manner. 
+Developers across industries have a need for a distributed, general-purpose method that enables any person to author, publish, discover, fetch, scrutinize, prioritize and optionally automate rules on digital networks at scale and with speed.  The Xalgorithms Foundation has created a general purpose free/libre/open method called [DWDS](https://gitlab.com/xalgorithms-alliance/dwds-documents/-/blob/master/current/DBA-Thesis_JPotvin_UQuebec-UQO.pdf). With nearly a decade spent developing the system specifications, entering the implementation phase of the project marks a major milestone. I took this as an opportunity to both design the interface of the rule maker application, as well as to help the organization asses priorities and orient the implementation of the application in a strategic manner. 
 
-Image of three nodes
+<img src="/mocalt4.jpg" alt="mock of interface" />
 
-DWDS is a decentralized network of nodes. A node consists of three applications:
+Rule Maker enables users to author rules in tabular expression.This enables anyone to author rules that can be used across digital networks, in any language, no matter their level of technical ability. This innovative approach introduced challenges across the design process. Not only did the specification introduce novel mechanics, it also required a general purpose approach which rendered many common approaches such as the use of personas non-applicable. To take a successful human-centered approach, I realized a recursive process of research, iteration, and prototyping was needed. 
 
- 1. Rule Maker. A graphical interface used to author rules.
- 2. Rule Reserve. A decentralized index of published rules.
- 3. Rule Taker. An integrated interface for sifting and viewing rules.
+1.  Research is broken into two categories: validation and workflow analysis.
+    -   Validation is focused on assessing user actions within the existing rm design specifications.
+    -   Work flow analysis examines the application within an expanded context, looking at authorship processes both in and outside the application that influence the rule making process.
+2.  Iteration is informed by the validation testing to improve the existing actions supported in the application.
+3.  Prototyping involves crafting interfaces which can be used to conduct rule authoring actions. Interfaces can be used to enable user testing at various scales. Prototyping can happen in production and pre-production interfaces, which can take the form of anything from paper prototypes to production class screens.
 
-I was tasked with designing the Rule Maker application. This is a critical element of the overall success of the project. One of the key points of distinction, and one of the core value propositions of the specification is the tabular authorship method that enables any user, no matter the level of technical ability, to write rules that can be utilized across digital networks. 
+<iframe border="1px solid rgba(0, 0, 0, 0.1)" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FDqjfZzcD8kYAHEKpMohY1f%2Frule-maker%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 
-<img src="/diagram-01.png" alt="rule expression example" />
+With this approach, and with the help of many converstaions with colleagues, I was able to chart the required in-application activities. This required both understanding the authorship process, and the constraints of the application. Authoring a rule is a process that requires a deep interrogation of a source text and reflection on meaning, intention, and outcome. Only some actions involved in this process are supported in application: much happening in the mind of the author. While these mental actions may be complimented by the application, charting this distinction helped focus the design process, ensuring support of application functionality.
 
-The method of authorship is the most striking characteristic of the Rule Maker application. However, given Rule Maker's status as one of three applications comprising a node, it was clear that before work could begin on the design of the interface it was important to understand how and why all three applications would be implemented across use-cases. To explore this questions, I developed distinct narratives and mapped the implementation process and interplay between the three applications that comprise a node.
+<iframe border="1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXz37GPQS5Zw5CRf1ljobHM%2FRM-Activity-Map%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+
+With this information, It was possible to begin formulating user flows, and designing an application to accommodate these. The end result is a high fidelity mock up. You can click through the prototype below to get a sense of how the application would work. This design process is on going and testing and iteration continues.
+
+<iframe border="1px solid rgba(0, 0, 0, 0.1)" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FIBwP60W5HyMid6apwO7ANC%2FTable-Editor%3Fpage-id%3D189%253A10559%26node-id%3D207%253A18340%26viewport%3D323%252C48%252C0.05%26scaling%3Dscale-down%26starting-point-node-id%3D207%253A18340%26show-proto-sidebar%3D1" allowfullscreen></iframe>
+
+The method of authorship is the most striking characteristic of the Rule Maker application. However, given Rule Maker's status as one of three applications comprising a node, it was clear that I needed to understand how and why all three applications would be implemented across use-cases. To explore this questions, I developed distinct narratives and mapped the implementation process and interplay between the three applications that comprise a node.
 
 <img src="/JOURNEY.png" alt="mock of interface" />
 
-The common thread across all stories was the developer. The developer had to play a central role in integrating DWDS with other pieces of software to meet their goals. It became clear that the innovative features of Rule Maker would not benefit any rule authors if the application was not designed with developer implication as a primary concern. To help orient the design and development process two personas were created as touch stones. 
-
-<img src="/Persona.png" alt="persona image" />
-
-This insight helped to create two poles of focus for the project, ensuring that both the developer implementing Rule Maker, and the author writing rules were considered. With this framework in mind it was possible to being charting what developer accommodations were needed. The following graphics maps out the relationship between between developer actions and core actions.
+The common thread across all stories was the developer. The developer had to play a central role in integrating DWDS with other pieces of software to meet their goals. It became clear that the innovative features of Rule Maker would not benefit any rule authors if the application was not designed with developer implication as a primary concern. This insight helped to create two poles of focus for the project, ensuring that both the developer implementing Rule Maker, and the author writing rules were considered. With this framework in mind it was possible to being charting what developer accommodations were needed. The following graphics maps out the relationship between between developer actions and core actions.
 
 <iframe border= "1px solid rgba(0, 0, 0, 0.1)" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fr2fxTOD3VGA94AHlBUZTKz%2FDWDS-Rule-Maker-Action-Map-v0.1.0%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 
@@ -67,5 +71,3 @@ Considering the needs of developers and rule authors, shaped the design of the R
 2. Support for developer implementation
 
 The result is a focused application designed to easily be adapted to specific use-cases. 
-
-<img src="/mocalt4.jpg" alt="mock of interface" />
