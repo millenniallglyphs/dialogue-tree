@@ -7,7 +7,7 @@ export default function Footer() {
             align-items: center;
             padding: 1em;
             color: #04082B;
-            width: 700px;
+            width: 100%;
             margin: auto;
         `}>
             <div className={css`
@@ -25,7 +25,7 @@ export default function Footer() {
             <p>Sign up for My Email List</p>
              </div>
 
-            <iframe frameBorder="0" box-shaddow="none" width="100%" height="310px" src="https://cdn.forms-content.sg-form.com/4f11af5c-a58e-11ec-ba81-3e29a8487d1a"/>
+            <iframe frameBorder="0" scrolling="no" width="100%" height="310px" src="https://cdn.forms-content.sg-form.com/4f11af5c-a58e-11ec-ba81-3e29a8487d1a"/>
            
             
 

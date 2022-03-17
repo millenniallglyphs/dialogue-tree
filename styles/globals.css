@@ -435,6 +435,16 @@ caption {
     padding: 1em;
     border-radius: 0;
   }
+
+  .wrapper>blockquote {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+
+  .wrapper>ul,ol {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
 }
 
 .none {
