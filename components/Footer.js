@@ -7,10 +7,29 @@ export default function Footer() {
             align-items: center;
             padding: 1em;
             color: #04082B;
-            
-            width: 300px;
+            width: 700px;
             margin: auto;
         `}>
+            <div className={css`
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            `}>
+                <div className={css`
+                      text-align: center;
+                      font-size: 0.8em;
+                      font-weight: 800;
+                      text-transform: uppercase;
+                    }
+                `}>
+            <p>Sign up for My Email List</p>
+             </div>
+
+            <iframe frameBorder="0" box-shaddow="none" width="100%" height="310px" src="https://cdn.forms-content.sg-form.com/4f11af5c-a58e-11ec-ba81-3e29a8487d1a"/>
+           
+            
+
+            </div>
             <div>
                 <p className={css`
                     text-align: center;
@@ -18,6 +37,7 @@ export default function Footer() {
                     font-weight: 600;
                 `}>
                     🕯
+                    <br />
                     <br />
                     Designed and Built by Calvin
                 </p>
@@ -28,7 +48,7 @@ export default function Footer() {
                 font-size: 0.8em;
                 justify-content: center;
             `}>
-                <p>Contents © 2022</p>
+                <p>Contents CC 2022</p>
                 <p>Website Apache 2.0</p>
             </div>
             <div className={css`

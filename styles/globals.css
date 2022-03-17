@@ -82,7 +82,7 @@ li::marker{
 }
 
 caption {
-  width: 750px;
+  max-width: 750px;
   font-size: 0.8em;
 }
 
@@ -341,28 +341,22 @@ caption {
 
 .wrapper>*>a {
   color:  #04082B;
-  border-bottom: 1px solid #04082B;
+  border-bottom: 1px solid #879dff;
   transition: border-bottom 1s;
 }
 
 
-
-
-.wrapper>*>a:hover {
-  border-bottom: 2px solid #04082B;
-}
-
 .wrapper>*>a::after{
   content: " ↗";
+  color: #879dff;
 }
 
 .wrapper>blockquote {
   font-style: italic;
-  border-left: 1px solid #39435B;
+  border-left: 1px solid #879dff;
   padding-left: 1em;
   margin-left: 1em;
   margin-right: 2em;
-  width: 100%;
   max-width: 750px;
 }
 
@@ -397,17 +391,6 @@ caption {
 }
 
 
-.wrapper>p>img {
-  width: 100%;
-}
-
-.wrapper>table {
-  width: 100%;
-}
-
-
-
-
 .projgrid {
   width: 100%;
   max-height: 100vh;
@@ -424,9 +407,33 @@ caption {
 
 @media screen and (max-width: 1400px) {
   .projgrid {
-   
     grid-template-columns: 1fr;
     
+  }
+
+  .wrapper>*:not(img):not(iframe):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre):not(div) {
+    max-width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .wrapper>p {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .wrapper { 
+    max-width: 100vw;
+  }
+
+  caption {
+    max-width: 100%;
+  }
+
+  pre {
+    width: 100%;
+    padding: 1em;
+    border-radius: 0;
   }
 }
 

@@ -47,7 +47,6 @@ export default function Writing({ allWritingData }){
             <div className="projgrid" id="scroll-element">
               
               {renderWriting()}
-              <Footer />
          
             </div>
          

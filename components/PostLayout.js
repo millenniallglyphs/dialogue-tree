@@ -17,7 +17,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 background: #fff;
                 font-size: 0.8em;
                 box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.14);
-            `}>
+            `} key={index}>
                 {label}
             </div>
         ));
@@ -50,7 +50,8 @@ export default function PostLayout({tags, features, team, title, date, image, bg
 
     const renderAll = () => {
       return(
-        <div>
+        <div> 
+          { tags ? (
           <p className={css`
                   margin-top: 0em;
                   font-size: 0.8em;
@@ -58,6 +59,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   text-transform: uppercase;
                   padding-bottom: 1em;
                 `}>My Roles</p>
+          ) :( null ) }
                   <div className={css`
                         display: flex;
                         justify-content: flex-end;
@@ -83,6 +85,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
          ) : (
                 null
           )}
+          { features ? (
               <p className={css`
                 font-size: 0.8em;
                 font-weight: 800;
@@ -90,6 +93,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 padding-top: 1em;
                 padding-bottom: 1em;
               `}>Deliverables</p>
+          ) : ( null ) }
               <div className={css`
                   display: grid;
                   grid-template-columns: 1fr;
@@ -141,6 +145,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   @media (max-width: 1000px) {
                     margin-top: 0px;
                     max-width: 100%;
+                    padding-left: 0em;
                   }
   
               `}>
@@ -156,7 +161,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                     padding-left: 2rem;
                     @media (max-width: 1000px) {
                       margin: 0;
-                      padding-left: 0em;
+                      padding-left: 0rem;
                     }
                 `}>{title}</h1>
               </div>
@@ -220,6 +225,9 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                       background: #F4F4F4;
                       z-index: 1;
                       width: 100%;
+                      @media (max-width: 1000px) {
+                        padding-left: 0em;
+                      }
                     `}>
                     <p className={css`
                       margin: 0;
@@ -258,11 +266,12 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   top: 0px;
                   @media (max-width: 1000px) {
                     margin-top: -100px;
-                    height: auto;
+                    height: 80px;
                     top: 0px;
-                    padding-top: 48px;
+                    padding-top: 1em;
                     padding-left: 0em;
                     padding-right: 0em;
+                    padding-bottom: 1em;
                     text-align: left;
                   }
               `}>
@@ -343,7 +352,8 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   padding: 1em;
                   padding-left: 1em;
                   @media (max-width: 1000px) {
-                    padding-left: 1em;
+                    padding-left: 0em;
+                    padding-right: 0em;
                   }
               `}>
                  {children}

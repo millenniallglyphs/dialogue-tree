@@ -43,7 +43,7 @@ export default function Work({allPostsData}){
   
     return(
       <>
-      <SEO title="Product Design for a Complex World" description="Calvin Hutcheon is a product designer dedicated to delivering value to users by championing resilience, tolerance, and capacity for complexity." img="headshot.png"/>
+      <SEO title="Calvin Hutcheon" description="Calvin Hutcheon helps teams discover emergent possibility, leverage collaborative potential, and deliver enchanting products." img="headshot.jpg"/>
       <div id="another-test">
             <ul className={css`
               list-style-type: none;
@@ -59,7 +59,6 @@ export default function Work({allPostsData}){
                   display: none;
                 }
               `}>
-                <Footer />
               </div>
             </div>
          

@@ -43,6 +43,7 @@ export default function Preview() {
                     height: 55vh;
                     width: 100vw;
                     padding: 0em;
+                    border-radius: 0px;
                   }
             `}
         > 
@@ -119,7 +120,7 @@ export default function Preview() {
                 
             </div>
             <div className={css`
-                background-image: url("/yarn.png");
+                background: radial-gradient(172.81% 172.81% at 50% 10.6%, rgba(0, 0, 0, 0) 33.24%, #000000 65.87%),  url("/yarn.png");
                 background-position: top;
                 background-size: cover;
                 width: 100%;
@@ -161,22 +162,18 @@ export default function Preview() {
                     font-weight: 600;
                     color: #04082B;
                     font-size: 1rem;
-                    background: rgba(250, 250, 250, 0.8 );
                     border-radius: 8px;
-                    box-shadow: 0px 0px 40px 50px rgba(250, 250, 250, 0.8);
-                    @media (max-width: 600px) {
-                        width: 70px;
-                    }
                 `}>
                     <p className={css`
                         margin: 0;
                         padding: 0;
-                        color: #04082B
+                        color: #fff;
                         
                     `}> Read More</p>
                     <p id="activate" className={css`
                         margin: 0;
                         padding: 0;
+                        color: #fff;
                     `}>→</p>
                 </div>
             </div>

@@ -8,8 +8,9 @@ import BasicLayout from '../../components/BasicLayout';
 import RandomLogo from '../../components/RandomLogo';
 import Preview from '../../components/Preview';
 import { MDXProvider } from '@mdx-js/react'
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote } from 'next-mdx-remote';
+import ReadMore from '../../components/ReadMore';
 
 const components = { ContentLeft, BlockContent, SideQuote, RandomLogo, Preview }
 
@@ -31,7 +32,10 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function Post({ source, postData }) {
+
+
+export default function Post({ source, postData}) {
+
   return (
     <>
       <SEO title={postData.title} img={postData.image} description={postData.description}/>
@@ -41,6 +45,7 @@ export default function Post({ source, postData }) {
                   <MDXRemote {...source} />
               </div>
           </MDXProvider>
+          <ReadMore />
         </PostLayout>
     </> 
   )

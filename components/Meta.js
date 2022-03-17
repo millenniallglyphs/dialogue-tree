@@ -153,11 +153,11 @@ export default function Meta({kind}) {
                                 box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.14);
                                 &:hover  {
                                     background: #f4f4f4;
-                                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                    box-shadow: 0px 0px 14px 10px rgba(0, 0, 0, 0.24);
                                 }
                                 &:active  {
                                     background: #f4f4f4;
-                                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                    box-shadow: 0px 0px 14px 10px rgba(0, 0, 0, 0.24);
                                 }
                             `}>
                                 Get In Touch

@@ -193,8 +193,8 @@ export default function DialogueTree() {
             flex-wrap: wrap;
             max-width: 900px;
             min-height: 35px;
-            gap: 0.5em;
-            padding: 1em;
+            gap: 0.5rem;
+            padding: 1em 0.85rem 1em 0.85em;
             background: #F4F4F4;
             margin-left: 1em;
             margin-right: 0em;

@@ -52,7 +52,7 @@ export default function WritingPrev({name, id, target, summary}) {
                 <div>
                     <h3 className={css`
                         font-weight: 800;
-                        font-size: 8vw;
+                        font-size: 4.5vw;
                         line-height: 1em;
                         margin: 0;
                         color: #04082B;
