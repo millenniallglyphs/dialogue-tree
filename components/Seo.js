@@ -81,23 +81,22 @@ export default function SEO ({img, title, description, tags=[]}) {
             <link rel="icon" href="/favicon.ico" />
             <meta name="description" content={description} />
 
-
             {/*Google SEO*/}
             <meta itemprop="name" content={title}/>
             <meta itemprop="description" content={description}/>
-            <meta itemprop="image" content={"https://ecstatic-ramanujan-505715.netlify.app/" + img}/>
+            <meta itemprop="image" content={"https://ecstatic-ramanujan-505715.netlify.app" + img}/>
 
             {/*Twitter SEO*/}
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:title" content={title}/>
             <meta name="twitter:description" content={description}/>
-            <meta name="twitter:image:src" content={"https://ecstatic-ramanujan-505715.netlify.app/" + img}/>
+            <meta name="twitter:image:src" content={"https://ecstatic-ramanujan-505715.netlify.app" + img}/>
 
             {/*Open Graph SEO*/}
             <meta property="og:title" content={title}/>
             <meta property="og:type" content="website"/>
             <meta property="og:url" content=""/>
-            <meta property="og:image" content={"https://ecstatic-ramanujan-505715.netlify.app/" + img}/>
+            <meta property="og:image" content={"https://ecstatic-ramanujan-505715.netlify.app" + img}/>
             <meta property="og:image:width" content=""/>
             <meta property="pg:image:height" content=""/>
             <meta property="og:description" content={description}/>
