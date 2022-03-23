@@ -82,7 +82,7 @@ li::marker{
 }
 
 caption {
-  max-width: 750px;
+  width: 750px;
   font-size: 0.8em;
 }
 
@@ -427,7 +427,7 @@ caption {
   }
 
   caption {
-    max-width: 100%;
+    width: 100%;
   }
 
   pre {
