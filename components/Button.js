@@ -23,7 +23,7 @@ export default function Button({children, step, check}) {
             animation-name: buttonappear;
             animation-duration: 0.5s;
             animation-fill-mode: backwards;
-            font-weight: 600;
+            font-weight: 400;
             transition: box-shadow 1s;
             box-shadow: none;
             cursor: pointer;

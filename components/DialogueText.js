@@ -14,7 +14,6 @@ export default function DialogueText({children, index}) {
               background-color: #fff;
               opacity: 1;
               margin-top: 0em;
-              box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
               animation-name: appear;
               animation-duration: 0.75s;
               animation-delay: ${index + 's'};
@@ -53,6 +52,23 @@ export default function DialogueText({children, index}) {
                   `}>
                     {children}
                   </a>
+                  ) : children === "currently" ? ( 
+                    <p className={css`
+                      margin: 0;
+                      padding: 0;
+                    `}>
+                      Right now, I’m growing <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
+                    border-bottom: 2px solid #04082B;
+                    &::after {
+                      content: "↗"
+                    }
+                  `}>Enchanted Network</a>  and Building an Internet of Rules with the <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
+                  border-bottom: 2px solid #04082B;
+                  &::after {
+                    content: "↗"
+                  }
+                `}>Xalgorithms Foundation</a>.
+                    </p>
                   ) : (
                     <>
                     {children}

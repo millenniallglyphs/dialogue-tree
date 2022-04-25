@@ -72,18 +72,23 @@ export default function DialogueTree() {
   const renderQuestions = () => {
     return current_question.map(({ q, next }, index) => (
       q ? (
-      <Button
-      check={() => {
-        setLine(next);
-        setRealq(q);
-        setconcat(next, index);
-        scrollDown();
-      }} 
-      key={index}
-      step={current_step}
-      >
-          {q}
-        </Button>
+        <div className={css`
+          display: flex;
+          justify-content: flex-end;
+        `}>
+        <Button
+        check={() => {
+          setLine(next);
+          setRealq(q);
+          setconcat(next, index);
+          scrollDown();
+        }} 
+        key={index}
+        step={current_step}
+        >
+            {q}
+          </Button>
+        </div>
       ) : (
         null
       )
@@ -113,11 +118,10 @@ export default function DialogueTree() {
           padding: 0.5em 1em 0.5em 1em;
           border-radius: 0.75em 0.75em 0.12em 0.75em;
           font-weight: 400;
-          background: #04082B;
           animation-name: appear;
           animation-duration: 0.5s;
           animation-fill-mode: both;
-          color: #fff;
+          color: #42434E;
           @media (max-width: 1000px) {
             animation-name: appearb;
             animation-duration: 0.5s;
@@ -136,11 +140,32 @@ export default function DialogueTree() {
           null
         )}
         { dia ? (
-          dia.map(({ d }, index) => (
+          <div className={css`
+              display: flex;          
+          `}>
+            <div>
+            <div className={css`
+                            height: 3em;
+                            width: 3em;
+                            background-image: url('/headshot.jpg');
+                            background-size: cover;
+                            background-position: center;
+                            border-radius: 2em;
+                            margin-right: 1em;
+                            isolation: isolate;
+                        `}></div>
+            </div>
+            <div className={css`
+              display: flex;
+              flex-direction: column;
+            `}>
+          {dia.map(({ d }, index) => (
           <DialogueText key={index} index={index}>
                 {d}
           </DialogueText>  
-          ))
+          ))}
+          </div>
+          </div>
         ) : (
           null
         )}
@@ -162,7 +187,7 @@ export default function DialogueTree() {
           display: grid;
           height: 100vh;
           padding-bottom: 1em;
-          grid-template-rows: 1fr 65px;
+          grid-template-rows: 1fr 135px;
           @media (max-width: 1000px) {
             height: 45vh;
             grid-template-rows: 1fr 45px;
@@ -190,16 +215,12 @@ export default function DialogueTree() {
           <div className={css`
             display: flex;
             justify-content: flex-end;
-            flex-wrap: wrap;
+            flex-direction: column; 
             max-width: 900px;
-            min-height: 35px;
+            min-height: 110px;
             gap: 0.5rem;
             padding: 1em 0.85rem 1em 0.85em;
-            background: #F4F4F4;
-            margin-left: 1em;
-            margin-right: 0em;
-            border-radius: 8px;
-            box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.14);
+
             @media (max-width: 1000px) {
               margin-left: 0em;
               margin-right: 0em;

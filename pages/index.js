@@ -1,9 +1,8 @@
 import { getSortedPostsData } from '../lib/projects'
 import SEO from '../components/Seo'
-import ListLayout from '../components/ListLayout'
-import BasicLayout from '../components/BasicLayout'
 import React, { useEffect } from "react";
-import Router from 'next/router';
+import DialogueTree from '../components/DialogueTree'
+import { css } from '@emotion/css'
 
 export async function getStaticProps() {
 
@@ -17,11 +16,7 @@ export async function getStaticProps() {
 
   export default function Home() {
 
-    useEffect(() => {
-    
-      Router.push('/work')
-  
-    });
+   
 
 
   
@@ -29,19 +24,16 @@ export async function getStaticProps() {
     return (
       <>
         <SEO title="Product Design for a Complex World" description="Calvin Hutcheon is a product designer dedicated to delivering value to users by championing resilience, tolerance, and capacity for complexity." img="headshot.png"/>
-      
+        <div className={css`
+          margin: auto;
+          max-width: 1000px;
+        `}>
+          <DialogueTree />
+        </div>
           
-        </>
+      </>
     )
   }
   
-  Home.getLayout = function getLayout(page) {
-    return (
-      <BasicLayout kind="light">
-        <ListLayout>
-          {page}
-        </ListLayout>
-      </BasicLayout>
-    )
-  }
+  
   
