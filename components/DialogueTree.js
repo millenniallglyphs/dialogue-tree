@@ -58,7 +58,7 @@ export default function DialogueTree() {
 
   const setconcat = (va, q) => {
     const temp = Dialogue[va].dialogue
-    const tempq = current_question[q]
+    const tempq = quiz[q]
     const a = { dia:
                   temp,
                   qu:
@@ -67,10 +67,21 @@ export default function DialogueTree() {
     setTrees(trees => trees.concat(a))
   }
 
+  const [quiz, setQuiz] = useState(current_question)
+
+  const setquizconcat = (i, newq) => {
+    const temp = Dialogue[newq].questions
+    setQuiz(quiz.filter((_, i2) => i2 !== i))
+    setQuiz(quiz => quiz.concat(temp))
+  }
+
+  console.log(quiz)
+
+
 
 
   const renderQuestions = () => {
-    return current_question.map(({ q, next }, index) => (
+    return quiz.map(({ q, next }, index) => (
       q ? (
         <div className={css`
           display: flex;
@@ -82,6 +93,7 @@ export default function DialogueTree() {
           setRealq(q);
           setconcat(next, index);
           scrollDown();
+          setquizconcat(index, next);
         }} 
         key={index}
         step={current_step}
@@ -121,7 +133,7 @@ export default function DialogueTree() {
           animation-name: appear;
           animation-duration: 0.5s;
           animation-fill-mode: both;
-          color: #42434E;
+          color: #2F20D6;
           @media (max-width: 1000px) {
             animation-name: appearb;
             animation-duration: 0.5s;
@@ -181,13 +193,12 @@ export default function DialogueTree() {
         `}
         >
         <div className={css`
-          maxWidth: 900px;
           padding: 0px;
           margin: auto;
           display: grid;
           height: 100vh;
           padding-bottom: 1em;
-          grid-template-rows: 1fr 135px;
+          grid-template-rows: 1fr 155px;
           @media (max-width: 1000px) {
             height: 45vh;
             grid-template-rows: 1fr 45px;
@@ -216,8 +227,7 @@ export default function DialogueTree() {
             display: flex;
             justify-content: flex-end;
             flex-direction: column; 
-            max-width: 900px;
-            min-height: 110px;
+            min-height: 130px;
             gap: 0.5rem;
             padding: 1em 0.85rem 1em 0.85em;
 

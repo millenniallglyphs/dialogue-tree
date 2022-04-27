@@ -4,15 +4,26 @@ const Dialogue = {
         [ 
           {d: "Hello."},
           {d: "My Name's Calvin."},
-          {d: "I'm a designer building the future of collaboration."},
+          {d: "I'm a designer building for the future."},
           {d: "currently"},
           {d: 'Try asking a  question to learn more.'},
         ],
       questions: 
         [
+          {q: "Can I see your work?", next: "work"},
           {q: "What's your experience?", next: "experience"},
-          {q: "What's your skill set?", next: "ability"},
+          {q: "Can I hire you?", next: "end"},
         ]
+    },
+    work: {
+      dialogue: 
+      [
+        {d: "test"}
+      ],
+      questions:
+      [
+        {q: "beep boop", next: "ability"}
+      ]
     },
     experience: {
       dialogue:

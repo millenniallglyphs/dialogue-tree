@@ -11,9 +11,10 @@ export default function DialogueText({children, index}) {
               display: inline-block;
               border-radius:  0.75em 0.75em 0.75em 0.12em;
               font-weight: 400;
-              background-color: #fff;
+              background-color: #F5F5F5;
               opacity: 1;
               margin-top: 0em;
+              max-width: 700px;
               animation-name: appear;
               animation-duration: 0.75s;
               animation-delay: ${index + 's'};
@@ -58,14 +59,24 @@ export default function DialogueText({children, index}) {
                       padding: 0;
                     `}>
                       Right now, I’m growing <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
-                    border-bottom: 2px solid #04082B;
-                    &::after {
-                      content: "↗"
-                    }
-                  `}>Enchanted Network</a>  and Building an Internet of Rules with the <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
-                  border-bottom: 2px solid #04082B;
-                  &::after {
-                    content: "↗"
+                   display: inline-block;
+                   height: 1.4em;
+                   border-bottom: 8px solid #DEDBFF;
+                   transition: height 1s, border 1s;
+                   &:hover {
+                     transition: height 1s, border 1s;
+                     height: 1.4em;
+                     border-bottom: 27px solid #DEDBFF;
+                   }
+                  `}>Enchanted Network</a> and creating an Internet of Rules with the <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
+                  display: inline-block;
+                  height: 1.4em;
+                  border-bottom: 8px solid #DEDBFF;
+                  transition: height 1s, border 1s;
+                  &:hover {
+                    transition: height 1s, border 1s;
+                    height: 1.4em;
+                    border-bottom: 27px solid #DEDBFF;
                   }
                 `}>Xalgorithms Foundation</a>.
                     </p>
