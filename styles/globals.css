@@ -102,6 +102,19 @@ caption {
   padding-bottom: 1em;
 }
 
+.footlink {
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 1em;
+  transition: background 1s;
+  color: #2F20D6;
+  font-size: 10px;
+}
+
+.footlink:hover {
+  background: #E3E1F9;
+  cursor: pointer;
+}
+
 @keyframes buttonappear {
   0% {
     opacity: 0;
@@ -216,6 +229,7 @@ caption {
   flex-flow: column;
   overflow-y: scroll; /* or overflow-y: auto */
   height: 100%;
+  
 }
 
 .chat {

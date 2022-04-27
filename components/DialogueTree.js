@@ -197,8 +197,9 @@ export default function DialogueTree() {
           margin: auto;
           display: grid;
           height: 100vh;
+          width: 100vw;
           padding-bottom: 1em;
-          grid-template-rows: 1fr 155px;
+          grid-template-rows: 1fr 155px 60px;
           @media (max-width: 1000px) {
             height: 45vh;
             grid-template-rows: 1fr 45px;
@@ -212,13 +213,18 @@ export default function DialogueTree() {
                 flex-direction: column-reverse;
                 background: none;
                 height: 100%;
+                
                 overflow-y: scroll;
                 padding: 1em;
                 @media (max-width: 1000px) {
                   padding: 1em;
                 }
             `} id="reverseflow">
-              <div >
+              <div className={css`
+              width: 1000px;
+              margin-left: auto;
+              margin-right: auto;
+              `}>
               {renderTree()}
               </div>
             </div>
@@ -230,6 +236,8 @@ export default function DialogueTree() {
             min-height: 130px;
             gap: 0.5rem;
             padding: 1em 0.85rem 1em 0.85em;
+            width: 1000px;
+              margin: auto;
 
             @media (max-width: 1000px) {
               margin-left: 0em;
@@ -238,6 +246,39 @@ export default function DialogueTree() {
             }
           `}>
             {renderQuestions()}
+          </div>
+          <div className={css`
+            display: flex;
+            width: 1000px;
+            margin: auto;
+            font-size: 10px;
+            justify-content: space-between;
+            padding: 1em;
+            color: #2F20D6;
+          `}>
+              <div>
+                © 2022
+              </div>
+              <div className={css`
+                display: flex;
+                gap: 2em;
+              `}>
+                <div>
+                  <a className='footlink'>
+                  Case Studies
+                  </a>
+                </div>
+                <div>
+                <a className='footlink'>
+                  Writing
+                  </a>
+                </div>
+                <div>
+                <a className='footlink'>
+                  Twitter
+                  </a>
+                </div>
+              </div>
           </div>
         </div>
       </div>

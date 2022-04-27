@@ -4,7 +4,7 @@ const Dialogue = {
         [ 
           {d: "Hello."},
           {d: "My Name's Calvin."},
-          {d: "I'm a designer building for the future."},
+          {d: "I'm a designer accelerating into the future."},
           {d: "currently"},
           {d: 'Try asking a  question to learn more.'},
         ],

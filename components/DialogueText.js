@@ -28,28 +28,43 @@ export default function DialogueText({children, index}) {
                 `}>
                   { children === "Selman" ? ( 
                     <a href="https://selmandesign.com" target="_blank" className={css`
-                      border-bottom: 2px solid #04082B;
-                      &::after {
-                        content: "↗"
-                      }
+                    display: inline-block;
+                    height: 1.4em;
+                    border-bottom: 8px solid #DEDBFF;
+                    transition: height 1s, border 1s;
+                    &:hover {
+                      transition: height 1s, border 1s;
+                      height: 1.4em;
+                      border-bottom: 27px solid #DEDBFF;
+                    }
                     `}>
                       {children}
                     </a>
                   ) : children === "XXIX" ? ( 
                     <a href="https://studioxxix.com" target="_blank" className={css`
-                      border-bottom: 2px solid #04082B;
-                      &::after {
-                        content: "↗"
-                      }
+                    display: inline-block;
+                    height: 1.4em;
+                    border-bottom: 8px solid #DEDBFF;
+                    transition: height 1s, border 1s;
+                    &:hover {
+                      transition: height 1s, border 1s;
+                      height: 1.4em;
+                      border-bottom: 27px solid #DEDBFF;
+                    }
                     `}>
                       {children}
                     </a>
                   ) : children === "hello@calvin.ooo" ? (
                     <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
-                    border-bottom: 2px solid #04082B;
-                    &::after {
-                      content: "↗"
-                    }
+                    display: inline-block;
+                   height: 1.4em;
+                   border-bottom: 8px solid #DEDBFF;
+                   transition: height 1s, border 1s;
+                   &:hover {
+                     transition: height 1s, border 1s;
+                     height: 1.4em;
+                     border-bottom: 27px solid #DEDBFF;
+                   }
                   `}>
                     {children}
                   </a>
