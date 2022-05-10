@@ -237,8 +237,10 @@ export default function DialogueTree() {
             gap: 0.5rem;
             padding: 1em 0.85rem 1em 0.85em;
             width: 1000px;
-              margin: auto;
-
+            margin: auto;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0px 0px 8px 8px #F5F5F5;
             @media (max-width: 1000px) {
               margin-left: 0em;
               margin-right: 0em;

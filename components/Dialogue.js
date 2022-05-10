@@ -19,10 +19,8 @@ const Dialogue = {
       dialogue: 
       [
         {d: "Here are a few of my case-studies I think you'd be interested in."},
-        {d: "gp"},
-        {d: "ns"},
         {d: "db"},
-        {d: "ds"}
+        {d: "dc"},
       ],
       questions:
       [
@@ -47,19 +45,29 @@ const Dialogue = {
     writing: {
       dialogue: [
         {d: "Yes! Writing is an important part of my practice. Check out these pieces:"},
-        {d: "Collaborative Futures: Leaving my Cabin"},
-        {d: "Design for an Animate World"},
-        {d: "Transcending the Creative Cloud"},
+        {d: "cf"},
+        {d: "daw"},
+        {d: "cc"},
       ],
       questions:
       [
-        
+        {q: "What do you do outside of design?", next: "hobby"}
       ]
     },
     dog: {
       dialogue: [
         {d: "dog-pic"},
         {d: "Yes! Here is my boy Cobol. 🐩"},
+      ],
+      questions:
+      [
+        
+      ]
+    },
+    hobby: {
+      dialogue: [
+        {d: "trunnel-pic"},
+        {d: "I'm into carpentry, running, cycling and gardening."},
       ],
       questions:
       [
@@ -79,7 +87,7 @@ const Dialogue = {
       ],
       questions:
       [
-        {q: "How can we get in touch?", next: "end"},
+        {q: "Do you have a dog?", next: "dog"},
       ]
     },
    

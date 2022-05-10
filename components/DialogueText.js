@@ -94,48 +94,65 @@ export default function DialogueText({children, index}) {
                   }
                 `}>Xalgorithms Foundation</a>.
                     </p>
-                  ) : children === "gp" ? (
-                    
-                    <p className={css`
-                    margin: 0;
-                    padding: 0;
-                  `}> <span>1.  </span>
-                      <a className={css`
-                   display: inline-block;
-                   height: 1.4em;
-                   border-bottom: 8px solid #DEDBFF;
-                   transition: height 1s, border 1s;
-                   &:hover {
-                     transition: height 1s, border 1s;
-                     height: 1.4em;
-                     border-bottom: 27px solid #DEDBFF;
-                   }
-                  `}>  Human Centered + General Purpose</a>
-
-                  </p>
-                  ) : children === "ns" ? ( 
-<p className={css`
-                    margin: 0;
-                    padding: 0;
-                  `}> <span>2.  </span>
-                      <a className={css`
-                   display: inline-block;
-                   height: 1.4em;
-                   border-bottom: 8px solid #DEDBFF;
-                   transition: height 1s, border 1s;
-                   &:hover {
-                     transition: height 1s, border 1s;
-                     height: 1.4em;
-                     border-bottom: 27px solid #DEDBFF;
-                   }
-                  `}>  Designing Neighborhood Scale Software</a>
-
-                  </p>
                   ) : children === "db" ? ( 
+                  <>
+                  <div className={css`
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1em;
+                    width: 100%;
+                  `}>
+                    <div>
+                    <div className={css`
+                      height: 250px;
+                      max-width: 650px;
+                      background: red;
+                      border-radius: 8px;
+                      background-image: url(/mocalt4.jpg);
+                      background-size: cover;
+                      background-position: center;
+                      animation-name: appearc;
+                      animation-duration: 0.75s;
+                      animation-delay: ${index + 's'};
+                      animation-fill-mode: both;
+                    `}></div>
+                    <p className={css`
+                      margin: 0;
+                      padding: 0;
+                    `}>
+                        <a className={css`
+                    display: inline-block;
+                    height: 1.4em;
+                    border-bottom: 8px solid #DEDBFF;
+                    transition: height 1s, border 1s;
+                    &:hover {
+                      transition: height 1s, border 1s;
+                      height: 1.4em;
+                      border-bottom: 27px solid #DEDBFF;
+                    }
+                    `}> General-purpose Construction </a>
+
+                    </p>
+
+                    </div>
+                    <div>
+                    <div className={css`
+                      height: 250px;
+                      max-width: 650px;
+                      background: red;
+                      border-radius: 8px;
+                      background-image: url(/tabletop.jpg);
+                      background-size: cover;
+                      background-position: center;
+                      animation-name: appearc;
+                      animation-duration: 0.75s;
+                      animation-delay: ${index + 's'};
+                      animation-fill-mode: both;
+                    `}></div>
                   <p className={css`
                     margin: 0;
                     padding: 0;
-                  `}> <span>3.  </span>
+                  `}>
                       <a className={css`
                    display: inline-block;
                    height: 1.4em;
@@ -146,29 +163,167 @@ export default function DialogueText({children, index}) {
                      height: 1.4em;
                      border-bottom: 27px solid #DEDBFF;
                    }
-                  `}> Implementing a Distributed Brand</a>
+                  `}>  Neighborhood Scale Software</a>
 
                   </p>
+                    </div>
+                  
+                  </div>
+                  </>
+                  ) : children === "dc" ? ( 
+                    <>
+                    <div className={css`
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 1em;
+                      width: 100%;
+                    `}>
+                     
+                      <div>
+                    <div className={css`
+                        height: 250px;
+                        max-width: 650px;
+                        background: red;
+                        border-radius: 8px;
+                        background-image: url(/brand-process-hero.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        animation-name: appearc;
+                        animation-duration: 0.75s;
+                        animation-delay: ${index + 's'};
+                        animation-fill-mode: both;
+                      `}></div>
+                    <p className={css`
+                      margin: 0;
+                      padding: 0;
+                    `}>
+                        <a className={css`
+                        display: inline-block;
+                        height: 1.4em;
+                        border-bottom: 8px solid #DEDBFF;
+                        transition: height 1s, border 1s;
+                        &:hover {
+                       transition: height 1s, border 1s;
+                       height: 1.4em;
+                       border-bottom: 27px solid #DEDBFF;
+                     }
+                    `}> Building a Distributed Brand</a>
+  
+                    </p>
+                    </div>
+                    <div>
+                    <div className={css`
+                        height: 250px;
+                        max-width: 650px;
+                        border-radius: 8px;
+                        background-image: url(/components-material.png);
+                        background-size: cover;
+                        background-position: center;
+                        animation-name: appearc;
+                        animation-duration: 0.75s;
+                        animation-delay: ${index + 's'};
+                        animation-fill-mode: both;
+                      `}></div>
+                    <p className={css`
+                      margin: 0;
+                      padding: 0;
+                    `}> 
+                        <a className={css`
+                     display: inline-block;
+                     height: 1.4em;
+                     border-bottom: 8px solid #DEDBFF;
+                     transition: height 1s, border 1s;
+                     &:hover {
+                       transition: height 1s, border 1s;
+                       height: 1.4em;
+                       border-bottom: 27px solid #DEDBFF;
+                     }
+                    `}>Design System Wins</a>
+  
+                    </p>
+  
+                    </div>
+                    </div>
+                    </>
 
-                  ) : children === "ds" ? ( 
+                  ) : children === "dog-pic" ? ( 
+                    <div className={css`
+                        height: 250px;
+                        max-width: 650px;
+                        border-radius: 8px;
+                        background-image: url(/cobol.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        animation-name: appearc;
+                        animation-duration: 0.75s;
+                        animation-delay: ${index + 's'};
+                        animation-fill-mode: both;
+                      `}></div>
+                  ) : children === "cf" ? ( 
+                    <p className={css`
+                      margin: 0;
+                      padding: 0;
+                    `}>
+                        <a className={css`
+                        display: inline-block;
+                        height: 1.4em;
+                        border-bottom: 8px solid #DEDBFF;
+                        transition: height 1s, border 1s;
+                        &:hover {
+                       transition: height 1s, border 1s;
+                       height: 1.4em;
+                       border-bottom: 27px solid #DEDBFF;
+                     }
+                    `}> Collaborative Futures: Leaving my Cabin</a>
+  
+                    </p>
+                  ) : children === "daw" ? ( 
                     <p className={css`
                     margin: 0;
                     padding: 0;
-                  `}> <span>4.  </span>
+                  `}>
                       <a className={css`
-                   display: inline-block;
-                   height: 1.4em;
-                   border-bottom: 8px solid #DEDBFF;
-                   transition: height 1s, border 1s;
-                   &:hover {
+                      display: inline-block;
+                      height: 1.4em;
+                      border-bottom: 8px solid #DEDBFF;
+                      transition: height 1s, border 1s;
+                      &:hover {
                      transition: height 1s, border 1s;
                      height: 1.4em;
                      border-bottom: 27px solid #DEDBFF;
                    }
-                  `}>Design System Wins</a>
+                  `}>Design for an Animate World</a>
 
                   </p>
-
+                  ) : children === "cc" ? ( 
+                    <p className={css`
+                    margin: 0;
+                    padding: 0;
+                  `}>
+                      <a className={css`
+                      display: inline-block;
+                      height: 1.4em;
+                      border-bottom: 8px solid #DEDBFF;
+                      transition: height 1s, border 1s;
+                      &:hover {
+                     transition: height 1s, border 1s;
+                     height: 1.4em;
+                     border-bottom: 27px solid #DEDBFF;
+                   }
+                  `}>Transcending the Creative Cloud</a>
+                    </p>
+                  ) : children === "trunnel-pic" ? ( 
+                    <div className={css`
+                        
+                        border-radius: 8px;
+                        background-image: url(/trunnel.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        animation-name: appearc;
+                        animation-duration: 0.75s;
+                        animation-delay: 0s;
+                        animation-fill-mode: both;
+                      `}></div>
                   ) : (
                     <>
                     {children}
