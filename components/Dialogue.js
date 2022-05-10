@@ -18,11 +18,15 @@ const Dialogue = {
     work: {
       dialogue: 
       [
-        {d: "test"}
+        {d: "Here are a few of my case-studies I think you'd be interested in."},
+        {d: "gp"},
+        {d: "ns"},
+        {d: "db"},
+        {d: "ds"}
       ],
       questions:
       [
-        {q: "beep boop", next: "ability"}
+        {q: "What's your skill-set?", next: "ability"}
       ]
     },
     experience: {
@@ -37,23 +41,29 @@ const Dialogue = {
         ],
       questions: 
         [
-          {q: "What's your skill set?", next: "ability"},
+          {q: "Do you write about design?", next: "writing"},
         ]
     },
-    challenge: {
+    writing: {
       dialogue: [
-        {d: "I start by finding the right people to talk to."},
-        {d: "From this I outline what needs solving. "},
-        {d: "Research usually comes next."},
-        {d: "Sketching, conversation, and brainstorming grow from this."},
-        {d: "High fidelity prototypes are defined."},
-        {d: "Before production, I write up my thought process."},
-        {d: "This lets me document, and ensures I haven't missed something."},
-        {d: "Often these steps can take multiple attempts to get right."}
+        {d: "Yes! Writing is an important part of my practice. Check out these pieces:"},
+        {d: "Collaborative Futures: Leaving my Cabin"},
+        {d: "Design for an Animate World"},
+        {d: "Transcending the Creative Cloud"},
       ],
       questions:
       [
-        {q: "What are your design abilities?", next: "ability"},
+        
+      ]
+    },
+    dog: {
+      dialogue: [
+        {d: "dog-pic"},
+        {d: "Yes! Here is my boy Cobol. 🐩"},
+      ],
+      questions:
+      [
+        
       ]
     },
     ability: {
@@ -72,40 +82,8 @@ const Dialogue = {
         {q: "How can we get in touch?", next: "end"},
       ]
     },
-    excited: {
-      dialogue: [
-        {d: "I'm interested in commons governance, "},
-        {d: "defi,"},
-        {d: "Free software"},
-        {d: "ecology,"},
-        {d: "permaculture, "},
-        {d: "and localizing power systems."}
-      ],
-      questions: [
-        {q: "So, what's next?", next: "end"},
-      ]
-    },
-    passion: {
-      dialogue:
-        [ 
-          {d: "Shaping systems means shaping outcomes. "},
-          {d: "In a world where power is increasingly defined by systems, I believe design plays a critical role. "},
-        ],
-      questions: 
-        [
-          {q: "What experience do you have?", next: "experience"},
-        ]
-    },
-    test: {
-      dialogue:
-      [
-        {d: 'test'},
-      ],
-      questions:
-      [
-        {q: "test", next: "live"}
-      ]
-    },
+   
+    
     end: {
       dialogue: [
         {d: "Do you have more questions?"},

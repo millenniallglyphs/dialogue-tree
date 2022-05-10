@@ -11,7 +11,6 @@ export default function DialogueText({children, index}) {
               display: inline-block;
               border-radius:  0.75em 0.75em 0.75em 0.12em;
               font-weight: 400;
-              background-color: #F5F5F5;
               opacity: 1;
               margin-top: 0em;
               max-width: 700px;
@@ -95,6 +94,81 @@ export default function DialogueText({children, index}) {
                   }
                 `}>Xalgorithms Foundation</a>.
                     </p>
+                  ) : children === "gp" ? (
+                    
+                    <p className={css`
+                    margin: 0;
+                    padding: 0;
+                  `}> <span>1.  </span>
+                      <a className={css`
+                   display: inline-block;
+                   height: 1.4em;
+                   border-bottom: 8px solid #DEDBFF;
+                   transition: height 1s, border 1s;
+                   &:hover {
+                     transition: height 1s, border 1s;
+                     height: 1.4em;
+                     border-bottom: 27px solid #DEDBFF;
+                   }
+                  `}>  Human Centered + General Purpose</a>
+
+                  </p>
+                  ) : children === "ns" ? ( 
+<p className={css`
+                    margin: 0;
+                    padding: 0;
+                  `}> <span>2.  </span>
+                      <a className={css`
+                   display: inline-block;
+                   height: 1.4em;
+                   border-bottom: 8px solid #DEDBFF;
+                   transition: height 1s, border 1s;
+                   &:hover {
+                     transition: height 1s, border 1s;
+                     height: 1.4em;
+                     border-bottom: 27px solid #DEDBFF;
+                   }
+                  `}>  Designing Neighborhood Scale Software</a>
+
+                  </p>
+                  ) : children === "db" ? ( 
+                  <p className={css`
+                    margin: 0;
+                    padding: 0;
+                  `}> <span>3.  </span>
+                      <a className={css`
+                   display: inline-block;
+                   height: 1.4em;
+                   border-bottom: 8px solid #DEDBFF;
+                   transition: height 1s, border 1s;
+                   &:hover {
+                     transition: height 1s, border 1s;
+                     height: 1.4em;
+                     border-bottom: 27px solid #DEDBFF;
+                   }
+                  `}> Implementing a Distributed Brand</a>
+
+                  </p>
+
+                  ) : children === "ds" ? ( 
+                    <p className={css`
+                    margin: 0;
+                    padding: 0;
+                  `}> <span>4.  </span>
+                      <a className={css`
+                   display: inline-block;
+                   height: 1.4em;
+                   border-bottom: 8px solid #DEDBFF;
+                   transition: height 1s, border 1s;
+                   &:hover {
+                     transition: height 1s, border 1s;
+                     height: 1.4em;
+                     border-bottom: 27px solid #DEDBFF;
+                   }
+                  `}>Design System Wins</a>
+
+                  </p>
+
                   ) : (
                     <>
                     {children}
