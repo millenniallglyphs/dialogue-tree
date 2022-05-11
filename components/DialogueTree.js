@@ -5,11 +5,12 @@ import Button from './Button'
 import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
 import DialogueText from '../components/DialogueText'
+import SimpleFooter from './SimpleFooter';
 
 
 
 
-export default function DialogueTree() {
+export default function DialogueTree({hidden}) {
 
     const color = useContext(StyleSelect)
 
@@ -193,6 +194,8 @@ export default function DialogueTree() {
         <div className={css`
             padding-top: 0;
             width: 100%;
+            position: ${hidden ? ("absolute") : ("relative")};
+            margin-left: ${hidden ? ("-200vw") : ("auto")}
         `}
         >
         <div className={css`
@@ -258,42 +261,7 @@ export default function DialogueTree() {
           `}>
             {renderQuestions()}
           </div>
-          <div className={css`
-            display: flex;
-            width: 1000px;
-            margin: auto;
-            font-size: 10px;
-            justify-content: space-between;
-            padding: 1em;
-            color: #2F20D6;
-            @media (max-width: 1000px) {
-              width: 100%;
-            }
-          `}>
-              <div>
-                © 2022
-              </div>
-              <div className={css`
-                display: flex;
-                gap: 2em;
-              `}>
-                <div>
-                  <a className='footlink'>
-                  Case Studies
-                  </a>
-                </div>
-                <div>
-                <a className='footlink'>
-                  Writing
-                  </a>
-                </div>
-                <div>
-                <a className='footlink'>
-                  Twitter
-                  </a>
-                </div>
-              </div>
-          </div>
+          <SimpleFooter/>
         </div>
       </div>
     )

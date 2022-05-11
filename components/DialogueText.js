@@ -1,6 +1,7 @@
 import { css } from '@emotion/css'
 import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
+import SimpleBlock from './simpleBlock';
 
 export default function DialogueText({children, index}) {
     const color = useContext(StyleSelect)
@@ -100,78 +101,8 @@ export default function DialogueText({children, index}) {
                       grid-template-columns: 1fr;
                     }
                   `}>
-                    <div>
-                    <div className={css`
-                      height: 250px;
-                      max-width: 650px;
-                      background: red;
-                      border-radius: 8px;
-                      background-image: url(/mocalt4.jpg);
-                      background-size: cover;
-                      background-position: center;
-                      animation-name: appearc;
-                      animation-duration: 0.75s;
-                      animation-delay: ${index + 's'};
-                      animation-fill-mode: both;
-                      @media (max-width: 1000px) {
-                        animation-name: appeard;
-                      }
-                    `}></div>
-                    <p className={css`
-                      margin: 0;
-                      padding: 0;
-                    `}>
-                        <a className={css`
-                    display: inline-block;
-                    height: 1.4em;
-                    border-bottom: 8px solid #DEDBFF;
-                    transition: height 1s, border 1s;
-                    &:hover {
-                      transition: height 1s, border 1s;
-                      height: 1.4em;
-                      border-bottom: 27px solid #DEDBFF;
-                    }
-                    `}> General-purpose Construction </a>
-
-                    </p>
-
-                    </div>
-                    <div>
-                    <div className={css`
-                      height: 250px;
-                      max-width: 650px;
-                      background: red;
-                      border-radius: 8px;
-                      background-image: url(/tabletop.jpg);
-                      background-size: cover;
-                      background-position: center;
-                      animation-name: appearc;
-                      animation-duration: 0.75s;
-                      animation-delay: ${index + 's'};
-                      animation-fill-mode: both;
-                      @media (max-width: 1000px) {
-                        animation-name: appeard;
-                      }
-                    `}></div>
-                  <p className={css`
-                    margin: 0;
-                    padding: 0;
-                  `}>
-                      <a className={css`
-                   display: inline-block;
-                   height: 1.4em;
-                   border-bottom: 8px solid #DEDBFF;
-                   transition: height 1s, border 1s;
-                   &:hover {
-                     transition: height 1s, border 1s;
-                     height: 1.4em;
-                     border-bottom: 27px solid #DEDBFF;
-                   }
-                  `}>  Neighborhood Scale Software</a>
-
-                  </p>
-                    </div>
-                  
+                    <SimpleBlock caption="Design For General Purpose" image="/mocalt4.jpg" target="/projects/design-for-general-purpose" key={index} />
+                    <SimpleBlock caption="Neighborhood Scale Software" image="/tabletop.jpg" target="/projects/neighborhood-scale-software" delay={index} />
                   </div>
                   </>
                   ) : children === "dc" ? ( 
@@ -185,77 +116,8 @@ export default function DialogueText({children, index}) {
                         grid-template-columns: 1fr;
                       }
                     `}>
-                     
-                      <div>
-                    <div className={css`
-                        height: 250px;
-                        max-width: 650px;
-                        background: red;
-                        border-radius: 8px;
-                        background-image: url(/brand-process-hero.jpg);
-                        background-size: cover;
-                        background-position: center;
-                        animation-name: appearc;
-                        animation-duration: 0.75s;
-                        animation-delay: ${index + 's'};
-                        animation-fill-mode: both;
-                        @media (max-width: 1000px) {
-                          animation-name: appeard;
-                        }
-                      `}></div>
-                    <p className={css`
-                      margin: 0;
-                      padding: 0;
-                    `}>
-                        <a className={css`
-                        display: inline-block;
-                        height: 1.4em;
-                        border-bottom: 8px solid #DEDBFF;
-                        transition: height 1s, border 1s;
-                        &:hover {
-                       transition: height 1s, border 1s;
-                       height: 1.4em;
-                       border-bottom: 27px solid #DEDBFF;
-                     }
-                    `}> Building a Distributed Brand</a>
-  
-                    </p>
-                    </div>
-                    <div>
-                    <div className={css`
-                        height: 250px;
-                        max-width: 650px;
-                        border-radius: 8px;
-                        background-image: url(/components-material.png);
-                        background-size: cover;
-                        background-position: center;
-                        animation-name: appearc;
-                        animation-duration: 0.75s;
-                        animation-delay: ${index + 's'};
-                        animation-fill-mode: both;
-                        @media (max-width: 1000px) {
-                          animation-name: appeard;
-                        }
-                      `}></div>
-                    <p className={css`
-                      margin: 0;
-                      padding: 0;
-                    `}> 
-                        <a className={css`
-                     display: inline-block;
-                     height: 1.4em;
-                     border-bottom: 8px solid #DEDBFF;
-                     transition: height 1s, border 1s;
-                     &:hover {
-                       transition: height 1s, border 1s;
-                       height: 1.4em;
-                       border-bottom: 27px solid #DEDBFF;
-                     }
-                    `}>Design System Wins</a>
-  
-                    </p>
-  
-                    </div>
+                      <SimpleBlock caption="Building a Distributed Brand" image="/brand-process-hero.jpg" target="/projects/building-a-distributed-brand" delay={index} />
+                      <SimpleBlock caption="Design System Wins" image="/components-material.png" target="/projects/design-system-wins" delay={index} />
                     </div>
                     </>
 

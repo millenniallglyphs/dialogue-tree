@@ -1,22 +1,21 @@
 import Link from "next/link"
 import { css } from '@emotion/css'
 
-export default function SimpleBlock({caption, image, target, key}) {
+export default function SimpleBlock({caption, image, target, delay, ind}) {
     return(
-        <div key={key}>
+        <div key={ind}>
             <Link href={target}>
             <div className={css`
-                height: 250px;
-                max-width: 650px;
-                background: red;
+                background: #fff;
                 border-radius: 8px;
                 background-image: url(${image});
                 background-size: cover;
                 background-position: center;
                 animation-name: appearc;
                 animation-duration: 0.75s;
-                animation-delay: ${key + 's'};
+                animation-delay: ${delay + 's'};
                 animation-fill-mode: both;
+                cursor: pointer;
                 @media (max-width: 1000px) {
                     animation-name: appeard;
                 }

@@ -9,6 +9,7 @@ import BasicLayout from '../components/BasicLayout'
 import UpButton from '../components/UpButton'
 import React, { useEffect } from "react";
 import SimpleBlock from '../components/simpleBlock'
+import ContentLayout from '../components/ContentLayout'
 
 
 export async function getStaticProps() {
@@ -28,7 +29,7 @@ export default function Work({allPostsData}){
       allPostsData.map(({id, title, image, date, description, tags, color, kind, writingid, summary}, index) => (
         <div key={index}>
         { kind === "work" ? (
-          <SimpleBlock caption={title} image={image} target={'work/'+id} key={index} />
+          <SimpleBlock caption={title} image={image} target={'/projects/'+id} ind={index}/>
         ) : (
           null
         )}
@@ -47,12 +48,14 @@ export default function Work({allPostsData}){
                       display: grid;
                       grid-template-columns: 1fr 1fr;
                       gap: 1em;
-                      width: 100%;
+                      width: 100vw;
                       padding: 1em;
+                      padding-top: 60px;
                       width: 1000px;
                       margin: auto;
                       @media (max-width: 1000px) {
                         grid-template-columns: 1fr;
+                        width: 100%;
                       }
                     `}>
               {renderProject()}
@@ -67,8 +70,10 @@ export default function Work({allPostsData}){
 
 Work.getLayout = function getLayout(page) {
   return (
-    <BasicLayout kind="light">
-        {page}
+    <BasicLayout display="true">
+        <ContentLayout>
+          {page}
+        </ContentLayout>
     </BasicLayout>
   )
 }

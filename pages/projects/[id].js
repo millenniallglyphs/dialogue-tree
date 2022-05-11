@@ -11,6 +11,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import ReadMore from '../../components/ReadMore';
+import ContentLayout from '../../components/ContentLayout';
 
 const components = { ContentLeft, BlockContent, SideQuote, RandomLogo, Preview }
 
@@ -53,8 +54,10 @@ export default function Post({ source, postData}) {
 
 Post.getLayout = function getLayout(page) {
   return (
-    <BasicLayout kind="light">
+    <BasicLayout display="true">
+      <ContentLayout>
       {page}
+      </ContentLayout>
     </BasicLayout>
   )
 }

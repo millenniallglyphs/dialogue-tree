@@ -46,6 +46,9 @@ export default function Meta({kind}) {
                 width: 1000px;
                 margin: auto;
                 padding: 1em;
+                @media (max-width: 1000px) {
+                    width: 100%;
+                }
             `}>
                 <div style={home}>
                 <Link href="/">

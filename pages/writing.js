@@ -7,6 +7,7 @@ import ListLayout from '../components/ListLayout'
 import BasicLayout from '../components/BasicLayout'
 import UpButton from '../components/UpButton'
 import SimpleBlock from '../components/simpleBlock'
+import ContentLayout from '../components/ContentLayout'
 
 export async function getStaticProps() {
 
@@ -24,10 +25,10 @@ export default function Writing({ allWritingData }){
 
   const renderWriting = () => {
     return(
-      allWritingData.map(({id, title, kind}, index) => (
+      allWritingData.map(({id, title, kind, image}, index) => (
         <div key={index}>
         {  kind === "writing" ? (
-          <SimpleBlock caption={title} target={'/writing/'+id} key={index} />
+          <SimpleBlock caption={title} target={'/writing/'+id} key={index} image={image}/>
         ): ( null)
         }
         </div>
@@ -43,12 +44,14 @@ export default function Writing({ allWritingData }){
                       display: grid;
                       grid-template-columns: 1fr 1fr;
                       gap: 1em;
-                      width: 100%;
+                      width: 100vw;
                       padding: 1em;
+                      padding-top: 60px;
                       width: 1000px;
                       margin: auto;
                       @media (max-width: 1000px) {
                         grid-template-columns: 1fr;
+                        width: 100%;
                       }
                     `}>
               
@@ -64,8 +67,10 @@ export default function Writing({ allWritingData }){
 
 Writing.getLayout = function getLayout(page) {
   return (
-    <BasicLayout>
-        {page}
+    <BasicLayout display="true">
+        <ContentLayout>
+          {page}
+        </ContentLayout>
     </BasicLayout>
   )
 }
