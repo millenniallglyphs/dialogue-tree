@@ -72,25 +72,20 @@ export default function DialogueText({children, index}) {
                       margin: 0;
                       padding: 0;
                     `}>
-                      Right now, I’m growing <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
-                   display: inline-block;
+                      I’m growing <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
                    height: 1.4em;
-                   border-bottom: 8px solid #DEDBFF;
-                   transition: height 1s, border 1s;
+                   margin-top: -1em;
+                   box-shadow: inset 0px -6px 0px #DEDBFF;
+                   transition: box-shadow 1s;
                    &:hover {
-                     transition: height 1s, border 1s;
-                     height: 1.4em;
-                     border-bottom: 27px solid #DEDBFF;
+                    box-shadow: inset 0px -1.2em 0px #DEDBFF;
                    }
                   `}>Enchanted Network</a> and creating an Internet of Rules with the <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
-                  display: inline-block;
                   height: 1.4em;
-                  border-bottom: 8px solid #DEDBFF;
-                  transition: height 1s, border 1s;
+                  box-shadow: inset 0px -6px 0px #DEDBFF;
+                   transition: box-shadow 1s;
                   &:hover {
-                    transition: height 1s, border 1s;
-                    height: 1.4em;
-                    border-bottom: 27px solid #DEDBFF;
+                    box-shadow: inset 0px -1.2em 0px #DEDBFF;
                   }
                 `}>Xalgorithms Foundation</a>.
                     </p>
@@ -101,6 +96,9 @@ export default function DialogueText({children, index}) {
                     grid-template-columns: 1fr 1fr;
                     gap: 1em;
                     width: 100%;
+                    @media (max-width: 1000px) {
+                      grid-template-columns: 1fr;
+                    }
                   `}>
                     <div>
                     <div className={css`
@@ -115,6 +113,9 @@ export default function DialogueText({children, index}) {
                       animation-duration: 0.75s;
                       animation-delay: ${index + 's'};
                       animation-fill-mode: both;
+                      @media (max-width: 1000px) {
+                        animation-name: appeard;
+                      }
                     `}></div>
                     <p className={css`
                       margin: 0;
@@ -148,6 +149,9 @@ export default function DialogueText({children, index}) {
                       animation-duration: 0.75s;
                       animation-delay: ${index + 's'};
                       animation-fill-mode: both;
+                      @media (max-width: 1000px) {
+                        animation-name: appeard;
+                      }
                     `}></div>
                   <p className={css`
                     margin: 0;
@@ -177,6 +181,9 @@ export default function DialogueText({children, index}) {
                       grid-template-columns: 1fr 1fr;
                       gap: 1em;
                       width: 100%;
+                      @media (max-width: 1000px) {
+                        grid-template-columns: 1fr;
+                      }
                     `}>
                      
                       <div>
@@ -192,6 +199,9 @@ export default function DialogueText({children, index}) {
                         animation-duration: 0.75s;
                         animation-delay: ${index + 's'};
                         animation-fill-mode: both;
+                        @media (max-width: 1000px) {
+                          animation-name: appeard;
+                        }
                       `}></div>
                     <p className={css`
                       margin: 0;
@@ -223,6 +233,9 @@ export default function DialogueText({children, index}) {
                         animation-duration: 0.75s;
                         animation-delay: ${index + 's'};
                         animation-fill-mode: both;
+                        @media (max-width: 1000px) {
+                          animation-name: appeard;
+                        }
                       `}></div>
                     <p className={css`
                       margin: 0;
@@ -314,7 +327,6 @@ export default function DialogueText({children, index}) {
                     </p>
                   ) : children === "trunnel-pic" ? ( 
                     <div className={css`
-                        
                         border-radius: 8px;
                         background-image: url(/trunnel.jpg);
                         background-size: cover;

@@ -6,6 +6,7 @@ import SEO from '../components/Seo'
 import ListLayout from '../components/ListLayout'
 import BasicLayout from '../components/BasicLayout'
 import UpButton from '../components/UpButton'
+import SimpleBlock from '../components/simpleBlock'
 
 export async function getStaticProps() {
 
@@ -23,10 +24,10 @@ export default function Writing({ allWritingData }){
 
   const renderWriting = () => {
     return(
-      allWritingData.map(({id, title,  summary, kind}, index) => (
+      allWritingData.map(({id, title, kind}, index) => (
         <div key={index}>
         {  kind === "writing" ? (
-          <WritingPrev name={title} target={'/writing/'+id} id={id} summary={summary} key={index}/>
+          <SimpleBlock caption={title} target={'/writing/'+id} key={index} />
         ): ( null)
         }
         </div>
@@ -38,21 +39,24 @@ export default function Writing({ allWritingData }){
     return(
       <>
         <SEO title="Product Design for a Complex World" description="Calvin Hutcheon is a product designer dedicated to delivering value to users by championing resilience, tolerance, and capacity for complexity." img="headshot.png"/>
-        <div id="another-test">
-            <ul className={css`
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-            `} id="testing">
-            <div className="projgrid" id="scroll-element">
+       <div className={css`
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 1em;
+                      width: 100%;
+                      padding: 1em;
+                      width: 1000px;
+                      margin: auto;
+                      @media (max-width: 1000px) {
+                        grid-template-columns: 1fr;
+                      }
+                    `}>
               
               {renderWriting()}
-         
-            </div>
-         
-          </ul>
-          </div>
-          <UpButton />
+              
+              
+        </div>
+           
       </>
     
     )
@@ -61,9 +65,7 @@ export default function Writing({ allWritingData }){
 Writing.getLayout = function getLayout(page) {
   return (
     <BasicLayout>
-      <ListLayout>
         {page}
-      </ListLayout>
     </BasicLayout>
   )
 }

@@ -165,6 +165,9 @@ export default function DialogueTree() {
                             border-radius: 2em;
                             margin-right: 1em;
                             isolation: isolate;
+                            @media (max-width: 1000px) {
+                              margin-right: 0em;
+                            }
                         `}></div>
             </div>
             <div className={css`
@@ -201,8 +204,9 @@ export default function DialogueTree() {
           padding-bottom: 1em;
           grid-template-rows: 1fr 155px 60px;
           @media (max-width: 1000px) {
-            height: 45vh;
-            grid-template-rows: 1fr 45px;
+            height: 100vh;
+            width: 100vw;
+            grid-template-rows: 1fr 130px 33px;
             padding-bottom: 0em;
           }
         `}>
@@ -224,6 +228,10 @@ export default function DialogueTree() {
               width: 1000px;
               margin-left: auto;
               margin-right: auto;
+              @media (max-width: 1000px) {
+                width: 100%;
+              }
+
               `}>
               {renderTree()}
               </div>
@@ -245,6 +253,7 @@ export default function DialogueTree() {
               margin-left: 0em;
               margin-right: 0em;
               border-radius: 0em;
+              width: 100%;
             }
           `}>
             {renderQuestions()}
@@ -257,6 +266,9 @@ export default function DialogueTree() {
             justify-content: space-between;
             padding: 1em;
             color: #2F20D6;
+            @media (max-width: 1000px) {
+              width: 100%;
+            }
           `}>
               <div>
                 © 2022

@@ -170,17 +170,17 @@ caption {
     font-size: 0em;
   }
   25% {
-    font-size: 1.6em;
+    font-size: 1.2em;
     opacity: 0;
-    padding: 0.35em 0.75em 0.35em 0.75em;
+    padding: 0.35em 0em 0.35em 0.75em;
   }
   100% {
     opacity: 1;
     margin-top: 0px;
-    padding: 0.35em 0.75em 0.35em 0.75em;
+    padding: 0.35em 0em 0.35em 0.75em;
     margin-bottom: 0em;
     line-height: 1.8rem;
-    font-size: 1.6em;
+    font-size: 1.2em;
   }
 }
 
@@ -199,6 +199,25 @@ caption {
     opacity: 1;
     height: 250px;
     width: 100%;
+  }
+}
+
+@keyframes appeard {
+  0% {
+    opacity: 0;
+    height: 0em;
+    width: 0em;
+  }
+  25% {
+    opacity: 0;
+    height: 0em;
+    width: 0em;
+  }
+  100% {
+    opacity: 1;
+    height: 150px;
+    width: 100%;
+    max-width: 300px;
   }
 }
 
@@ -375,15 +394,14 @@ caption {
 
 .wrapper>*>a {
   color:  #04082B;
-  border-bottom: 1px solid #879dff;
-  transition: border-bottom 1s;
+  box-shadow: inset 0px -6px 0px #DEDBFF;
+  transition: box-shadow 1s;
 }
 
-
-.wrapper>*>a::after{
-  content: " ↗";
-  color: #879dff;
+.wrapper>*>a:hover {
+  box-shadow: inset 0px -1.2em 0px #DEDBFF;
 }
+
 
 .wrapper>blockquote {
   font-style: italic;

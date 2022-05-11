@@ -8,6 +8,7 @@ import ListLayout from '../components/ListLayout'
 import BasicLayout from '../components/BasicLayout'
 import UpButton from '../components/UpButton'
 import React, { useEffect } from "react";
+import SimpleBlock from '../components/simpleBlock'
 
 
 export async function getStaticProps() {
@@ -27,9 +28,7 @@ export default function Work({allPostsData}){
       allPostsData.map(({id, title, image, date, description, tags, color, kind, writingid, summary}, index) => (
         <div key={index}>
         { kind === "work" ? (
-          <Project image={image} name={title} date={date} description={description} options={tags} target={'/projects/'+id} key={id} id={id} bgcolor={color}/>
-        ) : kind === "writing" ? (
-          <WritingPrev name={title} target={'/writing/'+writingid} id={writingid} summary={summary}/>
+          <SimpleBlock caption={title} image={image} target={'work/'+id} key={index} />
         ) : (
           null
         )}
@@ -44,27 +43,20 @@ export default function Work({allPostsData}){
     return(
       <>
       <SEO title="Calvin Hutcheon" description="Calvin Hutcheon helps teams discover emergent possibility, leverage collaborative potential, and deliver enchanting products." img="headshot.jpg"/>
-      <div id="another-test">
-            <ul className={css`
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-            `} id="testing">
-            <div className="projgrid" id="scroll-element">
-              
+      <div className={css`
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 1em;
+                      width: 100%;
+                      padding: 1em;
+                      width: 1000px;
+                      margin: auto;
+                      @media (max-width: 1000px) {
+                        grid-template-columns: 1fr;
+                      }
+                    `}>
               {renderProject()}
-              <div className={css`
-                display: block;
-                @media (max-width: 1000px) {
-                  display: none;
-                }
-              `}>
-              </div>
-            </div>
-         
-          </ul>
-          </div>
-          <UpButton />
+      </div>  
       
 
       </>
@@ -76,9 +68,7 @@ export default function Work({allPostsData}){
 Work.getLayout = function getLayout(page) {
   return (
     <BasicLayout kind="light">
-      <ListLayout>
         {page}
-      </ListLayout>
     </BasicLayout>
   )
 }
