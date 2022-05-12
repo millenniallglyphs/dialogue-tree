@@ -50,7 +50,7 @@ export default function Work({allPostsData}){
                       gap: 1em;
                       width: 100vw;
                       padding: 1em;
-                      padding-top: 60px;
+                      padding-top: 5em;
                       width: 1000px;
                       margin: auto;
                       @media (max-width: 1000px) {

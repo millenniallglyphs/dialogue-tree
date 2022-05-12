@@ -6,18 +6,21 @@ export default function SimpleBlock({caption, image, target, delay, ind}) {
         <div key={ind}>
             <Link href={target}>
             <div className={css`
+                height: 250px;
+                width: 100%;
                 background: #fff;
                 border-radius: 8px;
                 background-image: url(${image});
                 background-size: cover;
                 background-position: center;
-                animation-name: appearc;
+                animation-name: ${delay ? ('appearc') :('none')};
                 animation-duration: 0.75s;
                 animation-delay: ${delay + 's'};
                 animation-fill-mode: both;
                 cursor: pointer;
                 @media (max-width: 1000px) {
-                    animation-name: appeard;
+                    height: 150px;
+                    animation-name: ${delay ? ('appeard') :('none')};
                 }
             `}></div>
             </Link>

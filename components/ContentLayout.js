@@ -7,7 +7,7 @@ export default function ContentLayout({children}) {
         <div>
             <Meta />
             <div className={css`
-                min-height: 100vh;
+                min-height: 80vh;
                 width: 100vw;
             `}>
                 {children}

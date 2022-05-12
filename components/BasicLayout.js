@@ -7,7 +7,7 @@ export default function BasicLayout({display, children}) {
         <>
             <DialogueTree hidden={display} />
             <div className={css`
-                min-height: ${ display ? ('100vh') : ('0px')};
+                min-height: ${ display ? ('80vh') : ('0px')};
                 background-color: #F4F4F4;
             `}>
                 {children}

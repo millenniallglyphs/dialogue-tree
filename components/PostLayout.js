@@ -120,14 +120,10 @@ export default function PostLayout({tags, features, team, title, date, image, bg
            z-index: 4;
            background: #F4F4F4;
            position: relative;
-           display: grid;
-            grid-template-columns: 475px 1fr;
-           width: 100%;
-           padding-left: 1em;
-           padding-right: 1em;
+           width: 1000px;
+           margin: auto;
           @media (max-width: 1000px) {
-              grid-template-columns: 1fr;
-              grid-template-rows: auto 1fr;
+            width: 100%;
             }
           `}>
             <div />
@@ -152,7 +148,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 
               <div>
                 <h1 className={css`
-                    font-weight: 800;
+                    font-weight: 600;
                     font-size: 3.2em;
                     line-height: 1em;
                     padding-left: 0rem !important; 
@@ -174,8 +170,8 @@ export default function PostLayout({tags, features, team, title, date, image, bg
           
       
         <div className={css`
-           display: grid;
-           grid-template-columns: 475px auto 1fr;
+           width: 1000px;
+           margin: auto;
            @media (max-width: 1000px) {
               grid-template-columns: 1fr;
               grid-template-rows: auto 1fr;
