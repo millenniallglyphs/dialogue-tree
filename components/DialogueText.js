@@ -68,12 +68,34 @@ export default function DialogueText({children, index}) {
                   `}>
                     {children}
                   </a>
+                  ) : children === "farm" ? (
+                    <div>
+                    <div className={css`
+                        height: 250px;
+                        max-width: 350px;
+                        border-radius: 8px;
+                        background-image: url(/farm.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        animation-name: appearc;
+                        animation-duration: 0.75s;
+                        animation-delay: ${index + 's'};
+                        animation-fill-mode: both;
+                      `}></div>
+                    <p className={css`
+                      margin: 0;
+                      padding: 0;
+                      `}>
+                        I work remotely from Frog Creek Farm, in beautiful Western Washington.
+                      </p>
+                    
+                    </div>
                   ) : children === "currently" ? ( 
                     <p className={css`
                       margin: 0;
                       padding: 0;
                     `}>
-                      I’m growing <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
+                      I’m  a product designer growing <a href="http://enchanted.network" target="_blank" className={css`
                    height: 1.4em;
                    margin-top: -1em;
                    box-shadow: inset 0px -6px 0px #DEDBFF;
@@ -81,7 +103,7 @@ export default function DialogueText({children, index}) {
                    &:hover {
                     box-shadow: inset 0px -1.2em 0px #DEDBFF;
                    }
-                  `}>Enchanted Network</a> and creating an Internet of Rules with the <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
+                  `}>Enchanted Network</a> and creating an Internet of Rules with the <a href="http://xalgorithms.org" target="_blank" className={css`
                   height: 1.4em;
                   box-shadow: inset 0px -6px 0px #DEDBFF;
                    transition: box-shadow 1s;
@@ -101,7 +123,7 @@ export default function DialogueText({children, index}) {
                       grid-template-columns: 1fr;
                     }
                   `}>
-                    <SimpleBlock caption="Design For General Purpose" image="/mocalt4.jpg" target="/projects/design-for-general-purpose" key={index} />
+                    <SimpleBlock caption="Design For General Purpose" image="/mocalt4.jpg" target="/projects/design-for-general-purpose" delay={index} />
                     <SimpleBlock caption="Neighborhood Scale Software" image="/tabletop.jpg" target="/projects/neighborhood-scale-software" delay={index} />
                   </div>
                   </>
@@ -122,18 +144,24 @@ export default function DialogueText({children, index}) {
                     </>
 
                   ) : children === "dog-pic" ? ( 
+                    <div>
                     <div className={css`
-                        height: 250px;
                         max-width: 650px;
+                        min-width: 350px;
                         border-radius: 8px;
                         background-image: url(/cobol.jpg);
                         background-size: cover;
                         background-position: center;
                         animation-name: appearc;
                         animation-duration: 0.75s;
-                        animation-delay: ${index + 's'};
+                        animation-delay: ${(index + 1) + 's'};
                         animation-fill-mode: both;
                       `}></div>
+                      <p className={css`
+                      margin: 0;
+                      padding: 0;
+                    `}>This is Cobol :&#x29;</p>
+                      </div>
                   ) : children === "cf" ? ( 
                     <p className={css`
                       margin: 0;

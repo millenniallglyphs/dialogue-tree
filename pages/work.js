@@ -46,7 +46,7 @@ export default function Work({allPostsData}){
       <SEO title="Calvin Hutcheon" description="Calvin Hutcheon helps teams discover emergent possibility, leverage collaborative potential, and deliver enchanting products." img="headshot.jpg"/>
       <div className={css`
                       display: grid;
-                      grid-template-columns: 1fr 1fr;
+                      grid-template-columns: 1fr;
                       gap: 1em;
                       width: 100vw;
                       padding: 1em;

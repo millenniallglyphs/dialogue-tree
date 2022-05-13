@@ -5,12 +5,13 @@ const Dialogue = {
           {d: "Hello."},
           {d: "My Name's Calvin."},
           {d: "currently"},
-          {d: 'Try asking a  question to learn more.'},
+          {d: "farm"},
+          {d: "Let's chat."},
         ],
       questions: 
         [
           {q: "Can I see your work?", next: "work"},
-          {q: "What's your experience?", next: "experience"},
+          {q: "What's your dog's name?", next: "dog"},
           {q: "Can I hire you?", next: "end"},
         ]
     },
@@ -56,7 +57,6 @@ const Dialogue = {
     dog: {
       dialogue: [
         {d: "dog-pic"},
-        {d: "Yes! Here is my boy Cobol. 🐩"},
       ],
       questions:
       [

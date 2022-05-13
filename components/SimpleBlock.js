@@ -6,7 +6,6 @@ export default function SimpleBlock({caption, image, target, delay, ind}) {
         <div key={ind}>
             <Link href={target}>
             <div className={css`
-                height: 250px;
                 width: 100%;
                 background: #fff;
                 border-radius: 8px;
@@ -15,7 +14,7 @@ export default function SimpleBlock({caption, image, target, delay, ind}) {
                 background-position: center;
                 animation-name: ${delay ? ('appearc') :('none')};
                 animation-duration: 0.75s;
-                animation-delay: ${delay + 's'};
+                animation-delay: ${(delay + 1) + 's'};
                 animation-fill-mode: both;
                 cursor: pointer;
                 @media (max-width: 1000px) {

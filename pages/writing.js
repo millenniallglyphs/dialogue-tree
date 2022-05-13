@@ -42,7 +42,7 @@ export default function Writing({ allWritingData }){
         <SEO title="Product Design for a Complex World" description="Calvin Hutcheon is a product designer dedicated to delivering value to users by championing resilience, tolerance, and capacity for complexity." img="headshot.png"/>
        <div className={css`
                       display: grid;
-                      grid-template-columns: 1fr 1fr;
+                      grid-template-columns: 1fr;
                       gap: 1em;
                       width: 100vw;
                       padding: 1em;
