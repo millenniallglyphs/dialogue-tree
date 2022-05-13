@@ -4,10 +4,11 @@ import ContentLeft from '../../components/contentLeft'
 import BlockContent from '../../components/BlockContent';
 import SEO from '../../components/Seo';
 import PostLayout from '../../components/PostLayout';
-import BasicLayout from '../../components/BasicLayout';
 import { MDXProvider } from '@mdx-js/react'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import BasicLayout from '../../components/BasicLayout';
+import ContentLayout from '../../components/ContentLayout';
 
 const components = { ContentLeft, BlockContent }
 
@@ -47,8 +48,10 @@ export default function Writing({ writingData, source }) {
 
 Writing.getLayout = function getLayout(page) {
     return (
-      <BasicLayout>
-        {page}
-      </BasicLayout>
+      <BasicLayout display="true">
+        <ContentLayout>
+          {page}
+        </ContentLayout>
+    </BasicLayout>
     )
   }

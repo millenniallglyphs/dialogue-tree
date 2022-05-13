@@ -10,7 +10,7 @@ export default function SimpleFooter() {
             font-size: 10px;
             justify-content: space-between;
             padding: 1em;
-            color: #2F20D6;
+            color: #39435B;
             @media (max-width: 1000px) {
               width: 100%;
             }

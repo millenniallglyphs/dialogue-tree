@@ -187,8 +187,6 @@ export default function PostLayout({tags, features, team, title, date, image, bg
             `}>
               <div className={css`
                   margin-top: 0px;
-                  padding: 1em;
-                  padding-left: 1em;
                   @media (max-width: 1000px) {
                     padding-left: 0em;
                     padding-right: 0em;

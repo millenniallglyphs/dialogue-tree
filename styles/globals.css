@@ -118,6 +118,40 @@ caption {
   box-shadow: 0px 0px 6px 6px #E3E1F9;
 }
 
+.transition-animation {
+
+}
+
+@keyframes introanimation {
+  0% {
+    left: 200vw;
+    width: 0%;
+  }
+  25% {
+    left: 0vw;
+    width: 200vw;
+  }
+  50% {
+    left: -50vw;
+    width: 0;
+  }
+}
+
+@keyframes outroanimation {
+  0% {
+    left: -50vw;
+    width: 0%;
+  }
+  25% {
+    left: -50vw;
+    width: 200vw;
+  }
+  50% {
+    left: 200vw;
+    width: 0%;
+  }
+}
+
 @keyframes buttonappear {
   0% {
     opacity: 0;

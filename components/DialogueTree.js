@@ -194,8 +194,9 @@ export default function DialogueTree({hidden}) {
         <div className={css`
             padding-top: 0;
             width: 100%;
-            position: ${hidden ? ("absolute") : ("relative")};
-            margin-left: ${hidden ? ("-200vw") : ("auto")}
+            position: absolute;
+            left: ${hidden ? ("-200vw") : ("0")};
+            transition: left 0.5s;
         `}
         >
         <div className={css`

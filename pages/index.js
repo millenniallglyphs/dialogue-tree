@@ -2,6 +2,7 @@ import { getSortedPostsData } from '../lib/projects'
 import SEO from '../components/Seo'
 import React from "react";
 import BasicLayout from '../components/BasicLayout';
+import ContentLayout from '../components/ContentLayout';
 
 export async function getStaticProps() {
 
@@ -25,7 +26,9 @@ export async function getStaticProps() {
   Home.getLayout = function getLayout(page) {
     return (
       <BasicLayout >
+        <ContentLayout invisible='true'>
           {page}
+        </ContentLayout>
       </BasicLayout>
     )
   }

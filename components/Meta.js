@@ -61,7 +61,7 @@ export default function Meta({kind}) {
                                     font-weight: 400;
                                     border-radius: 30px;
                                     padding: 0.4rem;
-                                    width: 1,6em;
+                                    width: 1.75em;
                                     text-align: center;
                                     transition: background 1s, box-shadow 1s;
                                     :hover {
