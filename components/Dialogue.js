@@ -93,10 +93,6 @@ const Dialogue = {
     
     end: {
       dialogue: [
-        {d: "Do you have more questions?"},
-        {d: "Are you interested in collaborating?"},
-        {d: "Want to hire me?"},
-        {d: "Please, shoot me an email:"},
         {d: "hello@calvin.ooo"}
       ],
       questions: [

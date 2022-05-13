@@ -55,19 +55,17 @@ export default function DialogueText({children, index}) {
                       {children}
                     </a>
                   ) : children === "hello@calvin.ooo" ? (
-                    <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
-                    display: inline-block;
-                   height: 1.4em;
-                   border-bottom: 8px solid #DEDBFF;
-                   transition: height 1s, border 1s;
-                   &:hover {
-                     transition: height 1s, border 1s;
-                     height: 1.4em;
-                     border-bottom: 27px solid #DEDBFF;
-                   }
+                    <p> 
+                      Please, reach out to me at <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
+                     box-shadow: inset 0px -6px 0px #DEDBFF;
+                     transition: box-shadow 1s;
+                     &:hover {
+                         box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                     }
                   `}>
-                    {children}
-                  </a>
+                    hello@calvin.ooo
+                  </a>.
+                  </p>
                   ) : children === "farm" ? (
                     <div>
                     <div className={css`

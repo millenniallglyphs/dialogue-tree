@@ -130,7 +130,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
             <div className={css`
                   
                   padding-bottom: 1em;
-                  padding-left: 2em;
+                  padding-left: 1em;
                   padding-top: 84px;
 
                   max-width: 750px;
@@ -140,8 +140,6 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   z-index: 3;
                   @media (max-width: 1000px) {
                     margin-top: 0px;
-                    max-width: 100%;
-                    padding-left: 0em;
                   }
   
               `}>
@@ -175,6 +173,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
            @media (max-width: 1000px) {
               grid-template-columns: 1fr;
               grid-template-rows: auto 1fr;
+              width: 100%;
             }
           `}>
           

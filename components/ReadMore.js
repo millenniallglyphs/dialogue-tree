@@ -28,7 +28,7 @@ export default function ReadMore() {
                 margin: auto;
                 @media (max-width: 1000px) {
                   grid-template-columns: 1fr;
-                  width: 100%;
+                  width: 100vw;
                 }
             `}>
                 <SimpleBlock caption="Building a Distributed Brand" image="/brand-process-hero.jpg" target="/projects/building-a-distributed-brand" />
