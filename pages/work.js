@@ -8,7 +8,7 @@ import ListLayout from '../components/ListLayout'
 import BasicLayout from '../components/BasicLayout'
 import UpButton from '../components/UpButton'
 import React, { useEffect } from "react";
-import SimpleBlock from '../components/simpleBlock'
+import SimpleBlock from '../components/SimpleBlock'
 import ContentLayout from '../components/ContentLayout'
 
 

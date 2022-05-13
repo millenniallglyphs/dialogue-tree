@@ -6,7 +6,7 @@ import SEO from '../components/Seo'
 import ListLayout from '../components/ListLayout'
 import BasicLayout from '../components/BasicLayout'
 import UpButton from '../components/UpButton'
-import SimpleBlock from '../components/simpleBlock'
+import SimpleBlock from '../components/SimpleBlock'
 import ContentLayout from '../components/ContentLayout'
 
 export async function getStaticProps() {

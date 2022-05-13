@@ -1,7 +1,7 @@
 import { css } from '@emotion/css'
 import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
-import SimpleBlock from './simpleBlock';
+import SimpleBlock from './SimpleBlock';
 
 export default function DialogueText({children, index}) {
     const color = useContext(StyleSelect)
