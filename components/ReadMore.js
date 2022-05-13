@@ -1,6 +1,6 @@
 import { css } from "@emotion/css"
 import Preview from "./Preview"
-import SimpleBlock from "./simpleBlock"
+import SimpleBlock from "./SimpleBlock"
 
 export default function ReadMore() {
     return(
