@@ -76,9 +76,16 @@ export default function DialogueTree({hidden}) {
     setQuiz(quiz => quiz.concat(temp))
   }
 
-  console.log(quiz)
+  console.log(quiz.length)
 
 
+const endpost = () => {
+  if (quiz.length = 0) {
+    console.log("no more questions")
+  }
+}
+    
+ 
 
 
   const renderQuestions = () => {
@@ -95,6 +102,7 @@ export default function DialogueTree({hidden}) {
           setconcat(next, index);
           scrollDown();
           setquizconcat(index, next);
+          endpost();
         }} 
         key={index}
         step={current_step}
@@ -103,14 +111,14 @@ export default function DialogueTree({hidden}) {
           </Button>
         </div>
       ) : (
-        null
+        endpost()
       )
     ));
   };
 
   useEffect(() => {
     window.addEventListener('load', () => {
-      
+ 
     });
   });
 
@@ -154,7 +162,8 @@ export default function DialogueTree({hidden}) {
         )}
         { dia ? (
           <div className={css`
-              display: flex;          
+              display: flex;
+              width: 100%;          
           `}>
             <div>
             <div className={css`
@@ -174,6 +183,7 @@ export default function DialogueTree({hidden}) {
             <div className={css`
               display: flex;
               flex-direction: column;
+              width: 100%;
             `}>
           {dia.map(({ d }, index) => (
           <DialogueText key={index} index={index}>

@@ -60,7 +60,7 @@ const Dialogue = {
       ],
       questions:
       [
-        
+        {q: "What's your experience?", next: "experience"}
       ]
     },
     hobby: {
@@ -82,15 +82,24 @@ const Dialogue = {
         {d: "3. UX Design"},
         {d: "4. UI Design"},
         {d: "5. Prototyping"},
-        {d: "6. Dev Handoff"}
+        {d: "6. Front end dev"}
       ],
       questions:
       [
-        {q: "Do you have a dog?", next: "dog"},
+        {q: "What dev work do you do?", next: "dev"},
       ]
     },
-   
-    
+    dev: {
+      dialogue:
+      [
+        {d: "I have front end experience, mainly working in React frameworks"},
+        {d: "This includes building component libraries, and webapp development."},
+      ],
+      questions:
+      [
+        
+      ]
+    },
     end: {
       dialogue: [
         {d: "hello@calvin.ooo"}
@@ -98,7 +107,19 @@ const Dialogue = {
       questions: [
         
       ]
+    },
+    finish: {
+      dialogue: [
+        {d: "Thanks for chatting."},
+        {d: "Come say hi to me on twitter"},
+        {d: "I hope to talk again soon."}
+      ],
+      questions: [
+        
+      ]
     }
   }
+
+  
 
 export default Dialogue;

@@ -2,6 +2,7 @@ import { css } from '@emotion/css'
 import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
 import SimpleBlock from './SimpleBlock';
+import Link from 'next/link';
 
 export default function DialogueText({children, index}) {
     const color = useContext(StyleSelect)
@@ -28,29 +29,23 @@ export default function DialogueText({children, index}) {
                 `}>
                   { children === "Selman" ? ( 
                     <a href="https://selmandesign.com" target="_blank" className={css`
-                    display: inline-block;
-                    height: 1.4em;
-                    border-bottom: 8px solid #DEDBFF;
-                    transition: height 1s, border 1s;
-                    &:hover {
-                      transition: height 1s, border 1s;
-                      height: 1.4em;
-                      border-bottom: 27px solid #DEDBFF;
-                    }
+                    box-shadow: inset 0px -6px 0px #DEDBFF;
+                      transition: box-shadow 1s;
+                      cursor: pointer;
+                      &:hover {
+                          box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                      }
                     `}>
                       {children}
                     </a>
                   ) : children === "XXIX" ? ( 
                     <a href="https://studioxxix.com" target="_blank" className={css`
-                    display: inline-block;
-                    height: 1.4em;
-                    border-bottom: 8px solid #DEDBFF;
-                    transition: height 1s, border 1s;
-                    &:hover {
-                      transition: height 1s, border 1s;
-                      height: 1.4em;
-                      border-bottom: 27px solid #DEDBFF;
-                    }
+                    box-shadow: inset 0px -6px 0px #DEDBFF;
+                      transition: box-shadow 1s;
+                      cursor: pointer;
+                      &:hover {
+                          box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                      }
                     `}>
                       {children}
                     </a>
@@ -142,10 +137,11 @@ export default function DialogueText({children, index}) {
                     </>
 
                   ) : children === "dog-pic" ? ( 
-                    <div>
                     <div className={css`
-                        max-width: 650px;
-                        min-width: 350px;
+                      width: 100%;
+                    `}>
+                    <div className={css`
+                        max-width: 350px;
                         border-radius: 8px;
                         background-image: url(/cobol.jpg);
                         background-size: cover;
@@ -165,53 +161,51 @@ export default function DialogueText({children, index}) {
                       margin: 0;
                       padding: 0;
                     `}>
+                      <Link href="/writing/collaborative-futures">
                         <a className={css`
-                        display: inline-block;
-                        height: 1.4em;
-                        border-bottom: 8px solid #DEDBFF;
-                        transition: height 1s, border 1s;
+                        box-shadow: inset 0px -6px 0px #DEDBFF;
+                        transition: box-shadow 1s;
+                        cursor: pointer;
                         &:hover {
-                       transition: height 1s, border 1s;
-                       height: 1.4em;
-                       border-bottom: 27px solid #DEDBFF;
+                            box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                        }
                      }
                     `}> Collaborative Futures: Leaving my Cabin</a>
-  
+                      </Link>
                     </p>
                   ) : children === "daw" ? ( 
                     <p className={css`
                     margin: 0;
                     padding: 0;
                   `}>
+                    <Link href="/writing/design-for-an-animate-world">
                       <a className={css`
-                      display: inline-block;
-                      height: 1.4em;
-                      border-bottom: 8px solid #DEDBFF;
-                      transition: height 1s, border 1s;
+                      box-shadow: inset 0px -6px 0px #DEDBFF;
+                      transition: box-shadow 1s;
+                      cursor: pointer;
                       &:hover {
-                     transition: height 1s, border 1s;
-                     height: 1.4em;
-                     border-bottom: 27px solid #DEDBFF;
+                          box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                      }
                    }
                   `}>Design for an Animate World</a>
-
+                  </Link>
                   </p>
                   ) : children === "cc" ? ( 
                     <p className={css`
                     margin: 0;
                     padding: 0;
                   `}>
+                    <Link href="/writing/transcending-the-creative-cloud">
                       <a className={css`
-                      display: inline-block;
-                      height: 1.4em;
-                      border-bottom: 8px solid #DEDBFF;
-                      transition: height 1s, border 1s;
+                      box-shadow: inset 0px -6px 0px #DEDBFF;
+                      transition: box-shadow 1s;
+                      cursor: pointer;
                       &:hover {
-                     transition: height 1s, border 1s;
-                     height: 1.4em;
-                     border-bottom: 27px solid #DEDBFF;
+                          box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                      }
                    }
                   `}>Transcending the Creative Cloud</a>
+                  </Link>
                     </p>
                   ) : children === "trunnel-pic" ? ( 
                     <div className={css`
@@ -221,7 +215,7 @@ export default function DialogueText({children, index}) {
                         background-position: center;
                         animation-name: appearc;
                         animation-duration: 0.75s;
-                        animation-delay: 0s;
+                        animation-delay: 1s;
                         animation-fill-mode: both;
                       `}></div>
                   ) : (

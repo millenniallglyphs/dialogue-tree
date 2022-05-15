@@ -18,7 +18,6 @@ export default function SimpleBlock({caption, image, target, delay, ind}) {
                 animation-fill-mode: both;
                 cursor: pointer;
                 @media (max-width: 1000px) {
-                    height: 150px;
                     animation-name: ${delay ? ('appeard') :('none')};
                 }
             `}></div>
