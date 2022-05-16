@@ -111,7 +111,6 @@ const Dialogue = {
     finish: {
       dialogue: [
         {d: "Thanks for chatting."},
-        {d: "Come say hi to me on twitter"},
         {d: "I hope to talk again soon."}
       ],
       questions: [

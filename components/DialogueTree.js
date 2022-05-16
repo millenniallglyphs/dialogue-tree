@@ -71,29 +71,18 @@ export default function DialogueTree({hidden}) {
   const [quiz, setQuiz] = useState(current_question)
 
   const setquizconcat = (i, newq) => {
-    console.log(quiz.length)
     const temp = Dialogue[newq].questions
     setQuiz(quiz.filter((_, i2) => i2 !== i))
     setQuiz(quiz => quiz.concat(temp))
     
   }
 
-  const eventListner = useCallback(() => {
-    console.log(quiz); // use the stateful variable in event listener
-  }, [quiz]);
- 
-
+  
   
 const endq = () => {
-  console.log(quiz)
-  if (quiz.length > 0) {
-    console.log("questions")
-  } else {
-    console.log("no more questions")
     setLine("finish");
     setconcat("finish");
     scrollDown();
-  }
 }
     
  
@@ -121,7 +110,9 @@ const endq = () => {
           </Button>
         </div>
       ) : (
-       null
+       <p>
+         test
+         </p>
       )
     ));
   };
@@ -131,6 +122,26 @@ const endq = () => {
       
     });
   });
+
+ 
+
+ const treewatch = () => {
+  const timer = setTimeout(() => {
+   console.log(trees.length)
+   if (trees.length === 8) {
+    console.log("good bye")
+    endq();
+  }
+}, 4000);
+return () => clearTimeout(timer);
+ }
+  
+useEffect(() => {
+ 
+  window.addEventListener('click', treewatch);
+  return () => window.removeEventListener('click', treewatch);
+  
+}, [treewatch]);
 
   const renderTree = () => {
     return trees.map(({dia, qu}, index) => (

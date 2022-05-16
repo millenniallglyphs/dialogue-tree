@@ -210,6 +210,7 @@ export default function DialogueText({children, index}) {
                   ) : children === "trunnel-pic" ? ( 
                     <div className={css`
                         border-radius: 8px;
+                        max-width: 350px;
                         background-image: url(/trunnel.jpg);
                         background-size: cover;
                         background-position: center;
