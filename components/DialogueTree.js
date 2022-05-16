@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, eventListener } from 'react'
 import { css } from '@emotion/css'
 import Dialogue from './Dialogue'
 import Button from './Button'
@@ -71,17 +71,28 @@ export default function DialogueTree({hidden}) {
   const [quiz, setQuiz] = useState(current_question)
 
   const setquizconcat = (i, newq) => {
+    console.log(quiz.length)
     const temp = Dialogue[newq].questions
     setQuiz(quiz.filter((_, i2) => i2 !== i))
     setQuiz(quiz => quiz.concat(temp))
+    
   }
 
-  console.log(quiz.length)
+  const eventListner = useCallback(() => {
+    console.log(quiz); // use the stateful variable in event listener
+  }, [quiz]);
+ 
 
-
-const endpost = () => {
-  if (quiz.length = 0) {
+  
+const endq = () => {
+  console.log(quiz)
+  if (quiz.length > 0) {
+    console.log("questions")
+  } else {
     console.log("no more questions")
+    setLine("finish");
+    setconcat("finish");
+    scrollDown();
   }
 }
     
@@ -102,7 +113,6 @@ const endpost = () => {
           setconcat(next, index);
           scrollDown();
           setquizconcat(index, next);
-          endpost();
         }} 
         key={index}
         step={current_step}
@@ -111,14 +121,14 @@ const endpost = () => {
           </Button>
         </div>
       ) : (
-        endpost()
+       null
       )
     ));
   };
 
   useEffect(() => {
     window.addEventListener('load', () => {
- 
+      
     });
   });
 
