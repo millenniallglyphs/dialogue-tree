@@ -3,7 +3,6 @@ import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
 import SimpleBlock from './SimpleBlock';
 import Link from 'next/link';
-import WorkShow from './workshow';
 
 export default function DialogueText({children, index}) {
     const color = useContext(StyleSelect)
