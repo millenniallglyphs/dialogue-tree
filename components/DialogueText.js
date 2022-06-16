@@ -173,7 +173,7 @@ export default function DialogueText({children, index}) {
                     padding: 0;
                   `}>
                     
-                      I'm a designer who <a href="https://enchanted.network/" target="_blank" className={css`
+                      I'm a product designer who <a href="https://enchanted.network/" target="_blank" className={css`
                     box-shadow: inset 0px -6px 0px #DEDBFF;
                       transition: box-shadow 1s;
                       cursor: pointer;
