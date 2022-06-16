@@ -2,16 +2,18 @@ const Dialogue = {
     start: {
       dialogue:
         [ 
-          {d: "Hello."},
-          {d: "My Name's Calvin."},
-          {d: "currently"},
-          {d: "farm"},
-          {d: "Let's chat."},
+          {d: "Hi. My Name's Calvin"},
+          {d: "cc"},
+          {d: "I work on projects like these"},
+          {d: "da"},
+          {d: "db"},
+          {d: "dc"},
+          {d: "dd"},
         ],
       questions: 
         [
-          {q: "Can I see your work?", next: "work"},
-          {q: "What's your dog's name?", next: "dog"},
+          {q: "What's your skill-set?", next: "ability"},
+          {q: "What's your experience?", next: "experience"},
           {q: "Can I hire you?", next: "end"},
         ]
     },
@@ -39,7 +41,7 @@ const Dialogue = {
         ],
       questions: 
         [
-          {q: "Do you write about design?", next: "writing"},
+          {q: "What do you do outside of design?", next: "hobby"}
         ]
     },
     writing: {
@@ -65,7 +67,6 @@ const Dialogue = {
     },
     hobby: {
       dialogue: [
-        {d: "trunnel-pic"},
         {d: "I'm into carpentry, running, cycling and gardening."},
       ],
       questions:
@@ -86,7 +87,7 @@ const Dialogue = {
       ],
       questions:
       [
-        {q: "What dev work do you do?", next: "dev"},
+        
       ]
     },
     dev: {

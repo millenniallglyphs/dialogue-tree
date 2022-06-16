@@ -3,6 +3,7 @@ import StyleSelect from '../lib/StyleSelect';
 import { useContext } from 'react';
 import SimpleBlock from './SimpleBlock';
 import Link from 'next/link';
+import WorkShow from './workshow';
 
 export default function DialogueText({children, index}) {
     const color = useContext(StyleSelect)
@@ -105,38 +106,15 @@ export default function DialogueText({children, index}) {
                   }
                 `}>Xalgorithms Foundation</a>.
                     </p>
+                  ) : children === "da" ? (
+                    <SimpleBlock caption="No Code Rules People Understand" image="/preview-rule.png" target="/projects/design-for-general-purpose" delay={index} />
                   ) : children === "db" ? ( 
-                  <>
-                  <div className={css`
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 1em;
-                    width: 100%;
-                    @media (max-width: 1000px) {
-                      grid-template-columns: 1fr;
-                    }
-                  `}>
-                    <SimpleBlock caption="Design For General Purpose" image="/mocalt4.jpg" target="/projects/design-for-general-purpose" delay={index} />
-                    <SimpleBlock caption="Neighborhood Scale Software" image="/tabletop.jpg" target="/projects/neighborhood-scale-software" delay={index} />
-                  </div>
-                  </>
-                  ) : children === "dc" ? ( 
-                    <>
-                    <div className={css`
-                      display: grid;
-                      grid-template-columns: 1fr 1fr;
-                      gap: 1em;
-                      width: 100%;
-                      @media (max-width: 1000px) {
-                        grid-template-columns: 1fr;
-                      }
-                    `}>
-                      <SimpleBlock caption="Building a Distributed Brand" image="/brand-process-hero.jpg" target="/projects/building-a-distributed-brand" delay={index} />
-                      <SimpleBlock caption="Design System Wins" image="/components-material.png" target="/projects/design-system-wins" delay={index} />
-                    </div>
-                    </>
-
-                  ) : children === "dog-pic" ? ( 
+                      <SimpleBlock caption="Design System Wins" image="/preview-system.png" target="/projects/design-system-wins" delay={index} />
+                  ) :  children === "dc" ? (
+                    <SimpleBlock caption="Building a Distributed Brand" image="/preview-brand.png" target="/projects/building-a-distributed-brand" delay={index} bw="true" />
+                  ) :  children === "dd" ? (
+                    <SimpleBlock caption="Neighborhood Scale Software" image="/preview-software.png" target="/projects/neighborhood-scale-software" delay={index} />
+                   ) : children === "dog-pic" ? ( 
                     <div className={css`
                       width: 100%;
                     `}>
@@ -195,30 +173,23 @@ export default function DialogueText({children, index}) {
                     margin: 0;
                     padding: 0;
                   `}>
-                    <Link href="/writing/transcending-the-creative-cloud">
-                      <a className={css`
-                      box-shadow: inset 0px -6px 0px #DEDBFF;
+                    
+                      I'm a designer who <a href="https://enchanted.network/" target="_blank" className={css`
+                    box-shadow: inset 0px -6px 0px #DEDBFF;
                       transition: box-shadow 1s;
                       cursor: pointer;
                       &:hover {
                           box-shadow: inset 0px -1.2em 0px #DEDBFF;
                       }
-                   }
-                  `}>Transcending the Creative Cloud</a>
-                  </Link>
+                    `}>writes</a> and <a href="https://gitlab.com/seeddisburser" target="_blank" className={css`
+                    box-shadow: inset 0px -6px 0px #DEDBFF;
+                      transition: box-shadow 1s;
+                      cursor: pointer;
+                      &:hover {
+                          box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                      }
+                    `}>codes</a>.
                     </p>
-                  ) : children === "trunnel-pic" ? ( 
-                    <div className={css`
-                        border-radius: 8px;
-                        max-width: 350px;
-                        background-image: url(/trunnel.jpg);
-                        background-size: cover;
-                        background-position: center;
-                        animation-name: appearc;
-                        animation-duration: 0.75s;
-                        animation-delay: 1s;
-                        animation-fill-mode: both;
-                      `}></div>
                   ) : (
                     <>
                     {children}

@@ -194,11 +194,7 @@ useEffect(() => {
                             background-size: cover;
                             background-position: center;
                             border-radius: 2em;
-                            margin-right: 1em;
                             isolation: isolate;
-                            @media (max-width: 1000px) {
-                              margin-right: 0em;
-                            }
                         `}></div>
             </div>
             <div className={css`
@@ -232,17 +228,17 @@ useEffect(() => {
         >
         <div className={css`
           padding: 0px;
-          margin: auto;
+          margin: 0;
           display: grid;
           height: 100vh;
           width: 100vw;
-          padding-bottom: 1em;
-          grid-template-rows: 1fr 155px 60px;
+          grid-template-rows: 1fr 155px;
+          padding-bottom: 0.5em;
           @media (max-width: 1000px) {
             height: 100vh;
             width: 100vw;
-            grid-template-rows: 1fr 130px 33px;
-            padding-bottom: 0em;
+            grid-template-rows: 1fr 90px;
+            padding-bottom: 1em;
           }
         `}>
           <div className="chatHold">
@@ -252,15 +248,14 @@ useEffect(() => {
                 flex-direction: column-reverse;
                 background: none;
                 height: 100%;
-                
                 overflow-y: scroll;
-                padding: 1em;
+                padding: 0em 1em;
                 @media (max-width: 1000px) {
                   padding: 1em;
                 }
             `} id="reverseflow">
               <div className={css`
-              width: 1000px;
+              width: 100%;
               margin-left: auto;
               margin-right: auto;
               @media (max-width: 1000px) {
@@ -276,24 +271,22 @@ useEffect(() => {
             display: flex;
             justify-content: flex-end;
             flex-direction: column; 
-            min-height: 130px;
+            min-height: 90px;
             gap: 0.5rem;
-            padding: 1em 0.85rem 1em 0.85em;
-            width: 1000px;
+            padding: 1em 0.85rem 0em 0.85em;
+            width: 100%;
             margin: auto;
             position: relative;
             z-index: 3;
             box-shadow: 0px 0px 8px 8px #F5F5F5;
             @media (max-width: 1000px) {
-              margin-left: 0em;
-              margin-right: 0em;
-              border-radius: 0em;
+              margin: 0em;
               width: 100%;
+              padding-top: 0em;
             }
           `}>
             {renderQuestions()}
           </div>
-          <SimpleFooter/>
         </div>
       </div>
     )

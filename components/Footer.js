@@ -5,7 +5,7 @@ export default function Footer() {
         <div className={css`
             width: 100%;
             align-items: center;
-            padding: 1em;
+            padding: 0.5em 0.5em;
             color: #04082B;
             width: 100%;
             margin: auto;

@@ -5,11 +5,11 @@ export default function SimpleFooter() {
     return(
         <div className={css`
             display: flex;
-            width: 1000px;
+            width: 100%;
             margin: auto;
             font-size: 10px;
             justify-content: space-between;
-            padding: 1em;
+            padding: 0.5em 2em;
             color: #39435B;
             @media (max-width: 1000px) {
               width: 100%;
