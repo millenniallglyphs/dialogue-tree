@@ -1,11 +1,25 @@
+@import url(/public/TWKLausanne-750.woff2);
+
+@import url(/public/TWKLausanne-450.woff2);
+
+@font-face {
+  font-family: twkLausanne;
+  src: url(../public/TWKLausanne-750.woff2);
+}
+
+@font-face {
+  font-family: twkLausanne-body;
+  src: url(../public/TWKLausanne-450.woff2);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'twkLausanne-body';
   font-size: 16px;
-  background: #F5F5F5;
+  background: #FAFAFA;
+  color: #1A3448;
   
 }
 
@@ -124,12 +138,11 @@ caption {
 
 .holdhover {
   cursor: pointer;
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: 80px 1fr 60px;
-  width: 100%;
   overflow: hidden;
   cursor: pointer;
+  overflow: hidden;
 }
 .holdhover:hover>* {
   background-size: 200%;
@@ -137,6 +150,7 @@ caption {
 
 .holdhover:hover>:nth-child(3) {
   margin-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 @keyframes introanimation {
@@ -196,17 +210,17 @@ caption {
     font-size: 0em;
   }
   25% {
-    font-size: 1.4rem;
+    font-size: 3vw;
     opacity: 0;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.5vw 1em 0.5vw 0em;
   }
   100% {
     opacity: 1;
     margin-top: 0px;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.5vw 1em 0.5vw 0em;
     margin-bottom: 0em;
-    line-height: 2rem;
-    font-size: 1.4rem;
+    line-height: 4.2vw;
+    font-size: 3.2vw;
   }
 }
 
@@ -430,8 +444,8 @@ caption {
 
 .wrapper>*:not(img):not(iframe):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre):not(div) {
   max-width: 100%;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 0em;
+  margin-right: 0em;
 }
 
 .wrapper>iframe {

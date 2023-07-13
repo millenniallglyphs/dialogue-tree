@@ -15,7 +15,6 @@ export default function DialogueText({children, index}) {
               font-weight: 400;
               opacity: 1;
               margin-top: 0em;
-              max-width: 700px;
               animation-name: appear;
               animation-duration: 0.75s;
               animation-delay: ${index + 's'};
@@ -25,26 +24,28 @@ export default function DialogueText({children, index}) {
               }
               `}>
                 <div className={css`
-                     color: #04082B;
+                     color: #1A3448;
                 `}>
                   { children === "Selman" ? ( 
                     <a href="https://selmandesign.com" target="_blank" className={css`
-                    box-shadow: inset 0px -6px 0px #DEDBFF;
+                    color: #0D6AB1;
+                    box-shadow: inset 0px -0.4em 0px rgba(13, 106, 177, 0.15);
                       transition: box-shadow 1s;
                       cursor: pointer;
                       &:hover {
-                          box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                          box-shadow: inset 0px -1.2em 0px rgba(13, 106, 177, 0.15);
                       }
                     `}>
                       {children}
                     </a>
                   ) : children === "XXIX" ? ( 
                     <a href="https://studioxxix.com" target="_blank" className={css`
-                    box-shadow: inset 0px -6px 0px #DEDBFF;
+                    color: #0D6AB1;
+                    box-shadow: inset 0px -0.4em 0px rgba(13, 106, 177, 0.15);
                       transition: box-shadow 1s;
                       cursor: pointer;
                       &:hover {
-                          box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                          box-shadow: inset 0px -1.2em 0px rgba(13, 106, 177, 0.15);
                       }
                     `}>
                       {children}
@@ -52,6 +53,7 @@ export default function DialogueText({children, index}) {
                   ) : children === "hello@calvin.ooo" ? (
                     <p> 
                       Please, reach out to me at <a href="mailto:hello@calvin.ooo" target="_blank" className={css`
+                      color: #0D6AB1;
                      box-shadow: inset 0px -6px 0px #DEDBFF;
                      transition: box-shadow 1s;
                      &:hover {
@@ -106,13 +108,13 @@ export default function DialogueText({children, index}) {
                 `}>Xalgorithms Foundation</a>.
                     </p>
                   ) : children === "da" ? (
-                    <SimpleBlock caption="No Code Rules People Understand" image="/preview-rule.png" target="/projects/design-for-general-purpose" delay={index} />
+                    <SimpleBlock caption="No Code Rules" image="/preview-rule.png" target="/projects/design-for-general-purpose" delay={index} color="#E154D3" bg="#EBDAF1" />
                   ) : children === "db" ? ( 
-                      <SimpleBlock caption="Design System Wins" image="/preview-system.png" target="/projects/design-system-wins" delay={index} />
+                      <SimpleBlock caption="Design System Wins" image="/preview-system.png" target="/projects/design-system-wins" delay={index} color="#86B10D" bg="#DDE8D2" />
                   ) :  children === "dc" ? (
-                    <SimpleBlock caption="Building a Distributed Brand" image="/preview-brand.png" target="/projects/building-a-distributed-brand" delay={index} bw="true" />
+                    <SimpleBlock caption="Building a Distributed Brand" image="/preview-brand.png" target="/projects/building-a-distributed-brand" delay={index} color="#5F0DB1" bg="#DACFEB" />
                   ) :  children === "dd" ? (
-                    <SimpleBlock caption="Neighborhood Scale Software" image="/preview-software.png" target="/projects/neighborhood-scale-software" delay={index} />
+                    <SimpleBlock caption="Cross-chain bridge" image="/preview-software.png" target="/projects/neighborhood-scale-software" delay={index} color="#ED8526" bg="#EBE2D8" />
                    ) : children === "dog-pic" ? ( 
                     <div className={css`
                       width: 100%;
@@ -168,27 +170,46 @@ export default function DialogueText({children, index}) {
                   </Link>
                   </p>
                   ) : children === "cc" ? ( 
+                    <div className={css`
+                    width: 100%;
+                    `}>
                     <p className={css`
                     margin: 0;
                     padding: 0;
+                    
                   `}>
                     
-                      I'm a product designer who <a href="https://enchanted.network/" target="_blank" className={css`
-                    box-shadow: inset 0px -6px 0px #DEDBFF;
+                     <a href="https://enchanted.network/" target="_blank" className={css`
+                      color: #0D6AB1;
+                    box-shadow: inset 0px -0.4em 0px rgba(13, 106, 177, 0.15);
                       transition: box-shadow 1s;
                       cursor: pointer;
                       &:hover {
-                          box-shadow: inset 0px -1.2em 0px #DEDBFF;
+                          box-shadow: inset 0px -1.2em 0px rgba(13, 106, 177, 0.15);
                       }
-                    `}>writes</a> and <a href="https://gitlab.com/seeddisburser" target="_blank" className={css`
-                    box-shadow: inset 0px -6px 0px #DEDBFF;
-                      transition: box-shadow 1s;
-                      cursor: pointer;
-                      &:hover {
-                          box-shadow: inset 0px -1.2em 0px #DEDBFF;
-                      }
-                    `}>codes</a>.
+                    `}>writes about teams</a> 
                     </p>
+                    </div>
+                  ) : children === "cd" ? (
+                    <div className={css`
+                    width: 100%;
+                    `}>
+                    <p className={css`
+                    margin: 0;
+                    padding: 0;
+                    
+                  `}> 
+                  and <a href="https://gitlab.com/seeddisburser" target="_blank" className={css`
+                    color: #0D6AB1;
+                    box-shadow: inset 0px -0.4em 0px rgba(13, 106, 177, 0.15);
+                      transition: box-shadow 1s;
+                      cursor: pointer;
+                      &:hover {
+                          box-shadow: inset 0px -1.2em 0px rgba(13, 106, 177, 0.15);
+                      }
+                    `}>plays with code</a>.
+                  </p>
+                    </div>
                   ) : (
                     <>
                     {children}

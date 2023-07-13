@@ -24,7 +24,6 @@ export default function ContentLayout({invisible, children}) {
                     `}>
                         {children}
                     </div>
-                    <SimpleFooter />
             </div>
         </div>
     )

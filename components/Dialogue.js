@@ -2,13 +2,17 @@ const Dialogue = {
     start: {
       dialogue:
         [ 
-          {d: "Hi. My Name's Calvin"},
+          {d: "Hello. I'm Calvin,"},
+          {d: "a product designer who"},
           {d: "cc"},
-          {d: "I work on projects like these"},
+          {d: "cd"},
+          {d: "I work on projects like:"},
           {d: "da"},
           {d: "db"},
           {d: "dc"},
           {d: "dd"},
+          {d: "db"},
+          {d: "da"}
         ],
       questions: 
         [

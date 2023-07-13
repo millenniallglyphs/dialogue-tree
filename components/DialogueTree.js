@@ -123,6 +123,42 @@ const endq = () => {
     });
   });
 
+
+  const renderLabel = () => {
+
+    const beep = current_step.length
+
+    return (
+      quiz ? (
+
+        <div className={css`
+        color: #0D6AB1;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        animation-delay: ${(beep + 0.5) + 's'};
+            animation-name: buttonappear;
+            animation-duration: 0.5s;
+            animation-fill-mode: backwards;
+      `}>
+        Ask me a question
+      </div>
+      ) : (
+       <p>
+         test
+         </p>
+      )
+    );
+  };
+
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      
+    });
+  });
+
+
+
  
 
  const treewatch = () => {
@@ -188,8 +224,10 @@ useEffect(() => {
           `}>
             <div>
             <div className={css`
-                            height: 3em;
-                            width: 3em;
+                            height: 3vw;
+                            width: 3vw;
+                            margin-top: 1vw;
+                            margin-right: 1em;
                             background-image: url('/headshot.jpg');
                             background-size: cover;
                             background-position: center;
@@ -199,8 +237,9 @@ useEffect(() => {
             </div>
             <div className={css`
               display: flex;
-              flex-direction: column;
+              flex-wrap: wrap;
               width: 100%;
+              align-items: center;
             `}>
           {dia.map(({ d }, index) => (
           <DialogueText key={index} index={index}>
@@ -232,7 +271,7 @@ useEffect(() => {
           display: grid;
           height: 100vh;
           width: 100vw;
-          grid-template-rows: 1fr 155px;
+          grid-template-rows: 1fr 180px;
           padding-bottom: 0.5em;
           @media (max-width: 1000px) {
             height: 100vh;
@@ -278,13 +317,21 @@ useEffect(() => {
             margin: auto;
             position: relative;
             z-index: 3;
-            box-shadow: 0px 0px 8px 8px #F5F5F5;
+            box-shadow: 0px 0px 8px 8px #ECF1F5;
             @media (max-width: 1000px) {
               margin: 0em;
               width: 100%;
               padding-top: 0em;
             }
           `}>
+            <div className={css`
+              color: #0D6AB1;
+              display: flex;
+              width: 100%;
+              justify-content: flex-end;
+            `}>
+              {renderLabel()}
+            </div>
             {renderQuestions()}
           </div>
         </div>

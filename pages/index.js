@@ -16,6 +16,29 @@ export async function getStaticProps() {
 
   export default function Home() {
 
+    let p1 = new Promise((resolve, reject) => {
+      resolve("foo");
+  });
+  let p2 = new Promise((resolve, reject) => {
+      reject("bar");
+  });
+  
+  console.log("bip");
+  
+  p1.then(val => {
+      console.log(val);
+      return p2;
+    })
+    .then(val => {
+      console.log("baz");
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  
+  console.log("bop");
+  
+
     return (
       <>
         <SEO title="Calvin Hutcheon Designs Products" description="My name&apos;s Calvin and I'm a product designer coming to you from beautiful Frog Creek Farm." img="/seo.png"/>  
