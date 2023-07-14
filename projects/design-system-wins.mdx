@@ -17,40 +17,13 @@ features : [
 ]
 ---
 
-Three of the core Xalgorithms Foundation outputs are applications. While the applications are the core focus, there are also websites needed for working groups. In order to establish a cohesive identity across multiple applications, I decided a design system was needed to consolidate the components and ensure consistency.
+The Xalgorithms Foundation required a cohesive experience across its applications and websites, leading to the creation of a design system aimed at ensuring consistency, usability, while facilitating design and development. To achieve the best user experience, considerations were made for accessibility, multi-lingual functionality, and brand conformance. 
 
-I created a design system intended to ensure best user experience across applications and websites, streamline the design process, and facilitates front end development tasks. I viewed meeting the needs of users, designers and developers as crucial to the success of this project. 
+<img src="/v2/win/hero.png" alt="assets in privacy spiral"/>
 
-**Ensuring Best User Experience**
+<img src="/v2/win/icon.png" alt="assets in privacy spiral"/>
 
-To ensure the best user experience across applications I considered issues of accessibility, multi-lingual functionality, and brand conformance. This draws directly from the intended impact:
-
-> Increased capacity to draft, publish, access, audit, and operationalize normative rules by people (and machines) 
-
-From the impact statement its clear that not only must the interfaces make rules accessible to non-technical people, it is also critical that rules are accessible to people regardless of ability, or language preference. This influenced my decisions, particularly those regarding type choice.
-
-<img src="/font.png" alt="fira in use" />
-
-I selected Fira Sans (and Fira Code) for use in the component library. Fira has high legibility, and has undergone significant user testing by the Mozilla Foundation to ensure readability on screens. Importantly, Fira is an open source project with an active group of contributors maintaining glyphs across alphabets. This means that Fira has exceptional multi-lingual support, that includes Latin, Hebrew, Arabic, Cyrillic, Devanagari and more. 
-
-<img src="/color.png" alt="color makeup" />
-
-When making color choices, I selected colors to direct user actions, support the brand identity, while at the same time supporting users regardless of vision status. This meant considering issues of contrast and conducting usability testing across the color library. Accessibility testing was accomplished using xyz application.
-
-<img src="/components-material.png" alt="preview of design system" />
-
-Finally making the best possible user experience requires correct dev implementation. For this reason, I paid special attention to  documentation to ensure compliance with accessibility standards, such as including image alts.
-
-**Streamlining Design Process**
-
-Creating a dedicated design system streamlines the design process. In Figma projects it is a simple process to import the library to begin building a high fidelity flow once the wire-frame stage is completed. This ensure consistency when collaborating with other designers. Also, given the fact that this is an open source project,  easy designer on-boarding is a natural way to bolster collaboration.
-
-<img src="/library.png" alt="figma library preview" />
-
-**Facilitating Dev Work**
-
-My final goal was to facilitate development, streamline prototyping, and create a shared sense of dev objective through a cohesive brand framework. Since the Xalgorithms Foundation website and the Rule Maker prototype are built in react, the natural choice was to create a react component library. I built a minimal component library containing all the atomic components of the design system. I deployed this as an NPM package for ease of implementation. 
-
+<img src="/v2/win/components.png" alt="assets in privacy spiral"/>
 
 ```cl
 $ yarn add xf-material-components
@@ -70,18 +43,9 @@ $ yarn add xf-material-components
     }
 ```
 
-I decided it was also important to maximize flexibility by not assuming use of react. To help ensure effective design across frameworks, I but together a basic css file containing the atomic design elements. 
+<RandomLogo />
 
-```html
-// index.html
-    <head>
-        <link rel="stylesheet"
-          type="css"
-          href="xf-material-components/config/rootStyle.css">
-    </head>
-```
-
-Similarly, I built a simple hugo template to facilitate documentation. This is also how I documented all of the elements of the design system. You can try out the theme by starting a new [Hugo](https://github.com/gohugoio/hugo) project.
+The design system streamlined the design processes, ensured consistency and facilitated collaboration. Additionally, the creation of a React component library, a raw CSS guide, and a Hugo Template streamlined development and made open source contribution easier and more consistent across frameworks. 
 
 ```cl
 $ hugo new site quickstart
@@ -100,4 +64,11 @@ Include the theme in the config.
 ```cl
 $ echo 'theme = "xf-material-theme"' >> config.toml
 ```
+
+<img src="/v2/win/inputs.png" alt="assets in privacy spiral"/>
+
+<img src="/v2/win/type-sytem.png" alt="assets in privacy spiral"/>
+
+In conclusion, the design system successfully addressed the need for a cohesive user experience across the Xalgorithms Foundation by focusing on accessibility, multi-lingual use cases, and consistency, while simultaneously streamlining design and development processes. 
+
 
