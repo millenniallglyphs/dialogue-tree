@@ -1,6 +1,7 @@
 import { css } from '@emotion/css';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,7 +50,8 @@ const Carousel = ({ images }) => {
                 background-position: center;
                 justify-content: flex-end;
                 box-shadow: 24px 24px 24px 0px rgba(0, 0, 0, 0.13);
-                transition: all 1s;
+                transition: margin 2.5s, transform 2.5s;
+                transition-timing-function: ease-in-out;
                 transform: rotate(${
                     (keys-counter) === 0 ? ("-15deg") :
                     (keys-counter) === 1 ? ("-5deg") : 
@@ -67,6 +69,7 @@ const Carousel = ({ images }) => {
                 <h3 className={css`
                     margin: 0;
                     padding: 0;
+                    color: ${ index.t === "Informed Decision Making" ? ("#FAFAFA") : ("#1A3448")};
                 `}>
                     {index.t}
                 </h3>
@@ -77,7 +80,17 @@ const Carousel = ({ images }) => {
     ));
   };
 
-  console.log({images});
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Trigger your event here
+     arrayPrev();
+    }, 4000);
+
+    return () => {
+      clearInterval(interval); // Cleanup interval on component unmount
+    };
+  }, [arrayPrev]);
+
 
   return (
     <div className="carousel">
@@ -85,16 +98,13 @@ const Carousel = ({ images }) => {
             max-width: 1000px;
             margin: auto;
         `}>
-      <button className="carousel-button previous" onClick={arrayPrev}>
-        next
-      </button>
       </div>
       <div className={css`
         gap: 0em;
         width: 100vw;
         height: 80vh;
         padding-bottom: 120px;
-        padding-top: 100px;
+        padding-top: 10px;
         position:relative;
       `}>
         <div className={css`

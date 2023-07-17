@@ -5,6 +5,7 @@ import BasicLayout from '../components/BasicLayout';
 import ContentLayout from '../components/ContentLayout';
 import { css } from '@emotion/css'
 import Carousel from '../components/Carousel';
+import ScrollAnimationComponent from '../components/ScrollAnimationComponent';
 
 export async function getStaticProps() {
 
@@ -109,39 +110,7 @@ export async function getStaticProps() {
             }
           `}>Get in Touch</button>
         </div>
-        <div className={css`
-          padding-top: 16svh;
-          padding-bottom: 0vh;
-          display: flex;
-          align-items: center;
-          width: 100%;
-          justify-content: center;
-        `}>
-          <div className={css`
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            max-width: 1000px;
-            gap: 1em;
-            align-items: center;
-          `}>
-            <div>
-              <h3 className={css`
-                margin: 0;
-                padding: 0;
-              `}>
-               My Work
-              </h3>
-              <p className={css`
-                line-height: 1.8em;
-              `}>
-              Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
-              </p>
-              <p>
-
-              </p>
-            </div>
-          </div>
-        </div>
+       
         <div>
           <Carousel images={images}/>
         </div>
@@ -161,15 +130,17 @@ export async function getStaticProps() {
             gap: 1em;
             align-items: center;
           `}>
+            <ScrollAnimationComponent>
             <div className={css`
               width: 100%;
-              height: 70vh;
+              height: 37vw;
               background: url(/v2/portrait.png);
               background-size: cover;
               background-position: center;
             `}>
 
             </div>
+            </ScrollAnimationComponent>
             <div>
               <h3 className={css`
                 margin: 0;
