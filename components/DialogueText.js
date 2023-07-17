@@ -24,7 +24,7 @@ export default function DialogueText({children, index}) {
               }
               `}>
                 <div className={css`
-                     color: #1A3448;
+                     color: #FAFAFA;
                 `}>
                   { children === "Selman" ? ( 
                     <a href="https://selmandesign.com" target="_blank" className={css`

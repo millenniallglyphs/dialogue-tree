@@ -51,24 +51,29 @@ export async function getStaticProps() {
   const images = [
     {
       t: "Designing for Trust and Transparency",
-      i: "v2/trust/hero-trust.png"
+      i: "v2/trust/hero-trust.png",
+      l: "/projects/designing-for-trust-and-transpernecy"
     },
     {
         t: "Form Factors for Creativity",
-        i: "v2/creative/render-02.png"
+        i: "v2/creative/render-02.png",
+        l: "/projects/form-factor-for-creativity"
     },
     {
       t: "Design System Wins",
-      i: "v2/win/hero.png"
+      i: "v2/win/hero.png",
+      l: "/projects/design-system-wins"
     },
     {
       t: "Informed Decision Making",
-      i: "v2/decision/render-01.png"
+      i: "v2/decision/render-01.png",
+      l: "/projects/informed-decision-making"
     
     },
     {
       t: "Reliability and Design Systems",
-      i: "v2/reliability/hero.png"
+      i: "v2/reliability/hero.png",
+      l: "/projects/reliability-and-design-systems"
     }
   ];
 
@@ -96,37 +101,39 @@ export async function getStaticProps() {
           <button className={css`
             padding: 10px 24px;
             border-radius: 50px;
-            background: #000;
+            background: #1A3448;
             color: white;
             border: none;
+            &:hover  {
+              background: #485661;
+            }
           `}>Get in Touch</button>
         </div>
-        <div>
-          <Carousel images={images}/>
-        </div>
         <div className={css`
-          margin-top: 20vh;
-          margin-bottom: 20vh;
+          padding-top: 16svh;
+          padding-bottom: 0vh;
           display: flex;
-          align-items: center
-          background: #fff;
+          align-items: center;
           width: 100%;
           justify-content: center;
         `}>
           <div className={css`
             display: grid;
-            grid-columns-template: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             max-width: 1000px;
             gap: 1em;
+            align-items: center;
           `}>
             <div>
-
-            </div>
-            <div>
-              <h3>
-                My Story
+              <h3 className={css`
+                margin: 0;
+                padding: 0;
+              `}>
+               My Work
               </h3>
-              <p>
+              <p className={css`
+                line-height: 1.8em;
+              `}>
               Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
               </p>
               <p>
@@ -135,11 +142,89 @@ export async function getStaticProps() {
             </div>
           </div>
         </div>
+        <div>
+          <Carousel images={images}/>
+        </div>
+        <div className={css`
+          padding-top: 10vh;
+          padding-bottom: 10vh;
+          display: flex;
+          align-items: center;
+          background: #fff;
+          width: 100%;
+          justify-content: center;
+        `}>
+          <div className={css`
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1000px;
+            gap: 1em;
+            align-items: center;
+          `}>
+            <div className={css`
+              width: 100%;
+              height: 70vh;
+              background: url(/v2/portrait.png);
+              background-size: cover;
+              background-position: center;
+            `}>
+
+            </div>
+            <div>
+              <h3 className={css`
+                margin: 0;
+                padding: 0;
+              `}>
+                My Story
+              </h3>
+              <p className={css`
+                line-height: 1.8em;
+              `}>
+              Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
+              </p>
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        
       <BasicLayout >
         <ContentLayout invisible='true'>
           {page}
         </ContentLayout>
       </BasicLayout>
+      <div className={css`
+          padding-top: 10vh;
+          padding-bottom: 10vh;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: center;
+        `}>
+          <div className={css`
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1000px;
+            gap: 1em;
+            align-items: center;
+          `}>
+            <div>
+              <p>
+                © 2023
+              </p>
+              <p>
+
+              </p>
+            </div>
+            <div className={css`
+            height: 30vh;
+            `}>
+
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

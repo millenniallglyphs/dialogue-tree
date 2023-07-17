@@ -14,7 +14,7 @@ export default function Button({children, step, check}) {
             padding-left: 1em;
             padding-right: 1em;
             color: #ECF1F5;
-            background: #0D6AB1;
+            background: #1A3448;
             border-radius: 0.5em 0.5em 0em 0.5em;
             border: none;
             outline: none;
@@ -28,7 +28,7 @@ export default function Button({children, step, check}) {
             box-shadow: none;
             cursor: pointer;
             &:hover  {
-              background: rgba(13, 106, 177, 0.75);
+              background: #485661;
             }
           `}
           onClick={check}

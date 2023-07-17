@@ -132,7 +132,7 @@ const endq = () => {
       quiz ? (
 
         <div className={css`
-        color: #0D6AB1;
+        color: #485661;
         display: flex;
         width: 100%;
         justify-content: flex-end;
@@ -260,6 +260,8 @@ useEffect(() => {
         <div className={css`
             padding-top: 0;
             width: 100%;
+            padding-bottom: 20vh;
+            background: #1A3448;
             position: absolute;
             left: ${hidden ? ("-200vw") : ("0")};
             transition: left 0.5s;
@@ -267,10 +269,11 @@ useEffect(() => {
         >
         <div className={css`
           padding: 0px;
-          margin: 0;
+          margin: auto;
           display: grid;
-          height: 100vh;
-          width: 100vw;
+          height: 70vh;
+          width: 1000px;
+          background: #1A3448;
           grid-template-rows: 1fr 180px;
           padding-bottom: 0.5em;
           @media (max-width: 1000px) {
@@ -317,7 +320,7 @@ useEffect(() => {
             margin: auto;
             position: relative;
             z-index: 3;
-            box-shadow: 0px 0px 8px 8px #ECF1F5;
+            box-shadow: 0px 0px 8px 8px ##FAFAFA;
             @media (max-width: 1000px) {
               margin: 0em;
               width: 100%;
