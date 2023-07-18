@@ -1,6 +1,7 @@
 import Meta from "./Meta"
 import { css } from '@emotion/css'
 import DialogueTree from "./DialogueTree"
+import Nav from "./Nav"
 
 export default function BasicLayout({display, children}) {
     return(
@@ -8,6 +9,7 @@ export default function BasicLayout({display, children}) {
             <div className={css`
                 z-index: 7;
             `}>
+                <Nav />
                 <DialogueTree hidden={display} />
             </div>
             <div className={css`

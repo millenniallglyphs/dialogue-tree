@@ -6,6 +6,9 @@ import ContentLayout from '../components/ContentLayout';
 import { css } from '@emotion/css'
 import Carousel from '../components/Carousel';
 import ScrollAnimationComponent from '../components/ScrollAnimationComponent';
+import SelfPic from '../components/SelfPic';
+import Contact from '../components/Contact';
+
 
 export async function getStaticProps() {
 
@@ -99,16 +102,7 @@ export async function getStaticProps() {
           <p>
           Calvin is a product designer grounded in craft to step into uncharted technical futures. 
           </p>
-          <button className={css`
-            padding: 10px 24px;
-            border-radius: 50px;
-            background: #1A3448;
-            color: white;
-            border: none;
-            &:hover  {
-              background: #485661;
-            }
-          `}>Get in Touch</button>
+          <Contact />
         </div>
        
         <div>
@@ -130,17 +124,7 @@ export async function getStaticProps() {
             gap: 1em;
             align-items: center;
           `}>
-            <ScrollAnimationComponent>
-            <div className={css`
-              width: 100%;
-              height: 37vw;
-              background: url(/v2/portrait.png);
-              background-size: cover;
-              background-position: center;
-            `}>
-
-            </div>
-            </ScrollAnimationComponent>
+            <SelfPic />
             <div>
               <h3 className={css`
                 margin: 0;
@@ -175,13 +159,16 @@ export async function getStaticProps() {
           justify-content: center;
         `}>
           <div className={css`
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            max-width: 1000px;
+            width: 100%;
+            margin: auto;
             gap: 1em;
+            display: flex;
             align-items: center;
+            text-align: center;
+            justify-content: center;
           `}>
             <div>
+              <Contact />
               <p>
                 © 2023
               </p>
