@@ -29,8 +29,8 @@ console.log(isVisible + " hi hi");
     >
         <div className={css`
               width: 100%;
-              height: 37vw;
-              background: url(/v2/grid.png);
+              height: 30vw;
+              background: url(/v2/layer-00.png);
               background-size: cover;
               background-position: center;
               opacity: ${ isVisible ? ("1") : ("0") };
@@ -40,16 +40,29 @@ console.log(isVisible + " hi hi");
             `}>
         </div>
        <div className={css`
-            margin-top: -37vw;
+            margin-top: -30vw;
               width: 100%;
-              height: 37vw;
-              background: url(/v2/portrait.png);
+              height: 30vw;
+              background: url(/v2/layer-01.png);
               background-size: cover;
               background-position: center;
               opacity: ${ isVisible ? ("1") : ("0") };
             transform: scale( ${ isVisible ? ("1") : ("0.8") } );
             transition: opacity 1s, transform 2s;
             transition-delay: 1s;
+            `}>
+        </div>
+        <div className={css`
+            margin-top: -30vw;
+              width: 100%;
+              height: 30vw;
+              background: url(/v2/layer-02.png);
+              background-size: cover;
+              background-position: center;
+              opacity: ${ isVisible ? ("1") : ("0") };
+            transform: scale( ${ isVisible ? ("1") : ("0.8") } );
+            transition: opacity 1s, transform 2s;
+            transition-delay: 2s;
             `}>
         </div>
         

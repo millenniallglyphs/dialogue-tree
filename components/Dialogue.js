@@ -2,8 +2,8 @@ const Dialogue = {
     start: {
       dialogue:
         [ 
-          {d: "Thanks for visiting my site."},
-          {d: "Have more questions?"},
+          {d: "Want to learn more?"},
+          {d: "Ask me a question"},
         ],
       questions: 
         [

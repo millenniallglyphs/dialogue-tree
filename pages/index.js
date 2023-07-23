@@ -8,6 +8,9 @@ import Carousel from '../components/Carousel';
 import ScrollAnimationComponent from '../components/ScrollAnimationComponent';
 import SelfPic from '../components/SelfPic';
 import Contact from '../components/Contact';
+import GridWork from '../components/GridWork';
+import HowWork from '../components/HowWork';
+import WritingList from '../components/WritingList';
 
 
 export async function getStaticProps() {
@@ -85,7 +88,7 @@ export async function getStaticProps() {
     return (
       <div>
         <div className={css`
-          height: 80vh;
+          height: 70vh;
           width: 100vw;
           display: flex;
           flex-direction: column;
@@ -94,20 +97,48 @@ export async function getStaticProps() {
           justify-content: center;
           text-align: center;
           gap: 1em;
-          background-image: url(/v2/transform-hero.png);
           background-position: center;
           background-size: cover
         `}>
-          <h1>Grounded in craft. <br /> Stepping into the future.</h1>
-          <p>
-          Calvin is a product designer grounded in craft to step into uncharted technical futures. 
-          </p>
-          <Contact />
+          <h1>A <span className='callout'>craftsman</span> & <span className='callout'>designer</span> building <br /> experiences for an <span className='callout'>emergent internet</span>. </h1>
+          <div className={css`
+            display: flex;
+            gap: 1em;
+          `}>
+          <button className={css`
+              padding: 0.5em;
+              padding-left: 1em;
+              padding-right: 1em;
+              color: #f8f8f8;
+              background: #1A3448;;
+              border-radius: 0.5em 0.5em 0.5em 0.5em;
+              border: none;
+              outline: none;
+              display: flex;
+              font-size: 1em;
+              animation-fill-mode: backwards;
+              font-weight: 400;
+              transition: background 1s;
+              box-shadow: none;
+              cursor: pointer;
+              align-items: center;
+              gap: 0.5em;
+              &:hover  {
+                background: #000;
+              }
+              `}>
+                Let's Talk
+          </button>
+          </div>
         </div>
        
         <div>
           <Carousel images={images}/>
+          {/*<GridWork images={images}/>*/}
         </div>
+        <HowWork />
+        <WritingList />
+        {/*
         <div className={css`
           padding-top: 10vh;
           padding-bottom: 10vh;
@@ -143,46 +174,13 @@ export async function getStaticProps() {
             </div>
           </div>
         </div>
-        
+            */}
         
       <BasicLayout >
         <ContentLayout invisible='true'>
           {page}
         </ContentLayout>
       </BasicLayout>
-      <div className={css`
-          padding-top: 10vh;
-          padding-bottom: 10vh;
-          display: flex;
-          align-items: center;
-          width: 100%;
-          justify-content: center;
-        `}>
-          <div className={css`
-            width: 100%;
-            margin: auto;
-            gap: 1em;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-          `}>
-            <div>
-              <Contact />
-              <p>
-                © 2023
-              </p>
-              <p>
-
-              </p>
-            </div>
-            <div className={css`
-            height: 30vh;
-            `}>
-
-            </div>
-          </div>
-        </div>
       </div>
     )
   }

@@ -2,6 +2,7 @@ import Meta from "./Meta"
 import { css } from '@emotion/css'
 import DialogueTree from "./DialogueTree"
 import Nav from "./Nav"
+import Contact from "./Contact"
 
 export default function BasicLayout({display, children}) {
     return(
@@ -17,7 +18,51 @@ export default function BasicLayout({display, children}) {
                 z-index: 6;
             `}>
                 {children}
+                <DialogueTree hidden={!display} />
+                <div className={css`
+                    margin-top: ${ display ? ('80vh') : ('0vh')};
+                `}>
+                    <div className={css`
+          padding-top: 10vh;
+          padding-bottom: 10vh;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: center;
+        `}>
+          <div className={css`
+            width: 100%;
+            margin: auto;
+            gap: 1em;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+          `}>
+            <div>
+              <Contact />
+              <p>
+                © 2023
+              </p>
+              <p>
+
+              </p>
             </div>
+            <div className={css`
+            height: 30vh;
+            `}>
+
+            </div>
+          </div>
+        </div>
+
+                </div>
+            </div>
+            
+            
+            
+
+
             <div className={css`
                 position: fixed;
                 top: 0;

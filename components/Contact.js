@@ -24,7 +24,7 @@ return (
     border: none;
     outline: none;
     display: flex;
-    font-size: 0.8em;
+    font-size: 0.85em;
     font-family: monospace;
     animation-fill-mode: backwards;
     font-weight: 400;

@@ -199,7 +199,7 @@ useEffect(() => {
           animation-name: appear;
           animation-duration: 0.5s;
           animation-fill-mode: both;
-          color: #2F20D6;
+          color: #F8F8F8;
           @media (max-width: 1000px) {
             animation-name: appearb;
             animation-duration: 0.5s;
@@ -228,7 +228,7 @@ useEffect(() => {
                             width: 3vw;
                             margin-top: 1vw;
                             margin-right: 1em;
-                            background-image: url('/headshot.jpg');
+                            background-image: url('/v2/creative/i-calvin.jpg');
                             background-size: cover;
                             background-position: center;
                             border-radius: 2em;
@@ -260,11 +260,13 @@ useEffect(() => {
         <div className={css`
             padding-top: 0;
             width: 100%;
-            padding-bottom: 20vh;
+            padding-bottom: ${hidden ? ("0px") : ("20vh")};
             background: #1A3448;
             position: absolute;
             left: ${hidden ? ("-200vw") : ("0")};
+            height: ${hidden ? ("0px") : ("auto")};
             transition: left 0.5s;
+            overflow: hidden;
         `}
         >
         <div className={css`

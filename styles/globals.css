@@ -2,6 +2,8 @@
 
 @import url(/public/TWKLausanne-450.woff2);
 
+@import url(/public/GaramondBookCondensed.woff2);
+
 @font-face {
   font-family: twkLausanne;
   src: url(../public/TWKLausanne-750.woff2);
@@ -10,6 +12,11 @@
 @font-face {
   font-family: twkLausanne-body;
   src: url(../public/TWKLausanne-450.woff2);
+}
+
+@font-face {
+  font-family: garamond;
+  src: url(../public/GaramondBookCondensed.woff2);
 }
 
 html,
@@ -23,14 +30,20 @@ body {
   
 }
 
-h1 h2 h3 h4 h5 {
- font-family: 'twkLausanne';
+h1, h2, h3, h4, h5 {
+ font-family: 'twkLausanne' !important;
  font-weight: 700;
+ color: #1A3448;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.callout {
+  font-family: 'garamond', serif;
+  font-size: 1.3em;
 }
 
 
@@ -116,9 +129,33 @@ caption {
   font-size: 0.8em;
 }
 
+p {
+  color: #9D9A9A;
+}
+
 .twitter-tweet {
   margin: auto;
 }
+
+.linkbutton {
+  display: flex;
+  transition: margin 1s;
+  gap: 0.5em;
+  cursor: pointer;
+  align-items: flex-end;
+}
+
+.linkbutton:hover>:nth-child(2) {
+  margin-left: 1em;
+  margin-right: 0em;
+}
+
+.linkbutton>:nth-child(2) {
+  margin-left: 0em;
+  margin-right: 1em;
+  transition: margin 1s;
+}
+
 
 
 .subMenu {

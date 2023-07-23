@@ -16,7 +16,7 @@ export default function ReadMore() {
                 text-transform: uppercase;
                 padding: 1em;
             `}>
-                See More Work
+                More Work
             </p>
             <div className={css`
                 display: grid;

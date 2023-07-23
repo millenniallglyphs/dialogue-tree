@@ -15,8 +15,6 @@ export default function ContentLayout({invisible, children}) {
                 right: ${invisible ? ('-200vw') : ('0vw')};
                 transition: right 0.5s;
             `}>
-                
-                    <Meta />
                     <div className={css`
                         min-height: 80vh;
                         width: 100vw;

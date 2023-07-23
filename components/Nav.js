@@ -1,6 +1,7 @@
 
 import { css } from '@emotion/css';
 import Contact from './Contact';
+import Link from 'next/link';
 
 export default function Nav() {
 
@@ -23,7 +24,9 @@ export default function Nav() {
             align-items: center;
             `}>
                 <div>
+                    <Link href={"/"}>
                     <p>Calvin Hutcheon</p>
+                    </Link>
                 </div>
                 <div className={css`
                     display: flex;
