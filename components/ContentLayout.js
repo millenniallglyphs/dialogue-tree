@@ -7,8 +7,6 @@ export default function ContentLayout({invisible, children}) {
         <div className={css`
             width: 100vw
             overflow-x: none;
-            overflow-y: scroll;
-            min-height: 60vh;
         `}>
             <div className={css`
                 position: relative;
