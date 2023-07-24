@@ -11,6 +11,14 @@ const Carousel = ({ images }) => {
 
   const [counter, setCounter] = useState(0)
 
+  const [loadStyle, setLoadStyle] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      setLoadStyle(true)
+    });
+  });
+
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
@@ -44,7 +52,7 @@ const Carousel = ({ images }) => {
                 align-items: center;
                 justify-content: center;
                 margin-left: ${keys*30+(counter*-30)-7.5}vw;
-                transition: margin 2.5s, transform 2.5s;
+                transition: ${ loadStyle ? ('margin 2.5s, transform 2.5s') : ('none !important')};
                 transition-timing-function: ease-in-out;
                 transform: rotate(${
                     (keys-counter) === 0 ? ("-15deg") :

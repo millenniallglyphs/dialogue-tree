@@ -11,6 +11,7 @@ import Contact from '../components/Contact';
 import GridWork from '../components/GridWork';
 import HowWork from '../components/HowWork';
 import WritingList from '../components/WritingList';
+import DialogueTree from '../components/DialogueTree';
 
 
 export async function getStaticProps() {
@@ -138,6 +139,7 @@ export async function getStaticProps() {
         </div>
         <HowWork />
         <WritingList />
+        <DialogueTree />
         {/*
         <div className={css`
           padding-top: 10vh;

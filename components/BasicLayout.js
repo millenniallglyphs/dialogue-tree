@@ -11,14 +11,12 @@ export default function BasicLayout({display, children}) {
                 z-index: 7;
             `}>
                 <Nav />
-                <DialogueTree hidden={display} />
             </div>
             <div className={css`
                 min-height: ${ display ? ('80vh') : ('0px')};
                 z-index: 6;
             `}>
                 {children}
-                <DialogueTree hidden={!display} />
                 <div className={css`
                     margin-top: ${ display ? ('80vh') : ('0vh')};
                 `}>

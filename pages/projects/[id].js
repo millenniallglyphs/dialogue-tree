@@ -12,6 +12,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import ReadMore from '../../components/ReadMore';
 import ContentLayout from '../../components/ContentLayout';
+import DialogueTree from '../../components/DialogueTree';
 
 const components = { ContentLeft, BlockContent, SideQuote, RandomLogo, Preview }
 
@@ -46,7 +47,7 @@ export default function Post({ source, postData}) {
                   <MDXRemote {...source} />
               </div>
           </MDXProvider>
-          <ReadMore />
+          <DialogueTree />
         </PostLayout>
     </> 
   )
