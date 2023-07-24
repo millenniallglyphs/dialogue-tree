@@ -25,7 +25,13 @@ export default function Nav() {
             `}>
                 <div>
                     <Link href={"/"}>
-                    <p>Calvin Hutcheon</p>
+                    <p className={css`   
+                        color: #1A3448;
+                        font-family: 'twkLausanne';
+                        &:hover {
+                             cursor: pointer;
+                        }
+                    `}>Calvin Hutcheon</p>
                     </Link>
                 </div>
                 <div className={css`

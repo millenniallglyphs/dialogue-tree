@@ -35,7 +35,7 @@ export default function HowWork() {
               `}>
               Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
               </p>
-              <LinkButton target="test">
+              <LinkButton target="/about">
                 How I work
               </LinkButton>
             </div>

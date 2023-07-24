@@ -135,6 +135,7 @@ const endq = () => {
         color: #485661;
         display: flex;
         width: 100%;
+        margin-right: 1em;
         justify-content: flex-end;
         animation-delay: ${(beep + 0.5) + 's'};
             animation-name: buttonappear;

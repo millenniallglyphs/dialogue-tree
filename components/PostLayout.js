@@ -221,8 +221,9 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 {renderAll()}
                 <h1 className={css`
                     font-weight: 600;
-                    font-size: 3.2em;
+                    font-size: 3.8em;
                     line-height: 1em;
+                    font-family: 'garamond' !important;
                     padding-left: 0rem !important; 
                     color: #04082B;
                     margin: 0;

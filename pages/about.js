@@ -2,6 +2,7 @@ import ContentLayout from "../components/ContentLayout"
 import BasicLayout from "../components/BasicLayout"
 import { css } from "@emotion/css"
 import Carousel from "../components/Carousel"
+import DialogueTree from "../components/DialogueTree"
 
 
 const images = [
@@ -175,7 +176,9 @@ export default function About() {
               </div>
 
               <Carousel images={images}/>
-
+              <div>
+                <DialogueTree />
+              </div>
 
         </div>
 
