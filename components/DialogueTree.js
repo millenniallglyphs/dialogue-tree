@@ -264,7 +264,7 @@ useEffect(() => {
             padding-bottom: ${hidden ? ("0px") : ("20vh")};
             background: #1A3448;
             position: absolute;
-            left: ${hidden ? ("-200vw") : ("0")};
+            left: 0;
             height: ${hidden ? ("0px") : ("auto")};
             transition: left 0.5s;
             overflow: hidden;

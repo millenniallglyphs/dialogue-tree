@@ -7,7 +7,7 @@ export default function Nav() {
 
     return(
         <div className={css`
-        width: 100%;
+        width: 100vw;
         background: rgba(255, 255, 255, 0.50);
         backdrop-filter: blur(8px);
         position: fixed;
@@ -17,6 +17,10 @@ export default function Nav() {
         `}>
             <div className={css`
             width: 1000px;
+            @media (max-width: 1000px) {
+                width: 100%;
+                padding: 0px 1em;
+            }
             margin: auto;
             display: grid;
             grid-template-columns: 1fr 1fr;

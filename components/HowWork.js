@@ -12,6 +12,10 @@ export default function HowWork() {
           background: #fff;
           width: 100%;
           justify-content: center;
+          @media (max-width: 600px) {
+            padding-top: 10vh;
+          padding-bottom: 10vh;
+          }
         `}>
           <div className={css`
             display: grid;
@@ -19,6 +23,10 @@ export default function HowWork() {
             max-width: 1000px;
             gap: 1em;
             align-items: center;
+            @media (max-width: 600px) {
+                grid-template-columns: 1fr;
+                padding: 0px 1em;
+            }
           `}>
             <SelfPic />
             <div>

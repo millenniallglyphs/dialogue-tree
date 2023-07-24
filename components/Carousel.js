@@ -70,12 +70,19 @@ const Carousel = ({ images }) => {
                   margin-right: 1em;
                   transition: margin 1s;
                 }
+                @media (max-width: 600px) {
+                  margin-left: ${keys*65+(counter*-65)-80}vw;
+                }
               `}>
                 <div className={css`
                   height: 20vw;
                   width: 27vw;
                   overflow: hidden;
                   border-radius: 8px;
+                  @media (max-width: 600px) {
+                    height: 85vw;
+                    width: 65vw;
+                  }
                 `}>
                 <div className={css`
                 height: 20vw;
@@ -95,6 +102,11 @@ const Carousel = ({ images }) => {
                     cursor: pointer;
                     transform: scale(1.1, 1.1);
                 }
+
+                @media (max-width: 600px) {
+                  height: 85vw;
+                    width: 65vw;
+                }
                 `} >
                 
                 </div>
@@ -108,6 +120,9 @@ const Carousel = ({ images }) => {
                     display: flex;
                 flex-direction: column;
                 align-items: center;
+                @media (max-width: 600px) {
+                  width: 48vw;
+                }
                   `}>
                   <h3 className={css`
                       margin: 0;

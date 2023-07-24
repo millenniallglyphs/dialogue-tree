@@ -37,6 +37,9 @@ console.log(isVisible + " hi hi");
               transform: rotate( ${ isVisible ? ("0deg") : ("10deg")} );
                 transform: scale( ${ isVisible ? ("1") : ("0.8") } );
                 transition: opacity 3s, transform 3s;
+                @media (max-width: 600px) {
+                  height: 90vw;
+                }
             `}>
         </div>
        <div className={css`
@@ -50,6 +53,10 @@ console.log(isVisible + " hi hi");
             transform: scale( ${ isVisible ? ("1") : ("0.8") } );
             transition: opacity 1s, transform 2s;
             transition-delay: 1s;
+            @media (max-width: 600px) {
+              margin-top: -90vw;
+              height: 90vw;
+            }
             `}>
         </div>
         <div className={css`
@@ -63,6 +70,10 @@ console.log(isVisible + " hi hi");
             transform: scale( ${ isVisible ? ("1") : ("0.8") } );
             transition: opacity 1s, transform 2s;
             transition-delay: 2s;
+            @media (max-width: 600px) {
+              margin-top: -90vw;
+              height: 90vw;
+            }
             `}>
         </div>
         

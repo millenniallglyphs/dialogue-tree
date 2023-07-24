@@ -99,7 +99,10 @@ export async function getStaticProps() {
           text-align: center;
           gap: 1em;
           background-position: center;
-          background-size: cover
+          background-size: cover;
+          @media (max-width: 1000px) {
+            padding: 0px 1em;
+          }
         `}>
           <h1>A <span className='callout'>craftsman</span> & <span className='callout'>designer</span> building <br /> experiences for an <span className='callout'>emergent internet</span>. </h1>
           <div className={css`
@@ -150,46 +153,10 @@ export async function getStaticProps() {
         <HowWork />
         <WritingList />
         <DialogueTree />
-        {/*
-        <div className={css`
-          padding-top: 10vh;
-          padding-bottom: 10vh;
-          display: flex;
-          align-items: center;
-          background: #fff;
-          width: 100%;
-          justify-content: center;
-        `}>
-          <div className={css`
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            max-width: 1000px;
-            gap: 1em;
-            align-items: center;
-          `}>
-            <SelfPic />
-            <div>
-              <h3 className={css`
-                margin: 0;
-                padding: 0;
-              `}>
-                My Story
-              </h3>
-              <p className={css`
-                line-height: 1.8em;
-              `}>
-              Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
-              </p>
-              <p>
-
-              </p>
-            </div>
-          </div>
-        </div>
-            */}
+        
         
       <BasicLayout >
-        <ContentLayout invisible='true'>
+        <ContentLayout >
           {page}
         </ContentLayout>
       </BasicLayout>
