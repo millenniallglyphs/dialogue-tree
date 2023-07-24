@@ -14,13 +14,17 @@ export default function DialogueText({children, index}) {
               border-radius:  0.75em 0.75em 0.75em 0.12em;
               font-weight: 400;
               opacity: 1;
-              margin-top: 0em;
+              padding-left: 1em;
               animation-name: appear;
               animation-duration: 0.75s;
               animation-delay: ${index + 's'};
               animation-fill-mode: both;
-              @media (max-width: 1000px) {
+              font-size: 2.4em;
+              overflow: hidden;
+              width: 100%;
+              @media (max-width: 600px) {
                 animation-name: appearb;
+                font-size: 1.8em;
               }
               `}>
                 <div className={css`

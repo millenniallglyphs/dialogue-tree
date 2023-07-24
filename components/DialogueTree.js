@@ -132,15 +132,19 @@ const endq = () => {
       quiz ? (
 
         <div className={css`
-        color: #485661;
+        color: #9D9A9A;
         display: flex;
         width: 100%;
         margin-right: 1em;
+        font-size: 1em;
         justify-content: flex-end;
         animation-delay: ${(beep + 0.5) + 's'};
-            animation-name: buttonappear;
-            animation-duration: 0.5s;
-            animation-fill-mode: backwards;
+        animation-name: buttonappear;
+        animation-duration: 0.5s;
+        animation-fill-mode: backwards;
+        @media (max-width: 600px) {
+          font-size: 1.2em;
+        }
       `}>
         Ask me a question
       </div>
@@ -201,11 +205,11 @@ useEffect(() => {
           animation-duration: 0.5s;
           animation-fill-mode: both;
           color: #F8F8F8;
-          @media (max-width: 1000px) {
+          font-size: 1.8em;
+          @media (max-width: 600px) {
             animation-name: appearb;
             animation-duration: 0.5s;
             animation-fill-mode: both;
-            font-size: 1.2em;
           }
           `}>
             <p className={css`
@@ -225,8 +229,8 @@ useEffect(() => {
           `}>
             <div>
             <div className={css`
-                            height: 3vw;
-                            width: 3vw;
+                            height: 48px;
+                            width: 48px;
                             margin-top: 1vw;
                             margin-right: 1em;
                             background-image: url('/v2/creative/i-calvin.jpg');
@@ -234,6 +238,10 @@ useEffect(() => {
                             background-position: center;
                             border-radius: 2em;
                             isolation: isolate;
+                            @media (max-width: 600px) {
+                              height: 48px;
+                            width: 48px;
+                            }
                         `}></div>
             </div>
             <div className={css`
@@ -261,7 +269,7 @@ useEffect(() => {
         <div className={css`
             padding-top: 0;
             width: 100%;
-            padding-bottom: ${hidden ? ("0px") : ("20vh")};
+            padding-bottom: ${hidden ? ("0px") : ("3vh")};
             background: #1A3448;
             position: absolute;
             left: 0;
@@ -279,10 +287,10 @@ useEffect(() => {
           background: #1A3448;
           grid-template-rows: 1fr 180px;
           padding-bottom: 0.5em;
-          @media (max-width: 1000px) {
-            height: 100vh;
+          @media (max-width: 600px) {
+            height: 70vh;
             width: 100vw;
-            grid-template-rows: 1fr 90px;
+            grid-template-rows: 1fr 160px;
             padding-bottom: 1em;
           }
         `}>

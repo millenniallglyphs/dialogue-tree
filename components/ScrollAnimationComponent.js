@@ -20,8 +20,6 @@ const ScrollAnimationComponent = ({children}) => {
     return () => observer.unobserve(elementRef.current);
 }, []);
 
-console.log(isVisible + " hi hi");
-
 
   return (
     <div
