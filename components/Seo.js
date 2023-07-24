@@ -80,6 +80,7 @@ export default function SEO ({img, title, description, tags=[]}) {
             <title>{title}</title>
             <link rel="icon" href="/favicon.ico" />
             <meta name="description" content={description} />
+            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Public+Sans&display=swap" rel="stylesheet" /> 
 
             {/*Google SEO*/}
             <meta itemprop="name" content={title}/>

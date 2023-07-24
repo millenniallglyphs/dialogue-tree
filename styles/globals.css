@@ -1,22 +1,22 @@
-@import url(/public/TWKLausanne-750.woff2);
+@import url(/TWKLausanne-750.woff2);
 
-@import url(/public/TWKLausanne-450.woff2);
+@import url(/TWKLausanne-450.woff2);
 
-@import url(/public/GaramondBookCondensed.woff2);
+@import url(/GaramondBookCondensed.woff2);
 
 @font-face {
   font-family: twkLausanne;
-  src: url(../public/TWKLausanne-750.woff2);
+  src: url(/TWKLausanne-750.woff2);
 }
 
 @font-face {
   font-family: twkLausanne-body;
-  src: url(../public/TWKLausanne-450.woff2);
+  src: url(/TWKLausanne-450.woff2);
 }
 
 @font-face {
   font-family: garamond;
-  src: url(../public/GaramondBookCondensed.woff2);
+  src: url(/GaramondBookCondensed.woff2);
 }
 
 html,
