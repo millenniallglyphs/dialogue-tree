@@ -38,7 +38,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                 <div key={index} className={css`
                   display: flex;
                   align-items: center;
-                  gap: 0.5em;
+                  gap: 0.25em;
                   margin-left: ${ index != 0 ? ( open ? ("0px") :("-24px")) : ("0px")}
                 `}>
                   <div className={css`
@@ -50,7 +50,8 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   `}></div>
                   <div className={css`
                     opacity: ${ open ? ("1") : ("0")};
-                    width: ${ open ? ("auto") : ("0px")}
+                    width: ${ open ? ("auto") : ("0px")};
+                    overflow: hidden;
                   `}>
                       <LinkButton target={target}>
                         {name}
@@ -107,7 +108,51 @@ export default function PostLayout({tags, features, team, title, date, image, bg
           padding: 0.5em;
           border-radius: 8px;
           margin-top: 1em;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
         `}>
+          <div className={css`
+            display: flex;
+            align-items: center;
+            :hover {
+              cursor: pointer;
+            }
+          `}
+          onClick={() => {
+            !open ? (
+              openSet()
+            ) : (
+              closeSet()
+            )
+          }}
+          >
+            <p className={css`
+              color: #494949;
+              background: #ECEAEA;
+              font-size: 0.8em;
+              margin: 0;
+              padding: 0;
+            `}>
+              Team
+            </p>
+          <div className={css`
+                    transform: ${ !open ? ('rotate(0deg)') : ('rotate(180deg)')};
+                    transition: transform 1s, background 1s;
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 24px;
+                    cursor: pointer;
+                    :hover {
+                      background: #F6F6F0;
+                    }
+                  `}
+                  >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path d="M12 14L8 10H16L12 14Z" fill="#4D4D4D"/>
+</svg>
+                  </div>
+          </div>
           <div className={css`
             display: flex;
             width: 100%;
@@ -134,36 +179,20 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   flex-direction: ${open ? ("column") : ("row")};
                   gap: ${open ? ("0.5em") : ("-16px")};
 
-                `}>
+                `}
+                onClick={() => {
+                  !open ? (
+                    openSet()
+                  ) : (
+                    null
+                  )
+                }}
+                >
                    {renderTeam()}
 
                 </div>
          
         </div>
-        <div className={css`
-                    transform: ${ !open ? ('rotate(0deg)') : ('rotate(180deg)')};
-                    transition: transform 1s, background 1s;
-                    height: 34px;
-                    width: 34px;
-                    padding: 5px;
-                    border-radius: 24px;
-                    cursor: pointer;
-                    :hover {
-                      background: #F6F6F0;
-                    }
-                  `}
-                  onClick={() => {
-                    !open ? (
-                      openSet()
-                    ) : (
-                      closeSet()
-                    )
-                  }}
-                  >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-<path d="M12 14L8 10H16L12 14Z" fill="#4D4D4D"/>
-</svg>
-                  </div>
                   </div>
                   
 
@@ -221,6 +250,9 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                     @media (max-width: 1000px) {
                       margin: 0;
                       padding-left: 0rem;
+                    }
+                    @media (max-width: 600px) {
+                      font-size: 2.5em;
                     }
                 `}>{title}</h1>
               </div>

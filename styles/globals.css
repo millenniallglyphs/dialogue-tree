@@ -141,19 +141,19 @@ p {
 .linkbutton {
   display: flex;
   transition: margin 1s;
-  gap: 0.5em;
+  gap: 0.25em;
   cursor: pointer;
   align-items: flex-end;
 }
 
 .linkbutton:hover>:nth-child(2) {
-  margin-left: 1em;
+  margin-left: 0.25em;
   margin-right: 0em;
 }
 
 .linkbutton>:nth-child(2) {
   margin-left: 0em;
-  margin-right: 1em;
+  margin-right: 0.25em;
   transition: margin 1s;
 }
 
@@ -473,7 +473,7 @@ p {
 
 .wrapper {
   max-width: 100%;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.8em; 
   display: flex;
   flex-direction: column;
@@ -489,8 +489,13 @@ p {
 
 .wrapper>*:not(img):not(iframe):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre):not(div) {
   max-width: 100%;
-  margin-left: 0em;
-  margin-right: 0em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.wrapper>p {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .wrapper>iframe {
@@ -565,6 +570,14 @@ p {
 
 .wrapper>p {
   width: 1000px;
+  padding: 0 1em;
+}
+
+@media screen and (min-width: 1400px) {
+  .wrapper>p {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -578,8 +591,8 @@ p {
   }
 
   .wrapper>p {
-    padding-left: 0em;
-    padding-right: 0em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   .wrapper { 

@@ -75,6 +75,12 @@ export default function About() {
             height: 35vw;
             align-items: center;
             transition: gap 2s;
+            @media (max-width: 600px) {
+              width: 100vw;
+              overflow: hidden;
+              height: 60vw;
+              margin: auto;
+            }
             &:hover {
                 gap: 2em;
             }

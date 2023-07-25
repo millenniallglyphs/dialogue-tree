@@ -84,9 +84,16 @@ export async function getStaticProps() {
           background-size: cover;
           @media (max-width: 1000px) {
             padding: 0px 1em;
+            height: auto;
+            padding-top: 7.5vh;
+            padding-bottom: 7.5vh;
           }
         `}>
-          <h1>A <span className='callout'>craftsman</span> & <span className='callout'>designer</span> building <br /> experiences for an <span className='callout'>emergent internet</span>. </h1>
+          <h1 className={css`
+           @media (max-width: 600px){
+            font-size: 2.5em;
+           }
+          `}>A <span className='callout'>craftsman</span> & <span className='callout'>designer</span> building <br /> experiences for an <span className='callout'>emergent internet</span>. </h1>
           <div className={css`
             display: flex;
             gap: 1em;
