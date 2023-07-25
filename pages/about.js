@@ -44,19 +44,24 @@ export default function About() {
           align-content: center;
           align-items: center;
           justify-content: center;
-          text-align: center;
           gap: 4em;
           padding-top: 20vh;
           background-position: center;
-          background-size: cover
+          margin: 0 !important;
+          @media (max-width: 600px) {
+            padding: 0 1em;
+          }
         `}>
-            <h2>Grounded in <span className='callout'>craft</span> <br /> Stepping into the <span className='callout'>future</span>. </h2>
+            <h2 className={css`
+              text-align: center;
+            `}>Grounded in <span className='callout'>craft</span> <br /> Stepping into the <span className='callout'>future</span>. </h2>
             <div className={css`
             
             max-width: 450px;
             `}>
             <p className={css`
                 line-height: 1.8em;
+                text-align: center;
               `}>
               Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
               </p>
@@ -93,6 +98,7 @@ export default function About() {
                 margin-top: 7.5vw;
                 transition: margin 2s, transform 2s;
               }
+
           `}>
 
             <div className={css`
@@ -100,6 +106,10 @@ export default function About() {
              background-size: cover;
              width: 20vw;
              height: 28vw;
+             @media (max-width: 600px) {
+              width: 35vw;
+             height: 43vw;
+             }
             `}>
 
             </div>
@@ -108,6 +118,10 @@ export default function About() {
              background-size: cover;
              width: 20vw;
              height: 28vw;
+             @media (max-width: 600px) {
+              width: 35vw;
+             height: 43vw;
+             }
             `}>
 
             </div>
@@ -116,6 +130,10 @@ export default function About() {
              background-size: cover;
              width: 20vw;
              height: 28vw;
+             @media (max-width: 600px) {
+              width: 35vw;
+             height: 43vw;
+             }
             `}>
 
             </div>
@@ -127,11 +145,14 @@ export default function About() {
             max-width: 1000px;
             gap: 1em;
             align-items: center;
+            @media (max-width: 600px) {
+              grid-template-columns: 1fr;
+            }
           `}>
             <div>
-                <h5>
+                <h4>
                     Craft
-                </h5>
+                </h4>
                 <p className={css`
                 line-height: 1.8em;
               `}>
@@ -139,9 +160,9 @@ export default function About() {
               </p>
             </div>
             <div>
-                <h5>
+                <h4>
                     Connection
-                </h5>
+                </h4>
                 <p className={css`
                 line-height: 1.8em;
               `}>
@@ -149,9 +170,9 @@ export default function About() {
               </p>
             </div>
             <div>
-                <h5>
+                <h4>
                     Emergence
-                </h5>
+                </h4>
                 <p className={css`
                 line-height: 1.8em;
               `}>
@@ -168,6 +189,7 @@ export default function About() {
             `}>
             <p className={css`
                 line-height: 1.8em;
+                text-align: center;
               `}>
               Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
               </p>

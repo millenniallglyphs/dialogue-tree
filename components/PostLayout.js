@@ -3,6 +3,7 @@ import FileBlock from './FileBlock';
 import Footer from './Footer';
 import React from 'react';
 import { useState } from 'react';
+import LinkButton from './LinkButton';
 
 
 export default function PostLayout({tags, features, team, title, date, image, bgcolor, children, kind}) {
@@ -51,11 +52,9 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                     opacity: ${ open ? ("1") : ("0")};
                     width: ${ open ? ("auto") : ("0px")}
                   `}>
-                      <a href={target} className={css`
-                        &::after {
-                          content: " ↗";
-                        }
-                      `}>{name}</a>
+                      <LinkButton target={target}>
+                        {name}
+                      </LinkButton>
                     </div>
                     <div className={css`
                      color: #494949;
@@ -96,18 +95,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
               </div>
               <div>
               <div>
-                  <a href={features[0].target} target="_blank" className={css`
-                  color:  #04082B;
-                  border-bottom: 0px solid #04082B;
-                  transition: border-bottom 1s;
-                  font-weight: 400;
-                  &:hover {
-                    border-bottom: 2px solid #04082B;
-                  }
-                  &::after {
-                    content: " ↗";
-                  }
-                  `}>{features[0].title}</a>
+                <LinkButton target={features[0].target} >{features[0].title}</LinkButton>
                   </div>
               </div>
           </div>
@@ -213,6 +201,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                   z-index: 3;
                   @media (max-width: 1000px) {
                     margin-top: 0px;
+                    padding: 4em 1em 0em 1em;
                   }
   
               `}>
@@ -244,7 +233,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
           
       
         <div className={css`
-           width: 1000px;
+           width: 100%;
            margin: auto;
            @media (max-width: 1000px) {
               grid-template-columns: 1fr;

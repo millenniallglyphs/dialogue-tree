@@ -62,11 +62,12 @@ a {
 }
 
 
+.mid {
+  max-width: 1000px;
+}
+
 @media screen and (max-width: 1000px) {
-  html,
-  body {
-    font-size: 12px;
-  }
+  
 }
 
 h2 {
@@ -130,7 +131,7 @@ caption {
 }
 
 p {
-  color: #9D9A9A;
+  color: #4A5B68;
 }
 
 .twitter-tweet {
@@ -263,7 +264,7 @@ p {
   }
   100% {
     opacity: 1;
-    line-height: 2.4rem;
+    line-height: 4.2rem;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
@@ -471,13 +472,19 @@ p {
 }
 
 .wrapper {
-  max-width: 880px;
+  max-width: 100%;
   font-size: 1.4em;
   line-height: 1.8em; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper > img {
   width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .wrapper>*:not(img):not(iframe):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre):not(div) {
@@ -534,7 +541,6 @@ p {
   color: #04082B;
   margin: 0;
   max-width: 750px;
-  padding-left: 2rem;
   line-height: 1.2em;
 }
 
@@ -557,6 +563,10 @@ p {
   margin: 0;
 }
 
+.wrapper>p {
+  width: 1000px;
+}
+
 @media screen and (max-width: 1400px) {
   .projgrid {
     grid-template-columns: 1fr;
@@ -565,13 +575,11 @@ p {
 
   .wrapper>*:not(img):not(iframe):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre):not(div) {
     max-width: 100%;
-    margin-left: 0rem;
-    margin-right: 0rem;
   }
 
   .wrapper>p {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 0em;
+    padding-right: 0em;
   }
 
   .wrapper { 

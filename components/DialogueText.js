@@ -14,7 +14,6 @@ export default function DialogueText({children, index}) {
               border-radius:  0.75em 0.75em 0.75em 0.12em;
               font-weight: 400;
               opacity: 1;
-              padding-left: 1em;
               animation-name: appear;
               animation-duration: 0.75s;
               animation-delay: ${index + 's'};
