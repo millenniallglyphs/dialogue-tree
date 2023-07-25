@@ -142,9 +142,6 @@ const endq = () => {
         animation-name: buttonappear;
         animation-duration: 0.5s;
         animation-fill-mode: backwards;
-        @media (max-width: 600px) {
-          font-size: 1.2em;
-        }
       `}>
         Ask me a question
       </div>

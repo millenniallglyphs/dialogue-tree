@@ -30,9 +30,6 @@ export default function Button({children, step, check}) {
             &:hover  {
               background: #485661;
             }
-            @media (max-width: 600px) {
-              font-size: 1.2em;
-            }
           `}
           onClick={check}
           >

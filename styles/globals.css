@@ -102,7 +102,7 @@ h4 {
 
 pre {
   overflow-y: scroll;
-  width: 100%;
+  width: 1000px;
   background: #04082B;
   padding: 1em 2rem 1em 2rem;
   border-radius: 8px;
@@ -528,9 +528,9 @@ p {
   font-size: 0.8em;
   background: #04082B;
   color: #fff;
-  padding: 0.2em 2em 0.2em 2em;
+  padding: 0.2em 1em 0.2em 1em;
   border-radius: 4px;
-  max-width: 750px;
+  width: 1000px;
 }
 
 
