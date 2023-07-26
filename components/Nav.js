@@ -43,7 +43,40 @@ export default function Nav() {
                     align-items: flex-end;
                     justify-content: flex-end;
                 `}>
-                    <Contact />
+                    <a href="https://calendly.com/hello-calvin/30min" target="_blank">
+          <button className={css`
+              padding: 0.35em;
+              padding-left: 0.5em;
+              padding-right: 0.5em;
+              margin: 0.65em;
+              margin-left: 0.5em;
+              margin-right: 0.5em;
+              color: #f8f8f8;
+              background: #1A3448;;
+              border-radius: 0.5em 0.5em 0.5em 0.5em;
+              border: none;
+              outline: none;
+              display: flex;
+              font-size: 1em;
+              animation-fill-mode: backwards;
+              font-weight: 400;
+              transition: margin 1s, padding 1s;
+              box-shadow: none;
+              cursor: pointer;
+              align-items: center;
+              gap: 0.5em;
+              &:hover  {
+                padding: 0.55em;
+                padding-left: 1em;
+                padding-right: 1em;
+                margin: 0em;
+                margin-left: 0em;
+                margin-right: 0em;
+              }
+              `}>
+                Let's Talk
+          </button>
+          </a>
                 </div>
             </div>
         </div>
