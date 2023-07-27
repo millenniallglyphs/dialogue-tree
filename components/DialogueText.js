@@ -20,6 +20,8 @@ export default function DialogueText({children, index}) {
               animation-fill-mode: both;
               font-size: 2.4em;
               overflow: hidden;
+              margin: 0;
+              padding: 0;
               width: 100%;
               @media (max-width: 600px) {
                 animation-name: appearb;

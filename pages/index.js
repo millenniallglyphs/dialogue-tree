@@ -12,6 +12,7 @@ import GridWork from '../components/GridWork';
 import HowWork from '../components/HowWork';
 import WritingList from '../components/WritingList';
 import DialogueTree from '../components/DialogueTree';
+import Hero from '../components/Hero';
 
 
 export async function getStaticProps() {
@@ -70,73 +71,10 @@ export async function getStaticProps() {
   Home.getLayout = function getLayout(page) {
     return (
       <div>
-        <div className={css`
-          height: 70vh;
-          width: 100vw;
-          display: flex;
-          flex-direction: column;
-          align-content: center;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          gap: 1em;
-          background-position: center;
-          background-size: cover;
-          @media (max-width: 1000px) {
-            padding: 0px 1em;
-            height: auto;
-            padding-top: 7.5vh;
-            padding-bottom: 7.5vh;
-          }
-        `}>
-          <h1 className={css`
-           @media (max-width: 600px){
-            font-size: 2.5em;
-           }
-          `}>A <span className='callout'>craftsman</span> & <span className='callout'>designer</span> building <br /> experiences for an <span className='callout'>emergent internet</span>. </h1>
-          <div className={css`
-            display: flex;
-            gap: 1em;
-          `}>
-            <a href="https://calendly.com/hello-calvin/30min" target="_blank">
-          <button className={css`
-              padding: 0.5em;
-              padding-left: 1em;
-              padding-right: 1em;
-              margin: 0.25em;
-              margin-left: 1em;
-              margin-right: 1em;
-              color: #f8f8f8;
-              background: #1A3448;;
-              border-radius: 0.5em 0.5em 0.5em 0.5em;
-              border: none;
-              outline: none;
-              display: flex;
-              font-size: 1em;
-              animation-fill-mode: backwards;
-              font-weight: 400;
-              transition: margin 1s, padding 1s;
-              box-shadow: none;
-              cursor: pointer;
-              align-items: center;
-              gap: 0.5em;
-              &:hover  {
-                padding: 0.75em;
-                padding-left: 2em;
-                padding-right: 2em;
-                margin: 0em;
-                margin-left: 0em;
-                margin-right: 0em;
-              }
-              `}>
-                Let's Talk
-          </button>
-          </a>
-          </div>
-        </div>
-       
+        
+       <Hero />
         <div>
-          <Carousel images={images}/>
+          <GridWork images={images}/>
           {/*<GridWork images={images}/>*/}
         </div>
         <HowWork />

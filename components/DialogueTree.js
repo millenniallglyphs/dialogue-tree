@@ -279,7 +279,7 @@ useEffect(() => {
           padding: 0px;
           margin: auto;
           display: grid;
-          height: 70vh;
+          height: 600px;
           width: 1000px;
           background: #1A3448;
           grid-template-rows: 1fr 180px;

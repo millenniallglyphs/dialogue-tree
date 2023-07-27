@@ -4,9 +4,11 @@
 
 @import url(/GaramondBookCondensed.woff2);
 
+@import url(/FT88-Italic.woff2);
+
 @font-face {
   font-family: twkLausanne;
-  src: url(/TWKLausanne-750.woff2);
+  src: url(/TWKLausanne-600.woff2);
 }
 
 @font-face {
@@ -17,6 +19,11 @@
 @font-face {
   font-family: garamond;
   src: url(/GaramondBookCondensed.woff2);
+}
+
+@font-face {
+  font-family: "ft-88";
+  src: url(/FT88-Italic.woff2)
 }
 
 html,
@@ -42,8 +49,10 @@ a {
 }
 
 .callout {
-  font-family: 'garamond', serif;
-  font-size: 1.3em;
+  font-family: 'ft-88', monospace;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -206,6 +215,51 @@ p {
   padding-right: 0.5em;
 }
 
+@keyframes heroimage {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes heroimageb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes heroimagec {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 @keyframes introanimation {
   0% {
     left: 200vw;
@@ -265,8 +319,8 @@ p {
   100% {
     opacity: 1;
     line-height: 4.2rem;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
   }
 }
 
@@ -283,8 +337,8 @@ p {
   100% {
     opacity: 1;
     line-height: 2.4rem;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
   }
 }
 
