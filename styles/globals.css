@@ -73,6 +73,7 @@ a {
 
 .mid {
   max-width: 1000px;
+  margin: 2em 0 !important;
 }
 
 @media screen and (max-width: 1000px) {
@@ -391,6 +392,10 @@ p {
   }
 }
 
+#last {
+  margin-top: -2px;
+}
+
 .animationInternal {
   padding: 0em;
   margin: 0em;
@@ -540,8 +545,8 @@ p {
 
 .wrapper > img {
   width: 100%;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+ margin: 0;
+ margin-top: 2em;
 }
 
 .wrapper>*:not(img):not(iframe):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre):not(div) {

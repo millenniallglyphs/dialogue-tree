@@ -36,16 +36,18 @@ console.log(image.title);
                         display: flex;
                         flex-direction: column;
                         gap: 1em;
-                        padding-bottom: 2em;
                         opacity: ${ isVisible ? ("1") : ("0") };
                         transform: rotate( ${ isVisible ? ("0deg") : ("10deg")} );
                         transform: scale( ${ isVisible ? ("1") : ("0.8") } );
                         transition: opacity 1s, transform 1s;
-                        &:hover>:nth-child(3)>#beep  {
+                        :hover {
+                            cursor: pointer;
+                        }
+                        &:hover>*>*>*>#beep  {
                             margin-left: 1em;
                             margin-right: 0em;
                           }
-                          >:nth-child(3)>#beep {
+                          >*>*>*>#beep {
                             margin-left: 0em;
                             margin-right: 1em;
                             transition: margin 1s;
@@ -85,7 +87,7 @@ console.log(image.title);
                             align-items: flex-end;
                             justify-content: flex-end;
                             gap: 1em;
-                            padding: 2em 0;
+                            padding: 6em 0;
                             `}>
                                 <div className={css`
                                 max-width: 1000px;
@@ -95,7 +97,7 @@ console.log(image.title);
                                     <h2 className={css`
                                         margin: 0;
                                         padding: 0;
-                                        color: #1A3448;
+                                        color: ${ image.title === "Informed Decision Making" ? ("#FAFAFA") : ("#1A3448") };
                                     `}>
                                         {image.title}
                                     </h2>
@@ -103,12 +105,22 @@ console.log(image.title);
                                     <div className="linkbutton">
                                         <div>
                                             <p className="callout">
+                                            <span className={css`
+                                                color: ${ image.title === "Informed Decision Making" ? ("#ECEAEA") : ("#4A5B68") };
+                                            `}>
                                             Read
+                                            </span>
                                             </p>
                                         </div>
                                         <div id="beep">
                                         <p className="callout">
-                                            {">"}
+                                            <span className={css`
+                                                color: ${ image.title === "Informed Decision Making" ? ("#ECEAEA") : ("#4A5B68") };
+                                            `}>
+
+                                                {">"}
+                                            </span>
+                                            
                                             </p>
                                         </div>
                                     

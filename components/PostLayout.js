@@ -4,6 +4,7 @@ import Footer from './Footer';
 import React from 'react';
 import { useState } from 'react';
 import LinkButton from './LinkButton';
+import Link from 'next/link';
 
 
 export default function PostLayout({tags, features, team, title, date, image, bgcolor, children, kind}) {
@@ -23,7 +24,7 @@ export default function PostLayout({tags, features, team, title, date, image, bg
             <div className={css`
                 padding: 0.5em;
                 border-radius: 8px;
-                color: #494949;
+                color: #1A3448;;
                 background: #ECEAEA;
                 font-size: 0.8em;
             `} key={index}>
@@ -53,9 +54,9 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                     width: ${ open ? ("auto") : ("0px")};
                     overflow: hidden;
                   `}>
-                      <LinkButton target={target}>
+                      <Link href={target}>
                         {name}
-                      </LinkButton>
+                      </Link>
                     </div>
                     <div className={css`
                      color: #494949;
@@ -128,11 +129,10 @@ export default function PostLayout({tags, features, team, title, date, image, bg
           }}
           >
             <p className={css`
-              color: #494949;
               background: #ECEAEA;
-              font-size: 0.8em;
               margin: 0;
               padding: 0;
+              color: #1A3448;
             `}>
               Team
             </p>
@@ -241,7 +241,6 @@ export default function PostLayout({tags, features, team, title, date, image, bg
                     font-weight: 600;
                     font-size: 3.8em;
                     line-height: 1em;
-                    font-family: 'garamond' !important;
                     padding-left: 0rem !important; 
                     color: #04082B;
                     margin: 0;

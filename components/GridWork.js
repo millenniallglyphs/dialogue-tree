@@ -17,7 +17,6 @@ export default function GridWork({images}) {
             max-width: 100%;
             margin: auto;
             width: 100%;
-            gap: 2em;
         `}>
             {renderCards()}
         </div>
