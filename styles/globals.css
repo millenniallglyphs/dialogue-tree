@@ -153,6 +153,9 @@ p {
   gap: 0.25em;
   cursor: pointer;
   align-items: flex-end;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .linkbutton:hover>:nth-child(2) {

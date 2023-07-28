@@ -4,10 +4,9 @@ import FeatureWork from "./FeatureWork";
 
 export default function GridWork({images}) {
 
-
     const renderCards = () => {
         return images.map((index, keys) => (
-            <FeatureWork index={images[index]}/>
+            <FeatureWork image={index.i} title={index.t} link={index.l} key={keys}/>
         ));
       };
 
@@ -15,7 +14,7 @@ export default function GridWork({images}) {
         <div className={css`
             display: grid;
             grid-template-columns: 1fr;
-            max-width: 1000px;
+            max-width: 100%;
             margin: auto;
             width: 100%;
             gap: 2em;

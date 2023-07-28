@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { css } from '@emotion/css';
 import Link from 'next/link';
 
-const FeatureWork = (key, index) => {
+const FeatureWork = (image, title, link, key) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
 
@@ -21,7 +21,7 @@ const FeatureWork = (key, index) => {
     return () => observer.unobserve(elementRef.current);
 }, []);
 
-
+console.log(image.title);
 
 
   return (
@@ -30,7 +30,8 @@ const FeatureWork = (key, index) => {
       key={key}
     >
         <>
-                <Link href={index}>
+            
+                <Link href={image.link}>
                     <div className={css`
                         display: flex;
                         flex-direction: column;
@@ -52,48 +53,74 @@ const FeatureWork = (key, index) => {
                     `}>
                         <div className={css`
                             overflow: hidden;
-                            height: 30vw;
+                            height: 50vw;
                             width: 100%;
                         `}>
                         <div className={css`
-                        height: 30vw;
+                        height: 50vw;
                         width: 100%;
-                        background: ${index.i ? ( "url(" + index.i + ")") : ("red")};
+                      
+                        background: ${image.image ? ( "url(" + image.image + ")") : ("red")};
                         background-size: cover;
                         background-position: center;
                         transform: scale(1, 1);
                         transition: transform 2s;
                         &:hover {
-                            z-index: t+1;
                             cursor: pointer;
                             transform: scale(1.1, 1.1);
                         }
-                        `} key={index.t}>
+                        `} key={image.title}>
+                            
                         
                         </div>
+                        <div className={css`
+                            height: 50vw;
+                            width: 100%;
+                            margin-top: -50vw;
+                            z-index: 5;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            align-content: flex-end;
+                            align-items: flex-end;
+                            justify-content: flex-end;
+                            gap: 1em;
+                            padding: 2em 0;
+                            `}>
+                                <div className={css`
+                                max-width: 1000px;
+                                margin: 0 auto;
+                                width: 100%;
+                                `}>
+                                    <h2 className={css`
+                                        margin: 0;
+                                        padding: 0;
+                                        color: #1A3448;
+                                    `}>
+                                        {image.title}
+                                    </h2>
+                                </div>
+                                    <div className="linkbutton">
+                                        <div>
+                                            <p className="callout">
+                                            Read
+                                            </p>
+                                        </div>
+                                        <div id="beep">
+                                        <p className="callout">
+                                            {">"}
+                                            </p>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        
                         </div>
-                        <h2 className={css`
-                            margin: 0;
-                            padding: 0;
-                            color: #1A3448;
-                        `}>
-                            {index.t}
-                        </h2>
-                        <div className="linkbutton">
-                <div>
-                    <p className="callout">
-                    Read
-                    </p>
-                </div>
-                <div id="beep">
-                <p className="callout">
-                    {">"}
-                    </p>
-                </div>
-            </div>
+                        
                     </div>
+                   
                 </Link>
-                
+                 
             </>
     </div>
   );
