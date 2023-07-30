@@ -13,6 +13,9 @@ import HowWork from '../components/HowWork';
 import WritingList from '../components/WritingList';
 import DialogueTree from '../components/DialogueTree';
 import Hero from '../components/Hero';
+import NewHero from '../components/NewHero';
+import ConciseWork from '../components/ConciseWork';
+import AboutMe from '../components/AboutMe';
 
 
 export async function getStaticProps() {
@@ -72,13 +75,14 @@ export async function getStaticProps() {
     return (
       <div>
         
-       <Hero />
+       <NewHero />
         <div>
-          <GridWork images={images}/>
+          <ConciseWork images={images}/>
           {/*<GridWork images={images}/>*/}
         </div>
-        <HowWork />
-        <WritingList />
+        
+        <AboutMe />
+
         <DialogueTree />
         
         

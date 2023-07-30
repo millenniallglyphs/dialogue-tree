@@ -20,16 +20,19 @@ const SelfPic = () => {
     return () => observer.unobserve(elementRef.current);
 }, []);
 
-console.log(isVisible + " hi hi");
+
 
 
   return (
     <div
       ref={elementRef}
+      className={css`
+          padding: 4em;
+      `}
     >
         <div className={css`
               width: 100%;
-              height: 30vw;
+              height: 40vw;
               background: url(/v2/layer-00.png);
               background-size: cover;
               background-position: center;
@@ -43,9 +46,9 @@ console.log(isVisible + " hi hi");
             `}>
         </div>
        <div className={css`
-            margin-top: -30vw;
+            margin-top: -40vw;
               width: 100%;
-              height: 30vw;
+              height: 40vw;
               background: url(/v2/layer-01.png);
               background-size: cover;
               background-position: center;
@@ -60,9 +63,9 @@ console.log(isVisible + " hi hi");
             `}>
         </div>
         <div className={css`
-            margin-top: -30vw;
+            margin-top: -40vw;
               width: 100%;
-              height: 30vw;
+              height: 40vw;
               background: url(/v2/layer-02.png);
               background-size: cover;
               background-position: center;
