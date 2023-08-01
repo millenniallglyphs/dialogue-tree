@@ -81,6 +81,10 @@ export default function ConciseWork({images}) {
                 background: url(${index.i});
                 background-size: cover;
                 background-position: center;
+                @media (max-width: 600px) {
+                    width: 100vw;
+                    height: 80vw;
+                }
             `}>
             </div>
         ))
@@ -95,11 +99,20 @@ export default function ConciseWork({images}) {
             gap: 4em;
             align-items: center;
             background: #fff;
+            @media (max-width: 600px) {
+                grid-template-columns: 1fr;
+                height: auto;
+                padding-bottom: 2em;
+                gap: 1em;
+            }
         `}>
             <div className={css`
              height: 40vw;
              width: 100%;
              overflow: hidden;
+             @media (max-width: 600px) {
+                height: 80vw;
+             }
             `}>
                 {renderImages()}
             </div>
@@ -107,6 +120,7 @@ export default function ConciseWork({images}) {
                 display: flex;
                 flex-direction: column;
                 gap: 1em;
+                padding: 0 1em;
             `}>
                 <h3>
                     Featured Work

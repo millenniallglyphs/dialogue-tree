@@ -30,6 +30,9 @@ const SelfPic = () => {
       ref={elementRef}
       className={css`
           padding: 4em;
+          @media (max-width: 600px) {
+            padding: 0.5em;
+          }
       `}
     >
         <div className={css`

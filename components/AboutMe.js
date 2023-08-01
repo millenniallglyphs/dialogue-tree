@@ -1,4 +1,5 @@
 import { css } from "@emotion/css"
+import PhotoTransition from "./PhotoTransition"
 
 export default function AboutMe() {
     return(
@@ -17,6 +18,7 @@ export default function AboutMe() {
           margin: 0 !important;
           @media (max-width: 600px) {
             padding: 0 1em;
+            gap: 1em;
           }
         `}>
             <h2 className={css`
@@ -124,21 +126,27 @@ export default function AboutMe() {
             }
           `}>
             <div>
-            <div className={css`
-             background: url(/v2/craft.png);
-             background-size: cover;
-             transform: rotate(-6deg);
-             display: none;
-             margin: auto;
-             margin-bottom: 2em;
-             @media (max-width: 600px) {
+              <div className={css`
+                  display: none;
+                  margin: auto;
+                  margin-bottom: 2em;
+                  @media (max-width: 600px) {
+                  display: block;
+              `}>
+              <PhotoTransition rotate="-6">
+                <div className={css`
+                background: url(/v2/craft.png);
+                background-size: cover;
+                margin: auto;
                 width: 50vw;
                 height: 70vw;
-             display: block;
-             }
-            `}>
-
-            </div>
+                margin-bottom: 2em;
+                
+                `}>
+                  
+                </div>
+              </PhotoTransition>
+              </div>
                 <h4>
                     Craft
                 </h4>
@@ -150,19 +158,25 @@ export default function AboutMe() {
             </div>
             <div>
             <div className={css`
-             background: url(/v2/connection.png);
-             background-size: cover;
-             transform: rotate(6deg);
-             display: none;
-             margin: auto;
-             margin-bottom: 2em;
-             @media (max-width: 600px) {
-                width: 50vw;
-                height: 70vw;
-             display: block;
-             }
-            `}>
+                  display: none;
+                  margin: auto;
+                  margin-bottom: 2em;
+                  @media (max-width: 600px) {
+                  display: block;
+                  }
+              `}>
+                <PhotoTransition rotate="6">
+                  <div className={css`
+                  background: url(/v2/connection.png);
+                  background-size: cover;
+                  width: 50vw;
+                  height: 70vw;
+                  margin: auto;
+                  
+                  `}>
 
+                  </div>
+                </PhotoTransition>
             </div>
                 <h4>
                     Connection
@@ -175,20 +189,25 @@ export default function AboutMe() {
             </div>
             <div>
             <div className={css`
-             background: url(/v2/emergence.png);
-             background-size: cover;
-             transform: rotate(-6deg);
-             display: none;
-             margin: auto;
-             margin-bottom: 2em;
-             @media (max-width: 600px) {
-                width: 50vw;
-                height: 70vw;
-             display: block;
-             }
-            `}>
+                  display: none;
+                  margin: auto;
+                  margin-bottom: 2em;
+                  @media (max-width: 600px) {
+                  display: block;
+                  }
+              `}>
+                <PhotoTransition rotate="-6">
+                  <div className={css`
+                  background: url(/v2/emergence.png);
+                  background-size: cover;
+                  width: 50vw;
+                  height: 70vw;
+                  margin: auto;
+                  `}>
 
-            </div>
+                  </div>
+                </PhotoTransition>
+              </div>
                 <h4>
                     Emergence
                 </h4>
