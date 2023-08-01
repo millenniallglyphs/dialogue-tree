@@ -67,19 +67,17 @@ export default function ConciseWork({images}) {
     const renderImages =() => {
         return images.map((index, keys) => (
             <div key={keys} className={css`
-                height: 100%;
-                width: 100%;
-                overflow: hidden;
+                height: 40vw;
+                width: 50vw;
                 opacity: ${
                     keys === img ? ("1") : ("0")
                 };
+                margin-top: 0px;
+                z-index: ${keys} !important;
+                position: absolute;
+                display: block;
                 transition: opacity 2s;
-                margin-top: ${
-                    keys === img ? ("0") : ("-50vw")
-                };
-                z-index: ${
-                    keys === img ? ("2") : ("-1")
-                };
+                background-color: transparent;
                 background: url(${index.i});
                 background-size: cover;
                 background-position: center;
@@ -92,14 +90,14 @@ export default function ConciseWork({images}) {
         <div className={css`
             width: 100%;
             display: grid;
-            height: 50vw;
+            height: 40vw;
             grid-template-columns: 1fr 1fr;
             gap: 4em;
             align-items: center;
             background: #fff;
         `}>
             <div className={css`
-             height: 50vw;
+             height: 40vw;
              width: 100%;
              overflow: hidden;
             `}>

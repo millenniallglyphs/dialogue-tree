@@ -18,7 +18,9 @@ const SelfPic = () => {
     elementRef.current && observer.observe(elementRef.current);
 
     return () => observer.unobserve(elementRef.current);
-}, []);
+}, [isVisible]);
+
+
 
 
 
@@ -40,6 +42,10 @@ const SelfPic = () => {
               transform: rotate( ${ isVisible ? ("0deg") : ("10deg")} );
                 transform: scale( ${ isVisible ? ("1") : ("0.8") } );
                 transition: opacity 3s, transform 3s;
+                transition-delay: 0s;
+                animation-name: hero1;
+                animation-duration: 2s;
+                animation-fill-mode: backwards;
                 @media (max-width: 600px) {
                   height: 90vw;
                 }
@@ -56,6 +62,10 @@ const SelfPic = () => {
             transform: scale( ${ isVisible ? ("1") : ("0.8") } );
             transition: opacity 1s, transform 2s;
             transition-delay: 1s;
+            animation-name: hero1;
+                animation-duration: 2s;
+                animation-fill-mode: backwards;
+                animation-delay: 1s;
             @media (max-width: 600px) {
               margin-top: -90vw;
               height: 90vw;
@@ -73,6 +83,10 @@ const SelfPic = () => {
             transform: scale( ${ isVisible ? ("1") : ("0.8") } );
             transition: opacity 1s, transform 2s;
             transition-delay: 2s;
+            animation-name: hero1;
+            animation-duration: 2s;
+            animation-fill-mode: backwards;
+            animation-delay: 2s;
             @media (max-width: 600px) {
               margin-top: -90vw;
               height: 90vw;

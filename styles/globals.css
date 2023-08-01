@@ -219,6 +219,19 @@ p {
   padding-right: 0.5em;
 }
 
+@keyframes hero1 {
+  0% {
+    opacity: 0;
+    transform: rotate(10deg);
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform: scale(1);
+  }
+}
+
 @keyframes heroimage {
   0% {
     opacity: 0;

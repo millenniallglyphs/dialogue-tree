@@ -4,15 +4,8 @@ import React from "react";
 import BasicLayout from '../components/BasicLayout';
 import ContentLayout from '../components/ContentLayout';
 import { css } from '@emotion/css'
-import Carousel from '../components/Carousel';
-import ScrollAnimationComponent from '../components/ScrollAnimationComponent';
-import SelfPic from '../components/SelfPic';
-import Contact from '../components/Contact';
-import GridWork from '../components/GridWork';
-import HowWork from '../components/HowWork';
-import WritingList from '../components/WritingList';
+
 import DialogueTree from '../components/DialogueTree';
-import Hero from '../components/Hero';
 import NewHero from '../components/NewHero';
 import ConciseWork from '../components/ConciseWork';
 import AboutMe from '../components/AboutMe';
