@@ -73,7 +73,11 @@ export default function PostLayout({tags, features, team, title, date, image, bg
 
     const renderAll = () => {
       return(
-        <div> 
+        <div className={css`
+        @media (max-width: 1000px) {
+          margin-bottom: 1em;
+        }
+        `}> 
           <div className={css`
             display: flex;
             width: 100%;
