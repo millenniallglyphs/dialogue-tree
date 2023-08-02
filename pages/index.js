@@ -30,7 +30,7 @@ export async function getStaticProps() {
 
     return (
       <>
-        <SEO title="Calvin Hutcheon Designs Products" description="My name&apos;s Calvin and I'm a product designer coming to you from beautiful Frog Creek Farm." img="/seo.png"/>  
+        <SEO title="Calvin Hutcheon Utopian Craftsman" description="Calvin Hutcheon is a craftsman and designer building experiences for an emergent internet." img="/seo.png"/>  
       </>
     )
   }

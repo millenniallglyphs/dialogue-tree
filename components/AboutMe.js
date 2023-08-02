@@ -32,7 +32,7 @@ export default function AboutMe() {
                 line-height: 1.8em;
                 text-align: center;
               `}>
-              Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
+             I’m a UX/UI designer, a creative technologist and a wood-worker. These skillsets give me both technical insight, and an intuitive form finding impulse. I'm guided by three principals. 
               </p>
 
               </div>
@@ -153,7 +153,8 @@ export default function AboutMe() {
                 <p className={css`
                 line-height: 1.8em;
               `}>
-              Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
+              Craft means setting a high standard of quality. But it also means cultivating a relationship with tools. Tools must be understood as agentic, both objects of design processes and agents in creation. 
+ 
               </p>
             </div>
             <div>
@@ -184,7 +185,7 @@ export default function AboutMe() {
                 <p className={css`
                 line-height: 1.8em;
               `}>
-              Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
+              Lasting design emerges from patterns of habitation, community, ecology, and history. When deep, Intuitive patterns are uncovered and applied in novel technical contexts, magic happens. 
               </p>
             </div>
             <div>
@@ -214,7 +215,7 @@ export default function AboutMe() {
                 <p className={css`
                 line-height: 1.8em;
               `}>
-              Calvin is a product designer grounded in craft to step into uncharted technical futures. Calvin is a product designer grounded in craft to step into uncharted technical futures.
+              Building for an emergent internet means outcomes are unknown. When it's unclear clear how people will use technology, design must work to ensure emergence coincides with community and communion. 
               </p>
             </div>
 
