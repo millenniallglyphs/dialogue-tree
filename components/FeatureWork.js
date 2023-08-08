@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { css } from '@emotion/css';
 import Link from 'next/link';
 
-const FeatureWork = (image, title, link, key) => {
+const FeatureWork = (image, title, link, key, featured) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
 
@@ -43,91 +43,72 @@ console.log(image.title);
                         :hover {
                             cursor: pointer;
                         }
-                        &:hover>*>*>*>#beep  {
+                        :hover>:nth-child(2)>#beep  {
                             margin-left: 1em;
                             margin-right: 0em;
                           }
-                          >*>*>*>#beep {
-                            margin-left: 0em;
-                            margin-right: 1em;
-                            transition: margin 1s;
-                          }
+                        >:nth-child(1)>#beep {
+                        margin-left: 0em;
+                        margin-right: 1em;
+                        transition: margin 1s;
+                        background: red;
+                        }
                     `}>
                         <div className={css`
                             overflow: hidden;
-                            height: 50vw;
+                            height: 45vw;
                             width: 100%;
+                            @media (max-width: 600px) {
+                                height: 65vw;
+                            }
                         `}>
                         <div className={css`
-                        height: 50vw;
+                        height: ${image.featured ? ("45vw") : ("35vw") };
                         width: 100%;
-                      
                         background: ${image.image ? ( "url(" + image.image + ")") : ("red")};
                         background-size: cover;
                         background-position: center;
                         transform: scale(1, 1);
                         transition: transform 2s;
-                        &:hover {
+                        :hover {
                             cursor: pointer;
                             transform: scale(1.1, 1.1);
+                        }
+                        @media (max-width: 600px) {
+                            height: 65vw;
                         }
                         `} key={image.title}>
                             
                         
                         </div>
-                        <div className={css`
-                            height: 50vw;
-                            width: 100%;
-                            margin-top: -50vw;
-                            z-index: 5;
-                            position: relative;
-                            display: flex;
-                            flex-direction: column;
-                            align-content: flex-end;
-                            align-items: flex-end;
-                            justify-content: flex-end;
-                            gap: 1em;
-                            padding: 6em 0;
-                            `}>
-                                <div className={css`
-                                max-width: 1000px;
-                                margin: 0 auto;
-                                width: 100%;
-                                `}>
-                                    <h2 className={css`
-                                        margin: 0;
-                                        padding: 0;
-                                        color: ${ image.title === "Informed Decision Making" ? ("#FAFAFA") : ("#1A3448") };
-                                    `}>
-                                        {image.title}
-                                    </h2>
-                                </div>
-                                    <div className="linkbutton">
-                                        <div>
-                                            <p className="callout">
-                                            <span className={css`
-                                                color: ${ image.title === "Informed Decision Making" ? ("#ECEAEA") : ("#4A5B68") };
-                                            `}>
-                                            Read
-                                            </span>
-                                            </p>
-                                        </div>
-                                        <div id="beep">
-                                        <p className="callout">
-                                            <span className={css`
-                                                color: ${ image.title === "Informed Decision Making" ? ("#ECEAEA") : ("#4A5B68") };
-                                            `}>
-
-                                                {">"}
-                                            </span>
-                                            
-                                            </p>
-                                        </div>
-                                    
-                                </div>
-                            </div>
                         
                         </div>
+                        
+                                    
+                <div className="linkbutton">
+                    <div className={css`
+                        margin-bottom: 2px;
+                        font-family: "twkLausanne";
+                        color: #1A3448;
+                    `}>
+                       <h4 className={css`
+                                        margin: 0;
+                                        padding: 0;
+                                        color: #1A3448;
+                                    `}>
+                                        {image.title}
+                                    </h4>
+                    </div>
+                    <div id="beep">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+            <path d="M11.1368 5.99072L6.56799 1.42186L7.77256 0.217285L14.3977 6.84248L7.77256 13.4676L6.56799 12.263L11.1368 7.69425H0.769531V5.99072H11.1368Z" fill="#1A3448"/>
+            </svg>
+                    </div>
+                </div>
+     
+                                    
+                       
+                        
                         
                     </div>
                    

@@ -9,6 +9,7 @@ import DialogueTree from '../components/DialogueTree';
 import NewHero from '../components/NewHero';
 import ConciseWork from '../components/ConciseWork';
 import AboutMe from '../components/AboutMe';
+import GridWork from '../components/GridWork'
 
 
 export async function getStaticProps() {
@@ -39,7 +40,8 @@ export async function getStaticProps() {
     {
       t: "Designing for Trust and Transparency",
       i: "v2/trust/hero-trust.png",
-      l: "/projects/designing-for-trust-and-transpernecy"
+      l: "/projects/designing-for-trust-and-transpernecy",
+      f: "true"
     },
     {
         t: "Form Factors for Creativity",
@@ -53,7 +55,7 @@ export async function getStaticProps() {
     },
     {
       t: "Informed Decision Making",
-      i: "v2/decision/render-01.png",
+      i: "/v2/decision/hero.png",
       l: "/projects/informed-decision-making"
     
     },
@@ -70,10 +72,9 @@ export async function getStaticProps() {
         
        <NewHero />
         <div>
-          <ConciseWork images={images}/>
-          {/*<GridWork images={images}/>*/}
+          <GridWork images={images}/>
         </div>
-        
+
         <AboutMe />
 
         <DialogueTree />
