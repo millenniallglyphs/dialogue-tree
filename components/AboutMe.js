@@ -32,7 +32,7 @@ export default function AboutMe() {
                 line-height: 1.8em;
                 text-align: center;
               `}>
-             I’m a UX/UI designer, a creative technologist and a wood-worker. These skillsets give me both technical insight, and an intuitive form finding impulse. I'm guided by three principals. 
+             I’m a UX/UI designer, a creative technologist, and a wood-worker. These skillsets give me both technical insight, and an intuitive form-finding impulse. I'm guided by three principles:
               </p>
 
               </div>
@@ -215,7 +215,7 @@ export default function AboutMe() {
                 <p className={css`
                 line-height: 1.8em;
               `}>
-              Building for an emergent internet means outcomes are unknown. When it's unclear clear how people will use technology, design must work to ensure emergence coincides with community and communion. 
+              Building for an emergent internet means outcomes are unknown. When it's unclear how people will use technology, design must work to ensure emergence coincides with community and communion. 
               </p>
             </div>
 
