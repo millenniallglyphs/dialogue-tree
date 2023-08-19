@@ -5,42 +5,37 @@ export default function AboutMe() {
     return(
         <>
           <div className={css`
-          width: 100vw;
-          display: flex;
-          flex-direction: column;
-          align-content: center;
-          align-items: center;
-          justify-content: center;
-          gap: 4em;
+          max-width: 1200px;
+          
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
           padding-top: 20vh;
           padding-bottom: 12em;
           background-position: center;
-          margin: 0 !important;
+          margin: auto;
+          gap: 1em;
           @media (max-width: 600px) {
             padding: 0 1em;
             gap: 1em;
           }
         `}>
-            <h2 className={css`
-              text-align: center;
-            `}>Grounded in <span className='callout'>craft</span> <br /> Stepping into the <span className='callout'>future</span>. </h2>
-            <div className={css`
-            
-            max-width: 450px;
-            `}>
-            <p className={css`
-                line-height: 1.8em;
-                text-align: center;
-              `}>
-             I’m a UX/UI designer, a creative technologist, and a wood-worker. These skillsets give me both technical insight, and an intuitive form-finding impulse. I'm guided by three principles:
-              </p>
-
-              </div>
-              <div className={css`
+          <div className={css`
+            background: #EEEEEE;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            padding: 2em;
+            justify-content: center;
+            align-items: center;
+            grid-column-start: 1;
+            grid-column-end: 13;
+          `}>
+          <div className={css`
             width: 20vw;
             height: 28vw; 
             margin: auto;
-            margin-bottom: 6vw;
+            margin-bottom: 2vw;
+            transform: scale(0.8);
             @media (max-width: 600px) {
               width: 100vw;
               overflow: hidden;
@@ -113,115 +108,103 @@ export default function AboutMe() {
             `}>
 
             </div>
+
+          </div>
+          <h2 className={css`
+              text-align: center;
+            `}>Grounded in craft <br /> Stepping into the future. </h2>
+            <div className={css`
+            
+            max-width: 450px;
+            `}>
+            <p className={css`
+                line-height: 1.8em;
+                text-align: center;
+              `}>
+             I’m a UX/UI designer, a creative technologist, and a wood-worker. These skillsets give me both technical insight, and an intuitive form-finding impulse. I'm guided by three principles:
+              </p>
+
+              </div>
+
           </div>
 
-              <div className={css`
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            max-width: 1000px;
-            gap: 1em;
-            align-items: center;
-            @media (max-width: 600px) {
-              grid-template-columns: 1fr;
-            }
+          <div className={css`
+          height: 480px;
+          grid-column-start: 1;
+            grid-column-end: 7;
+            padding: 2em;
+            background: url(/v2/craft-comp.png);
+            background-size: cover;
+            background-position: top;
+            border-radius: 8px;
           `}>
-            <div>
-              <div className={css`
-                  display: none;
-                  margin: auto;
-                  margin-bottom: 2em;
-                  @media (max-width: 600px) {
-                  display: block;
-              `}>
-              <PhotoTransition rotate="-6">
-                <div className={css`
-                background: url(/v2/craft.png);
-                background-size: cover;
-                margin: auto;
-                width: 50vw;
-                height: 70vw;
-                margin-bottom: 2em;
-                
-                `}>
-                  
-                </div>
-              </PhotoTransition>
-              </div>
-                <h4>
+          <h4>
                     Craft
                 </h4>
+                <div className={css`
+                max-width: 380px;
+                `}>
                 <p className={css`
                 line-height: 1.8em;
               `}>
               Craft means setting a high standard of quality. But it also means cultivating a relationship with tools. Tools must be understood as agentic, both objects of design processes and agents in creation. 
  
               </p>
-            </div>
-            <div>
-            <div className={css`
-                  display: none;
-                  margin: auto;
-                  margin-bottom: 2em;
-                  @media (max-width: 600px) {
-                  display: block;
-                  }
-              `}>
-                <PhotoTransition rotate="6">
-                  <div className={css`
-                  background: url(/v2/connection.png);
-                  background-size: cover;
-                  width: 50vw;
-                  height: 70vw;
-                  margin: auto;
-                  
-                  `}>
+              </div>
 
-                  </div>
-                </PhotoTransition>
-            </div>
-                <h4>
+          </div>
+
+          <div className={css`
+          height: 480px;
+          grid-column-start: 7;
+            grid-column-end: 13;
+            padding: 2em;
+            background: url(/v2/connection-copm.png);
+            background-size: cover;
+            background-position: top;
+            border-radius: 8px;
+          `}>
+          <h4>
                     Connection
                 </h4>
+                <div className={css`
+                max-width: 380px;
+                `}>
                 <p className={css`
                 line-height: 1.8em;
               `}>
               Lasting design emerges from patterns of habitation, community, ecology, and history. When deep, Intuitive patterns are uncovered and applied in novel technical contexts, magic happens. 
               </p>
-            </div>
-            <div>
-            <div className={css`
-                  display: none;
-                  margin: auto;
-                  margin-bottom: 2em;
-                  @media (max-width: 600px) {
-                  display: block;
-                  }
-              `}>
-                <PhotoTransition rotate="-6">
-                  <div className={css`
-                  background: url(/v2/emergence.png);
-                  background-size: cover;
-                  width: 50vw;
-                  height: 70vw;
-                  margin: auto;
-                  `}>
-
-                  </div>
-                </PhotoTransition>
               </div>
-                <h4>
+
+          </div>
+
+          <div className={css`
+          height: 650px;
+          grid-column-start: 1;
+            grid-column-end: 13;
+            padding: 2em;
+            background: url(/v2/emerge-comp.png);
+            background-size: cover;
+            background-position: top;
+            border-radius: 8px;
+          `}>
+          <h4>
                     Emergence
                 </h4>
+                <div className={css`
+                max-width: 380px;
+                `}>
                 <p className={css`
                 line-height: 1.8em;
               `}>
               Building for an emergent internet means outcomes are unknown. When it's unclear how people will use technology, design must work to ensure emergence coincides with community and communion. 
               </p>
-            </div>
+              </div>
 
+          </div>
+            
 
-
-            </div>
             
 
             

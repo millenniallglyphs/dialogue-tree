@@ -39,30 +39,35 @@ export async function getStaticProps() {
   const images = [
     {
       t: "Designing for Trust and Transparency",
-      i: "v2/trust/hero-trust.png",
+      i: "v2/trust/hero-alt.png",
       l: "/projects/designing-for-trust-and-transpernecy",
-      f: "true"
-    },
-    {
-        t: "Form Factors for Creativity",
-        i: "v2/creative/render-02.png",
-        l: "/projects/form-factor-for-creativity"
+      f: "true",
+      w: "Webb Bridge"
     },
     {
       t: "Design System Wins",
-      i: "v2/win/hero.png",
-      l: "/projects/design-system-wins"
+      i: "v2/win/hero-alt.png",
+      l: "/projects/design-system-wins",
+      w: "XF Material Components"
     },
     {
       t: "Informed Decision Making",
-      i: "/v2/decision/hero.png",
-      l: "/projects/informed-decision-making"
+      i: "/v2/decision/alt-hero.png",
+      l: "/projects/informed-decision-making",
+      w: "Webb Stats"
     
     },
     {
+      t: "Form Factors for Creativity",
+      i: "v2/creative/alt-hero.png",
+      l: "/projects/form-factor-for-creativity",
+      w: "XF Rule Maker"
+  },
+    {
       t: "Reliability and Design Systems",
-      i: "v2/reliability/hero.png",
-      l: "/projects/reliability-and-design-systems"
+      i: "v2/reliability/alt-hero.png",
+      l: "/projects/reliability-and-design-systems",
+      w: "Webb Design System"
     }
   ];
 
