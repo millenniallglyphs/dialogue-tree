@@ -11,6 +11,18 @@ export default function GridWork({images}) {
       };
 
       return(
+        <>
+        <div className={css`
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+        `}>
+            <h3 className={css`
+            color: #1A3448;
+            `}>
+            Work
+            </h3>
+        </div>
         <div className={css`
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
@@ -46,6 +58,7 @@ export default function GridWork({images}) {
         `}>
             {renderCards()}
         </div>
+        </>
 
       )
 

@@ -226,8 +226,8 @@ useEffect(() => {
           `}>
             <div>
             <div className={css`
-                            height: 48px;
-                            width: 48px;
+                            height: 0px;
+                            width: 0px;
                             margin-top: 1vw;
                             margin-right: 1em;
                             background-image: url('/v2/creative/i-calvin.jpg');
@@ -267,7 +267,6 @@ useEffect(() => {
             padding-top: 0;
             width: 100%;
             padding-bottom: ${hidden ? ("0px") : ("3vh")};
-            background: #1A3448;
             position: absolute;
             left: 0;
             height: ${hidden ? ("0px") : ("auto")};
@@ -275,12 +274,25 @@ useEffect(() => {
             overflow: hidden;
         `}
         >
+          <div className={css`
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 1em;
+        `}>
+            <h3 className={css`
+            color: #1A3448;
+            `}>
+           About
+            </h3>
+        </div>
         <div className={css`
           padding: 0px;
           margin: auto;
           display: grid;
-          height: 600px;
-          width: 1000px;
+          height: 700px;
+          width: 1200px;
+          border-radius: 8px;
           background: #1A3448;
           grid-template-rows: 1fr 180px;
           padding-bottom: 0.5em;

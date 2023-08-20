@@ -5,11 +5,24 @@ export default function AboutMe() {
     return(
         <>
           <div className={css`
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+        padding-top: 20vh;
+        padding-bottom: 1em;
+        `}>
+            <h3 className={css`
+            color: #1A3448;
+            `}>
+            Philosophy 
+            </h3>
+        </div>
+          <div className={css`
           max-width: 1200px;
           
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-          padding-top: 20vh;
+          
           padding-bottom: 12em;
           background-position: center;
           margin: auto;
@@ -159,9 +172,11 @@ export default function AboutMe() {
           grid-column-start: 7;
             grid-column-end: 13;
             padding: 2em;
-            background: url(/v2/connection-copm.png);
-            background-size: cover;
-            background-position: top;
+            background-image: url(/v2/connection-copm.png);
+            background-color: #E3E1C9;
+            background-size: 89%;
+            background-position: bottom;
+            background-repeat: no-repeat;
             border-radius: 8px;
           `}>
           <h4>

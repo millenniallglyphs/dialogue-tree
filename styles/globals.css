@@ -222,7 +222,7 @@ p {
   0% {
     opacity: 0;
     transform: rotate(10deg);
-    transform: scale(0.8);
+    transform: scale(1.2);
   }
   100% {
     opacity: 1;
