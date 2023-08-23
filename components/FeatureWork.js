@@ -78,6 +78,7 @@ const FeatureWork = (image, title, link, key, featured) => {
                 @media (max-width: 900px) {
                      height: 65vw;
                      margin-top: -65vw;
+                     padding: 1em;
                 }
                 `}>
                 <div>

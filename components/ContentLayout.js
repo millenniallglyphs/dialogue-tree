@@ -5,8 +5,8 @@ import SimpleFooter from "./SimpleFooter"
 export default function ContentLayout({invisible, children}) {
     return(
         <div className={css`
-            width: 100vw
-            overflow-x: none;
+            width: 100vw;
+            overflow-x: hidden;
         `}>
             <div className={css`
                 position: relative;
@@ -14,8 +14,7 @@ export default function ContentLayout({invisible, children}) {
                 transition: right 0.5s;
             `}>
                     <div className={css`
-                        min-height: 80vh;
-                        width: 100vw;
+                       
                        
                     `}>
                         {children}

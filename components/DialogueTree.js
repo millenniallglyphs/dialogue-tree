@@ -225,21 +225,7 @@ useEffect(() => {
               width: 100%;          
           `}>
             <div>
-            <div className={css`
-                            height: 0px;
-                            width: 0px;
-                            margin-top: 1vw;
-                            margin-right: 1em;
-                            background-image: url('/v2/creative/i-calvin.jpg');
-                            background-size: cover;
-                            background-position: center;
-                            border-radius: 2em;
-                            isolation: isolate;
-                            @media (max-width: 600px) {
-                              height: 48px;
-                            width: 48px;
-                            }
-                        `}></div>
+            
             </div>
             <div className={css`
               display: flex;
@@ -275,21 +261,7 @@ useEffect(() => {
             z-index: 3;
         `}
         >
-          <div className={css`
-        max-width: 750px;
-        margin: auto;
-        text-align: center;
-        padding-bottom: 1em;
-        @media (max-width: 1200px) {
           
-        }
-        `}>
-            <h3 className={css`
-            color: #1A3448;
-            `}>
-           About
-            </h3>
-        </div>
         <div className={css`
           padding: 0px;
           margin: auto;
@@ -308,7 +280,7 @@ useEffect(() => {
           }
           @media (max-width: 600px) {
             height: 70vh;
-            width: 100vw;
+            max-width: 100vw;
             grid-template-rows: 1fr 160px;
             padding-bottom: 1em;
           }

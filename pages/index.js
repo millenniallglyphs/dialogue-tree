@@ -82,6 +82,22 @@ export async function getStaticProps() {
         </div>
 
         <AboutMe />
+        <div className={css`
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 1em;
+        padding-top: 8em;
+        @media (max-width: 600px) {
+          padding-top: 2em;
+        }
+        `}>
+            <h3 className={css`
+            color: #1A3448;
+            `}>
+           About
+            </h3>
+        </div>
         
         <DialogueTree />
     

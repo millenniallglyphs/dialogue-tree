@@ -20,10 +20,10 @@ export default function NewHero() {
             overflow: none;
             justify-content: center;
             @media (max-width:   1000px) {
-              height: 700px;
+              height: 600px;
             }
             @media (max-width: 600px) {
-              padding-top: 10vh;
+              padding-top: 0vh;
             padding-bottom: 10vh;
             }
           `}>
@@ -31,7 +31,6 @@ export default function NewHero() {
               display: grid;
               grid-template-columns: 1fr;
               width: 100vw;
-              gap: 1em;
               align-items: center;
               @media (max-width: 600px) {
                   grid-template-columns: 1fr;
@@ -56,6 +55,7 @@ export default function NewHero() {
                       grid-row-end: 3;
                       align-content: center;
                       align-items: center;
+                      margin-top: -4em;
                   }
               `}>
                   <div className={css`
@@ -70,15 +70,45 @@ export default function NewHero() {
                       <h1 className={css`
                       font-size: 2.6em;
                   @media (max-width: 600px){
-                      font-size: 1.6em;
+                      font-size: 2.2em;
                       text-align: center;
                   }
                   `}>A craftsman & designer building experiences for an emergent internet. </h1>
                   <div className={css`
                       display: flex;
+                      flex-direction: column;
                       gap: 1em;
+                      align-items: center;
                   `}>
+                  <a href="https://calendly.com/hello-calvin/30min?month=2023-08" target="_blank">
+                  <button className={css`
+                    padding: 0.5em;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    color: #fff;
+                    background: #1A3448;
+                    border-radius: 0.5em 0.5em 0.5em 0.5em;
+                    border: none;
+                    outline: none;
+                    display: flex;
+                    font-size: 0.85em;
+                    font-family: monospace;
+                    animation-fill-mode: backwards;
+                    font-weight: 400;
+                    transition: background 1s;
+                    box-shadow: none;
+                    cursor: pointer;
+                    align-items: center;
+                    gap: 0.5em;
+                    &:hover  {
+                      background: #545B69;
+                    }
+                    `}
                   
+                    >
+                        Let's Connect
+                    </button>
+                    </a>
                   <Contact />
             </div>
             </div>
@@ -216,6 +246,7 @@ export default function NewHero() {
                   @media (max-width: 600px){
                       font-size: 1.6em;
                       text-align: center;
+
                   }
                   `}>A craftsman & designer building experiences for an emergent internet. </h1>
                   <div className={css`
@@ -226,7 +257,7 @@ export default function NewHero() {
                       display-content: center;
                       justify-content: center;
                   `}>
-                  
+                  <a href="https://calendly.com/hello-calvin/30min?month=2023-08" target="_blank">
                   <button className={css`
                     padding: 0.5em;
                     padding-left: 1em;
@@ -254,6 +285,7 @@ export default function NewHero() {
                     >
                         Let's Connect
                     </button>
+                    </a>
                   <Contact />
                   
                   </div>

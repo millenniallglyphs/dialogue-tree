@@ -19,17 +19,18 @@ export default function BasicLayout({display, children}) {
             `}>
                 {children}
                 <div className={css`
-                    margin-top: ${ display ? ('80vh') : ('0vh')};
+                    margin-top: 0vh;
                     z-index: 0;
                     position: relative;
                 `}>
                     <div className={css`
-          padding-top: 10vh;
-          padding-bottom: 10vh;
+          padding-top: 1em;
+          padding-bottom: 2em;
           display: flex;
           align-items: center;
           width: 100%;
           justify-content: center;
+          height: 160px;
         `}>
           <div className={css`
             width: 100%;
@@ -39,6 +40,7 @@ export default function BasicLayout({display, children}) {
             align-items: center;
             text-align: center;
             justify-content: center;
+            height: 160px;
           `}>
             <div>
               <Contact />

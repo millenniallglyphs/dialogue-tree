@@ -8,8 +8,11 @@ export default function AboutMe() {
         max-width: 750px;
         margin: auto;
         text-align: center;
-        padding-top: 20vh;
-        padding-bottom: 1em;
+        padding-top: 8em;
+        padding-bottom: 2em;
+        @media (max-width: 900px) {
+          padding-top: 1em;
+        }
         `}>
             <h3 className={css`
             color: #1A3448;

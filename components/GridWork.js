@@ -16,6 +16,7 @@ export default function GridWork({images}) {
         max-width: 750px;
         margin: auto;
         text-align: center;
+        margin-bottom: 1em;
         `}>
             <h3 className={css`
             color: #1A3448;
