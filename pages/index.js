@@ -76,13 +76,15 @@ export async function getStaticProps() {
       <div>
         
        <NewHero />
+    
         <div>
           <GridWork images={images}/>
         </div>
 
         <AboutMe />
-
+        
         <DialogueTree />
+    
         
         
       <BasicLayout >

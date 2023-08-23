@@ -27,9 +27,12 @@ export default function AboutMe() {
           background-position: center;
           margin: auto;
           gap: 1em;
-          @media (max-width: 600px) {
+          @media (max-width: 900px) {
             padding: 0 1em;
             gap: 1em;
+            grid-template-columns: 1fr;
+            width: 100%;
+            overflow: hidden;
           }
         `}>
           <div className={css`
@@ -49,12 +52,17 @@ export default function AboutMe() {
             margin: auto;
             margin-bottom: 2vw;
             transform: scale(0.8);
-            @media (max-width: 600px) {
-              width: 100vw;
-              overflow: hidden;
-              height: 60vw;
+            @media (max-width: 1200px) {
               margin: auto;
-              display: none;
+              transform: scale(1.2);
+              margin-bottom: 12vw;
+              margin-top: 12vw;
+            }
+            @media (max-width: 600px) {
+              margin: auto;
+              transform: scale(1.7);
+              margin-bottom: 12vw;
+              margin-top: 12vw;
             }
             &:hover {
                 gap: 2em;
@@ -84,10 +92,7 @@ export default function AboutMe() {
              background-size: cover;
              width: 20vw;
              height: 28vw;
-             @media (max-width: 600px) {
-            width: 35vw;
-             height: 43vw;
-             }
+             
             `}>
 
             </div>
@@ -99,10 +104,7 @@ export default function AboutMe() {
              height: 28vw;
              margin-top: -24vw;
              margin-left: -20vw;
-             @media (max-width: 600px) {
-              width: 35vw;
-             height: 43vw;
-             }
+             
             `}>
 
             </div>
@@ -114,10 +116,7 @@ export default function AboutMe() {
              height: 28vw;
              margin-top: -28vw;
              margin-left: 20vw;
-             @media (max-width: 600px) {
-              width: 35vw;
-             height: 43vw;
-             }
+            
             `}>
 
             </div>
@@ -150,6 +149,21 @@ export default function AboutMe() {
             background-size: cover;
             background-position: top;
             border-radius: 8px;
+            background-color: #fff;
+            @media (max-width: 900px) {
+              grid-column-start: 1;
+              grid-column-end: 13;
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              
+            }
+            @media (max-width: 600px) {
+              background-position: bottom;
+              background-size: 100%;
+              background-repeat: no-repeat;
+            }
+            
           `}>
           <h4>
                     Craft
@@ -178,6 +192,14 @@ export default function AboutMe() {
             background-position: bottom;
             background-repeat: no-repeat;
             border-radius: 8px;
+            @media (max-width: 900px) {
+              grid-column-start: 1;
+              background-position: bottom;
+              background-size: 60%;
+            }
+            @media (max-width: 650px) {
+              background-size: 89%;
+            }
           `}>
           <h4>
                     Connection

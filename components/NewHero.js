@@ -16,7 +16,8 @@ export default function NewHero() {
           height: 50vw;
             display: flex;
             align-items: center;
-            width: 100%;
+            width: 100vw;
+            overflow: none;
             justify-content: center;
             @media (max-width:   1000px) {
               height: 700px;
@@ -96,8 +97,9 @@ export default function NewHero() {
           }
         `}>
             <div className={css`
-              width: 100%;
+              width: 100vw;
               height: 38vw;
+              overflow: hidden;
             `}>
               <div className={css`
               margin-top: -4vw;

@@ -269,9 +269,10 @@ useEffect(() => {
             padding-bottom: ${hidden ? ("0px") : ("3vh")};
             position: absolute;
             left: 0;
-            height: ${hidden ? ("0px") : ("auto")};
             transition: left 0.5s;
             overflow: hidden;
+            position: relative;
+            z-index: 3;
         `}
         >
           <div className={css`
@@ -279,6 +280,9 @@ useEffect(() => {
         margin: auto;
         text-align: center;
         padding-bottom: 1em;
+        @media (max-width: 1200px) {
+          
+        }
         `}>
             <h3 className={css`
             color: #1A3448;
@@ -291,11 +295,17 @@ useEffect(() => {
           margin: auto;
           display: grid;
           height: 700px;
-          width: 1200px;
+          max-width: 1200px;
           border-radius: 8px;
           background: #1A3448;
           grid-template-rows: 1fr 180px;
           padding-bottom: 0.5em;
+          z-index: 3;
+          @media (max-width: 1200px) {
+            max-width: 100vw;
+            margin: 1em;
+
+          }
           @media (max-width: 600px) {
             height: 70vh;
             width: 100vw;
@@ -310,8 +320,8 @@ useEffect(() => {
                 flex-direction: column-reverse;
                 background: none;
                 height: 100%;
-                overflow-y: scroll;
                 padding: 0em 1em;
+                overflow: scroll !important;
                 @media (max-width: 1000px) {
                   padding: 1em;
                 }

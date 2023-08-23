@@ -51,7 +51,7 @@ export default function GridWork({images}) {
                 grid-column-start: 9;
                 grid-column-end: 13;
             }
-            @media (max-width: 600px) {
+            @media (max-width: 900px) {
                 display: flex;
                 flex-direction: column;
             }

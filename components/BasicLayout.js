@@ -14,11 +14,14 @@ export default function BasicLayout({display, children}) {
             </div>
             <div className={css`
                 min-height: ${ display ? ('80vh') : ('0px')};
-                z-index: 6;
+                z-index: 0;
+                position: relative;
             `}>
                 {children}
                 <div className={css`
                     margin-top: ${ display ? ('80vh') : ('0vh')};
+                    z-index: 0;
+                    position: relative;
                 `}>
                     <div className={css`
           padding-top: 10vh;

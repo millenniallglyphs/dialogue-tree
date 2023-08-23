@@ -39,7 +39,7 @@ const FeatureWork = (image, title, link, key, featured) => {
                             height: 500px;
                             width: 100%;
                             border-radius: 8px;
-                            @media (max-width: 600px) {
+                            @media (max-width: 900px) {
                                 height: 65vw;
                             }
                         `}>
@@ -55,7 +55,7 @@ const FeatureWork = (image, title, link, key, featured) => {
                             cursor: pointer;
                             transform: scale(1.1, 1.1);
                         }
-                        @media (max-width: 600px) {
+                        @media (max-width: 900px) {
                             height: 65vw;
                         }
                         `} key={image.title}>
@@ -75,6 +75,10 @@ const FeatureWork = (image, title, link, key, featured) => {
                 padding: 2em;
                 align-content: space-between;
                 justify-content: space-between;
+                @media (max-width: 900px) {
+                     height: 65vw;
+                     margin-top: -65vw;
+                }
                 `}>
                 <div>
                     <h4 className={css`
