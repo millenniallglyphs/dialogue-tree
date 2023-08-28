@@ -13,7 +13,7 @@ export default function AboutMe() {
         @media (max-width: 900px) {
           padding-top: 1em;
         }
-        `}>
+        `} id="philosophy">
             <h3 className={css`
             color: #1A3448;
             `}>
@@ -25,8 +25,6 @@ export default function AboutMe() {
           
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-          
-          padding-bottom: 12em;
           background-position: center;
           margin: auto;
           gap: 1em;

@@ -17,7 +17,7 @@ export default function GridWork({images}) {
         margin: auto;
         text-align: center;
         margin-bottom: 1em;
-        `}>
+        `} id="work">
             <h3 className={css`
             color: #1A3448;
             `}>

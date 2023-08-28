@@ -91,7 +91,7 @@ export async function getStaticProps() {
         @media (max-width: 600px) {
           padding-top: 2em;
         }
-        `}>
+        `} id="about">
             <h3 className={css`
             color: #1A3448;
             `}>

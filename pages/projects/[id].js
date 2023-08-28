@@ -13,6 +13,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import ReadMore from '../../components/ReadMore';
 import ContentLayout from '../../components/ContentLayout';
 import DialogueTree from '../../components/DialogueTree';
+import { css } from '@emotion/css';
 
 const components = { ContentLeft, BlockContent, SideQuote, RandomLogo, Preview }
 
@@ -47,6 +48,12 @@ export default function Post({ source, postData}) {
                   <MDXRemote {...source} />
               </div>
           </MDXProvider>
+          <div className={css`
+            margin-top: 1em;
+            @media (max-width: 1200px) {
+              margin-top: 0em;
+            }
+          `}></div>
           <DialogueTree />
         </PostLayout>
     </> 
